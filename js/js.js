@@ -18,9 +18,8 @@ function insertImages() {
             var league = $('.league-content.active').attr('id');
 
             /**
-             * Check if the image exists,
-             * if it does load it,
-             * otherwise give the team-name a class of 'no-img'
+             * Check if the .svg image exists,
+             * if it does not, load the .png
              */
             var src = 'img/'+league+'/'+teamID+'.svg';
             var img = new Image();
@@ -30,8 +29,8 @@ function insertImages() {
               $('<img src="img/'+league+'/'+teamID+'.svg" alt="'+teamName+'" class="team-logo" />').insertBefore(_this);
             };
             img.onerror = function() {
-                // doesn't exist or error loading
-                _this.addClass('no-img');
+                // if the svg isn't there, load the png
+                $('<img src="img/'+league+'/'+teamID+'.png" alt="'+teamName+'" class="team-logo" />').insertBefore(_this);
             };
 
             img.src = src; // fires off loading of image

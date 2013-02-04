@@ -66,7 +66,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*
     GENERAL STYLES
 */
-/* line 4, /Users/jimniels/Sites/teams/css/sass/_general.scss */
+/* line 4, /Users/jimniels/Sites/teamcolors/css/sass/_general.scss */
 body {
   width: 100%;
   margin: 0 auto;
@@ -75,30 +75,43 @@ body {
   color: #333;
 }
 
-/* line 12, /Users/jimniels/Sites/teams/css/sass/_general.scss */
+/* line 12, /Users/jimniels/Sites/teamcolors/css/sass/_general.scss */
 a {
   color: #08c;
   text-decoration: none;
 }
 
-/* line 17, /Users/jimniels/Sites/teams/css/sass/_general.scss */
+/* line 17, /Users/jimniels/Sites/teamcolors/css/sass/_general.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 22, /Users/jimniels/Sites/teams/css/sass/_general.scss */
+/* line 22, /Users/jimniels/Sites/teamcolors/css/sass/_general.scss */
 .clearfix:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 28, /Users/jimniels/Sites/teams/css/sass/_general.scss */
+/* line 28, /Users/jimniels/Sites/teamcolors/css/sass/_general.scss */
 #footer {
   margin: 3em 0 5em;
   text-align: center;
 }
 
+/* line 34, /Users/jimniels/Sites/teamcolors/css/sass/_general.scss */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media \0screen {
+  /* line 39, /Users/jimniels/Sites/teamcolors/css/sass/_general.scss */
+  img {
+    width: auto;
+    /* for ie 8 */
+  }
+}
 /*
     COLORS
     Markup for displaying team colors and hex values
@@ -111,12 +124,12 @@ a:hover {
         <li class="color">
             <span class="hex">#000000
 */
-/* line 13, /Users/jimniels/Sites/teams/css/sass/_colors.scss */
+/* line 13, /Users/jimniels/Sites/teamcolors/css/sass/_colors.scss */
 .colors {
   margin-top: 1em;
 }
 
-/* line 17, /Users/jimniels/Sites/teams/css/sass/_colors.scss */
+/* line 17, /Users/jimniels/Sites/teamcolors/css/sass/_colors.scss */
 .color {
   margin-bottom: 1em;
   padding: 1em .75em;
@@ -135,13 +148,13 @@ a:hover {
   -moz-box-shadow: inset 0 -2px rgba(0, 0, 0, 0.1), 0 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 -2px rgba(0, 0, 0, 0.1), 0 2px rgba(0, 0, 0, 0.1);
 }
-/* line 27, /Users/jimniels/Sites/teams/css/sass/_colors.scss */
+/* line 27, /Users/jimniels/Sites/teamcolors/css/sass/_colors.scss */
 .color.color-white {
   color: #333;
   text-shadow: none;
   border: 1px solid #e9e9e9;
 }
-/* line 34, /Users/jimniels/Sites/teams/css/sass/_colors.scss */
+/* line 34, /Users/jimniels/Sites/teamcolors/css/sass/_colors.scss */
 .color.color-black .hex {
   background: rgba(255, 255, 255, 0.2);
   -webkit-box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.2), 0 0 0 2px rgba(0, 0, 0, 0.2);
@@ -149,7 +162,7 @@ a:hover {
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.2), 0 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
-/* line 41, /Users/jimniels/Sites/teams/css/sass/_colors.scss */
+/* line 41, /Users/jimniels/Sites/teamcolors/css/sass/_colors.scss */
 .hex {
   background: rgba(255, 255, 255, 0.1);
   padding: .5em 15%;
@@ -168,14 +181,14 @@ a:hover {
     NAVIGATION
     Handle styles for the main navigation element that lists the current league
 */
-/* line 5, /Users/jimniels/Sites/teams/css/sass/_nav.scss */
+/* line 5, /Users/jimniels/Sites/teamcolors/css/sass/_nav.scss */
 #nav {
   margin: 3em 0 5em;
   text-align: center;
   position: relative;
   border-top: 1px solid #ccc\9;
 }
-/* line 11, /Users/jimniels/Sites/teams/css/sass/_nav.scss */
+/* line 11, /Users/jimniels/Sites/teamcolors/css/sass/_nav.scss */
 #nav:before {
   content: "";
   position: absolute;
@@ -191,7 +204,7 @@ a:hover {
   z-index: -1;
 }
 
-/* line 23, /Users/jimniels/Sites/teams/css/sass/_nav.scss */
+/* line 23, /Users/jimniels/Sites/teamcolors/css/sass/_nav.scss */
 .league-name-active {
   display: -moz-inline-stack;
   display: inline-block;
@@ -222,7 +235,7 @@ a:hover {
   z-index: 2;
   position: relative;
 }
-/* line 38, /Users/jimniels/Sites/teams/css/sass/_nav.scss */
+/* line 38, /Users/jimniels/Sites/teamcolors/css/sass/_nav.scss */
 .league-name-active:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #33bbff), color-stop(100%, #0099e6));
   background-image: -webkit-linear-gradient(#33bbff, #0099e6);
@@ -230,7 +243,7 @@ a:hover {
   background-image: -o-linear-gradient(#33bbff, #0099e6);
   background-image: linear-gradient(#33bbff, #0099e6);
 }
-/* line 42, /Users/jimniels/Sites/teams/css/sass/_nav.scss */
+/* line 42, /Users/jimniels/Sites/teamcolors/css/sass/_nav.scss */
 .league-name-active a {
   text-decoration: none;
   font-size: 2.5em;
@@ -241,7 +254,7 @@ a:hover {
   padding: .25em 1em .225em;
   display: block;
 }
-/* line 53, /Users/jimniels/Sites/teams/css/sass/_nav.scss */
+/* line 53, /Users/jimniels/Sites/teamcolors/css/sass/_nav.scss */
 .league-name-active span {
   position: absolute;
   top: 34%;
@@ -249,7 +262,7 @@ a:hover {
   color: white;
 }
 
-/* line 1, /Users/jimniels/Sites/teams/css/sass/_header.scss */
+/* line 1, /Users/jimniels/Sites/teamcolors/css/sass/_header.scss */
 #masthead {
   padding: .75em 2em 1em;
   margin-bottom: 2em;
@@ -258,77 +271,77 @@ a:hover {
   font-size: .75em;
 }
 @media screen and (max-width: 600px) {
-  /* line 1, /Users/jimniels/Sites/teams/css/sass/_header.scss */
+  /* line 1, /Users/jimniels/Sites/teamcolors/css/sass/_header.scss */
   #masthead {
     text-align: center;
   }
 }
-/* line 12, /Users/jimniels/Sites/teams/css/sass/_header.scss */
+/* line 12, /Users/jimniels/Sites/teamcolors/css/sass/_header.scss */
 #masthead div:first-child {
   float: left;
 }
 @media screen and (max-width: 600px) {
-  /* line 12, /Users/jimniels/Sites/teams/css/sass/_header.scss */
+  /* line 12, /Users/jimniels/Sites/teamcolors/css/sass/_header.scss */
   #masthead div:first-child {
     float: none;
     margin-bottom: 1em;
   }
 }
-/* line 20, /Users/jimniels/Sites/teams/css/sass/_header.scss */
+/* line 20, /Users/jimniels/Sites/teamcolors/css/sass/_header.scss */
 #masthead div:first-child h1 {
   width: 100%;
   font-size: 3em;
   font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
   margin-bottom: .25em;
 }
-/* line 26, /Users/jimniels/Sites/teams/css/sass/_header.scss */
+/* line 26, /Users/jimniels/Sites/teamcolors/css/sass/_header.scss */
 #masthead div:first-child p {
   color: #777;
 }
-/* line 31, /Users/jimniels/Sites/teams/css/sass/_header.scss */
+/* line 31, /Users/jimniels/Sites/teamcolors/css/sass/_header.scss */
 #masthead div + div {
   float: right;
   color: #bbb;
 }
 @media screen and (max-width: 600px) {
-  /* line 31, /Users/jimniels/Sites/teams/css/sass/_header.scss */
+  /* line 31, /Users/jimniels/Sites/teamcolors/css/sass/_header.scss */
   #masthead div + div {
     float: none;
   }
 }
 
-/* line 40, /Users/jimniels/Sites/teams/css/sass/_header.scss */
+/* line 40, /Users/jimniels/Sites/teamcolors/css/sass/_header.scss */
 #header {
   font-size: 1.25em;
   margin: 5em 0 2em;
   text-align: center;
 }
 
-/* line 45, /Users/jimniels/Sites/teams/css/sass/_header.scss */
+/* line 45, /Users/jimniels/Sites/teamcolors/css/sass/_header.scss */
 .intro-arc {
   color: #aaa;
   font-size: .825em;
   margin: .5em 0 3em;
 }
 
-/* line 50, /Users/jimniels/Sites/teams/css/sass/_header.scss */
+/* line 50, /Users/jimniels/Sites/teamcolors/css/sass/_header.scss */
 .intro-main {
   font-size: 1.5em;
   margin-bottom: .25em;
 }
 
-/* line 54, /Users/jimniels/Sites/teams/css/sass/_header.scss */
+/* line 54, /Users/jimniels/Sites/teamcolors/css/sass/_header.scss */
 .intro-intstructions {
   margin-bottom: .5em;
 }
 
-/* line 57, /Users/jimniels/Sites/teams/css/sass/_header.scss */
+/* line 57, /Users/jimniels/Sites/teamcolors/css/sass/_header.scss */
 #arrow {
   position: relative;
   right: -2em;
 }
 
-/* line 1, /Users/jimniels/Sites/teams/css/sass/_drop-down.scss */
+/* line 1, /Users/jimniels/Sites/teamcolors/css/sass/_drop-down.scss */
 .drop-down {
   width: 200px;
   margin-left: -100px;
@@ -351,28 +364,28 @@ a:hover {
   -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
-/* line 15, /Users/jimniels/Sites/teams/css/sass/_drop-down.scss */
+/* line 15, /Users/jimniels/Sites/teamcolors/css/sass/_drop-down.scss */
 .drop-down.hide {
   opacity: 0;
   visibility: hidden;
 }
-/* line 20, /Users/jimniels/Sites/teams/css/sass/_drop-down.scss */
+/* line 20, /Users/jimniels/Sites/teamcolors/css/sass/_drop-down.scss */
 .drop-down.show {
   opacity: 1;
   visibility: visible;
 }
-/* line 25, /Users/jimniels/Sites/teams/css/sass/_drop-down.scss */
+/* line 25, /Users/jimniels/Sites/teamcolors/css/sass/_drop-down.scss */
 .drop-down .league-name {
   display: block;
   padding: 1em .5em;
   border-top: 1px solid #ccc;
   text-decoration: none;
 }
-/* line 31, /Users/jimniels/Sites/teams/css/sass/_drop-down.scss */
+/* line 31, /Users/jimniels/Sites/teamcolors/css/sass/_drop-down.scss */
 .drop-down .league-name:first-child {
   border: 0;
 }
-/* line 35, /Users/jimniels/Sites/teams/css/sass/_drop-down.scss */
+/* line 35, /Users/jimniels/Sites/teamcolors/css/sass/_drop-down.scss */
 .drop-down .league-name:hover {
   background: #08c;
   color: white;
@@ -385,7 +398,7 @@ a:hover {
         - Team logos
         - Team name
 */
-/* line 8, /Users/jimniels/Sites/teams/css/sass/_teams.scss */
+/* line 8, /Users/jimniels/Sites/teamcolors/css/sass/_teams.scss */
 .team {
   line-height: 2em;
   width: 33%;
@@ -398,37 +411,37 @@ a:hover {
   overflow: hidden;
   text-align: center;
 }
-/* line 18, /Users/jimniels/Sites/teams/css/sass/_teams.scss */
+/* line 18, /Users/jimniels/Sites/teamcolors/css/sass/_teams.scss */
 .team:nth-child(3n+1) {
   clear: both;
 }
 @media screen and (max-width: 1000px) {
-  /* line 8, /Users/jimniels/Sites/teams/css/sass/_teams.scss */
+  /* line 8, /Users/jimniels/Sites/teamcolors/css/sass/_teams.scss */
   .team {
     width: 50%;
   }
-  /* line 25, /Users/jimniels/Sites/teams/css/sass/_teams.scss */
+  /* line 25, /Users/jimniels/Sites/teamcolors/css/sass/_teams.scss */
   .team:nth-child(3n+1) {
     clear: none;
   }
-  /* line 28, /Users/jimniels/Sites/teams/css/sass/_teams.scss */
+  /* line 28, /Users/jimniels/Sites/teamcolors/css/sass/_teams.scss */
   .team:nth-child(odd) {
     clear: both;
   }
 }
 @media screen and (max-width: 600px) {
-  /* line 8, /Users/jimniels/Sites/teams/css/sass/_teams.scss */
+  /* line 8, /Users/jimniels/Sites/teamcolors/css/sass/_teams.scss */
   .team {
     width: 100%;
     margin-bottom: 2em;
   }
-  /* line 38, /Users/jimniels/Sites/teams/css/sass/_teams.scss */
+  /* line 38, /Users/jimniels/Sites/teamcolors/css/sass/_teams.scss */
   .team:nth-child(3n+1), .team:nth-child(odd) {
     clear: none;
   }
 }
 
-/* line 44, /Users/jimniels/Sites/teams/css/sass/_teams.scss */
+/* line 44, /Users/jimniels/Sites/teamcolors/css/sass/_teams.scss */
 .team-name {
   font-size: 1.125em;
   font-weight: 700;
@@ -437,12 +450,12 @@ a:hover {
       this class is for alignment
   */
 }
-/* line 52, /Users/jimniels/Sites/teams/css/sass/_teams.scss */
+/* line 52, /Users/jimniels/Sites/teamcolors/css/sass/_teams.scss */
 .team-name.no-img {
   margin-top: 100px;
 }
 
-/* line 57, /Users/jimniels/Sites/teams/css/sass/_teams.scss */
+/* line 57, /Users/jimniels/Sites/teamcolors/css/sass/_teams.scss */
 .team-logo {
   display: block;
   margin: 0 auto;
@@ -450,7 +463,7 @@ a:hover {
   max-width: 100%;
 }
 @media screen and (max-width: 600px) {
-  /* line 57, /Users/jimniels/Sites/teams/css/sass/_teams.scss */
+  /* line 57, /Users/jimniels/Sites/teamcolors/css/sass/_teams.scss */
   .team-logo {
     display: none;
   }
@@ -461,11 +474,11 @@ a:hover {
     All styles associatd with the '.js' class added by modernizer
     Hide any league that is not active
 */
-/* line 8, /Users/jimniels/Sites/teams/css/sass/_js.scss */
+/* line 8, /Users/jimniels/Sites/teamcolors/css/sass/_js.scss */
 .js .league-content {
   display: none;
 }
-/* line 11, /Users/jimniels/Sites/teams/css/sass/_js.scss */
+/* line 11, /Users/jimniels/Sites/teamcolors/css/sass/_js.scss */
 .js .league-content.active {
   display: block;
 }

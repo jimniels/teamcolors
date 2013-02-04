@@ -29,3 +29,14 @@ a:hover {
     margin: 3em 0 5em;
     text-align: center;
 }
+
+// responsive images
+img {
+    max-width: 100%;
+    height: auto;
+}
+@media \0screen {
+  img {
+    width: auto; /* for ie 8 */
+  }
+}
