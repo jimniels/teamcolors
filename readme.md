@@ -1,12 +1,10 @@
-Team Sport Colors
-
-# Readme
+# Team Sport Colors
 This page renders a reference of HEX values for major league sport teams' brand colors. PHP is used to parse and load the HTML markup. Javascript is used to load team logos (if SVG is supported by the browser)
 
 ## Add / Remove / Edit a Team
-All data for this page is loaded from the `team-data.json` file. If you want to change/add/edit a team, add the team's name and hex data in the appropriate league. The page will be rendered off this data.
+All data for this page is loaded from the `team-data.json` file. If you want to change/add/edit a team, add the team's name and hex data in the appropriate league in `team-data.json`. The page will be rendered off this data.
 
-If you want to add a team logo, add it's info in the `team-data.json' file and then add a .svg logo in the appropriate `img/` directory, with the team's name (as stated in `team-data.json`) in lowercase with hyphens in place of spaces.
+If you want to add a team logo, add its info in the `team-data.json` file and then add a .svg logo in the appropriate `img/` directory, with the team's name (as stated in `team-data.json`) in lowercase with hyphens in place of spaces.
 
 ## Dependencies
 
