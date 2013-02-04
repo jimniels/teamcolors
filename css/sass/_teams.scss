@@ -1,0 +1,66 @@
+/*
+    TEAM STYLES
+    General styles for team attributes, including:
+        - Team container
+        - Team logos
+        - Team name
+*/
+.team {
+    line-height: 2em;
+    width: 33%;
+    @include box-sizing(border-box);
+    padding: 0 2em;
+    float: left;
+    margin-bottom: 4em;
+    overflow: hidden;
+    text-align: center;
+
+    &:nth-child(3n+1) {
+        clear: both;
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 50%;
+
+        &:nth-child(3n+1) {
+            clear: none;
+        }
+        &:nth-child(odd) {
+            clear: both;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        width: 100%;
+        margin-bottom: 2em;
+
+        &:nth-child(3n+1),
+        &:nth-child(odd) {
+            clear: none;
+        }
+    }
+}
+
+.team-name {
+    font-size: 1.125em;
+    font-weight: 700;
+
+    /*
+        If there's no image to display (determined by js)
+        this class is for alignment
+    */
+    &.no-img {
+        margin-top: 100px; // height of .team-logo
+    }
+}
+
+.team-logo {
+    display: block;
+    margin: 0 auto;
+    height: 100px;
+    max-width: 100%;
+
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
+}

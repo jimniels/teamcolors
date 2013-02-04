@@ -1,0 +1,40 @@
+.drop-down {
+    width: 200px;
+    margin-left: -100px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border: 1px solid #ccc;
+    padding: 1em 0;
+    background: #fff;
+    font-size: 1.25em;
+    @include box-sizing(border-box);
+    @include border-radius(5px);
+    @include box-shadow(0 2px 10px rgba(0,0,0,.5));
+
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .league-name {
+        display: block;
+        padding: 1em .5em;
+        border-top: 1px solid #ccc;
+        text-decoration: none;
+
+        &:first-child {
+            border: 0;
+        }
+
+        &:hover {
+            background: #08c;
+            color: white;
+        }
+    }
+}

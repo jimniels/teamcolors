@@ -1,0 +1,16 @@
+/*
+    JS
+    All styles associatd with the '.js' class added by modernizer
+    Hide any league that is not active
+*/
+.js {
+
+    .league-content {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+}
