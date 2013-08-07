@@ -47,7 +47,7 @@ function blackOrWhite($color) {
         <h2 class="league-name-active"><a href="#"></a><span>&#9660;</span></h2>
         <ul class="drop-down hide">
             <?php foreach ($leagues as $league => $teams) { ?>
-                <li><a href="#<?= $league ?>" class="league-name"><?= $league ?></a></li>
+                <li><a href="#<?= $league ?>" id="nav-<?= $league ?>" class="league-name"><?= $league ?></a></li>
             <?php } ?>
         </ul>
     </nav>
