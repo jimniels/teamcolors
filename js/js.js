@@ -46,6 +46,12 @@ function insertImages() {
  */
 function replaceNavText(league) {
     $('.league-name-active a').text(league);
+    
+    // hide current league name in dropdown, show all the others
+    $('.drop-down li').each(function(){
+      $(this).show();
+    });
+    $('#nav-'+league).parent().hide();
 }
 
 /**
