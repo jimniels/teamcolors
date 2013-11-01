@@ -4,8 +4,7 @@
 body {
     width: 100%;
     margin: 0 auto;
-    font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
-    font-size: 18px/1.5;
+    font: 1em/1.3 'Droid Sans', Helvetica, Arial, sans-serif;
     color: #333;
 }
 
@@ -20,14 +19,14 @@ a:hover {
 
 // Clearfix
 .clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
-// Footer
-#footer {
-    margin: 3em 0 5em;
-    text-align: center;
+
+#leagues {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 // responsive images

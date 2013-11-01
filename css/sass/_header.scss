@@ -1,58 +1,26 @@
-#masthead {
-    padding: .75em 2em 1em;
-    margin-bottom: 2em;
-    border-bottom: 1px solid #ddd;
-    background: #f0f0f0;
-    font-size: .75em;
-
-    @media screen and (max-width: 600px) {
-        text-align: center;
-    }
-
-    div:first-child {
-        float: left;
-
-        @media screen and (max-width: 600px) {
-            float: none;
-            margin-bottom: 1em;
-        }
-
-        h1 {
-        width: 100%;
-        font-size: 3em;
-        font-family: $font-family-monospace;
-        margin-bottom: .25em;
-        }
-        p {
-            color: #777;
-        }
-    }
-
-    div + div {
-        float: right;
-        color: #bbb;
-
-        @media screen and (max-width: 600px) {
-            float: none;
-        }
-    }
-}
 #header {
     font-size: 1.25em;
-    margin: 5em 0 2em;
-    text-align:center;
+    margin: 3em auto 2em;
+    text-align: center;
+    width: 95%;
+
+    @media screen and (max-width: 600px) {
+        margin-top: 2em;
+    }
 }
 .intro-arc {
     color: #aaa;
     font-size: .825em;
-    margin: .5em 0 3em;
+    margin: 0 0 3em;
 }
 .intro-main {
-    font-size: 1.5em;
-    margin-bottom: .25em;
-}
-.intro-intstructions {
-    margin-bottom: .5em;
+    font-size: 1.25em;
+
+    strong {
+        font-size: 2em;
+        font-weight: bold;
+        display: block; 
+    }
 }
 #arrow {
     position: relative;

@@ -123,4 +123,8 @@ $(document).ready(function() {
         e.preventDefault();
         dropDown();
     });
+
+    $('.team').on('click', function() {
+      $(this).toggleClass('show');
+    });
 });

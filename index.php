@@ -36,10 +36,8 @@ function blackOrWhite($color) {
 
 <body>
     <header id="header">
-        <img src="img/lab.png"  alt="Arc90" />
-        <h1 class="intro-arc"><a href="http://arc90.com/">Arc90</a> labs + <a href="http://lab.arc90.com/hackathon/2012/">Hackathon 2012</a> presents:</h1>
-        <h2 class="intro-main">Copy and paste HEX colors from your favorite teams.</h2>
-        <p class="intro-intstructions">To start, choose a league:</p>
+        <p class="intro-arc"><a href="http://lab.arc90.com/">Arc90 Lab</a> + <a href="http://twitter.com/jimniels">@jimniels</a> present:</p>
+        <h1 class="intro-main"><strong>Team Colors</strong>Find and copy the HEX values of your favorite team&rsquo;s colors. First, choose a league:</h1>
         <img src="img/arrow.png" id="arrow" width="50" height="50" />
     </header>
 
@@ -47,7 +45,9 @@ function blackOrWhite($color) {
         <h2 class="league-name-active"><a href="#"></a><span>&#9660;</span></h2>
         <ul class="drop-down hide">
             <?php foreach ($leagues as $league => $teams) { ?>
-                <li><a href="#<?= $league ?>" id="nav-<?= $league ?>" class="league-name"><?= $league ?></a></li>
+                <li>
+                    <a href="#<?= $league ?>" id="nav-<?= $league ?>" class="league-name"><?= $league ?></a>
+                </li>
             <?php } ?>
         </ul>
     </nav>
@@ -88,7 +88,7 @@ function blackOrWhite($color) {
     </section>
 
     <footer id="footer">
-        <a href="#">Back to the top &#8593;</a>
+        <a href="#" id="top"><span>&#8593;</span>Back to the top</a>
     </footer>
 
     <!-- Script includes -->

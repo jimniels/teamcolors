@@ -33,6 +33,18 @@
     @media screen and (max-width: 600px) {
         width: 100%;
         margin-bottom: 2em;
+        padding: 0 1em;
+        position: relative;
+
+        &:after {
+            content: url(../img/arrow-e.svg);
+            position: absolute;
+            top: 0;
+            right: 1em;
+            -webkit-transform: (90deg);
+            -webkit-transition: .333s ease -webkit-transform;
+            transition: .333s ease transform;
+        }
 
         &:nth-child(3n+1),
         &:nth-child(odd) {
@@ -41,9 +53,14 @@
     }
 }
 
+.team.show:after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
 .team-name {
     font-size: 1.125em;
-    font-weight: 700;
+    
 
     /*
         If there's no image to display (determined by js)
@@ -52,6 +69,17 @@
     &.no-img {
         margin-top: 100px; // height of .team-logo
     }
+
+    @media screen and (max-width: 600px) {
+        float: right;
+        width: 75%;
+        margin-right: 5%;
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: pre;
+    }
+    
 }
 
 .team-logo {
@@ -61,6 +89,9 @@
     max-width: 100%;
 
     @media screen and (max-width: 600px) {
-        //display: none;
+        max-width: 13%;
+        height: 30px;
+        float: left;
     }
+    
 }
