@@ -1,0 +1,26 @@
+// Footer
+#footer {
+    margin: 3em 0 5em;
+    text-align: center;
+}
+#top {
+    border: 1px solid #08c;
+    padding: 1em 3em;
+    @include inline-block();
+    margin: 0 auto;
+    @include border-radius(5px);
+    @include transition(all .3s ease);
+
+    &:hover {
+        color: white;
+        background: #08c;
+
+        span {
+            text-decoration: none;
+        }
+    }
+
+    span {
+        display: block;
+    }
+}
