@@ -37,7 +37,7 @@ function blackOrWhite($color) {
 <body>
     <header id="header">
         <p class="intro-arc"><a href="http://lab.arc90.com/">Arc90 Lab</a> + <a href="http://twitter.com/jimniels">@jimniels</a> present:</p>
-        <h1 class="intro-main"><strong>Team Colors</strong>Find and copy the HEX values of your favorite team&rsquo;s colors. First, choose a league:</h1>
+        <h1 class="intro-main"><strong>Team Colors</strong>Find and copy the HEX values of your favorite team&rsquo;s colors.<br>First, choose a league:</h1>
         <img src="img/arrow.png" id="arrow" width="50" height="50" />
     </header>
 
@@ -89,6 +89,7 @@ function blackOrWhite($color) {
 
     <footer id="footer">
         <a href="#" id="top"><span>&#8593;</span>Back to the top</a>
+        <p>Want to add a new team or league? Want to make a correction? <a href="https://github.com/arc90/teamcolors">Find the source code on Github &raquo;</a></p>
     </footer>
 
     <!-- Script includes -->
