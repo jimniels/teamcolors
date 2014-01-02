@@ -106,7 +106,7 @@
         "Chicago Blackhawks" :      ["E3263A", "000000", "FFFFFF"],
         "Colorado Avalanche" :      ["8B2942", "01548A", "000000", "A9B0B8", "FFFFFF"],
         "Columbus Blue Jackets" :   ["00285C", "E03A3E", "A9B0B8", "FFFFFF"],
-        "Dallas Stars" :            ["025736", "D4A229", "000000", "FFFFFF"],
+        "Dallas Stars" :            ["006A4E", "000000", "FFFFFF", "C0C0C0"],
         "Detroit Redwings" :        ["EC1F26", "FFFFFF"],
         "Edmonton Oilers" :         ["003777", "E66A20", "FFFFFF"],
         "Florida Panthers" :        ["C8213F", "002E5F", "D59C05", "FFFFFF"],
