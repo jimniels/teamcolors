@@ -46,7 +46,7 @@
         "Green Bay Packers" :       ["213D30", "FFCC00"],
         "Houston Texans" :          ["02253A", "B31B34", "FFFFFF"],
         "Indianapolis Colts" :      ["003B7B", "FFFFFF"],
-        "Jacksonville Jaguars" :    ["000000", "007198", "D0B239", "FFFFFF"],
+        "Jacksonville Jaguars" :    ["000000", "D0B239", "007198", "FFFFFF"],
         "Kansas City Chiefs" :      ["B20032", "F2C800"],
         "Miami Dolphins" :          ["006666", "DF6108", "FFFFFF", "003366"],
         "Minnesota Vikings" :       ["3B0160", "F0BF00", "FFFFFF"],
