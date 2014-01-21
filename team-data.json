@@ -24,7 +24,7 @@
         "Orlando Magic" :           ["0047AB", "000000", "708090", "FFFFFF"],
         "Philadelphia 76ers" :      ["0046AD", "D0103A", "FFFFFF"],
         "Phoenix Suns" :            ["1c105e", "e65f20", "000000", "FFFFFF", "b1b3b3"],
-        "Portland Trail Blazers" :  ["F0163A", "B6BFBF", "000000", "FFFFFF"],
+        "Portland Trail Blazers" :  ["000000", "F0163A", "B6BFBF", "FFFFFF"],
         "Sacramento Kings" :        ["753BBD", "000000", "8A8D8F", "FFFFFF"],
         "San Antonio Spurs" :       ["000000", "BEC8C9", "FFFFFF"],
         "Toronto Raptors" :         ["B31B1B", "000000", "708090"],
