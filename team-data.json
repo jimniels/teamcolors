@@ -1,7 +1,7 @@
 {
     "NBA" : {
         "Atlanta Hawks" :           ["000080", "FF0000", "C0C0C0"],
-        "Boston Celtics" :          ["009E60", "FFFFFF","000000"],
+        "Boston Celtics" :          ["009E60", "FFFFFF", "000000", "FFD700"],
         "Brooklyn Nets" :           ["000000", "FFFFFF"],
         "Charlotte Bobcats" :       ["002B5C", "5191CD", "F26531", "A1A1A4", "FFFFFF"],
         "Chicago Bulls" :           ["D4001F", "000000", "FFFFFF"],
