@@ -139,7 +139,7 @@
         "Houston Dynamo" :          ["F36600", "2E2926", "85B7EA", "FFFFFF"],
         "LA Galaxy" :        		["12264C", "004689", "F1AA00", "FFD000", "FFFFFF"],
         "Montreal Impact" :      	["122089", "000000", "7A878F", "FFFFFF"],
-        "New England Revolution" :  ["0A2141", "D80016" "8A8D8F", "FFFFFF"],
+        "New England Revolution" :  ["0A2141", "D80016", "8A8D8F", "FFFFFF"],
         "New York Red Bulls" :   	["D50031", "012055", "FFC800", "8A8D8F", "FFFFFF"],
         "Philadelphia Union" :      ["001B2D", "B18500", "348AE1", "FFFFFF"],
         "Portland Timbers" :     	["1B5634", "DCE800", "FFFFFF"],
@@ -148,6 +148,6 @@
         "Seattle Sounders FC" :     ["4F8A10", "11568C", "212930", "FFFFFF"],
         "Sporting Kansas City" :    ["A4BBD7", "0A2141", "787775", "FFFFFF"],        
         "Toronto FC" :          	["D80016", "313F49", "A1AAAD", "FFFFFF"],
-        "Vancouver Whitecaps" :     ["12264C", "85B7EA", "85B7EA", "FFFFFF"]
+        "Vancouver Whitecaps" :     ["12264C", "85B7EA", "838383", "FFFFFF"]
     }
 }
