@@ -35,6 +35,7 @@ function blackOrWhite($color) {
 </head>
 
 <body>
+    <span id="copy-clipboard-message"><img src="img/click-copy-message.png" /></span>
     <header id="header">
         <p class="intro-arc"><a href="http://lab.arc90.com/">Arc90 Lab</a> + <a href="http://twitter.com/jimniels">@jimniels</a> present:</p>
         <h1 class="intro-main"><strong>Team Colors</strong>Find and copy the HEX values of your favorite team&rsquo;s colors.<br>First, choose a league:</h1>
@@ -72,7 +73,7 @@ function blackOrWhite($color) {
                                 <?php foreach($colors as $x => $color) { ?>
 
                                     <li style="background-color:#<?= $color ?>;" class="color <?= blackOrWhite($color) ?>">
-                                        <span class="hex">#<?= $color ?></span>
+                                        <span class="hex js-click-copy-color js-hover-color">#<?= $color ?></span>
                                     </li>
 
                                 <?php } ?>
