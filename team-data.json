@@ -128,5 +128,26 @@
         "Vancouver Canucks" :       ["07346F", "047A4A", "A8A9AD", "FFFFFF"],
         "Washington Capitals" :     ["CF132B", "00214E", "FFFFFF", "000000"],
         "Winnipeg Jets" :           ["002E62", "FFFFFF", "0168AB", "A8A9AD" ]
+    },
+    "MLS" : {
+    	"Chicago Fire" :     		["AF2626", "0A174A", "8A8D8F", "FFFFFF"],
+        "Chivas USA" :        		["AA002C", "031A43", "FFC800", "FFFFFF"],
+        "Colorado Rapids" :       	["91022D", "85B7EA", "8A8D8F", "313F49", "FFFFFF"],
+        "Columbus Crew" :           ["000000", "FFDB00", "8A8D8F", "FFFFFF"],
+        "DC United" :            	["000000", "DD0000", "FFFFFF"],
+        "FC Dallas" :       		["CF0032", "07175C", "8A8D8F", "FFFFFF"],    	
+        "Houston Dynamo" :          ["F36600", "2E2926", "85B7EA", "FFFFFF"],
+        "LA Galaxy" :        		["00245D", "004689", "F1AA00", "FFD200", "FFFFFF"],
+        "Montreal Impact" :      	["122089", "000000", "7A878F", "FFFFFF"],
+        "New England Revolution" :  ["0A2141", "D80016", "8A8D8F", "FFFFFF"],
+        "New York Red Bulls" :   	["D50031", "012055", "FFC800", "8A8D8F", "FFFFFF"],
+        "Philadelphia Union" :      ["001B2D", "B18500", "348AE1", "FFFFFF"],
+        "Portland Timbers" :     	["004812", "EBE72B", "FFFFFF"],
+        "Real Salt Lake" :          ["A50531", "013474", "F2D11A", "FFFFFF"],
+        "San Jose Earthquakes" :    ["0051BA", "000000", "B1B4B2", "FFFFFF"],
+        "Seattle Sounders FC" :     ["4F8A10", "11568C", "212930", "FFFFFF"],
+        "Sporting Kansas City" :    ["A4BBD7", "0A2141", "787775", "FFFFFF"],        
+        "Toronto FC" :          	["D80016", "313F49", "A1AAAD", "FFFFFF"],
+        "Vancouver Whitecaps" :     ["12264C", "85B7EA", "838383", "FFFFFF"]
     }
 }
