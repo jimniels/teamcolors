@@ -10,7 +10,7 @@ function insertImages() {
     // if they're not already in the DOM, load them
     if (teamLogos.length === 0) {
 
-        $('.league-content.active .team-name').each(function() {
+        $('.league-content.active .team-name').each(function(){
 
             var _this = $(this);
             var teamName = _this.text();
@@ -116,22 +116,6 @@ $(document).ready(function() {
 
         insertImages();
 
-    });
-    
-    $('.js-click-copy-color').on('click', function(e){
-       e.preventDefault(); 
-        console.log($(this).text());
-        console.log($(this).text().substr(1));
-    });
-    
-    $('.js-hover-color').on('mouseenter', function(e){
-       e.preventDefault();
-        document.getElementById('copy-clipboard-message').style.visibility="visible";
-    });
-    
-    $('.js-hover-color').on('mouseleave', function(e){
-       e.preventDefault();
-        document.getElementById('copy-clipboard-message').style.visibility="hidden";
     });
 
     // Drop downs
