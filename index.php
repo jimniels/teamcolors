@@ -32,6 +32,30 @@ function blackOrWhite($color) {
     <!--[if lte IE 8]>
         <link rel="stylesheet" type="text/css" href="ie.css" />
     <![endif]-->
+    <style>
+        @media print {
+            .hex,
+            .colors li {
+                box-shadow: none !important; 
+                text-shadow: none !important;
+            }
+            .colors li {
+                padding: .5em .75em;
+                border: 0 !important;
+                border-bottom: 1px solid #aaa !important;
+            }
+            .colors li:first-child {
+                border-top: 1px solid #aaa !important;
+            }
+            #footer {
+                display: none;
+            }
+            body:after {
+                content: "Brought to you by: http://teamcolors.ar90.com";
+            }
+        }
+
+    </style>
 </head>
 
 <body>
@@ -65,7 +89,7 @@ function blackOrWhite($color) {
 
                     if($colors) {  ?>
 
-                        <li class="team">
+                        <li class="team" id="print-<?= $teamID ?>">
                             <h3 id="<?= $teamID ?>" class="team-name" style="color: #<?= $colors[0] ?>"><?= $team ?></h3>
 
                             <ul class="colors">
