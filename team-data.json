@@ -99,6 +99,7 @@
     },
     "NHL" : {
         "Anaheim Ducks" :           ["000000", "91764B", "EF5225"],
+        "Arizona Coyotes" :         ["841F27", "000000", "EFE1C6", "FFFFFF"],
         "Boston Bruins" :           ["000000", "FFC422", "FFFFFF"],
         "Buffalo Sabres" :          ["002E62", "FDBB2F", "AEB6B9", "FFFFFF"],
         "Calgary Flames" :          ["E03A3E", "FFC758", "000000", "FFFFFF"],
@@ -119,7 +120,6 @@
         "New York Rangers" :        ["0161AB", "E6393F", "FFFFFF"],
         "Ottawa Senators" :         ["E4173E", "000000", "D69F0F", "FFFFFF"],
         "Philadelphia Flyers" :     ["F47940", "000000", "FFFFFF"],
-        "Phoenix Coyotes" :         ["8E0028", "000000", "EFE1C6", "FFFFFF"],
         "Pittsburgh Penguins" :     ["000000", "D1BD80", "FFFFFF"],
         "San Jose Sharks" :         ["05535D", "F38F20", "000000", "FFFFFF"],
         "St Louis Blues" :          ["0546A0", "FFC325", "101F48", "FFFFFF"],
