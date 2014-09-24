@@ -3,7 +3,7 @@
         "Atlanta Hawks" :           ["000080", "FF0000", "C0C0C0"],
         "Boston Celtics" :          ["009E60", "FFFFFF", "000000", "EFE196"],
         "Brooklyn Nets" :           ["000000", "FFFFFF"],
-        "Charlotte Hornets" :       ["1C0C65", "1D8CAA", "FFFFFF", "969491"],
+        "Charlotte Hornets" :       ["1C0C65", "1D8CAA", "969491", "000000"],
         "Chicago Bulls" :           ["D4001F", "000000", "FFFFFF"],
         "Cleveland Cavaliers" :     ["b3121d", "FFD700", "000080", "FFFFFF"],
         "Dallas Mavericks" :        ["0b60ad", "072156", "A9A9A9", "FFFFFF"],
