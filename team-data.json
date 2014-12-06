@@ -63,7 +63,7 @@
         "St Louis Rams" :           ["13264B", "C9AF74", "FFFFFF"],
         "Tampa Bay Buccaneers" :    ["D60A0B", "89765F", "000000", "FFFFFF", "FF7A00"],
         "Tennessee Titans" :        ["648FCC", "000080", "FF0000", "C0C0C0"],
-        "Washington Redskins" :     ["773141", "FFB612", "FFFFFF"]
+        "Washington DC" :              ["773141", "FFB612", "FFFFFF"]
     },
     "MLB" : {
         "Arizona Diamondbacks" :    ["A71930", "000000", "DBCEAC", "FFFFFF"],
