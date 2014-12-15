@@ -5,19 +5,45 @@
         - Team logos
         - Team name
 */
+.teams {
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+        content: '';
+        height: 100%;
+        top: 0;
+        position: absolute;
+        border-left: 1px solid $color-border;
+        border-right: 1px solid $color-border;
+        width: 33.3333333%;
+        left: 33.3333333%;
+        z-index: 1;
+    }
+}
+
 .team {
+    position: relative;
+    z-index: 10;
     line-height: 2em;
-    width: 33%;
+    width: 33.3333333%;
     @include box-sizing(border-box);
-    padding: 0 2em;
-    float: left;
-    margin-bottom: 4em;
+    
+    //float: left;
+
+    //width: 33%;
+    display: inline-block;
+    vertical-align: top;
+
     overflow: hidden;
     text-align: center;
+    padding: 2em;
 
-    &:nth-child(3n+1) {
-        clear: both;
-    }
+    border-top: 1px solid #e9e9e9;
+
+    // &:nth-child(3n+1) {
+    //     clear: both;
+    // }
 
     @media screen and (max-width: 1000px) {
         width: 50%;
@@ -53,14 +79,7 @@
     }
 }
 
-.team.show:after {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-}
-
-.team-name {
-    font-size: 1.125em;
-    
+.team-name {    
 
     /*
         If there's no image to display (determined by js)
@@ -85,7 +104,8 @@
 .team-logo {
     display: block;
     margin: 0 auto;
-    height: 100px;
+    height: 150px;
+    width: 150px;
     max-width: 100%;
 
     @media screen and (max-width: 600px) {

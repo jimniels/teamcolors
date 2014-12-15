@@ -1,6 +1,6 @@
 // Footer
 #footer {
-    margin: 3em 0 0;
+    margin: 0 0 0;
     text-align: center;
 
     p {
@@ -9,25 +9,5 @@
         padding: 1em;
         border-top: 1px solid #e9e9e9;
         color: #777;
-    }
-}
-#top {
-    border: 1px solid #08c;
-    padding: 1em 3em;
-    @include inline-block();
-    margin: 0 auto;
-    @include border-radius(5px);
-    @include transition(all .3s ease);
-    background: #08c;
-    color: white;
-
-    &:hover {
-        color: #08c;
-        background: white;
-        text-decoration: none;
-    }
-
-    span {
-        display: block;
     }
 }

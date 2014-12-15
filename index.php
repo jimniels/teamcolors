@@ -3,22 +3,12 @@
 $file = file_get_contents('team-data.json');
 $leagues = json_decode($file, true);
 
-// If the color is black or white,
-// give it a class for alternative styling
-function blackOrWhite($color) {
-    switch (strtolower($color)) {
-        case 'fff' :
-        case 'ffffff' :
-        case 'white' :
-            return 'color-white';
-            break;
-        case '000' :
-        case '000000' :
-        case 'black' :
-            return 'color-black';
-            break;
-    }
+function convertNameToID($name) {
+    $name = str_replace(" ","-",$name);
+    $name = strtolower($name);
+    return $name;
 }
+
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -28,10 +18,7 @@ function blackOrWhite($color) {
 
     <script src="js/modernizr.js"></script>
     <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <!--[if lte IE 8]>
-        <link rel="stylesheet" type="text/css" href="ie.css" />
-    <![endif]-->
+
     <style>
         @media print {
             .hex,
@@ -60,44 +47,45 @@ function blackOrWhite($color) {
 
 <body>
     <header id="header">
-        <p class="intro-arc"><a href="http://lab.arc90.com/">Arc90 Lab</a> + <a href="http://twitter.com/jimniels">@jimniels</a> present:</p>
-        <h1 class="intro-main"><strong>Team Colors</strong>Find and copy the HEX values of your favorite team&rsquo;s colors.<br>First, choose a league:</h1>
-        <img src="img/arrow.png" id="arrow" width="50" height="50" />
+        <p class="intro-arc"><a href="http://twitter.com/jimniels">@jimniels</a> + <a href="http://lab.arc90.com/">Arc90 Lab</a> present:</p>
+        <h1 class="intro-main"><strong>Team Colors:</strong> Find and copy the HEX values of your favorite team&rsquo;s colors.</h1>
     </header>
 
-    <nav role="navigation" id="nav">
-        <h2 class="league-name-active"><a href="#"></a><span>&#9660;</span></h2>
-        <ul class="drop-down hide">
+    <nav id="navigation">
+        <ul class="nav-leagues">
             <?php foreach ($leagues as $league => $teams) { ?>
-                <li>
-                    <a href="#<?= $league ?>" id="nav-<?= $league ?>" class="league-name"><?= $league ?></a>
+                <li id="nav-<?= $league ?>" class="nav-league">
+                    <a href="#<?= $league ?>" class="nav-league__name"><?= $league ?></a>
                 </li>
             <?php } ?>
         </ul>
+        <form class="search">
+            <input type="text" placeholder="Filter..." />
+        </form>
     </nav>
 
-
-    <section id="leagues">
+    <section id="content">
+        <ul class="leagues clearfix">
         <?php foreach ($leagues as $league => $teams) { ?>
 
-            <ul id="<?= $league ?>" class="league-content clearfix">
+            <li id="<?= $league ?>" class="league clearfix">
+                <h2 class="league__name"><?= $league ?></h2>
+                <ul class="teams">
 
                 <?php foreach($teams as $team => $colors) {
 
-                    $teamID = str_replace(" ","-",$team);
-                    $teamID = strtolower($teamID);
+                    $teamID = convertNameToId($team);
 
                     if($colors) {  ?>
 
-                        <li class="team" id="print-<?= $teamID ?>">
-                            <h3 id="<?= $teamID ?>" class="team-name" style="color: #<?= $colors[0] ?>"><?= $team ?></h3>
+                        <li class="team" id="<?= $teamID ?>" data-team="<?= $team ?>">
+                            <?php /*<img src="img/<?= $league . '/' . $teamID ?>.svg" class="team-logo"/> */?>
+                            <h3 id="<?= $teamID ?>" class="team__name"><?= $team ?></h3>
 
                             <ul class="colors">
                                 <?php foreach($colors as $x => $color) { ?>
 
-                                    <li style="background-color:#<?= $color ?>;" class="color <?= blackOrWhite($color) ?>">
-                                        <span class="hex">#<?= $color ?></span>
-                                    </li>
+                                    <li class="color">#<?= $color ?></li>
 
                                 <?php } ?>
                             </ul>
@@ -105,20 +93,21 @@ function blackOrWhite($color) {
 
                     <?php } //end if ?>
                 <?php } //end $teams foreach ?>
-
-            </ul>
+                </ul>
+            </li>
 
         <?php } //end $leagues foreach?>
+        </ul>
     </section>
 
     <footer id="footer">
-        <a href="#" id="top"><span>&#8593;</span>Back to the top</a>
         <p>Want to add a new team or league? Want to make a correction? <a href="https://github.com/arc90/teamcolors">Find the source code on Github &raquo;</a></p>
     </footer>
 
     <!-- Script includes -->
     <script src="js/jquery1.8.js"></script>
     <script src="js/js.js" type="text/javascript"></script>
+    <script src="js/loadcss.js"></script>
 
     <!-- Google Analytics -->
     <script type="text/javascript">

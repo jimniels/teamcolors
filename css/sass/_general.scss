@@ -1,10 +1,20 @@
 /*
     GENERAL STYLES
 */
+html {
+  box-sizing: border-box;
+}
+
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+
 body {
     width: 100%;
     margin: 0 auto;
-    font: 1em/1.3 'Droid Sans', Helvetica, Arial, sans-serif;
+    font: 1em/1.3 $font-family;
     color: #333;
 }
 
@@ -24,11 +34,6 @@ a:hover {
     clear: both;
 }
 
-#leagues {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 // responsive images
 img {
     max-width: 100%;
@@ -38,4 +43,27 @@ img {
   img {
     width: auto; /* for ie 8 */
   }
+}
+
+#top {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    z-index: 200;
+    @include inline-block();
+    @include border-radius(5px);
+    @include transition(all .33s ease);
+    background: #333;
+    color: white;
+    @include box-shadow(0 0 0 3px rgba(0,0,0,.1));
+    text-align: center;
+    font-weight: 700;
+
+    &:hover {
+        @include scale(1.1);
+        text-decoration: none;
+    }
 }

@@ -2,58 +2,78 @@
     NAVIGATION
     Handle styles for the main navigation element that lists the current league
 */
-#nav {
-    margin: 3em 0 5em;
-    text-align: center;
+#navigation {
+    background: $color-background;
+    padding-left: 2em;
     position: relative;
-    border-top: 1px solid #ccc\9; // IE 7 & 8 only
 
-    &:before {
-        content: "";
-        position: absolute;
-        top: -1px;
-        left: 0px;
-        height: 1px;
+    &.js-sticky {
+        position: fixed;
         width: 100%;
-        @include background-image(linear-gradient(left, white 0%, #ccc 25%, #ccc 75%, white 100%));
-        z-index: -1;
+        top: 0;
+        left: 0;
+        z-index: 200;
+        border-bottom: 1px solid $color-border;
     }
 }
 
-.league-name-active {
-    @include inline-block();
-    margin-top: -1.75em;
-    background: #08c;
-    @include background-image(linear-gradient(lighten(#08c, 15%), #08c));
-    border: 1px solid darken(#08c, 12%);
-    border-bottom-color: darken(#08c, 18%);
-    border-top-color: #08c;
-    @include border-radius(5px);
-    @include text-shadow(0 1px 2px darken(#08c, 25%));
-    @include box-shadow(0 1px 3px #aaa);
-    color: #fff;
-    z-index: 2;
-    position: relative;
+.nav-leagues {
+    overflow: scroll;
+    width: 80%;
+}
+
+.nav-league {
+    display: block;
+    float: left;
+    text-align: center;
+}
+
+.nav-league--active {
+    .nav-league__name {
+        border-bottom-color: $color-link;
+        color: $color-link;
+    }
+}
+
+.nav-league__name {
+    display: block;
+    padding: .5em 2em;
+    font-size: 1.25em;
+    color: #777;
+    border-bottom: 4px solid transparent;
 
     &:hover {
-        @include background-image(linear-gradient(lighten(#08c, 20%), lighten(#08c, 5%)));
-    }
-
-    a {
+        color: $color-link;
+        border-bottom-color: $color-link;
         text-decoration: none;
-        font-size: 2.5em;
-        font-weight: bold;
-        position: relative;
-        left: -5%;
-        color: #fff;
-        padding: .05em .825em 0;
-        display: block;
     }
+}
 
-    span {
-        position: absolute;
-        top: 34%;
-        right: 15%;
-        color: white;
+.js-active a {
+    font-weight: bold;
+    border-bottom-color: #333;
+    color: #333;
+
+    &:hover {
+        color: #333;
+        border-bottom-color: #333;
+    }
+}
+
+/*
+    SEARCH
+*/
+.search {
+    position: absolute;
+    width: 20%;
+    right: 1em;
+    top: 0;
+
+    input {
+        font-family: $font-family;
+        font-size: 1em;
+        width: 100%;
+        padding: .25em .5em;
+        border-radius: 3px;
     }
 }

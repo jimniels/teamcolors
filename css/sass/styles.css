@@ -1,0 +1,48 @@
+/**
+ * Table of Contents
+ *
+ * Variables
+ * @color-link      0088CC
+ * @color-border    e9e9e9
+ */
+
+/* ==========================================================================
+   General
+   ========================================================================== */
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    font: 1em/1.3 'Droid Sans', Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+a {
+    color: #0088CC;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+// Clearfix
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+// responsive images
+img {
+    max-width: 100%;
+    height: auto;
+}
+@media \0screen {
+  img {
+    width: auto; /* for ie 8 */
+  }
+}
+
+/* Sub-section comment block
+   ========================================================================== */
