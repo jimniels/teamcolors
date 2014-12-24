@@ -4,7 +4,7 @@
 */
 #navigation {
     background: $color-background;
-    padding-left: 2em;
+    padding: 0 2em;
     position: relative;
 
     &.js-sticky {
@@ -19,7 +19,7 @@
 
 .nav-leagues {
     overflow: scroll;
-    width: 80%;
+    width: 100%;
 }
 
 .nav-league {
@@ -38,7 +38,6 @@
 .nav-league__name {
     display: block;
     padding: .5em 2em;
-    font-size: 1.25em;
     color: #777;
     border-bottom: 4px solid transparent;
 
@@ -73,7 +72,15 @@
         font-family: $font-family;
         font-size: 1em;
         width: 100%;
-        padding: .25em .5em;
+        padding: .35em .5em;
         border-radius: 3px;
+        border: 1px solid $color-border;
+    }
+
+    @media screen and (max-width: 900px) {
+        position: static;
+        width: 100%;
+        padding: .625em 0;
+        border-top: 1px solid $color-border;
     }
 }

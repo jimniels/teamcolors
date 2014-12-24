@@ -9,6 +9,28 @@ function convertNameToID($name) {
     return $name;
 }
 
+/**
+ * Convert HEX to RGB
+ * http://css-tricks.com/snippets/php/convert-hex-to-rgb/
+ */
+function hex2rgb( $colour ) {
+        if ( $colour[0] == '#' ) {
+                $colour = substr( $colour, 1 );
+        }
+        if ( strlen( $colour ) == 6 ) {
+                list( $r, $g, $b ) = array( $colour[0] . $colour[1], $colour[2] . $colour[3], $colour[4] . $colour[5] );
+        } elseif ( strlen( $colour ) == 3 ) {
+                list( $r, $g, $b ) = array( $colour[0] . $colour[0], $colour[1] . $colour[1], $colour[2] . $colour[2] );
+        } else {
+                return false;
+        }
+        $r = hexdec( $r );
+        $g = hexdec( $g );
+        $b = hexdec( $b );
+        //return array( 'red' => $r, 'green' => $g, 'blue' => $b );
+        return "rgb($r,$g,$b)";
+}
+
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -20,6 +42,9 @@ function convertNameToID($name) {
     <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
 
     <style>
+        .highlight {
+            background-color: yellow;
+        }
         @media print {
             .hex,
             .colors li {
@@ -48,7 +73,7 @@ function convertNameToID($name) {
 <body>
     <header id="header">
         <p class="intro-arc"><a href="http://twitter.com/jimniels">@jimniels</a> + <a href="http://lab.arc90.com/">Arc90 Lab</a> present:</p>
-        <h1 class="intro-main"><strong>Team Colors:</strong> Find and copy the HEX values of your favorite team&rsquo;s colors.</h1>
+        <h1 class="intro-main"><strong>Team Colors:</strong> Find and copy the color values of your favorite teams.</h1>
     </header>
 
     <nav id="navigation">
@@ -60,7 +85,7 @@ function convertNameToID($name) {
             <?php } ?>
         </ul>
         <form class="search">
-            <input type="text" placeholder="Filter..." />
+            <input type="text" placeholder="Filter by team name..." />
         </form>
     </nav>
 
@@ -70,7 +95,9 @@ function convertNameToID($name) {
 
             <li id="<?= $league ?>" class="league clearfix">
                 <h2 class="league__name"><?= $league ?></h2>
-                <ul class="teams">
+                <!-- Inline block spacing
+                     http://css-tricks.com/fighting-the-space-between-inline-block-elements/ -->
+                <ul class="teams"><!--
 
                 <?php foreach($teams as $team => $colors) {
 
@@ -78,22 +105,22 @@ function convertNameToID($name) {
 
                     if($colors) {  ?>
 
-                        <li class="team" id="<?= $teamID ?>" data-team="<?= $team ?>">
-                            <?php /*<img src="img/<?= $league . '/' . $teamID ?>.svg" class="team-logo"/> */?>
+                        --><li class="team" id="<?= $teamID ?>" data-team="<?= $team ?>" data-logo="img/<?= $league . '/' . $teamID ?>">
                             <h3 id="<?= $teamID ?>" class="team__name"><?= $team ?></h3>
 
                             <ul class="colors">
                                 <?php foreach($colors as $x => $color) { ?>
-
-                                    <li class="color">#<?= $color ?></li>
-
+                                    <li class="color" data-color="<?= $color ?>">
+                                        <span class="color__hex">#<?= $color ?></span>
+                                        <span class="color__rgb"><?= hex2rgb($color) ?></span>
+                                    </li>
                                 <?php } ?>
                             </ul>
-                        </li>
+                        </li><!--
 
                     <?php } //end if ?>
                 <?php } //end $teams foreach ?>
-                </ul>
+                --></ul>
             </li>
 
         <?php } //end $leagues foreach?>

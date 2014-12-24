@@ -31,7 +31,9 @@
     
     //float: left;
 
-    //width: 33%;
+    // Inline-block spacing
+    // http://css-tricks.com/fighting-the-space-between-inline-block-elements/
+    // HTML must remove unwanted space
     display: inline-block;
     vertical-align: top;
 
@@ -79,15 +81,11 @@
     }
 }
 
-.team-name {    
+.team__name { 
+    text-transform: uppercase;
+    letter-spacing: .0625em;
+    font-size: .825em;
 
-    /*
-        If there's no image to display (determined by js)
-        this class is for alignment
-    */
-    &.no-img {
-        margin-top: 100px; // height of .team-logo
-    }
 
     @media screen and (max-width: 600px) {
         float: right;
@@ -101,7 +99,7 @@
     
 }
 
-.team-logo {
+.team__logo {
     display: block;
     margin: 0 auto;
     height: 150px;
@@ -112,6 +110,5 @@
         max-width: 13%;
         height: 30px;
         float: left;
-    }
-    
+    }   
 }

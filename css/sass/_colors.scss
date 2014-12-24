@@ -31,4 +31,30 @@
     font-family: $font-family-monospace;
     color: #fff;
     @include text-shadow(0 1px 1px rgba(0,0,0,.4));
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+//
+//  HEX RGB Colors
+//  -----
+//  By default, the HEX color is shown
+//  If a class is specificed, show RGB
+.color__hex {
+    display: block;
+}
+
+.color__rgb {
+    display: none;
+}
+
+.leagues--rgb {
+    .color__hex {
+        display: none;
+    }
+    .color__rgb {
+        display: block;
+    }
 }

@@ -1,7 +1,7 @@
 {
     "NBA" : {
         "Atlanta Hawks" :           ["000080", "FF0000", "C0C0C0"],
-        "Boston Celtics" :          ["009E60", "000000", "EFE196"],
+        "Boston Celtics" :          ["009E60", "000000"],
         "Brooklyn Nets" :           ["000000"],
         "Charlotte Hornets" :       ["1D1160", "008CA8", "A1A1A4"],
         "Chicago Bulls" :           ["D4001F", "000000"],
@@ -12,8 +12,8 @@
         "Golden State Warriors" :   ["04529c", "FFCC33"],
         "Houston Rockets" :         ["CE1138", "CCCCCC", "000000"],
         "Indiana Pacers" :          ["092c57", "ffc322", "C0C0C0"],
-        "LA Clippers" :             ["EE2944", "146AA2"],
-        "LA Lakers" :               ["4A2583", "F5AF1B"],
+        "Los Angeles Clippers" :    ["EE2944", "146AA2"],
+        "Los Angeles Lakers" :      ["4A2583", "F5AF1B"],
         "Memphis Grizzlies" :       ["001F70", "7399C6", "BED4E9", "FDB927"],
         "Miami Heat" :              ["000000", "B62630", "FF9F00"],
         "Milwaukee Bucks" :         ["003614", "E32636", "C0C0C0"],

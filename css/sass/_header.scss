@@ -14,16 +14,14 @@
 }
 
 .intro-main {
-    font-size: 1.25em;
 
     strong {
-        font-size: 2em;
+        font-size: 2.65em;
         font-weight: bold;
         display: block; 
     }
-}
 
-#arrow {
-    position: relative;
-    right: -2em;
+    select {
+        font-size: 1em;
+    }
 }
