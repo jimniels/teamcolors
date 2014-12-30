@@ -86,6 +86,15 @@
     letter-spacing: .0625em;
     font-size: .825em;
 
+    // SVG support allows for logos on this element
+    // background-image set dynamically w/javascript
+    .svg & {
+        padding-top: 175px;
+        background-size: 175px;
+        background-repeat: no-repeat;
+        background-position: center 0;
+    }
+
 
     @media screen and (max-width: 600px) {
         float: right;
@@ -95,20 +104,5 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: pre;
-    }
-    
-}
-
-.team__logo {
-    display: block;
-    margin: 0 auto;
-    height: 150px;
-    width: 150px;
-    max-width: 100%;
-
-    @media screen and (max-width: 600px) {
-        max-width: 13%;
-        height: 30px;
-        float: left;
     }   
 }

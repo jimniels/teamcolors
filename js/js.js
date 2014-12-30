@@ -15,33 +15,38 @@ var TeamColors = {
         // Append the "Back to Top" link
         $('body').append('<a href="#" id="top">&#8593;</a>');
 
-        // Paint background-color for each color value
-        this.$leagues.find('.color').each(function(){
-            $this = $(this);
-            var color = $this.attr('data-color');
-            $this.css('background-color', '#' + color);
-        });
-
         // Setup HEX/RGB color toggling
         var $intro = $('.intro-main'),
             introText = $intro.html().replace('the color', 'the <select><option value="HEX">HEX</option><option value="RGB">RGB</option></select>');
         $intro.html(introText);
-        this.activeColorMode = 'HEX';
+        this.activeColorMode = 'HEX';            
 
+        // Paint background-color for each color value
+        this.$leagues.find('.color').each(function(){
+            $(this).css('background-color', '#' + $(this).attr('data-color'));
+        });
+
+        // Set logos as background images
+        // use double background image declaration for png fallback
+        // http://css-tricks.com/using-svg/
+        if($('html').hasClass('svg')){
+            this.$leagues.find('.team__name').each(function(){
+                var logoPath = $(this).attr('data-logo-path');
+                var vals = {
+                    'background-image': 'url(' + logoPath + '.png)',
+                    'background-image': 'url(' + logoPath + '.svg), none'
+                }
+                $(this).css(vals);
+            });
+        }
+       
         // Create an 'all' listing 
         // In both the nav and content areas
-        this.$leagues.find('.league').hide(); // Hide all leagues
-        var allTeamsHtml = '',
-            $teams = this.$leagues.find('.team');
-        for (var i = 0; i < $teams.length; i++) {
-            allTeamsHtml += $teams[i].outerHTML;
-        };
         // Sort content alphabetically in 'all' listing
-        $allTeams = $(allTeamsHtml);
+        $allTeams = this.$leagues.find('.team').clone();
         $allTeams.sort(function(a,b){
-            var an = a.getAttribute('data-team'),
-                bn = b.getAttribute('data-team');
-                
+            var an = a.getAttribute('data-team-id'),
+                bn = b.getAttribute('data-team-id');
             if(an > bn) {
                 return 1;
             }
@@ -50,7 +55,6 @@ var TeamColors = {
             }
             return 0;
         });
-
         // Append everything
         this.$leagues
             .find('li')
@@ -58,7 +62,7 @@ var TeamColors = {
             .clone()
             .attr('id', 'ALL')
             .prependTo(this.$leagues)
-            .show()
+            .css('display', 'block')
             .find('.teams')
             .html($allTeams);
         this.$leaguesNav
@@ -72,41 +76,20 @@ var TeamColors = {
             .text('All Leagues')
             .attr('href', '#ALL');
         this.activeLeague = 'ALL';
-
-        // Load logos
-        // Check if the .svg image exists,
-        // if it does not, load the .png
-        var svgSupport = false;
-        if($('html').hasClass('svg')) {
-            svgSupport = true;
-        }
-        this.$leagues.find('.team').each(function(){
-            var $this = $(this),
-                img = new Image();
-            img.alt = $this.attr('data-team');
-            img.className = "team__logo";
-            if( svgSupport ) {
-                img.src = $this.attr('data-logo') + '.svg'; // fires off loading of image
-            } else {
-                img.src = $this.attr('data-logo') + '.png'
-            }
-            $(img).prependTo($this);
-
-            // If the svg can't be found, load the png
-            img.onerror = function() {
-                img.src = $this.attr('data-logo') + '.png';
-                $(img).prependTo($this);
-            };
-            
-        });
     },
 };
 
 
-
-
 $(document).ready(function(){
-    
+
+    // Test for SVG support
+    // Used to test whether or not to display the team logo
+    // https://github.com/Modernizr/Modernizr/issues/687
+    // https://github.com/Modernizr/Modernizr/blob/master/feature-detects/svg/asimg.js    
+    if(document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1")) {
+        $('html').addClass('svg');
+    }
+
     // Initialize the page
     TeamColors.init();
 
@@ -146,11 +129,11 @@ $(document).ready(function(){
         
         // Find all teams within the currently active selection
         TeamColors.$leagues.find('#' + TeamColors.activeLeague + ' .team').each(function(){
-            var name = $(this).attr('data-team').toLowerCase();
+            var name = $(this).attr('data-team-id').toLowerCase();
             
             if(TeamColors.search.length == 0) {
                 $(this).show();
-                $(this).find('.team__name').html($(this).attr('data-team'));
+                $(this).find('.team__name').html($(this).attr('data-team-id'));
             }
             else if(name.indexOf(TeamColors.search) != -1) {
                 $(this).show();
@@ -167,7 +150,7 @@ $(document).ready(function(){
         TeamColors.activeColorMode = $(this).val();
     });
 
-    // Select color on click
+    // Select color value on click
     // http://stackoverflow.com/questions/6139107/programatically-select-text-in-a-contenteditable-html-element
     $('.color').on('click', function(){
         var el = $(this).find('.color__' + TeamColors.activeColorMode);

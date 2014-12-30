@@ -38,7 +38,10 @@ function hex2rgb( $colour ) {
     <title>Team Hex Codes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="js/modernizr.js"></script>
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
     <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
 
     <style>
@@ -105,8 +108,8 @@ function hex2rgb( $colour ) {
 
                     if($colors) {  ?>
 
-                        --><li class="team" id="<?= $teamID ?>" data-team="<?= $team ?>" data-logo="img/<?= $league . '/' . $teamID ?>">
-                            <h3 id="<?= $teamID ?>" class="team__name"><?= $team ?></h3>
+                        --><li class="team" id="<?= $teamID ?>" data-team-id="<?= $team ?>">
+                            <h3 id="<?= $teamID ?>" class="team__name" data-logo-path="img/<?= $league . '/' . $teamID ?>"><?= $team ?></h3>
 
                             <ul class="colors">
                                 <?php foreach($colors as $x => $color) { ?>
