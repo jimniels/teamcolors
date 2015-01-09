@@ -1,0 +1,31 @@
+//
+//
+//  Colors
+//  ==============================
+//  Displaying team colors and hex values
+//
+.colors {
+    @include respond-to(one-col) {
+        display: none;
+        margin-bottom: 2em;
+
+        .show & {
+            display: block;
+        }
+    }
+}
+
+.color {
+    margin: .25em 0;
+    border-radius: 3px;
+    padding: 1em .75em;
+    text-transform: uppercase;
+    border-radius: 3px;
+    font-family: $font-family-monospace;
+    color: #fff;
+    @include text-shadow(0 1px 1px rgba(0,0,0,.4));
+
+    &:hover {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,16 @@
+//
+//
+//  Footer
+//  ==============================
+//
+#footer {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    border-top: 1px solid $color-border;
+
+    p {
+        padding: 1em;    
+        color: $color-text;
+    }
+}
