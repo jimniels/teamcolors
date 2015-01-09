@@ -70,6 +70,11 @@ a {
         @include scale(1.1);
         text-decoration: none;
     }
+
+    @include respond-to(one-col) {
+        bottom: 1em;
+        right: 1em;
+    }
 }
 
 //

@@ -8,6 +8,7 @@ var TeamColors = {
     $teams: $('#content'),
     $navigation: $('#navigation'),
 
+    // Initialize the view
     init: function(){
 
         // Load the page's CSS
@@ -74,30 +75,40 @@ $(document).ready(function(){
     $('#navigation select').on('change', function(e){
         e.preventDefault();
 
-        // Clear the search box if it's filled
-        $('.search').val('');
-        TeamColors.search = '';
-        
-        if( TeamColors.activeLeague != $(this).val() ) {
-            
-            // Set the active league
-            TeamColors.activeLeague = $(this).val();
+        // Set the active league
+        TeamColors.activeLeague = $(this).val(); 
 
-            // Loop over each team and hide/show depending on league filter
-            TeamColors.$teams.find('.team').each(function(){
-                if( TeamColors.activeLeague == $(this).attr('data-league') ) {
-                    $(this).show();
-                } else if(TeamColors.activeLeague == 'all') {
-                    $(this).show();
-                } else {
-                    $(this).hide();
-                }
+        // If '.show' exists (expanded team view on mobile)
+        // Collapse the team by removing the class
+        if( $('.show').length > 0 ) {
+            $('.show').removeClass('show');
+        }       
+
+        // If the search field is not empty (user has a filtered selection)
+        // Reset the search field
+        if( $('.search').val() != '' ) {
+            $('.search').val('');  
+            TeamColors.search = '';
+
+            // Reset the team name 'highlight' for any teams that have it
+            TeamColors.$teams.find('.highlight').each(function(){
+                $(this).parent().html( $(this).parents('.team').attr('data-team-id') );
             });
-
-            // Trigger scroll for showing images
-            $(window).trigger('scroll');
-            
         }
+
+        // Loop over each team and hide/show depending on league filter
+        TeamColors.$teams.find('.team').each(function(){
+            if( TeamColors.activeLeague == $(this).attr('data-league') ) {
+                $(this).show();
+            } else if(TeamColors.activeLeague == 'all') {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+
+        // Trigger scroll for showing images
+        $(window).trigger('scroll');
     });
 
     // Search functions
@@ -117,7 +128,7 @@ $(document).ready(function(){
             }
             else if(name.indexOf(TeamColors.search) != -1) {
                 $(this).show();
-                searchHighlight($(this), name);
+                addSearchHighlight($(this), name);
             } else {
                 $(this).hide();
             }
@@ -149,20 +160,20 @@ $(document).ready(function(){
         sel.addRange(range);
     });
 
-    // Lazy load team logos
-    if($('html').hasClass('svg')){
-        $(".team__name").lazyload();
-    }
-
     // Show/hide blocks (only visible on mobile)
     $('.team').on('click', function(){
         $(this).toggleClass('show');
     });
+
+    // Lazy load team logos
+    if($('html').hasClass('svg')){
+        $(".team__name").lazyload();
+    }
 });
 
 
 
-function searchHighlight($el) {
+function addSearchHighlight($el) {
     var $teamName = $el.find('.team__name');
     var name = $teamName.text().toLowerCase();  
     var highlight = '<span class="highlight">' + TeamColors.search + '</span>';
