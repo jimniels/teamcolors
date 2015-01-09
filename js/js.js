@@ -1,11 +1,12 @@
 
 var TeamColors = {
-    activeLeague: '',
-    activeColorMode: '',
-    search: '',
 
-    $leagues: $('.leagues'),
-    $leaguesNav: $('.nav-leagues'),
+    // Set the defaults
+    activeLeague: 'all',
+    activeColorMode: 'hex',
+    search: '',
+    $teams: $('#content'),
+    $navigation: $('#navigation'),
 
     init: function(){
 
@@ -16,34 +17,20 @@ var TeamColors = {
         $('body').append('<a href="#" id="top">&#8593;</a>');
 
         // Setup HEX/RGB color toggling
-        var $intro = $('.intro-main'),
-            introText = $intro.html().replace('the color', 'the <select><option value="HEX">HEX</option><option value="RGB">RGB</option></select>');
+        var $intro = $('.intro-description'),
+            introText = $intro.html().replace('the HEX', 'the <select><option value="hex">HEX</option><option value="rgb">RGB</option></select>');
         $intro.html(introText);
-        this.activeColorMode = 'HEX';            
+        this.activeColorMode = 'hex';            
 
         // Paint background-color for each color value
-        this.$leagues.find('.color').each(function(){
-            $(this).css('background-color', '#' + $(this).attr('data-color'));
+        this.$teams.find('.color').each(function(){
+            $(this).css('background-color', $(this).attr('data-hex'));
         });
-
-        // Set logos as background images
-        // use double background image declaration for png fallback
-        // http://css-tricks.com/using-svg/
-        if($('html').hasClass('svg')){
-            this.$leagues.find('.team__name').each(function(){
-                var logoPath = $(this).attr('data-logo-path');
-                var vals = {
-                    'background-image': 'url(' + logoPath + '.png)',
-                    'background-image': 'url(' + logoPath + '.svg), none'
-                }
-                $(this).css(vals);
-            });
-        }
        
         // Create an 'all' listing 
         // In both the nav and content areas
         // Sort content alphabetically in 'all' listing
-        $allTeams = this.$leagues.find('.team').clone();
+        $allTeams = this.$teams.find('.team').clone();
         $allTeams.sort(function(a,b){
             var an = a.getAttribute('data-team-id'),
                 bn = b.getAttribute('data-team-id');
@@ -55,27 +42,17 @@ var TeamColors = {
             }
             return 0;
         });
-        // Append everything
-        this.$leagues
-            .find('li')
-            .first()
-            .clone()
-            .attr('id', 'ALL')
-            .prependTo(this.$leagues)
-            .css('display', 'block')
-            .find('.teams')
-            .html($allTeams);
-        this.$leaguesNav
-            .find('li')
-            .first()
-            .clone()
-            .attr('id', 'nav-ALL')
-            .addClass('nav-league--active')
-            .prependTo(this.$leaguesNav)
-            .find('.nav-league__name')
-            .text('All Leagues')
-            .attr('href', '#ALL');
-        this.activeLeague = 'ALL';
+        this.$teams.html($allTeams);
+
+        // Setup the navigation
+        // Append the search box and convert nav <ul> into <select>
+        var selectHtml = '<select><option value="all">All Leagues</option>';
+        this.$navigation.find('a').each(function(){
+            selectHtml += '<option value="' + $(this).attr('href').substr(1) + '">'+ $(this).text() +'</option>';
+        });
+        selectHtml += '</select>';
+        this.$navigation.find('ul').remove();
+        this.$navigation.prepend(selectHtml + '<input type="text" placeholder="Filter by team name..." class="search"/>');
     },
 };
 
@@ -94,24 +71,21 @@ $(document).ready(function(){
     TeamColors.init();
 
     // Navigation click handler
-    $('.nav-league__name').on('click', function(e){
+    $('#navigation select').on('change', function(e){
         e.preventDefault();
-        $this = $(this);
 
         // Clear the search box if it's filled
-        $('.search input').val('');
+        $('.search').val('');
+        TeamColors.search = '';
+        
+        if( TeamColors.activeLeague != $(this).val() ) {
+            
+            // Set the active league
+            TeamColors.activeLeague = $(this).val();
 
-        if( !$this.parent().hasClass('nav-league--active') ) {
-
-            var id = $this.attr('href');
-            TeamColors.activeLeague = id.substr(1);
-
-            // add/remove active class
-            $('.nav-league--active').removeClass('nav-league--active');
-            $this.parent().addClass('nav-league--active');
-
-            TeamColors.$leagues.find('.league').each(function(){
-                if( TeamColors.activeLeague == $(this).attr('id') ) {
+            // Loop over each team and hide/show depending on league filter
+            TeamColors.$teams.find('.team').each(function(){
+                if( TeamColors.activeLeague == $(this).attr('data-league') ) {
                     $(this).show();
                 } else if(TeamColors.activeLeague == 'all') {
                     $(this).show();
@@ -119,16 +93,22 @@ $(document).ready(function(){
                     $(this).hide();
                 }
             });
+
+            // Trigger scroll for showing images
+            $(window).trigger('scroll');
             
         }
     });
 
     // Search functions
-    $('.search input').on('keyup', function(){
+    $('.search').on('keyup', function(){
         TeamColors.search = $(this).val().toLowerCase();
         
-        // Find all teams within the currently active selection
-        TeamColors.$leagues.find('#' + TeamColors.activeLeague + ' .team').each(function(){
+        // Filter by team name within the currently active league selection
+        // Loop over them and show/hide
+        TeamColors.$teams.find('.team').filter(function(){
+            return TeamColors.activeLeague == 'all' || $(this).attr('data-league') == TeamColors.activeLeague;
+        }).each(function(){
             var name = $(this).attr('data-team-id').toLowerCase();
             
             if(TeamColors.search.length == 0) {
@@ -141,13 +121,19 @@ $(document).ready(function(){
             } else {
                 $(this).hide();
             }
-        }); 
+        });
+
+        // Trigger scroll which is bound to lazy load of images
+        $(window).trigger("scroll");
     });
 
     // Color type changer
-    $('.intro-main select').on('change', function(){
-        TeamColors.$leagues.toggleClass('leagues--rgb'); 
-        TeamColors.activeColorMode = $(this).val();
+    $('.intro-description select').on('change', function(){
+        TeamColors.activeColorMode = $(this).val().toLowerCase();
+        TeamColors.$teams.find('.color').each(function(){
+            console.log($(this));
+            $(this).html( $(this).attr('data-' + TeamColors.activeColorMode) );
+        });
     });
 
     // Select color value on click
@@ -161,6 +147,15 @@ $(document).ready(function(){
         var sel = window.getSelection();
         sel.removeAllRanges();
         sel.addRange(range);
+    });
+
+    // Lazy load team logos
+    if($('html').hasClass('svg')){
+        $(".team__name").lazyload();
+    }
+
+    $('.team').on('click', function(){
+        $(this).toggleClass('show');
     });
 });
 

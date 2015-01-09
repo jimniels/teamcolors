@@ -1,20 +1,13 @@
-/*
-    COLORS
-    Markup for displaying team colors and hex values
-    .color has optional, additional classes of:
-        '-white' or '-black'
-        Only if those are the colors being shown
-
-    Example:
-    <ul class="colors"
-        <li class="color">
-            <span class="hex">#000000
-*/
+//
+//
+//  Colors
+//  ==============================
+//  Displaying team colors and hex values
+//
 .colors {
-
-    @media screen and (max-width: 600px) {
+    @include respond-to(one-col) {
         display: none;
-        margin-top: 3em;
+        margin-bottom: 2em;
 
         .show & {
             display: block;
@@ -34,27 +27,5 @@
 
     &:hover {
         cursor: pointer;
-    }
-}
-
-//
-//  HEX RGB Colors
-//  -----
-//  By default, the HEX color is shown
-//  If a class is specificed, show RGB
-.color__hex {
-    display: block;
-}
-
-.color__rgb {
-    display: none;
-}
-
-.leagues--rgb {
-    .color__hex {
-        display: none;
-    }
-    .color__rgb {
-        display: block;
     }
 }

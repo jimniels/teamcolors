@@ -1,19 +1,63 @@
+//
+//
+//  Header
+//  ==============================
+//
 #header {
-    font-size: 1.25em;
-    padding: 3em 2em 2em;
+    position: relative;
+    padding: em(40);
     background: $color-background;
 
-    @media screen and (max-width: 600px) {
-        margin-top: 2em;
+    @include respond-to(one-col) {
+        padding: em(30);
+        padding-bottom: em(75);
+    }
+
+    .svg & {
+        &:before {
+            content: '';
+            position: absolute;
+            right: em(20);
+            top: em(50);
+            width: 300px;
+            height: 70px;
+            background-repeat: no-repeat;
+            background-size: 70px;
+            @include opacity(.25);
+            @include filter(grayscale(1));
+
+            background-image:
+                url('../img/leagues/nba.svg'), 
+                url('../img/leagues/nfl.svg'),
+                url('../img/leagues/nhl.svg'),
+                url('../img/leagues/mlb.svg'),
+                url('../img/leagues/mls.svg');
+            background-position:
+                100% center, 
+                80% center, 
+                56% center, 
+                29% center, 
+                0% center;
+            @include respond-to(two-col) {
+                background-size: 60px
+            }
+            @include respond-to(one-col) {
+                //background-size: 50px;
+                right: initial;
+                top: initial;
+                left: em(20);
+                bottom: 0;
+            }
+        }
     }
 }
 
-.intro-arc {
+.intro-authors {
     color: #aaa;
     font-size: .825em;
 }
 
-.intro-main {
+.intro-description {
 
     strong {
         font-size: 2.65em;
