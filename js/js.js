@@ -154,6 +154,7 @@ $(document).ready(function(){
         $(".team__name").lazyload();
     }
 
+    // Show/hide blocks (only visible on mobile)
     $('.team').on('click', function(){
         $(this).toggleClass('show');
     });

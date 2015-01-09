@@ -1,33 +1,34 @@
 # Team Colors
-[Team Colors](http://teamcolors.arc90.com/) is a reference of HEX values for the brand colors of major league sporting teams. 
+
+[Team Colors](http://teamcolors.arc90.com/) is a reference of HEX & RGB color values of major league sporting teams. 
 
 
 ## Technical Overview
-PHP is used to parse and load the HTML markup. Javascript is used to load vector versions of the team logos (if SVG is supported by the browser).
+
+PHP is used to parse and load the basic HTML markup. Javascript is used to load styles and vector versions of the team logos (if SVG is supported by the browser).
 
 
 ## Making Changes
+
 Team Colors data is rendered from the `team-data.json` file. Any changes to the data of the page can be done from that file. Teams are sorted according to their respective leagues. Leagues and league navigation controls are all rendered from this single `.json` file.
 
 ### Edit Team Color or Name
-If you want to edit a team's name or color(s), find the team's entry in `team-data.json`.
+
+1. Find the team's entry in `team-data.json` 
+2. Edit it
 
 ### Adding a Team
-If you want to add a team, add the team name and colors in `team-data.json`. Then, add a .svg logo in the appropriate `img/` directory, with the team's name (as stated in `team-data.json`) in lowercase with hyphens in place of spaces.
 
-### Adding a New League
-Adding a league is relatively straight forward. Copy the model used for structuring data in `team-data.json`, add the appropriate logos, and you're done.
-
+1. Add the team name and colors in `team-data.json`
+2. Add an .svg logo in the `project-files/TeamLogos.sketch` file, with the team's name (as stated in `team-data.json`) in lowercase with hyphens in place of spaces
+3. Export the .svg file to the `img/` directory
 
 ## Dependencies
 
 ### Compass
+
 CSS is built and compiled using compass. Partials are in `css/sass/` and are compiled to stylesheets in `css/`.
 
-### Modernizer
-Specialized version of modernizer tests support for SVG only. If SVG is supported, a class of 'svg' is added to the body.
+### Sketch App
 
-This class is important. The main script will check to see if the body has a class of svg. If it does, the team logos (in .svg fomat) will be loaded. Otherwise, the team logos are not loaded.
-
-### Team Logos
-All team logos are in .svg format. See documentation on modernizer for more info.
+All team logos are laid out in the .sketch file. You can export them to their corresponding league in `img/`.
