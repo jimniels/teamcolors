@@ -52,7 +52,7 @@
                             ?>
                             -->
                             <li class="team" id="<?= $teamID ?>" data-team-id="<?= $team ?>" data-league="<?= strtolower($league) ?>">
-                                <h3 id="<?= $teamID ?>" class="team__name" data-logo-url="img/build/<?= $league . '/' . $teamID ?>"><?= $team ?></h3>
+                                <h3 id="<?= $teamID ?>" class="team__name" data-logo-url="img/build/<?= $league . '/' . $teamID ?>.svg"><?= $team ?></h3>
 
                                 <ul class="colors">
                                     <?php 
