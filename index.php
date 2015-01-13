@@ -80,7 +80,7 @@
     </ul>
 
     <footer id="footer">
-        <p>Want to add a new team or league? Want to make a correction? <a href="https://github.com/arc90/teamcolors">Find the source code on Github &raquo;</a></p>
+        <p>Want to add a new team or league? Want to make a correction? <a href="https://github.com/teamcolors/teamcolors.github.io">Find the source code on Github &raquo;</a></p>
     </footer>
 
     <!-- Script includes -->
