@@ -19,10 +19,10 @@
             position: absolute;
             right: em(20);
             top: em(50);
-            width: 300px;
-            height: 70px;
+            width: 320px;
+            height: 60px;
             background-repeat: no-repeat;
-            background-size: 70px;
+            background-size: 60px;
             @include opacity(.25);
             @include filter(grayscale(1));
 
@@ -31,18 +31,17 @@
                 image-url("leagues/nfl.svg"),
                 image-url("leagues/nhl.svg"),
                 image-url("leagues/mlb.svg"),
-                image-url("leagues/mls.svg");
+                image-url("leagues/mls.svg"),
+                image-url("leagues/epl.svg");
             background-position:
                 100% center, 
-                80% center, 
-                56% center, 
-                29% center, 
+                85% center, 
+                65% center, 
+                43% center, 
+                20% center, 
                 0% center;
-            @include respond-to(two-col) {
-                background-size: 60px
-            }
             @include respond-to(one-col) {
-                //background-size: 50px;
+                background-size: 50px;
                 right: initial;
                 top: initial;
                 left: em(20);

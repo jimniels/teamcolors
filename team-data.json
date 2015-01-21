@@ -150,5 +150,27 @@
         "Sporting Kansas City" :            ["A4BBD7", "0A2141", "787775"],        
         "Toronto FC" :                      ["D80016", "313F49", "A1AAAD"],
         "Vancouver Whitecaps FC" :          ["12264C", "85B7EA", "838383"]
+    },
+    "EPL": {
+        "Arsenal" :                         ["EF0107", "023474", "9C824A"],
+        "Aston Villa" :                     ["94BEE5", "7A003C", "FFE600"],
+        "Burnley" :                         ["8CCCE5", "53162F", "F9EC34"],
+        "Chelsea" :                         ["034694", "DBA111", "ED1C24"],
+        "Crystal Palace" :                  ["1B458F", "C4122E", "A7A5A6"],
+        "Everton" :                         ["274488"],
+        "Hull City" :                       ["F5A12D", "000000"],
+        "Leicester City" :                  ["FDBE11", "0053A0"],
+        "Liverpool" :                       ["00A398", "D00027", "FEF667"],
+        "Manchester City" :                 ["5CBFEB", "FFCE65"],
+        "Manchester United" :               ["DA020E", "FFE500", "000000"],
+        "Newcastle United" :                ["00B6F1", "BBBDBF", "231F20", "F0B83D"],
+        "Queens Park Rangers" :             ["005CAB"],
+        "Southampton" :                     ["ED1A3B", "211E1F", "FFC20E"],
+        "Stoke City" :                      ["E03A3E", "1B449C"],
+        "Sunderland" :                      ["EB172B", "A68A26", "211E1E"],
+        "Swansea City" :                    ["000000"],
+        "Tottenham Hotspur" :               ["001C58"],
+        "West Bromwich Albion" :            ["091453"],
+        "West Ham United" :                 ["60223B", "F7C240", "5299C6"]
     }
 }

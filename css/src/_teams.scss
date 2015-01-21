@@ -8,51 +8,46 @@
     background: #fff;
     min-height: 250px;
     
-    // No results filter message
-    &:before {
-        content: 'No results. Try a different team name.';
-        position: absolute;
-        top: 120px;
-        left: 4em;
-
-        @include respond-to(one-col) {
-            top: 1em;
-            left: 0;
-            width: 100%;
-            text-align: center;
-        }
-    } 
-
     // Border between columns
+    &:before,
     &:after {
         content: '';
         height: 100%;
         top: 0;
         position: absolute;
-        border-left: 1px solid $color-border;
-        border-right: 1px solid $color-border;
-        width: 33.3333333%;
-        left: 33.3333333%;
-        z-index: 10;
+        width: 1px;
+        background: $color-border;
+        z-index: $z-index-dividers;
+    }
+
+    &:before {
+        left: 33.33333333%;
 
         @include respond-to(two-col) {
-            width: 50%;
-            left: 0;
+            left: 50%;
         }
         
         @include respond-to(one-col) {
             display: none;
         }
     }
+
+    &:after {
+        left: 66.66666666%;
+
+        @include respond-to(two-col) {
+            display: none;
+        }
+    }
 }
 
 .team {
+    background: #fff;
     position: relative;
     z-index: 10;
     line-height: 2em;
     width: 33.3333333%;
     @include box-sizing(border-box);
-    background: #fff;
     overflow: hidden;
     text-align: center;
     padding: 2em;
@@ -88,6 +83,31 @@
 
         &.show:after {
             @include rotate(90deg);
+        }
+    }
+
+    // League background image
+    .svg & {
+        @each $league in $leagues {
+            &[data-league="#{$league}"]:before {
+                content: '';
+                width: 50px;
+                height: 50px;
+                background-size: 50px;
+                position: absolute;
+                top: 1em;
+                right: 1em;
+                @include opacity(.15);
+                @include filter(grayscale(1));
+                color: red;
+                background-image: image-url("leagues/#{$league}.svg");
+                background-repeat: none;
+                
+                // Don't show the league logos in the mobile view
+                @include respond-to(one-col) {
+                    display: none;
+                }
+            }
         }
     }
 }

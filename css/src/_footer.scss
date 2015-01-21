@@ -5,7 +5,7 @@
 //
 #footer {
     position: relative;
-    z-index: 10;
+    z-index: $z-index-footer;
     text-align: center;
     border-top: 1px solid $color-border;
 

@@ -56,7 +56,7 @@ a {
     position: fixed;
     bottom: 2em;
     right: 2em;
-    z-index: 200;
+    z-index: $z-index-back-to-top;
     @include inline-block();
     @include border-radius(5px);
     @include transition(all .33s ease);

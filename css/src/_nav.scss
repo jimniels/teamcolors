@@ -8,8 +8,22 @@
     border-bottom: 1px solid $color-border;
     border-top: 1px solid $color-border;
     top: 1px;
-    z-index: 5;
+    z-index: $z-index-nav;
     background: #fff;
+
+    // No results filter message
+    &:after {
+        content: 'No results.';
+        position: absolute;
+        top: 9em;
+        left: 3em;
+        color: $color-text-light;
+
+        @include respond-to(one-col) {
+            top: 11em;
+            left: 2em;
+        }
+    } 
 
     select {
         margin-left: em(40);

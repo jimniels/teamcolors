@@ -3,6 +3,8 @@
 //  Mixins & Variables
 //  ==============================
 //
+$leagues: nba, nfl, nhl, mlb, mls, epl;
+
 $font-size-base: 16;
 $font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
 $font-family-monospace: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
@@ -12,6 +14,11 @@ $color-background: #f7f7f7;
 $color-link: #08c;
 $color-text: #222;
 $color-text-light: #777;
+
+$z-index-back-to-top: 200;
+$z-index-dividers: 20;
+$z-index-footer: 10;
+$z-index-nav: 5;
 
 @function em($px, $base: $font-size-base) {
     @return ($px / $base) * 1em;
