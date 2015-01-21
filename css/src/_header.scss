@@ -54,6 +54,11 @@
 .intro-authors {
     color: #aaa;
     font-size: .825em;
+
+    // De-emphasize Arc90, as it's no longer a company
+    a + a {
+        color: inherit;
+    }
 }
 
 .intro-description {
