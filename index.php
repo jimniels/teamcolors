@@ -12,7 +12,7 @@
 <body>
     <header id="header">
         <p class="intro-authors"><a href="http://twitter.com/jimniels">@jimniels</a> + <a href="http://lab.arc90.com/">Arc90 Lab</a> present:</p>
-        <h1 class="intro-description"><strong>Team Colors:</strong> Find and copy the HEX color values from your favorite teams.</h1>
+        <h1 class="intro-description"><strong>Team Colors:</strong> Find and copy HEX color approximations from your favorite teams.</h1>
     </header>
 
     <nav id="navigation">
