@@ -32,3 +32,9 @@ CSS is built and compiled using compass. Partials are in `css/sass/` and are com
 ### Sketch App
 
 All team logos are laid out in the .sketch file. You can export them to their corresponding league in `img/`.
+
+## Official Color References
+
+### NBA
+
+- [Wizards](https://nbcprobasketballtalk.files.wordpress.com/2015/04/logo-wizards.jpg)
