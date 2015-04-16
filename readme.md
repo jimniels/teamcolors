@@ -37,4 +37,5 @@ All team logos are laid out in the .sketch file. You can export them to their co
 
 ### NBA
 
-- [Wizards](https://nbcprobasketballtalk.files.wordpress.com/2015/04/logo-wizards.jpg)
+NBA colors and logos are all official. See this [NBA Media Central document](http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/AD4C002C7D0F37A285257D660058EAED/$File/NBA%20Primary%20Composite_14-15PLAYOFFS.pdf?OpenElement) for reference (username & password: nbamedia)
+
