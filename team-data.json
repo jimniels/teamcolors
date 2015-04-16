@@ -1,15 +1,65 @@
 {
     "NBA" : {
-        "Atlanta Hawks" :                   ["000080", "FF0000", "C0C0C0"],
-        "Boston Celtics" :                  ["009E60", "000000"],
-        "Brooklyn Nets" :                   ["000000"],
-        "Charlotte Hornets" :               ["1D1160", "008CA8", "A1A1A4"],
-        "Chicago Bulls" :                   ["D4001F", "000000"],
-        "Cleveland Cavaliers" :             ["860038", "FDBB30", "002D62"],
-        "Dallas Mavericks" :                ["0b60AD", "072156", "A9A9A9"],
-        "Denver Nuggets" :                  ["4b90CD", "FDB827", "002D62"],
-        "Detroit Pistons" :                 ["00519A", "EB003C", "041e40"],
-        "Golden State Warriors" :           ["04529C", "FFCC33"],
+        "Atlanta Hawks" : {
+            "rgb"   :   ["225 58 62",       "0 43 92",          "190 192 194"],
+            "cmyk"  :   ["0 91 76 6",       "100 64 0 60",      "0 0 0 29"],
+            "pms"   :   ["186",             "289",              "Cool Gray 5"],
+            "src"   :   "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/78FD994AC08E4244852573780069B342/$File/Atlanta_Hawks_logosheet.pdf?OpenElement"
+        },                   
+        "Boston Celtics" : {
+            "rgb"   :    ["0 131 72",       "187 151 83",       "167 56 50",        "250 179 131",      "6 25 34"],
+            "cmyk"  :    ["100 0 91 27",    "30 40 80 0",       "40 95 100 0",      "0 35 50 0",        "30 0 0 100"],
+            "pms"   :    ["356",            "874",              "174",              "472",              "Black"],
+            "src"   :    "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/F9ADD038D0D8A5B7852573780069CFDF/$File/Boston_Celtics_logosheet.pdf?OpenElement"
+        },
+        "Brooklyn Nets" : {
+            "rgb"   :   ["6 25 34"],
+            "cmyk"  :   ["30 0 0 100"],
+            "pms"   :   ["Black"],
+            "src"   :   "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/7214A85B310C4C1185257378006CA649/$File/Brooklyn_Nets_logosheet.pdf?OpenElement"
+        },
+        "Charlotte Hornets" : {
+            "rgb"   :   ["29 17 96",        "0 140 168",        "161 161 164"],
+            "cmyk"  :   ["98 100 0 43",     "100 0 19 23",      "0 1 0 43"],
+            "pms"   :   ["275",             "3145",             "Cool Gray 8"],
+            "src"   :   "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/166BA9D2D7C8ECD085257378006A90C2/$File/Charlotte_Hornets_logosheet.pdf?OpenElement"
+        },
+        "Chicago Bulls" : {
+            "rgb"   :   ["206 17 65",       "6 25 34"],
+            "cmyk"  :   ["0 100 65 15",     "30 0 0 100"],
+            "pms"   :   ["200",             "Black"],
+            "src"   :   "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/B856911ABFB2D6B885257378006AAEC7/$File/Chicago_Bulls_logosheet.pdf?OpenElement"
+        },
+        "Cleveland Cavaliers" : {
+            "rgb"   :   ["134 0 56",        "253 187 48",       "0 45 98"],
+            "cmyk"  :   ["0 100 34 53",     "0 29 91 0",        "100 68 54 0"],
+            "pms"   :   ["209",             "1235",             "282"],
+            "src"   :   "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/DD22CB8938E612F985257378006AC505/$File/Cleveland_Cavaliers_logosheet.pdf?OpenElement"
+        },
+        "Dallas Mavericks" : {
+            "rgb"   :   ["0 125 197",       "196 206 211",      "6 25 34",          "32 56 91"],
+            "cmyk"  :   ["100 40 0 0",      "5 0 0 20",         "30 0 0 100",       "94 79 36 32"],
+            "pms"   :   ["2935",            "877",              "Black",            "289"],
+            "src"   :   "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/01F9C61CB988932185257378006AE28E/$File/Dallas_Mavericks_logosheet.pdf?OpenElement"
+        },
+        "Denver Nuggets" : {
+            "rgb"   :   ["77 144 205",      "253 185 39",       "15 88 108"],
+            "cmyk"  :   ["69 34 0 0",       "0 30 94 0",        "100 72 56 0"],
+            "pms"   :   ["279",             "123",              "282"],
+            "src"   :   "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/BAE5DA4C3FD415F985257378006AFFB6/$File/Denver_Nuggets_logosheet%5B08-09%5D.pdf?OpenElement"
+        },
+        "Detroit Pistons" : {
+            "rgb"   :   ["237 23 76",       "0 107 182",        "15 88 108"],
+            "cmyk"  :   ["0 100 65 0",      "100 56 0 0",       "100 72 0 56"],
+            "pms"   :   ["199",             "293",              "282"],
+            "src"   :   "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/5BC9936709E5CCFF85257378006B1933/$File/Detroit_Pistons_logosheet.pdf?OpenElement"
+        },
+        "Golden State Warriors" : {
+            "rgb"   :   [""],
+            "cmyk"  :   [""],
+            "pms"   :   [""],
+            "src"   :   ""
+        },
         "Houston Rockets" :                 ["CE1138", "CCCCCC", "000000"],
         "Indiana Pacers" :                  ["092C57", "FFC322", "C0C0C0"],
         "Los Angeles Clippers" :            ["EE2944", "146AA2"],

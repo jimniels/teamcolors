@@ -56,13 +56,32 @@
 
                                 <ul class="colors">
                                     <?php 
-                                        foreach($colors as $x => $color) { 
+                                        for ($i=0; $i < count($colors['rgb']); $i++) { 
+                                            // Get the RGB, HEX, CMYK, and PMS values
+                                            // Then turn them into user-facing strings
+                                            $rgb = explode(" ", $colors['rgb'][$i]);
+                                            $hex = rgb2hex($rgb[0], $rgb[1], $rgb[2]);
+                                            $cmyk = explode(" ", $colors['cmyk'][$i]);
+                                            $pms = $colors['pms'][$i];
+
+                                            // RGB - RGB(x,x,x)
+                                            $rgbStr = "RGB(" . $rgb[0] . "," . $rgb[1] . "," . $rgb[2] . ")";
+                                            // HEX - #045743
+                                            $hexStr = "#" . $hex;
+                                            // CMYK - CMYK(0,12,43,54)
+                                            $cmykStr = "CMYK(" . $cmyk[0] . "," . $cmyk[1] . "," . $cmyk[2] . "," . $cmyk[3] . ")";
+                                            // Pantone - PMS 254
+                                            $pmsStr = "PMS " . $colors['pms'][$i];
                                             ?>
-                                            <li class="color" data-hex="#<?= $color ?>" data-rgb="<?= hex2rgb($color) ?>">
-                                                #<?= $color ?>
+                                            <li class="color" 
+                                                data-hex="<?= $hexStr ?>" 
+                                                data-rgb="<?= $rgbStr ?>" 
+                                                data-cmyk="<?= $cmykStr ?>"
+                                                data-pms="<?= $pmsStr ?>">
+                                                <?= $hexStr ?>
                                             </li>
-                                            <?php 
-                                        } 
+                                            <?php
+                                        }
                                     ?>
                                 </ul>
                             </li>
@@ -137,4 +156,21 @@ function hex2rgb( $colour ) {
     $b = hexdec( $b );
     //return array( 'red' => $r, 'green' => $g, 'blue' => $b );
     return "rgb($r,$g,$b)";
+}
+
+function rgb2hex($r, $g=-1, $b=-1) {
+    if (is_array($r) && sizeof($r) == 3)
+        list($r, $g, $b) = $r;
+
+    $r = intval($r); $g = intval($g);
+    $b = intval($b);
+
+    $r = dechex($r<0?0:($r>255?255:$r));
+    $g = dechex($g<0?0:($g>255?255:$g));
+    $b = dechex($b<0?0:($b>255?255:$b));
+
+    $color = (strlen($r) < 2?'0':'').$r;
+    $color .= (strlen($g) < 2?'0':'').$g;
+    $color .= (strlen($b) < 2?'0':'').$b;
+    return $color;
 }

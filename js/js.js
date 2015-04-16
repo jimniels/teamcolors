@@ -19,7 +19,7 @@ var TeamColors = {
 
         // Setup HEX/RGB color toggling
         var $intro = $('.intro-description'),
-            introText = $intro.html().replace('copy HEX', 'copy <select><option value="hex">HEX</option><option value="rgb">RGB</option></select>');
+            introText = $intro.html().replace('copy HEX', 'copy <select><option value="hex">HEX</option><option value="rgb">RGB</option><option value="cmyk">CMYK</option><option value="pms">Pantone</option></select>');
         $intro.html(introText);
         this.activeColorMode = 'hex';            
 
