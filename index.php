@@ -45,49 +45,39 @@
                 <!-- Inline block spacing 
                      http://css-tricks.com/fighting-the-space-between-inline-block-elements/
                 <?php 
-                    foreach($teams as $team => $colors) {
+                    foreach($teams as $team => $teamInfo) {
                         $teamID = convertNameToId($team);
+                        $colors = $teamInfo['colors'];
+                        ?>
+                        -->
+                        <li class="team" 
+                            id="<?= $teamID ?>" 
+                            data-team-id="<?= $team ?>" 
+                            data-league="<?= strtolower($league) ?>">
 
-                        if($colors) {  
-                            ?>
-                            -->
-                            <li class="team" id="<?= $teamID ?>" data-team-id="<?= $team ?>" data-league="<?= strtolower($league) ?>">
-                                <h3 id="<?= $teamID ?>" class="team__name" data-logo-url="img/build/<?= strtolower($league) . '/' . $teamID ?>.svg"><?= $team ?></h3>
-
-                                <ul class="colors">
-                                    <?php 
-                                        for ($i=0; $i < count($colors['rgb']); $i++) { 
-                                            // Get the RGB, HEX, CMYK, and PMS values
-                                            // Then turn them into user-facing strings
-                                            $rgb = explode(" ", $colors['rgb'][$i]);
-                                            $hex = rgb2hex($rgb[0], $rgb[1], $rgb[2]);
-                                            $cmyk = explode(" ", $colors['cmyk'][$i]);
-                                            $pms = $colors['pms'][$i];
-
-                                            // RGB - RGB(x,x,x)
-                                            $rgbStr = "RGB(" . $rgb[0] . "," . $rgb[1] . "," . $rgb[2] . ")";
-                                            // HEX - #045743
-                                            $hexStr = "#" . $hex;
-                                            // CMYK - CMYK(0,12,43,54)
-                                            $cmykStr = "CMYK(" . $cmyk[0] . "," . $cmyk[1] . "," . $cmyk[2] . "," . $cmyk[3] . ")";
-                                            // Pantone - PMS 254
-                                            $pmsStr = "PMS " . $colors['pms'][$i];
-                                            ?>
-                                            <li class="color" 
-                                                data-hex="<?= $hexStr ?>" 
-                                                data-rgb="<?= $rgbStr ?>" 
-                                                data-cmyk="<?= $cmykStr ?>"
-                                                data-pms="<?= $pmsStr ?>">
-                                                <?= $hexStr ?>
-                                            </li>
-                                            <?php
-                                        }
-                                    ?>
-                                </ul>
-                            </li>
-                            <!--
-                            <?php 
-                        }
+                            <h3 id="<?= $teamID ?>" 
+                                class="team__name" 
+                                data-logo-url="img/build/<?= strtolower($league) . '/' . $teamID ?>.svg">
+                                    <?= $team ?>
+                            </h3>
+                            <ul class="colors">
+                                <?php 
+                                    foreach ($colors as $index => $color) {
+                                        ?>
+                                        <li class="color" 
+                                            data-hex="<?= outputColor('hex', $color) ?>" 
+                                            data-rgb="<?= outputColor('rgb', $color)?>" 
+                                            data-cmyk="<?= outputColor('cmyk', $color) ?>"
+                                            data-pms="<?= outputColor('pms', $color) ?>">
+                                            <?= outputColor('hex', $color) ?>
+                                        </li>
+                                        <?php
+                                    }
+                                ?>
+                            </ul>
+                        </li>
+                        <!--
+                        <?php 
                     }
                 ?>
                 end inline block spacing -->
@@ -125,6 +115,32 @@
 
 <?php
 
+function outputColor($type, $color) {
+    if($color[$type]) {
+        switch($type) {
+            case 'rgb':
+                return 'RGB(' . str_replace(' ', ',', $color[$type]) . ')';
+            case 'cmyk':
+                return 'CMYK(' . str_replace(' ', ',', $color[$type]) . ')';
+            case 'hex':
+                return '#' . $color[$type];
+            case 'pms':
+                return 'PMS ' . $color[$type];
+            default:
+                return $color[$type];
+        }
+    } else {
+        // If HEX doesn't exist but RGB does
+        // Take the RGB and convert it to HEX
+        if($type == 'hex' && $color['rgb']) {
+            $rgb = explode(' ', $color['rgb']);
+            return '#' . rgb2hex($rgb[0], $rgb[1], $rgb[2]);
+        } else {
+            return '';
+        }
+    }
+}
+
 /**
  * Convert Name to ID
  * Takes team names like "Atlanta Hawks"
@@ -137,30 +153,13 @@ function convertNameToID($name) {
 }
 
 /**
- * Convert HEX to RGB
- * http://css-tricks.com/snippets/php/convert-hex-to-rgb/
+ * Convert RGB to HEX
+ * 
  */
-function hex2rgb( $colour ) {
-    if ( $colour[0] == '#' ) {
-            $colour = substr( $colour, 1 );
-    }
-    if ( strlen( $colour ) == 6 ) {
-            list( $r, $g, $b ) = array( $colour[0] . $colour[1], $colour[2] . $colour[3], $colour[4] . $colour[5] );
-    } elseif ( strlen( $colour ) == 3 ) {
-            list( $r, $g, $b ) = array( $colour[0] . $colour[0], $colour[1] . $colour[1], $colour[2] . $colour[2] );
-    } else {
-            return false;
-    }
-    $r = hexdec( $r );
-    $g = hexdec( $g );
-    $b = hexdec( $b );
-    //return array( 'red' => $r, 'green' => $g, 'blue' => $b );
-    return "rgb($r,$g,$b)";
-}
-
 function rgb2hex($r, $g=-1, $b=-1) {
-    if (is_array($r) && sizeof($r) == 3)
+    if (is_array($r) && sizeof($r) == 3) {
         list($r, $g, $b) = $r;
+    }
 
     $r = intval($r); $g = intval($g);
     $b = intval($b);

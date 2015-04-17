@@ -1,65 +1,187 @@
 {
     "NBA" : {
         "Atlanta Hawks" : {
-            "rgb"   :   ["225 58 62",       "0 43 92",          "190 192 194"],
-            "cmyk"  :   ["0 91 76 6",       "100 64 0 60",      "0 0 0 29"],
-            "pms"   :   ["186",             "289",              "Cool Gray 5"],
-            "src"   :   "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/78FD994AC08E4244852573780069B342/$File/Atlanta_Hawks_logosheet.pdf?OpenElement"
+            "colors" : [
+                {
+                    "rgb"   :   "225 58 62",
+                    "cmyk"  :   "0 91 76 6",
+                    "pms"   :   "186"
+                },
+                {
+                    "rgb"   :   "0 43 92",
+                    "cmyk"  :   "100 64 0 60",
+                    "pms"   :   "289"
+                },
+                {
+                    "rgb"   :   "190 192 194",
+                    "cmyk"  :   "0 0 0 29",
+                    "pms"   :   "Cool Gray 5"
+                }
+            ],
+            "src" : "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/78FD994AC08E4244852573780069B342/$File/Atlanta_Hawks_logosheet.pdf?OpenElement"
         },                   
         "Boston Celtics" : {
-            "rgb"   :    ["0 131 72",       "187 151 83",       "167 56 50",        "250 179 131",      "6 25 34"],
-            "cmyk"  :    ["100 0 91 27",    "30 40 80 0",       "40 95 100 0",      "0 35 50 0",        "30 0 0 100"],
-            "pms"   :    ["356",            "874",              "174",              "472",              "Black"],
-            "src"   :    "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/F9ADD038D0D8A5B7852573780069CFDF/$File/Boston_Celtics_logosheet.pdf?OpenElement"
+            "colors" : [
+                {
+                    "rgb"   :   "0 131 72",
+                    "cmyk"  :   "100 0 91 27",
+                    "pms"   :   "356"
+                },
+                {
+                    "rgb"   :   "187 151 83",
+                    "cmyk"  :   "30 40 80 0",
+                    "pms"   :   "874"
+                },
+                {
+                    "rgb"   :   "167 56 50",
+                    "cmyk"  :   "40 95 100 0",
+                    "pms"   :   "174"
+                },
+                {
+                    "rgb"   :   "250 179 131",
+                    "cmyk"  :   "0 35 50 0",
+                    "pms"   :   "472"
+                },
+                {
+                    "rgb"   :   "6 25 34",
+                    "cmyk"  :   "30 0 0 100",
+                    "pms"   :   "Black"
+                }
+            ],
+            "src" : "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/F9ADD038D0D8A5B7852573780069CFDF/$File/Boston_Celtics_logosheet.pdf?OpenElement"
         },
         "Brooklyn Nets" : {
-            "rgb"   :   ["6 25 34"],
-            "cmyk"  :   ["30 0 0 100"],
-            "pms"   :   ["Black"],
-            "src"   :   "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/7214A85B310C4C1185257378006CA649/$File/Brooklyn_Nets_logosheet.pdf?OpenElement"
+            "colors" : [
+                {
+                    "rgb"   :   "6 25 34",
+                    "cmyk"  :   "30 0 0 100",
+                    "pms"   :   "Black"
+                }
+            ],
+            "src" : "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/7214A85B310C4C1185257378006CA649/$File/Brooklyn_Nets_logosheet.pdf?OpenElement"
         },
         "Charlotte Hornets" : {
-            "rgb"   :   ["29 17 96",        "0 140 168",        "161 161 164"],
-            "cmyk"  :   ["98 100 0 43",     "100 0 19 23",      "0 1 0 43"],
-            "pms"   :   ["275",             "3145",             "Cool Gray 8"],
-            "src"   :   "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/166BA9D2D7C8ECD085257378006A90C2/$File/Charlotte_Hornets_logosheet.pdf?OpenElement"
+            "colors" : [
+                {
+                    "rgb"   :   "29 17 96",
+                    "cmyk"  :   "98 100 0 43",
+                    "pms"   :   "275"
+                },
+                {
+                    "rgb"   :   "0 140 168",
+                    "cmyk"  :   "100 0 19 23",
+                    "pms"   :   "3145"
+                },
+                {
+                    "rgb"   :   "161 161 164",
+                    "cmyk"  :   "0 1 0 43",
+                    "pms"   :   "Cool Gray 8"
+                }
+            ],
+            "src" : "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/166BA9D2D7C8ECD085257378006A90C2/$File/Charlotte_Hornets_logosheet.pdf?OpenElement"
         },
         "Chicago Bulls" : {
-            "rgb"   :   ["206 17 65",       "6 25 34"],
-            "cmyk"  :   ["0 100 65 15",     "30 0 0 100"],
-            "pms"   :   ["200",             "Black"],
-            "src"   :   "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/B856911ABFB2D6B885257378006AAEC7/$File/Chicago_Bulls_logosheet.pdf?OpenElement"
+            "colors" : [
+                {
+                    "rgb"   :   "206 17 65",
+                    "cmyk"  :   "0 100 65 15",
+                    "pms"   :   "200"
+                },
+                {
+                    "rgb"   :   "6 25 34",
+                    "cmyk"  :   "30 0 0 100",
+                    "pms"   :   "Black"
+                }
+            ],
+            "src" : "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/B856911ABFB2D6B885257378006AAEC7/$File/Chicago_Bulls_logosheet.pdf?OpenElement"
         },
         "Cleveland Cavaliers" : {
-            "rgb"   :   ["134 0 56",        "253 187 48",       "0 45 98"],
-            "cmyk"  :   ["0 100 34 53",     "0 29 91 0",        "100 68 54 0"],
-            "pms"   :   ["209",             "1235",             "282"],
-            "src"   :   "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/DD22CB8938E612F985257378006AC505/$File/Cleveland_Cavaliers_logosheet.pdf?OpenElement"
+            "colors" : [
+                {
+                    "rgb"   :   "134 0 56",
+                    "cmyk"  :   "0 100 34 53",
+                    "pms"   :   "209"
+                },
+                {
+                    "rgb"   :   "253 187 48",
+                    "cmyk"  :   "0 29 91 0",
+                    "pms"   :   "1235"
+                },
+                {
+                    "rgb"   :   "0 45 98",
+                    "cmyk"  :   "100 68 54 0",
+                    "pms"   :   "282"
+                }
+            ],
+            "src" : "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/DD22CB8938E612F985257378006AC505/$File/Cleveland_Cavaliers_logosheet.pdf?OpenElement"
         },
         "Dallas Mavericks" : {
-            "rgb"   :   ["0 125 197",       "196 206 211",      "6 25 34",          "32 56 91"],
-            "cmyk"  :   ["100 40 0 0",      "5 0 0 20",         "30 0 0 100",       "94 79 36 32"],
-            "pms"   :   ["2935",            "877",              "Black",            "289"],
-            "src"   :   "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/01F9C61CB988932185257378006AE28E/$File/Dallas_Mavericks_logosheet.pdf?OpenElement"
+            "colors" : [
+                {
+                    "rgb"   :   "0 125 197",
+                    "cmyk"  :   "100 40 0 0",
+                    "pms"   :   "2935"
+                },
+                {
+                    "rgb"   :   "196 206 211",
+                    "cmyk"  :   "5 0 0 20",
+                    "pms"   :   "877"
+                },
+                {
+                    "rgb"   :   "6 25 34",
+                    "cmyk"  :   "30 0 0 100",
+                    "pms"   :   "Black"
+                },
+                {
+                    "rgb"   :   "32 56 91",
+                    "cmyk"  :   "94 79 36 32",
+                    "pms"   :   "289"
+                }
+            ],
+            "src" : "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/01F9C61CB988932185257378006AE28E/$File/Dallas_Mavericks_logosheet.pdf?OpenElement"
         },
         "Denver Nuggets" : {
-            "rgb"   :   ["77 144 205",      "253 185 39",       "15 88 108"],
-            "cmyk"  :   ["69 34 0 0",       "0 30 94 0",        "100 72 56 0"],
-            "pms"   :   ["279",             "123",              "282"],
-            "src"   :   "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/BAE5DA4C3FD415F985257378006AFFB6/$File/Denver_Nuggets_logosheet%5B08-09%5D.pdf?OpenElement"
+            "colors" : [
+                { 
+                    "rgb"   :   "77 144 205",   
+                    "cmyk"  :   "69 34 0 0",       
+                    "pms"   :   "279" 
+                },
+                {   
+                    "rgb"   :   "253 185 39",   
+                    "cmyk"  :   "0 30 94 0",       
+                    "pms"   :   "123" 
+                },
+                { 
+                    "rgb"   :   "15 88 108",    
+                    "cmyk"  :   "100 72 56 0",     
+                    "pms"   :   "282" 
+                }
+            ],
+            "src" : "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/BAE5DA4C3FD415F985257378006AFFB6/$File/Denver_Nuggets_logosheet%5B08-09%5D.pdf?OpenElement"
         },
         "Detroit Pistons" : {
-            "rgb"   :   ["237 23 76",       "0 107 182",        "15 88 108"],
-            "cmyk"  :   ["0 100 65 0",      "100 56 0 0",       "100 72 0 56"],
-            "pms"   :   ["199",             "293",              "282"],
-            "src"   :   "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/5BC9936709E5CCFF85257378006B1933/$File/Detroit_Pistons_logosheet.pdf?OpenElement"
+            "colors": [
+                { 
+                    "rgb"   :   "237 23 76",   
+                    "cmyk"  :   "0 100 65 0",       
+                    "pms"   :   "199" 
+                },
+                { 
+                    "rgb"   :   "0 107 182",   
+                    "cmyk"  :   "100 56 0 0",       
+                    "pms"   :   "293" 
+                },
+                { 
+                    "rgb"   :   "15 88 108",   
+                    "cmyk"  :   "100 72 0 56",      
+                    "pms"   :   "282" 
+                }
+            ],
+            "src": "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/5BC9936709E5CCFF85257378006B1933/$File/Detroit_Pistons_logosheet.pdf?OpenElement"
         },
-        "Golden State Warriors" : {
-            "rgb"   :   [""],
-            "cmyk"  :   [""],
-            "pms"   :   [""],
-            "src"   :   ""
-        },
+
+        "Golden State Warriors" : {},
         "Houston Rockets" :                 ["CE1138", "CCCCCC", "000000"],
         "Indiana Pacers" :                  ["092C57", "FFC322", "C0C0C0"],
         "Los Angeles Clippers" :            ["EE2944", "146AA2"],
@@ -84,12 +206,94 @@
     "NFL" : {
         "Arizona Cardinals" :               ["870619", "000000"],
         "Atlanta Falcons" :                 ["BD0D18", "000000", "DCE0E5"],
-        "Baltimore Ravens" :                ["280353", "000000", "D0B240"],
-        "Buffalo Bills" :                   ["00338D", "C60C30"],
+        "Baltimore Ravens" : {
+            "colors" : [
+                {
+                    "hex"   :   "241773",
+                    "rgb"   :   "26 25 95",
+                    "cmyk"  :   "100 100 0 5",
+                    "pms"   :   "273 C"
+                },
+                {
+                    "hex"   :   "000000",
+                    "rgb"   :   "0 0 0",
+                    "cmyk"  :   "70 50 50 100",
+                    "pms"   :   "Process Black C"
+                },
+                {
+                    "hex"   :   "9E7C0C",
+                    "rgb"   :   "187 147 52",
+                    "cmyk"  :   "0 20 80 20",
+                    "pms"   :   "8660 C Metallic"
+                },
+                {
+                    "hex"   :   "C60C30",
+                    "rgb"   :   "213 10 10",
+                    "cmyk"  :   "10 100 100 0",
+                    "pms"   :   "186 C"
+                }
+            ],
+            "src" : "http://www.nflmedia.com/afc_north.zip"
+        },
+        "Buffalo Bills" : {
+            "colors" : [
+                {
+                    "hex"   :   "00338D",
+                    "rgb"   :   "12 46 130",
+                    "cmyk"  :   "100 60 0 20",
+                    "pms"   :   "287 C"
+                },
+                {
+                    "hex"   :   "C60C30",
+                    "rgb"   :   "213 10 10",
+                    "cmyk"  :   "10 100 100 0",
+                    "pms"   :   "186 C"
+                }
+            ],
+            "src" : "http://www.nflmedia.com/afc_east.zip"
+        },
         "Carolina Panthers" :               ["000000", "0088CE", "A5ACAF"],
         "Chicago Bears" :                   ["03202F", "DD4814"],
-        "Cincinnati Bengals" :              ["000000", "FB4F14"],
-        "Cleveland Browns" :                ["26201E", "E34912"],
+        "Cincinnati Bengals" : {
+            "colors" : [
+                {
+                    "hex"   :   "000000",
+                    "rgb"   :   "0 0 0",
+                    "cmyk"  :   "70 50 50 100",
+                    "pms"   :   "Process Black C"
+                },
+                {
+                    "hex"   :   "FB4F14",
+                    "rgb"   :   "211 47 30",
+                    "cmyk"  :   "0 85 100 0",
+                    "pms"   :   "1655 C"
+                }
+            ],
+            "src" : "http://www.nflmedia.com/afc_north.zip"
+        },
+        "Cleveland Browns" : {
+            "colors" : [
+                {
+                    "hex"   :   "FB4F14",
+                    "rgb"   :   "211 47 30",
+                    "cmyk"  :   "0 75 100 0",
+                    "pms"   :   "1655 C"
+                },
+                {
+                    "hex"   :   "22150C",
+                    "rgb"   :   "34 21 12",
+                    "cmyk"  :   "1 33 85 94",
+                    "pms"   :   "NFL Cleveland Browns"
+                },
+                {
+                    "hex"   :   "A5ACAF",
+                    "rgb"   :   "155 161 162",
+                    "cmyk"  :   "5 0 0 30",
+                    "pms"   :   "429 C"
+                }
+            ],
+            "src" : "http://www.nflmedia.com/afc_north.zip"
+        },
         "Dallas Cowboys" :                  ["002244", "8C8B8A"],
         "Denver Broncos" :                  ["FB4F14", "002244"],
         "Detroit Lions" :                   ["006DB0", "C5C7CF", "000000"],
@@ -98,15 +302,103 @@
         "Indianapolis Colts" :              ["003B7B"],
         "Jacksonville Jaguars" :            ["000000", "D0B239", "007198"],
         "Kansas City Chiefs" :              ["B20032", "F2C800"],
-        "Miami Dolphins" :                  ["008d97", "015679", "F5811F"],
+        "Miami Dolphins" : {
+            "colors" : [
+                {
+                    "hex"   :   "008E97",
+                    "rgb"   :   "0 142 151",
+                    "cmyk"  :   "100 21 42 2",
+                    "pms"   :   "321 C"
+                },
+                {
+                    "hex"   :   "F58220",
+                    "rgb"   :   "245 130 32",
+                    "cmyk"  :   "0 60 100 0",
+                    "pms"   :   "151 C"
+                },
+                {
+                    "hex"   :   "005778",
+                    "rgb"   :   "0 87 120",
+                    "cmyk"  :   "100 61 35 15",
+                    "pms"   :   "7701 C"
+                }
+            ],
+            "src" : "http://www.nflmedia.com/afc_east.zip"
+        },
         "Minnesota Vikings" :               ["4F2682", "FFC52F"],
-        "New England Patriots" :            ["0D254C", "D6D6D6", "C80815"],
+        "New England Patriots" : {
+            "colors" : [
+                {
+                    "hex"   :   "002244",
+                    "rgb"   :   "0 21 50",
+                    "cmyk"  :   "100 65 0 60",
+                    "pms"   :   "289 C"
+                },
+                {
+                    "hex"   :   "C60C30",
+                    "rgb"   :   "213 10 10",
+                    "cmyk"  :   "10 100 100 0",
+                    "pms"   :   "186 C"
+                },
+                {
+                    "hex"   :   "B0B7BC",
+                    "rgb"   :   "176 183 188",
+                    "cmyk"  :   "3 0 0 32",
+                    "pms"   :   "429 C"
+                }
+            ],
+            "src" : "http://www.nflmedia.com/afc_east.zip"
+        },
         "New Orleans Saints" :              ["D2B887", "000000"],
         "New York Giants" :                 ["192F6B", "CA001A", "808080"],
-        "New York Jets" :                   ["0C371D"],
+        "New York Jets" : {
+            "colors" : [
+                {
+                    "hex"   :   "203731",
+                    "rgb"   :   "28 45 37",
+                    "cmyk"  :   "70 40 60 60",
+                    "pms"   :   "5535 C"
+                }
+            ],
+            "src" : "http://www.nflmedia.com/afc_east.zip"
+        },
         "Oakland Raiders" :                 ["C4C8CB", "000000"],
         "Philadelphia Eagles" :             ["003B48", "000000", "708090", "C0C0C0"],
-        "Pittsburgh Steelers" :             ["000000", "F2C800"],
+        "Pittsburgh Steelers" : {
+            "colors" : [
+                {
+                    "hex"   :   "000000",
+                    "rgb"   :   "0 0 0",
+                    "cmyk"  :   "70 50 50 100",
+                    "pms"   :   "Process Black C"
+                },
+                {
+                    "hex"   :   "FFB612",
+                    "rgb"   :   "238 173 30",
+                    "cmyk"  :   "0 25 100 0",
+                    "pms"   :   "1235 C"
+                },
+                {
+                    "hex"   :   "C60C30",
+                    "rgb"   :   "213 10 10",
+                    "cmyk"  :   "10 100 100 0",
+                    "pms"   :   "186 C"
+                },
+                {
+                    "hex"   :   "00539B",
+                    "rgb"   :   "0 83 155",
+                    "cmyk"  :   "100 68 0 12",
+                    "pms"   :   "287 C"
+                },
+                {
+                    "hex"   :   "A5ACAF",
+                    "rgb"   :   "155 161 162",
+                    "cmyk"  :   "5 0 0 30",
+                    "pms"   :   "429 C"
+                }
+            ],
+            "src" : "http://www.nflmedia.com/afc_north.zip"
+        },
         "San Diego Chargers" :              ["08214A", "EEC607", "5B92E5"],
         "San Francisco 49ers" :             ["AF1E2C", "E6BE8A", "000000"],
         "Seattle Seahawks" :                ["06192E", "4EAE47", "ACB6BC"],
@@ -203,8 +495,32 @@
         "Vancouver Whitecaps FC" :          ["12264C", "85B7EA", "838383"]
     },
     "EPL": {
-        "Arsenal" :                         ["EF0107", "023474", "9C824A"],
-        "Aston Villa" :                     ["94BEE5", "7A003C", "FFE600"],
+        "Arsenal" : {
+            "colors" : [
+                {
+                    "hex"   :   "EF0107"
+                },
+                {
+                    "hex"   :   "023474"
+                },
+                {
+                    "hex"   :   "9C824A"
+                }
+            ]
+        },
+        "Aston Villa" : {
+            "colors" : [
+                {
+                    "hex"   :   "94BEE5"
+                }, 
+                {
+                    "hex"   :   "7A003C"
+                },
+                {
+                    "hex"   :   "FFE600"
+                }
+            ]
+        },
         "Burnley" :                         ["8CCCE5", "53162F", "F9EC34"],
         "Chelsea" :                         ["034694", "DBA111", "ED1C24"],
         "Crystal Palace" :                  ["1B458F", "C4122E", "A7A5A6"],
