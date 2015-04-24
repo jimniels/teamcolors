@@ -1,0 +1,8 @@
+<dl class="colors">
+    {{#each colors}}
+        <dt class="color-mode">{{toUpperCase @key}}</dt>
+        {{#each this}}
+            <dd class="color {{@../key}}" data-bg-color="#{{getBgColor ../../colors.hex @index}}">{{.}}</dd>
+        {{/each}}
+    {{/each}}
+</dl>

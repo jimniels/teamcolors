@@ -1,0 +1,26 @@
+<ul id="content" class="teams">
+    {{!-- leagues --}}{{#each .}}
+    <li>
+        <h2 id="{{convertToId @key}}">{{@key}}</h2>{{!-- league name --}}
+        <ul><!-- 
+            Inline block spacing 
+            http://css-tricks.com/fighting-the-space-between-inline-block-elements/
+            -->{{#each .}}<li>
+                    {{@key}}
+                    <ul>
+                        {{!-- colors --}}
+                        <dl class="colors">
+
+                            {{#each colors}}
+                                {{#each .}}
+                                    {{cmyk}}
+                                {{/each}}
+                            {{/each}}
+                            
+                        </dl>
+                    </ul>
+            </li>{{/each}}<!-- end inline block spacing
+        --></ul>
+    </li>
+    {{!-- ./leagues --}}{{/each}}
+</ul>

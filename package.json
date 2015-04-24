@@ -1,0 +1,26 @@
+{
+  "name": "teamcolors.github.io",
+  "version": "1.0.0",
+  "description": "[Team Colors](http://teamcolors.arc90.com/) is a reference of HEX & RGB color values of major league sporting teams.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teamcolors/teamcolors.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teamcolors/teamcolors.github.io/issues"
+  },
+  "homepage": "https://github.com/teamcolors/teamcolors.github.io",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-compile-handlebars": "^1.0.1",
+    "grunt-contrib-compass": "^1.0.3",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}

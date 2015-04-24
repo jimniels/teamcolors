@@ -92,11 +92,11 @@
         <p>Want to add a new team or league? Want to make a correction? <a href="https://github.com/teamcolors/teamcolors.github.io">Find the source code on Github &raquo;</a></p>
     </footer>
 
-    <!-- Script includes -->
+    <!-- Script includes 
     <script src="js/jquery1.8.js"></script>
     <script src="js/js.js"></script>
     <script src="js/loadcss.js"></script>
-    <script src="js/lazyload.js"></script>
+    <script src="js/lazyload.js"></script>-->
 
     <!-- Google Analytics -->
     <script type="text/javascript">
