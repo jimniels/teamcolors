@@ -43,13 +43,13 @@ var TeamColors = {
 
         // Setup leauge/color toggling
         // Convert the nav <ul> into <select>
-        var selectHtml = '<select id="select-league"><optgroup label="Leagues"><option value="all">All Leagues</option>';
+        var selectHtml = '<label for="select-league">Teams:</label><select id="select-league"><option value="all">All</option><optgroup label="By League">';
         this.$navigation.find('a').each(function(){
             selectHtml += '<option value="' + $(this).attr('href').substr(1) + '">'+ $(this).text() +'</option>';
         });
         selectHtml += '</optgroup></select>';
         // Create color <select>
-        var colorHtml = '<select id="select-color"><optgroup label="Colors"><option value="hex">HEX</option><option value="rgb">RGB</option><option value="cmyk">CMYK</option><option value="pms">Pantone</option></optgroup></select>';
+        var colorHtml = '<label for="select-color">Colors:</label><select id="select-color"><option value="hex">HEX</option><option value="rgb">RGB</option><option value="cmyk">CMYK</option><option value="pms">Pantone</option></select>';
         // Append it all to DOM with a search box
         this.$navigation.find('ul').remove();
         this.$navigation.prepend(selectHtml + colorHtml + '<input type="text" placeholder="Filter by team name..." class="search"/>');

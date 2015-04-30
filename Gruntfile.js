@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-
+    
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 
         'compile-handlebars': {
             allStatic: {
-                template: 'assets/templates/*.hbs',
+                template: 'assets/templates/backup.hbs',
                 templateData: 'assets/data/nba.json',
                 output: '*.html',
                 helpers: 'assets/templates/helpers/*.js',
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
         },
 
         jshint: {
-            all: ['assets/scripts/src/js.js']
+            all: ['assets/scripts/src/js.js', 'assets/data/*.json']
         },
 
         watch: {
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
                 tasks: ['compass']
             },
             jshint: {
-                files: ['assets/scripts/src/js.js'],
+                files: ['assets/scripts/src/js.js', 'assets/data/*.json'],
                 tasks: ['jshint']
             }
         }
@@ -56,13 +56,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-compile-handlebars');
     grunt.loadNpmTasks('grunt-contrib-jshint');
-
+    grunt.loadTasks('assets/grunt-tasks/colorify');
+    
     // Default task(s).
     grunt.registerTask('default', [
         'compass', 
+        'colorify',
         'compile-handlebars', 
         'jshint', 
         'watch'
     ]);
-
 };

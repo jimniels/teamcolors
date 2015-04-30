@@ -12,7 +12,7 @@
             "colors" : {
                 "rgb"   :   ["0 131 72",        "187 151 83",       "167 56 50",        "250 179 131",      "6 25 34"],
                 "cmyk"  :   ["100 0 91 27",     "30 40 80 0",       "40 95 100 0",      "0 35 50 0",        "30 0 0 100"],
-                "pms"   :   ["356",             "874",              "174",              "472",              "Black"],
+                "pms"   :   ["356",             "874",              "174",              "472",              "Black"]
             },
             "src" : "http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/F9ADD038D0D8A5B7852573780069CFDF/$File/Boston_Celtics_logosheet.pdf?OpenElement"
         },
