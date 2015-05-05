@@ -16,14 +16,20 @@
 
     <nav id="navigation">
         <ul class="leagues">
+                <li id="nav-epl" class="nav-league">
+                    <a href="#epl" class="nav-league__name">EPL</a>
+                </li>
+                <li id="nav-mlb" class="nav-league">
+                    <a href="#mlb" class="nav-league__name">MLB</a>
+                </li>
+                <li id="nav-mls" class="nav-league">
+                    <a href="#mls" class="nav-league__name">MLS</a>
+                </li>
                 <li id="nav-nba" class="nav-league">
                     <a href="#nba" class="nav-league__name">NBA</a>
                 </li>
                 <li id="nav-nfl" class="nav-league">
                     <a href="#nfl" class="nav-league__name">NFL</a>
-                </li>
-                <li id="nav-mlb" class="nav-league">
-                    <a href="#mlb" class="nav-league__name">MLB</a>
                 </li>
                 <li id="nav-nhl" class="nav-league">
                     <a href="#nhl" class="nav-league__name">NHL</a>
@@ -32,249 +38,1480 @@
     </nav>
 
     <main id="content">
+            <h2 id="epl" class="league-name">EPL</h2>
+            <ul class="teams"><!--
+                Inline block spacing http://css-tricks.com/fighting-the-space-between-inline-block-elements/
+                
+                    --><li class="team"
+                        data-team="Arsenal"
+                        data-league="epl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/epl/arsenal.svg">
+                            Arsenal
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#EF0107">EF0107</dd>
+                                    <dd class="color hex" data-bg-color="#023474">023474</dd>
+                                    <dd class="color hex" data-bg-color="#9C824A">9C824A</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#EF0107">239 1 7</dd>
+                                    <dd class="color rgb" data-bg-color="#023474">2 52 116</dd>
+                                    <dd class="color rgb" data-bg-color="#9C824A">156 130 74</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Aston Villa"
+                        data-league="epl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/epl/aston-villa.svg">
+                            Aston Villa
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#94BEE5">94BEE5</dd>
+                                    <dd class="color hex" data-bg-color="#7A003C">7A003C</dd>
+                                    <dd class="color hex" data-bg-color="#FFE600">FFE600</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#94BEE5">148 190 229</dd>
+                                    <dd class="color rgb" data-bg-color="#7A003C">122 0 60</dd>
+                                    <dd class="color rgb" data-bg-color="#FFE600">255 230 0</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Burnley"
+                        data-league="epl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/epl/burnley.svg">
+                            Burnley
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#8CCCE5">8CCCE5</dd>
+                                    <dd class="color hex" data-bg-color="#53162F">53162F</dd>
+                                    <dd class="color hex" data-bg-color="#F9EC34">F9EC34</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#8CCCE5">140 204 229</dd>
+                                    <dd class="color rgb" data-bg-color="#53162F">83 22 47</dd>
+                                    <dd class="color rgb" data-bg-color="#F9EC34">249 236 52</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Chelsea"
+                        data-league="epl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/epl/chelsea.svg">
+                            Chelsea
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#034694">034694</dd>
+                                    <dd class="color hex" data-bg-color="#DBA111">DBA111</dd>
+                                    <dd class="color hex" data-bg-color="#ED1C24">ED1C24</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#034694">3 70 148</dd>
+                                    <dd class="color rgb" data-bg-color="#DBA111">219 161 17</dd>
+                                    <dd class="color rgb" data-bg-color="#ED1C24">237 28 36</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Crystal Palace"
+                        data-league="epl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/epl/crystal-palace.svg">
+                            Crystal Palace
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#1B458F">1B458F</dd>
+                                    <dd class="color hex" data-bg-color="#C4122E">C4122E</dd>
+                                    <dd class="color hex" data-bg-color="#A7A5A6">A7A5A6</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#1B458F">27 69 143</dd>
+                                    <dd class="color rgb" data-bg-color="#C4122E">196 18 46</dd>
+                                    <dd class="color rgb" data-bg-color="#A7A5A6">167 165 166</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Everton"
+                        data-league="epl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/epl/everton.svg">
+                            Everton
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#274488">274488</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#274488">39 68 136</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Hull City"
+                        data-league="epl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/epl/hull-city.svg">
+                            Hull City
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#F5A12D">F5A12D</dd>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#F5A12D">245 161 45</dd>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Leicester City"
+                        data-league="epl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/epl/leicester-city.svg">
+                            Leicester City
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#FDBE11">FDBE11</dd>
+                                    <dd class="color hex" data-bg-color="#0053A0">0053A0</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#FDBE11">253 190 17</dd>
+                                    <dd class="color rgb" data-bg-color="#0053A0">0 83 160</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Liverpool"
+                        data-league="epl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/epl/liverpool.svg">
+                            Liverpool
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#00A398">00A398</dd>
+                                    <dd class="color hex" data-bg-color="#D00027">D00027</dd>
+                                    <dd class="color hex" data-bg-color="#FEF667">FEF667</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#00A398">0 163 152</dd>
+                                    <dd class="color rgb" data-bg-color="#D00027">208 0 39</dd>
+                                    <dd class="color rgb" data-bg-color="#FEF667">254 246 103</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Manchester City"
+                        data-league="epl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/epl/manchester-city.svg">
+                            Manchester City
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#5CBFEB">5CBFEB</dd>
+                                    <dd class="color hex" data-bg-color="#FFCE65">FFCE65</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#5CBFEB">92 191 235</dd>
+                                    <dd class="color rgb" data-bg-color="#FFCE65">255 206 101</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Manchester United"
+                        data-league="epl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/epl/manchester-united.svg">
+                            Manchester United
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#DA020E">DA020E</dd>
+                                    <dd class="color hex" data-bg-color="#FFE500">FFE500</dd>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#DA020E">218 2 14</dd>
+                                    <dd class="color rgb" data-bg-color="#FFE500">255 229 0</dd>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Newcastle United"
+                        data-league="epl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/epl/newcastle-united.svg">
+                            Newcastle United
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#00B6F1">00B6F1</dd>
+                                    <dd class="color hex" data-bg-color="#BBBDBF">BBBDBF</dd>
+                                    <dd class="color hex" data-bg-color="#231F20">231F20</dd>
+                                    <dd class="color hex" data-bg-color="#F0B83D">F0B83D</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#00B6F1">0 182 241</dd>
+                                    <dd class="color rgb" data-bg-color="#BBBDBF">187 189 191</dd>
+                                    <dd class="color rgb" data-bg-color="#231F20">35 31 32</dd>
+                                    <dd class="color rgb" data-bg-color="#F0B83D">240 184 61</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Queens Park Rangers"
+                        data-league="epl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/epl/queens-park-rangers.svg">
+                            Queens Park Rangers
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#005CAB">005CAB</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#005CAB">0 92 171</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Southampton"
+                        data-league="epl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/epl/southampton.svg">
+                            Southampton
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#ED1A3B">ED1A3B</dd>
+                                    <dd class="color hex" data-bg-color="#211E1F">211E1F</dd>
+                                    <dd class="color hex" data-bg-color="#FFC20E">FFC20E</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#ED1A3B">237 26 59</dd>
+                                    <dd class="color rgb" data-bg-color="#211E1F">33 30 31</dd>
+                                    <dd class="color rgb" data-bg-color="#FFC20E">255 194 14</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Stoke City"
+                        data-league="epl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/epl/stoke-city.svg">
+                            Stoke City
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#E03A3E">E03A3E</dd>
+                                    <dd class="color hex" data-bg-color="#1B449C">1B449C</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#E03A3E">224 58 62</dd>
+                                    <dd class="color rgb" data-bg-color="#1B449C">27 68 156</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Sunderland"
+                        data-league="epl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/epl/sunderland.svg">
+                            Sunderland
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#EB172B">EB172B</dd>
+                                    <dd class="color hex" data-bg-color="#A68A26">A68A26</dd>
+                                    <dd class="color hex" data-bg-color="#211E1E">211E1E</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#EB172B">235 23 43</dd>
+                                    <dd class="color rgb" data-bg-color="#A68A26">166 138 38</dd>
+                                    <dd class="color rgb" data-bg-color="#211E1E">33 30 30</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Swansea City"
+                        data-league="epl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/epl/swansea-city.svg">
+                            Swansea City
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Tottenham Hotspur"
+                        data-league="epl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/epl/tottenham-hotspur.svg">
+                            Tottenham Hotspur
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#001C58">001C58</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#001C58">0 28 88</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="West Bromwich Albion"
+                        data-league="epl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/epl/west-bromwich-albion.svg">
+                            West Bromwich Albion
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#091453">091453</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#091453">9 20 83</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="West Ham United"
+                        data-league="epl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/epl/west-ham-united.svg">
+                            West Ham United
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#60223B">60223B</dd>
+                                    <dd class="color hex" data-bg-color="#F7C240">F7C240</dd>
+                                    <dd class="color hex" data-bg-color="#5299C6">5299C6</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#60223B">96 34 59</dd>
+                                    <dd class="color rgb" data-bg-color="#F7C240">247 194 64</dd>
+                                    <dd class="color rgb" data-bg-color="#5299C6">82 153 198</dd>
+                        </dl>                    </li><!--
+                
+            --></ul>
+            <h2 id="mlb" class="league-name">MLB</h2>
+            <ul class="teams"><!--
+                Inline block spacing http://css-tricks.com/fighting-the-space-between-inline-block-elements/
+                
+                    --><li class="team"
+                        data-team="Arizona Diamondbacks"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/arizona-diamondbacks.svg">
+                            Arizona Diamondbacks
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#A71930">A71930</dd>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                    <dd class="color hex" data-bg-color="#DBCEAC">DBCEAC</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#A71930">167 25 48</dd>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                                    <dd class="color rgb" data-bg-color="#DBCEAC">219 206 172</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Atlanta Braves"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/atlanta-braves.svg">
+                            Atlanta Braves
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#002F5F">002F5F</dd>
+                                    <dd class="color hex" data-bg-color="#B71234">B71234</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#002F5F">0 47 95</dd>
+                                    <dd class="color rgb" data-bg-color="#B71234">183 18 52</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Baltimore Orioles"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/baltimore-orioles.svg">
+                            Baltimore Orioles
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#ed4c09">ed4c09</dd>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#ed4c09">237 76 9</dd>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Boston Red Sox"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/boston-red-sox.svg">
+                            Boston Red Sox
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#C60C30">C60C30</dd>
+                                    <dd class="color hex" data-bg-color="#002244">002244</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#C60C30">198 12 48</dd>
+                                    <dd class="color rgb" data-bg-color="#002244">0 34 68</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Chicago Cubs"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/chicago-cubs.svg">
+                            Chicago Cubs
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#003279">003279</dd>
+                                    <dd class="color hex" data-bg-color="#CC0033">CC0033</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#003279">0 50 121</dd>
+                                    <dd class="color rgb" data-bg-color="#CC0033">204 0 51</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Chicago White Sox"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/chicago-white-sox.svg">
+                            Chicago White Sox
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                    <dd class="color hex" data-bg-color="#C0C0C0">C0C0C0</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                                    <dd class="color rgb" data-bg-color="#C0C0C0">192 192 192</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Cincinnati Reds"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/cincinnati-reds.svg">
+                            Cincinnati Reds
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#C6011F">C6011F</dd>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#C6011F">198 1 31</dd>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Colorado Rockies"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/colorado-rockies.svg">
+                            Colorado Rockies
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                    <dd class="color hex" data-bg-color="#333366">333366</dd>
+                                    <dd class="color hex" data-bg-color="#C0C0C0">C0C0C0</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                                    <dd class="color rgb" data-bg-color="#333366">51 51 102</dd>
+                                    <dd class="color rgb" data-bg-color="#C0C0C0">192 192 192</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Cleveland Indians"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/cleveland-indians.svg">
+                            Cleveland Indians
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#003366">003366</dd>
+                                    <dd class="color hex" data-bg-color="#d30335">d30335</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#003366">0 51 102</dd>
+                                    <dd class="color rgb" data-bg-color="#d30335">211 3 53</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Detroit Tigers"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/detroit-tigers.svg">
+                            Detroit Tigers
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#001742">001742</dd>
+                                    <dd class="color hex" data-bg-color="#DE4406">DE4406</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#001742">0 23 66</dd>
+                                    <dd class="color rgb" data-bg-color="#DE4406">222 68 6</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Houston Astros"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/houston-astros.svg">
+                            Houston Astros
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#072854">072854</dd>
+                                    <dd class="color hex" data-bg-color="#FF7F00">FF7F00</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#072854">7 40 84</dd>
+                                    <dd class="color rgb" data-bg-color="#FF7F00">255 127 0</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Kansas City Royals"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/kansas-city-royals.svg">
+                            Kansas City Royals
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#15317E">15317E</dd>
+                                    <dd class="color hex" data-bg-color="#74B4FA">74B4FA</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#15317E">21 49 126</dd>
+                                    <dd class="color rgb" data-bg-color="#74B4FA">116 180 250</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Los Angeles Angels of Anaheim"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/los-angeles-angels-of-anaheim.svg">
+                            Los Angeles Angels of Anaheim
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#B71234">B71234</dd>
+                                    <dd class="color hex" data-bg-color="#002244">002244</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#B71234">183 18 52</dd>
+                                    <dd class="color rgb" data-bg-color="#002244">0 34 68</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Los Angeles Dodgers"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/los-angeles-dodgers.svg">
+                            Los Angeles Dodgers
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#083C6B">083C6B</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#083C6B">8 60 107</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Miami Marlins"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/miami-marlins.svg">
+                            Miami Marlins
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                    <dd class="color hex" data-bg-color="#F9423A">F9423A</dd>
+                                    <dd class="color hex" data-bg-color="#8A8D8F">8A8D8F</dd>
+                                    <dd class="color hex" data-bg-color="#0077C8">0077C8</dd>
+                                    <dd class="color hex" data-bg-color="#FFD100">FFD100</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                                    <dd class="color rgb" data-bg-color="#F9423A">249 66 58</dd>
+                                    <dd class="color rgb" data-bg-color="#8A8D8F">138 141 143</dd>
+                                    <dd class="color rgb" data-bg-color="#0077C8">0 119 200</dd>
+                                    <dd class="color rgb" data-bg-color="#FFD100">255 209 0</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Milwaukee Brewers"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/milwaukee-brewers.svg">
+                            Milwaukee Brewers
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#182B49">182B49</dd>
+                                    <dd class="color hex" data-bg-color="#92754C">92754C</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#182B49">24 43 73</dd>
+                                    <dd class="color rgb" data-bg-color="#92754C">146 117 76</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Minnesota Twins"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/minnesota-twins.svg">
+                            Minnesota Twins
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#072754">072754</dd>
+                                    <dd class="color hex" data-bg-color="#C6011F">C6011F</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#072754">7 39 84</dd>
+                                    <dd class="color rgb" data-bg-color="#C6011F">198 1 31</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="New York Mets"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/new-york-mets.svg">
+                            New York Mets
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#002C77">002C77</dd>
+                                    <dd class="color hex" data-bg-color="#FB4F14">FB4F14</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#002C77">0 44 119</dd>
+                                    <dd class="color rgb" data-bg-color="#FB4F14">251 79 20</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="New York Yankees"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/new-york-yankees.svg">
+                            New York Yankees
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#1C2841">1C2841</dd>
+                                    <dd class="color hex" data-bg-color="#808080">808080</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#1C2841">28 40 65</dd>
+                                    <dd class="color rgb" data-bg-color="#808080">128 128 128</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Oakland Athletics"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/oakland-athletics.svg">
+                            Oakland Athletics
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#003831">003831</dd>
+                                    <dd class="color hex" data-bg-color="#FFD800">FFD800</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#003831">0 56 49</dd>
+                                    <dd class="color rgb" data-bg-color="#FFD800">255 216 0</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Philadelphia Phillies"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/philadelphia-phillies.svg">
+                            Philadelphia Phillies
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#BA0C2F">BA0C2F</dd>
+                                    <dd class="color hex" data-bg-color="#003087">003087</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#BA0C2F">186 12 47</dd>
+                                    <dd class="color rgb" data-bg-color="#003087">0 48 135</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Pittsburgh Pirates"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/pittsburgh-pirates.svg">
+                            Pittsburgh Pirates
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                    <dd class="color hex" data-bg-color="#fdb829">fdb829</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                                    <dd class="color rgb" data-bg-color="#fdb829">253 184 41</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="San Diego Padres"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/san-diego-padres.svg">
+                            San Diego Padres
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#002147">002147</dd>
+                                    <dd class="color hex" data-bg-color="#B4A76C">B4A76C</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#002147">0 33 71</dd>
+                                    <dd class="color rgb" data-bg-color="#B4A76C">180 167 108</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="San Francisco Giants"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/san-francisco-giants.svg">
+                            San Francisco Giants
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                    <dd class="color hex" data-bg-color="#F2552C">F2552C</dd>
+                                    <dd class="color hex" data-bg-color="#FFFDD0">FFFDD0</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                                    <dd class="color rgb" data-bg-color="#F2552C">242 85 44</dd>
+                                    <dd class="color rgb" data-bg-color="#FFFDD0">255 253 208</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Seattle Mariners"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/seattle-mariners.svg">
+                            Seattle Mariners
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#0C2C56">0C2C56</dd>
+                                    <dd class="color hex" data-bg-color="#005C5C">005C5C</dd>
+                                    <dd class="color hex" data-bg-color="#C0C0C0">C0C0C0</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#0C2C56">12 44 86</dd>
+                                    <dd class="color rgb" data-bg-color="#005C5C">0 92 92</dd>
+                                    <dd class="color rgb" data-bg-color="#C0C0C0">192 192 192</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="St Louis Cardinals"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/st-louis-cardinals.svg">
+                            St Louis Cardinals
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#c41e3a">c41e3a</dd>
+                                    <dd class="color hex" data-bg-color="#0A2252">0A2252</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#c41e3a">196 30 58</dd>
+                                    <dd class="color rgb" data-bg-color="#0A2252">10 34 82</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Tampa Bay Rays"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/tampa-bay-rays.svg">
+                            Tampa Bay Rays
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#00285D">00285D</dd>
+                                    <dd class="color hex" data-bg-color="#9ECEEE">9ECEEE</dd>
+                                    <dd class="color hex" data-bg-color="#ffd700">ffd700</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#00285D">0 40 93</dd>
+                                    <dd class="color rgb" data-bg-color="#9ECEEE">158 206 238</dd>
+                                    <dd class="color rgb" data-bg-color="#ffd700">255 215 0</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Texas Rangers"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/texas-rangers.svg">
+                            Texas Rangers
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#BD1021">BD1021</dd>
+                                    <dd class="color hex" data-bg-color="#003279">003279</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#BD1021">189 16 33</dd>
+                                    <dd class="color rgb" data-bg-color="#003279">0 50 121</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Toronto Blue Jays"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/toronto-blue-jays.svg">
+                            Toronto Blue Jays
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#003DA5">003DA5</dd>
+                                    <dd class="color hex" data-bg-color="#041E42">041E42</dd>
+                                    <dd class="color hex" data-bg-color="#DA291C">DA291C</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#003DA5">0 61 165</dd>
+                                    <dd class="color rgb" data-bg-color="#041E42">4 30 66</dd>
+                                    <dd class="color rgb" data-bg-color="#DA291C">218 41 28</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Washington Nationals"
+                        data-league="mlb"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mlb/washington-nationals.svg">
+                            Washington Nationals
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#BA122B">BA122B</dd>
+                                    <dd class="color hex" data-bg-color="#11225B">11225B</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#BA122B">186 18 43</dd>
+                                    <dd class="color rgb" data-bg-color="#11225B">17 34 91</dd>
+                        </dl>                    </li><!--
+                
+            --></ul>
+            <h2 id="mls" class="league-name">MLS</h2>
+            <ul class="teams"><!--
+                Inline block spacing http://css-tricks.com/fighting-the-space-between-inline-block-elements/
+                
+                    --><li class="team"
+                        data-team="Chicago Fire"
+                        data-league="mls"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mls/chicago-fire.svg">
+                            Chicago Fire
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#AF2626">AF2626</dd>
+                                    <dd class="color hex" data-bg-color="#0A174A">0A174A</dd>
+                                    <dd class="color hex" data-bg-color="#8A8D8F">8A8D8F</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#AF2626">175 38 38</dd>
+                                    <dd class="color rgb" data-bg-color="#0A174A">10 23 74</dd>
+                                    <dd class="color rgb" data-bg-color="#8A8D8F">138 141 143</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Chivas USA"
+                        data-league="mls"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mls/chivas-usa.svg">
+                            Chivas USA
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#AA002C">AA002C</dd>
+                                    <dd class="color hex" data-bg-color="#031A43">031A43</dd>
+                                    <dd class="color hex" data-bg-color="#FFC800">FFC800</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#AA002C">170 0 44</dd>
+                                    <dd class="color rgb" data-bg-color="#031A43">3 26 67</dd>
+                                    <dd class="color rgb" data-bg-color="#FFC800">255 200 0</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Colorado Rapids"
+                        data-league="mls"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mls/colorado-rapids.svg">
+                            Colorado Rapids
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#91022D">91022D</dd>
+                                    <dd class="color hex" data-bg-color="#85B7EA">85B7EA</dd>
+                                    <dd class="color hex" data-bg-color="#8A8D8F">8A8D8F</dd>
+                                    <dd class="color hex" data-bg-color="#313F49">313F49</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#91022D">145 2 45</dd>
+                                    <dd class="color rgb" data-bg-color="#85B7EA">133 183 234</dd>
+                                    <dd class="color rgb" data-bg-color="#8A8D8F">138 141 143</dd>
+                                    <dd class="color rgb" data-bg-color="#313F49">49 63 73</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Columbus Crew"
+                        data-league="mls"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mls/columbus-crew.svg">
+                            Columbus Crew
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                    <dd class="color hex" data-bg-color="#FFDB00">FFDB00</dd>
+                                    <dd class="color hex" data-bg-color="#8A8D8F">8A8D8F</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                                    <dd class="color rgb" data-bg-color="#FFDB00">255 219 0</dd>
+                                    <dd class="color rgb" data-bg-color="#8A8D8F">138 141 143</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="DC United"
+                        data-league="mls"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mls/dc-united.svg">
+                            DC United
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                    <dd class="color hex" data-bg-color="#DD0000">DD0000</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                                    <dd class="color rgb" data-bg-color="#DD0000">221 0 0</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="FC Dallas"
+                        data-league="mls"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mls/fc-dallas.svg">
+                            FC Dallas
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#CF0032">CF0032</dd>
+                                    <dd class="color hex" data-bg-color="#07175C">07175C</dd>
+                                    <dd class="color hex" data-bg-color="#8A8D8F">8A8D8F</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#CF0032">207 0 50</dd>
+                                    <dd class="color rgb" data-bg-color="#07175C">7 23 92</dd>
+                                    <dd class="color rgb" data-bg-color="#8A8D8F">138 141 143</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Houston Dynamo"
+                        data-league="mls"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mls/houston-dynamo.svg">
+                            Houston Dynamo
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#F36600">F36600</dd>
+                                    <dd class="color hex" data-bg-color="#2E2926">2E2926</dd>
+                                    <dd class="color hex" data-bg-color="#85B7EA">85B7EA</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#F36600">243 102 0</dd>
+                                    <dd class="color rgb" data-bg-color="#2E2926">46 41 38</dd>
+                                    <dd class="color rgb" data-bg-color="#85B7EA">133 183 234</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Los Angeles Galaxy"
+                        data-league="mls"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mls/los-angeles-galaxy.svg">
+                            Los Angeles Galaxy
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#00245D">00245D</dd>
+                                    <dd class="color hex" data-bg-color="#004689">004689</dd>
+                                    <dd class="color hex" data-bg-color="#F1AA00">F1AA00</dd>
+                                    <dd class="color hex" data-bg-color="#FFD200">FFD200</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#00245D">0 36 93</dd>
+                                    <dd class="color rgb" data-bg-color="#004689">0 70 137</dd>
+                                    <dd class="color rgb" data-bg-color="#F1AA00">241 170 0</dd>
+                                    <dd class="color rgb" data-bg-color="#FFD200">255 210 0</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Montreal Impact"
+                        data-league="mls"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mls/montreal-impact.svg">
+                            Montreal Impact
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#122089">122089</dd>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                    <dd class="color hex" data-bg-color="#7A878F">7A878F</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#122089">18 32 137</dd>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                                    <dd class="color rgb" data-bg-color="#7A878F">122 135 143</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="New England Revolution"
+                        data-league="mls"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mls/new-england-revolution.svg">
+                            New England Revolution
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#0A2141">0A2141</dd>
+                                    <dd class="color hex" data-bg-color="#D80016">D80016</dd>
+                                    <dd class="color hex" data-bg-color="#8A8D8F">8A8D8F</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#0A2141">10 33 65</dd>
+                                    <dd class="color rgb" data-bg-color="#D80016">216 0 22</dd>
+                                    <dd class="color rgb" data-bg-color="#8A8D8F">138 141 143</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="New York Red Bulls"
+                        data-league="mls"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mls/new-york-red-bulls.svg">
+                            New York Red Bulls
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#D50031">D50031</dd>
+                                    <dd class="color hex" data-bg-color="#012055">012055</dd>
+                                    <dd class="color hex" data-bg-color="#FFC800">FFC800</dd>
+                                    <dd class="color hex" data-bg-color="#8A8D8F">8A8D8F</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#D50031">213 0 49</dd>
+                                    <dd class="color rgb" data-bg-color="#012055">1 32 85</dd>
+                                    <dd class="color rgb" data-bg-color="#FFC800">255 200 0</dd>
+                                    <dd class="color rgb" data-bg-color="#8A8D8F">138 141 143</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="New York City FC"
+                        data-league="mls"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mls/new-york-city-fc.svg">
+                            New York City FC
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#6CADDF">6CADDF</dd>
+                                    <dd class="color hex" data-bg-color="#00285E">00285E</dd>
+                                    <dd class="color hex" data-bg-color="#FD4F00">FD4F00</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#6CADDF">108 173 223</dd>
+                                    <dd class="color rgb" data-bg-color="#00285E">0 40 94</dd>
+                                    <dd class="color rgb" data-bg-color="#FD4F00">253 79 0</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Orlando City SC"
+                        data-league="mls"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mls/orlando-city-sc.svg">
+                            Orlando City SC
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#633492">633492</dd>
+                                    <dd class="color hex" data-bg-color="#FDE192">FDE192</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#633492">99 52 146</dd>
+                                    <dd class="color rgb" data-bg-color="#FDE192">253 225 146</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Philadelphia Union"
+                        data-league="mls"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mls/philadelphia-union.svg">
+                            Philadelphia Union
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#001B2D">001B2D</dd>
+                                    <dd class="color hex" data-bg-color="#B18500">B18500</dd>
+                                    <dd class="color hex" data-bg-color="#348AE1">348AE1</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#001B2D">0 27 45</dd>
+                                    <dd class="color rgb" data-bg-color="#B18500">177 133 0</dd>
+                                    <dd class="color rgb" data-bg-color="#348AE1">52 138 225</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Portland Timbers"
+                        data-league="mls"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mls/portland-timbers.svg">
+                            Portland Timbers
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#004812">004812</dd>
+                                    <dd class="color hex" data-bg-color="#EBE72B">EBE72B</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#004812">0 72 18</dd>
+                                    <dd class="color rgb" data-bg-color="#EBE72B">235 231 43</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Real Salt Lake"
+                        data-league="mls"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mls/real-salt-lake.svg">
+                            Real Salt Lake
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#A50531">A50531</dd>
+                                    <dd class="color hex" data-bg-color="#013474">013474</dd>
+                                    <dd class="color hex" data-bg-color="#F2D11A">F2D11A</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#A50531">165 5 49</dd>
+                                    <dd class="color rgb" data-bg-color="#013474">1 52 116</dd>
+                                    <dd class="color rgb" data-bg-color="#F2D11A">242 209 26</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="San Jose Earthquakes"
+                        data-league="mls"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mls/san-jose-earthquakes.svg">
+                            San Jose Earthquakes
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#0051BA">0051BA</dd>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                    <dd class="color hex" data-bg-color="#B1B4B2">B1B4B2</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#0051BA">0 81 186</dd>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                                    <dd class="color rgb" data-bg-color="#B1B4B2">177 180 178</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Seattle Sounders FC"
+                        data-league="mls"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mls/seattle-sounders-fc.svg">
+                            Seattle Sounders FC
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#4F8A10">4F8A10</dd>
+                                    <dd class="color hex" data-bg-color="#11568C">11568C</dd>
+                                    <dd class="color hex" data-bg-color="#212930">212930</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#4F8A10">79 138 16</dd>
+                                    <dd class="color rgb" data-bg-color="#11568C">17 86 140</dd>
+                                    <dd class="color rgb" data-bg-color="#212930">33 41 48</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Sporting Kansas City"
+                        data-league="mls"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mls/sporting-kansas-city.svg">
+                            Sporting Kansas City
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#A4BBD7">A4BBD7</dd>
+                                    <dd class="color hex" data-bg-color="#0A2141">0A2141</dd>
+                                    <dd class="color hex" data-bg-color="#787775">787775</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#A4BBD7">164 187 215</dd>
+                                    <dd class="color rgb" data-bg-color="#0A2141">10 33 65</dd>
+                                    <dd class="color rgb" data-bg-color="#787775">120 119 117</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Toronto FC"
+                        data-league="mls"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mls/toronto-fc.svg">
+                            Toronto FC
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#D80016">D80016</dd>
+                                    <dd class="color hex" data-bg-color="#313F49">313F49</dd>
+                                    <dd class="color hex" data-bg-color="#A1AAAD">A1AAAD</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#D80016">216 0 22</dd>
+                                    <dd class="color rgb" data-bg-color="#313F49">49 63 73</dd>
+                                    <dd class="color rgb" data-bg-color="#A1AAAD">161 170 173</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Vancouver Whitecaps FC"
+                        data-league="mls"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/mls/vancouver-whitecaps-fc.svg">
+                            Vancouver Whitecaps FC
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#12264C">12264C</dd>
+                                    <dd class="color hex" data-bg-color="#85B7EA">85B7EA</dd>
+                                    <dd class="color hex" data-bg-color="#838383">838383</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#12264C">18 38 76</dd>
+                                    <dd class="color rgb" data-bg-color="#85B7EA">133 183 234</dd>
+                                    <dd class="color rgb" data-bg-color="#838383">131 131 131</dd>
+                        </dl>                    </li><!--
+                
+            --></ul>
             <h2 id="nba" class="league-name">NBA</h2>
-            <ul class="teams">
-                    <li class="team"
-                            data-team="Atlanta Hawks"
-                            data-league="nba"
-                            data-colors="hex rgb cmyk pms ">
+            <ul class="teams"><!--
+                Inline block spacing http://css-tricks.com/fighting-the-space-between-inline-block-elements/
+                
+                    --><li class="team"
+                        data-team="Atlanta Hawks"
+                        data-league="nba"
+                        data-colors="rgb cmyk pms hex ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nba/atlanta-hawks.svg">
                             Atlanta Hawks
                         </h3>
                         <dl class="colors">
-                                <dt class="color-mode">HEX</dt>
-                                    <dd class="color hex" data-bg-color="#E13A3E">E13A3E</dd>
-                                    <dd class="color hex" data-bg-color="#002B5C">002B5C</dd>
-                                    <dd class="color hex" data-bg-color="#BEC0C2">BEC0C2</dd>
                                 <dt class="color-mode">RGB</dt>
-                                    <dd class="color rgb" data-bg-color="#E13A3E">225 58 62</dd>
-                                    <dd class="color rgb" data-bg-color="#002B5C">0 43 92</dd>
-                                    <dd class="color rgb" data-bg-color="#BEC0C2">190 192 194</dd>
+                                    <dd class="color rgb" data-bg-color="#e13a3e">225 58 62</dd>
+                                    <dd class="color rgb" data-bg-color="#002b5c">0 43 92</dd>
+                                    <dd class="color rgb" data-bg-color="#bec0c2">190 192 194</dd>
                                 <dt class="color-mode">CMYK</dt>
-                                    <dd class="color cmyk" data-bg-color="#E13A3E">0 91 76 6</dd>
-                                    <dd class="color cmyk" data-bg-color="#002B5C">100 64 0 60</dd>
-                                    <dd class="color cmyk" data-bg-color="#BEC0C2">0 0 0 29</dd>
+                                    <dd class="color cmyk" data-bg-color="#e13a3e">0 91 76 6</dd>
+                                    <dd class="color cmyk" data-bg-color="#002b5c">100 64 0 60</dd>
+                                    <dd class="color cmyk" data-bg-color="#bec0c2">0 0 0 29</dd>
                                 <dt class="color-mode">PMS</dt>
-                                    <dd class="color pms" data-bg-color="#E13A3E">186</dd>
-                                    <dd class="color pms" data-bg-color="#002B5C">289</dd>
-                                    <dd class="color pms" data-bg-color="#BEC0C2">Cool Gray 5</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Boston Celtics"
-                            data-league="nba"
-                            data-colors="hex rgb cmyk pms ">
+                                    <dd class="color pms" data-bg-color="#e13a3e">186</dd>
+                                    <dd class="color pms" data-bg-color="#002b5c">289</dd>
+                                    <dd class="color pms" data-bg-color="#bec0c2">Cool Gray 5</dd>
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#e13a3e">e13a3e</dd>
+                                    <dd class="color hex" data-bg-color="#002b5c">002b5c</dd>
+                                    <dd class="color hex" data-bg-color="#bec0c2">bec0c2</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Boston Celtics"
+                        data-league="nba"
+                        data-colors="rgb cmyk pms hex ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nba/boston-celtics.svg">
                             Boston Celtics
                         </h3>
                         <dl class="colors">
-                                <dt class="color-mode">HEX</dt>
-                                    <dd class="color hex" data-bg-color="#008348">008348</dd>
-                                    <dd class="color hex" data-bg-color="#BB9753">BB9753</dd>
-                                    <dd class="color hex" data-bg-color="#A73832">A73832</dd>
-                                    <dd class="color hex" data-bg-color="#FAB383">FAB383</dd>
-                                    <dd class="color hex" data-bg-color="#061922">061922</dd>
                                 <dt class="color-mode">RGB</dt>
                                     <dd class="color rgb" data-bg-color="#008348">0 131 72</dd>
-                                    <dd class="color rgb" data-bg-color="#BB9753">187 151 83</dd>
-                                    <dd class="color rgb" data-bg-color="#A73832">167 56 50</dd>
-                                    <dd class="color rgb" data-bg-color="#FAB383">250 179 131</dd>
+                                    <dd class="color rgb" data-bg-color="#bb9753">187 151 83</dd>
+                                    <dd class="color rgb" data-bg-color="#a73832">167 56 50</dd>
+                                    <dd class="color rgb" data-bg-color="#fab383">250 179 131</dd>
                                     <dd class="color rgb" data-bg-color="#061922">6 25 34</dd>
                                 <dt class="color-mode">CMYK</dt>
                                     <dd class="color cmyk" data-bg-color="#008348">100 0 91 27</dd>
-                                    <dd class="color cmyk" data-bg-color="#BB9753">30 40 80 0</dd>
-                                    <dd class="color cmyk" data-bg-color="#A73832">40 95 100 0</dd>
-                                    <dd class="color cmyk" data-bg-color="#FAB383">0 35 50 0</dd>
+                                    <dd class="color cmyk" data-bg-color="#bb9753">30 40 80 0</dd>
+                                    <dd class="color cmyk" data-bg-color="#a73832">40 95 100 0</dd>
+                                    <dd class="color cmyk" data-bg-color="#fab383">0 35 50 0</dd>
                                     <dd class="color cmyk" data-bg-color="#061922">30 0 0 100</dd>
                                 <dt class="color-mode">PMS</dt>
                                     <dd class="color pms" data-bg-color="#008348">356</dd>
-                                    <dd class="color pms" data-bg-color="#BB9753">874</dd>
-                                    <dd class="color pms" data-bg-color="#A73832">174</dd>
-                                    <dd class="color pms" data-bg-color="#FAB383">472</dd>
+                                    <dd class="color pms" data-bg-color="#bb9753">874</dd>
+                                    <dd class="color pms" data-bg-color="#a73832">174</dd>
+                                    <dd class="color pms" data-bg-color="#fab383">472</dd>
                                     <dd class="color pms" data-bg-color="#061922">Black</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Brooklyn Nets"
-                            data-league="nba"
-                            data-colors="hex rgb cmyk pms ">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#008348">008348</dd>
+                                    <dd class="color hex" data-bg-color="#bb9753">bb9753</dd>
+                                    <dd class="color hex" data-bg-color="#a73832">a73832</dd>
+                                    <dd class="color hex" data-bg-color="#fab383">fab383</dd>
+                                    <dd class="color hex" data-bg-color="#061922">061922</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Brooklyn Nets"
+                        data-league="nba"
+                        data-colors="rgb cmyk pms hex ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nba/brooklyn-nets.svg">
                             Brooklyn Nets
                         </h3>
                         <dl class="colors">
-                                <dt class="color-mode">HEX</dt>
-                                    <dd class="color hex" data-bg-color="#061922">061922</dd>
                                 <dt class="color-mode">RGB</dt>
                                     <dd class="color rgb" data-bg-color="#061922">6 25 34</dd>
                                 <dt class="color-mode">CMYK</dt>
                                     <dd class="color cmyk" data-bg-color="#061922">30 0 0 100</dd>
                                 <dt class="color-mode">PMS</dt>
                                     <dd class="color pms" data-bg-color="#061922">Black</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Charlotte Hornets"
-                            data-league="nba"
-                            data-colors="hex rgb cmyk pms ">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#061922">061922</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Charlotte Hornets"
+                        data-league="nba"
+                        data-colors="rgb cmyk pms hex ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nba/charlotte-hornets.svg">
                             Charlotte Hornets
                         </h3>
                         <dl class="colors">
-                                <dt class="color-mode">HEX</dt>
-                                    <dd class="color hex" data-bg-color="#1D1160">1D1160</dd>
-                                    <dd class="color hex" data-bg-color="#008CA8">008CA8</dd>
-                                    <dd class="color hex" data-bg-color="#A1A1A4">A1A1A4</dd>
                                 <dt class="color-mode">RGB</dt>
-                                    <dd class="color rgb" data-bg-color="#1D1160">29 17 96</dd>
-                                    <dd class="color rgb" data-bg-color="#008CA8">0 140 168</dd>
-                                    <dd class="color rgb" data-bg-color="#A1A1A4">161 161 164</dd>
+                                    <dd class="color rgb" data-bg-color="#1d1160">29 17 96</dd>
+                                    <dd class="color rgb" data-bg-color="#008ca8">0 140 168</dd>
+                                    <dd class="color rgb" data-bg-color="#a1a1a4">161 161 164</dd>
                                 <dt class="color-mode">CMYK</dt>
-                                    <dd class="color cmyk" data-bg-color="#1D1160">98 100 0 43</dd>
-                                    <dd class="color cmyk" data-bg-color="#008CA8">100 0 19 23</dd>
-                                    <dd class="color cmyk" data-bg-color="#A1A1A4">0 1 0 43</dd>
+                                    <dd class="color cmyk" data-bg-color="#1d1160">98 100 0 43</dd>
+                                    <dd class="color cmyk" data-bg-color="#008ca8">100 0 19 23</dd>
+                                    <dd class="color cmyk" data-bg-color="#a1a1a4">0 1 0 43</dd>
                                 <dt class="color-mode">PMS</dt>
-                                    <dd class="color pms" data-bg-color="#1D1160">275</dd>
-                                    <dd class="color pms" data-bg-color="#008CA8">3145</dd>
-                                    <dd class="color pms" data-bg-color="#A1A1A4">Cool Gray 8</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Chicago Bulls"
-                            data-league="nba"
-                            data-colors="hex rgb cmyk pms ">
+                                    <dd class="color pms" data-bg-color="#1d1160">275</dd>
+                                    <dd class="color pms" data-bg-color="#008ca8">3145</dd>
+                                    <dd class="color pms" data-bg-color="#a1a1a4">Cool Gray 8</dd>
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#1d1160">1d1160</dd>
+                                    <dd class="color hex" data-bg-color="#008ca8">008ca8</dd>
+                                    <dd class="color hex" data-bg-color="#a1a1a4">a1a1a4</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Chicago Bulls"
+                        data-league="nba"
+                        data-colors="rgb cmyk pms hex ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nba/chicago-bulls.svg">
                             Chicago Bulls
                         </h3>
                         <dl class="colors">
-                                <dt class="color-mode">HEX</dt>
-                                    <dd class="color hex" data-bg-color="#CE1141">CE1141</dd>
-                                    <dd class="color hex" data-bg-color="#061922">061922</dd>
                                 <dt class="color-mode">RGB</dt>
-                                    <dd class="color rgb" data-bg-color="#CE1141">206 17 65</dd>
+                                    <dd class="color rgb" data-bg-color="#ce1141">206 17 65</dd>
                                     <dd class="color rgb" data-bg-color="#061922">6 25 34</dd>
                                 <dt class="color-mode">CMYK</dt>
-                                    <dd class="color cmyk" data-bg-color="#CE1141">0 100 65 15</dd>
+                                    <dd class="color cmyk" data-bg-color="#ce1141">0 100 65 15</dd>
                                     <dd class="color cmyk" data-bg-color="#061922">30 0 0 100</dd>
                                 <dt class="color-mode">PMS</dt>
-                                    <dd class="color pms" data-bg-color="#CE1141">200</dd>
+                                    <dd class="color pms" data-bg-color="#ce1141">200</dd>
                                     <dd class="color pms" data-bg-color="#061922">Black</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Cleveland Cavaliers"
-                            data-league="nba"
-                            data-colors="hex rgb cmyk pms ">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#ce1141">ce1141</dd>
+                                    <dd class="color hex" data-bg-color="#061922">061922</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Cleveland Cavaliers"
+                        data-league="nba"
+                        data-colors="rgb cmyk pms hex ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nba/cleveland-cavaliers.svg">
                             Cleveland Cavaliers
                         </h3>
                         <dl class="colors">
-                                <dt class="color-mode">HEX</dt>
-                                    <dd class="color hex" data-bg-color="#860038">860038</dd>
-                                    <dd class="color hex" data-bg-color="#FDBB30">FDBB30</dd>
-                                    <dd class="color hex" data-bg-color="#002D62">002D62</dd>
                                 <dt class="color-mode">RGB</dt>
                                     <dd class="color rgb" data-bg-color="#860038">134 0 56</dd>
-                                    <dd class="color rgb" data-bg-color="#FDBB30">253 187 48</dd>
-                                    <dd class="color rgb" data-bg-color="#002D62">0 45 98</dd>
+                                    <dd class="color rgb" data-bg-color="#fdbb30">253 187 48</dd>
+                                    <dd class="color rgb" data-bg-color="#002d62">0 45 98</dd>
                                 <dt class="color-mode">CMYK</dt>
                                     <dd class="color cmyk" data-bg-color="#860038">0 100 34 53</dd>
-                                    <dd class="color cmyk" data-bg-color="#FDBB30">0 29 91 0</dd>
-                                    <dd class="color cmyk" data-bg-color="#002D62">100 68 54 0</dd>
+                                    <dd class="color cmyk" data-bg-color="#fdbb30">0 29 91 0</dd>
+                                    <dd class="color cmyk" data-bg-color="#002d62">100 68 54 0</dd>
                                 <dt class="color-mode">PMS</dt>
                                     <dd class="color pms" data-bg-color="#860038">209</dd>
-                                    <dd class="color pms" data-bg-color="#FDBB30">1235</dd>
-                                    <dd class="color pms" data-bg-color="#002D62">282</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Dallas Mavericks"
-                            data-league="nba"
-                            data-colors="hex rgb cmyk pms ">
+                                    <dd class="color pms" data-bg-color="#fdbb30">1235</dd>
+                                    <dd class="color pms" data-bg-color="#002d62">282</dd>
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#860038">860038</dd>
+                                    <dd class="color hex" data-bg-color="#fdbb30">fdbb30</dd>
+                                    <dd class="color hex" data-bg-color="#002d62">002d62</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Dallas Mavericks"
+                        data-league="nba"
+                        data-colors="rgb cmyk pms hex ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nba/dallas-mavericks.svg">
                             Dallas Mavericks
                         </h3>
                         <dl class="colors">
-                                <dt class="color-mode">HEX</dt>
-                                    <dd class="color hex" data-bg-color="#007DC5">007DC5</dd>
-                                    <dd class="color hex" data-bg-color="#C4CED3">C4CED3</dd>
-                                    <dd class="color hex" data-bg-color="#061922">061922</dd>
-                                    <dd class="color hex" data-bg-color="#20385B">20385B</dd>
                                 <dt class="color-mode">RGB</dt>
-                                    <dd class="color rgb" data-bg-color="#007DC5">0 125 197</dd>
-                                    <dd class="color rgb" data-bg-color="#C4CED3">196 206 211</dd>
+                                    <dd class="color rgb" data-bg-color="#007dc5">0 125 197</dd>
+                                    <dd class="color rgb" data-bg-color="#c4ced3">196 206 211</dd>
                                     <dd class="color rgb" data-bg-color="#061922">6 25 34</dd>
-                                    <dd class="color rgb" data-bg-color="#20385B">32 56 91</dd>
+                                    <dd class="color rgb" data-bg-color="#20385b">32 56 91</dd>
                                 <dt class="color-mode">CMYK</dt>
-                                    <dd class="color cmyk" data-bg-color="#007DC5">100 40 0 0</dd>
-                                    <dd class="color cmyk" data-bg-color="#C4CED3">5 0 0 20</dd>
+                                    <dd class="color cmyk" data-bg-color="#007dc5">100 40 0 0</dd>
+                                    <dd class="color cmyk" data-bg-color="#c4ced3">5 0 0 20</dd>
                                     <dd class="color cmyk" data-bg-color="#061922">30 0 0 100</dd>
-                                    <dd class="color cmyk" data-bg-color="#20385B">94 79 36 32</dd>
+                                    <dd class="color cmyk" data-bg-color="#20385b">94 79 36 32</dd>
                                 <dt class="color-mode">PMS</dt>
-                                    <dd class="color pms" data-bg-color="#007DC5">2935</dd>
-                                    <dd class="color pms" data-bg-color="#C4CED3">877</dd>
+                                    <dd class="color pms" data-bg-color="#007dc5">2935</dd>
+                                    <dd class="color pms" data-bg-color="#c4ced3">877</dd>
                                     <dd class="color pms" data-bg-color="#061922">Black</dd>
-                                    <dd class="color pms" data-bg-color="#20385B">289</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Denver Nuggets"
-                            data-league="nba"
-                            data-colors="hex rgb cmyk pms ">
+                                    <dd class="color pms" data-bg-color="#20385b">289</dd>
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#007dc5">007dc5</dd>
+                                    <dd class="color hex" data-bg-color="#c4ced3">c4ced3</dd>
+                                    <dd class="color hex" data-bg-color="#061922">061922</dd>
+                                    <dd class="color hex" data-bg-color="#20385b">20385b</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Denver Nuggets"
+                        data-league="nba"
+                        data-colors="rgb cmyk pms hex ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nba/denver-nuggets.svg">
                             Denver Nuggets
                         </h3>
                         <dl class="colors">
-                                <dt class="color-mode">HEX</dt>
-                                    <dd class="color hex" data-bg-color="#4D90CD">4D90CD</dd>
-                                    <dd class="color hex" data-bg-color="#FDB927">FDB927</dd>
-                                    <dd class="color hex" data-bg-color="#0F586C">0F586C</dd>
                                 <dt class="color-mode">RGB</dt>
-                                    <dd class="color rgb" data-bg-color="#4D90CD">77 144 205</dd>
-                                    <dd class="color rgb" data-bg-color="#FDB927">253 185 39</dd>
-                                    <dd class="color rgb" data-bg-color="#0F586C">15 88 108</dd>
+                                    <dd class="color rgb" data-bg-color="#4d90cd">77 144 205</dd>
+                                    <dd class="color rgb" data-bg-color="#fdb927">253 185 39</dd>
+                                    <dd class="color rgb" data-bg-color="#0f586c">15 88 108</dd>
                                 <dt class="color-mode">CMYK</dt>
-                                    <dd class="color cmyk" data-bg-color="#4D90CD">69 34 0 0</dd>
-                                    <dd class="color cmyk" data-bg-color="#FDB927">0 30 94 0</dd>
-                                    <dd class="color cmyk" data-bg-color="#0F586C">100 72 56 0</dd>
+                                    <dd class="color cmyk" data-bg-color="#4d90cd">69 34 0 0</dd>
+                                    <dd class="color cmyk" data-bg-color="#fdb927">0 30 94 0</dd>
+                                    <dd class="color cmyk" data-bg-color="#0f586c">100 72 56 0</dd>
                                 <dt class="color-mode">PMS</dt>
-                                    <dd class="color pms" data-bg-color="#4D90CD">279</dd>
-                                    <dd class="color pms" data-bg-color="#FDB927">123</dd>
-                                    <dd class="color pms" data-bg-color="#0F586C">282</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Detroit Pistons"
-                            data-league="nba"
-                            data-colors="hex rgb cmyk pms ">
+                                    <dd class="color pms" data-bg-color="#4d90cd">279</dd>
+                                    <dd class="color pms" data-bg-color="#fdb927">123</dd>
+                                    <dd class="color pms" data-bg-color="#0f586c">282</dd>
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#4d90cd">4d90cd</dd>
+                                    <dd class="color hex" data-bg-color="#fdb927">fdb927</dd>
+                                    <dd class="color hex" data-bg-color="#0f586c">0f586c</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Detroit Pistons"
+                        data-league="nba"
+                        data-colors="rgb cmyk pms hex ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nba/detroit-pistons.svg">
                             Detroit Pistons
                         </h3>
                         <dl class="colors">
-                                <dt class="color-mode">HEX</dt>
-                                    <dd class="color hex" data-bg-color="#ED174C">ED174C</dd>
-                                    <dd class="color hex" data-bg-color="#006BB6">006BB6</dd>
-                                    <dd class="color hex" data-bg-color="#0F586C">0F586C</dd>
                                 <dt class="color-mode">RGB</dt>
-                                    <dd class="color rgb" data-bg-color="#ED174C">237 23 76</dd>
-                                    <dd class="color rgb" data-bg-color="#006BB6">0 107 182</dd>
-                                    <dd class="color rgb" data-bg-color="#0F586C">15 88 108</dd>
+                                    <dd class="color rgb" data-bg-color="#ed174c">237 23 76</dd>
+                                    <dd class="color rgb" data-bg-color="#006bb6">0 107 182</dd>
+                                    <dd class="color rgb" data-bg-color="#0f586c">15 88 108</dd>
                                 <dt class="color-mode">CMYK</dt>
-                                    <dd class="color cmyk" data-bg-color="#ED174C">0 100 65 0</dd>
-                                    <dd class="color cmyk" data-bg-color="#006BB6">100 56 0 0</dd>
-                                    <dd class="color cmyk" data-bg-color="#0F586C">100 72 0 56</dd>
+                                    <dd class="color cmyk" data-bg-color="#ed174c">0 100 65 0</dd>
+                                    <dd class="color cmyk" data-bg-color="#006bb6">100 56 0 0</dd>
+                                    <dd class="color cmyk" data-bg-color="#0f586c">100 72 0 56</dd>
                                 <dt class="color-mode">PMS</dt>
-                                    <dd class="color pms" data-bg-color="#ED174C">199</dd>
-                                    <dd class="color pms" data-bg-color="#006BB6">293</dd>
-                                    <dd class="color pms" data-bg-color="#0F586C">282</dd>
-                        </dl>                    </li>
-            </ul>
+                                    <dd class="color pms" data-bg-color="#ed174c">199</dd>
+                                    <dd class="color pms" data-bg-color="#006bb6">293</dd>
+                                    <dd class="color pms" data-bg-color="#0f586c">282</dd>
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#ed174c">ed174c</dd>
+                                    <dd class="color hex" data-bg-color="#006bb6">006bb6</dd>
+                                    <dd class="color hex" data-bg-color="#0f586c">0f586c</dd>
+                        </dl>                    </li><!--
+                
+            --></ul>
             <h2 id="nfl" class="league-name">NFL</h2>
-            <ul class="teams">
-                    <li class="team"
-                            data-team="Arizona Cardinals"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+            <ul class="teams"><!--
+                Inline block spacing http://css-tricks.com/fighting-the-space-between-inline-block-elements/
+                
+                    --><li class="team"
+                        data-team="Arizona Cardinals"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/arizona-cardinals.svg">
                             Arizona Cardinals
@@ -300,11 +1537,11 @@
                                     <dd class="color pms" data-bg-color="#000000">Process Black C</dd>
                                     <dd class="color pms" data-bg-color="#FFB612">1235 C</dd>
                                     <dd class="color pms" data-bg-color="#A5ACAF">429 C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Atlanta Falcons"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Atlanta Falcons"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/atlanta-falcons.svg">
                             Atlanta Falcons
@@ -326,11 +1563,11 @@
                                     <dd class="color pms" data-bg-color="#A71930">187 C</dd>
                                     <dd class="color pms" data-bg-color="#000000">Process Black C</dd>
                                     <dd class="color pms" data-bg-color="#A5ACAF">877 C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Baltimore Ravens"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Baltimore Ravens"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/baltimore-ravens.svg">
                             Baltimore Ravens
@@ -356,11 +1593,11 @@
                                     <dd class="color pms" data-bg-color="#000000">Process Black C</dd>
                                     <dd class="color pms" data-bg-color="#9E7C0C">8660 C Metallic</dd>
                                     <dd class="color pms" data-bg-color="#C60C30">186 C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Buffalo Bills"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Buffalo Bills"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/buffalo-bills.svg">
                             Buffalo Bills
@@ -378,11 +1615,11 @@
                                 <dt class="color-mode">PMS</dt>
                                     <dd class="color pms" data-bg-color="#00338D">287 C</dd>
                                     <dd class="color pms" data-bg-color="#C60C30">186 C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Carolina Panthers"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Carolina Panthers"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/carolina-panthers.svg">
                             Carolina Panthers
@@ -404,11 +1641,11 @@
                                     <dd class="color pms" data-bg-color="#0085CA">Process Blue C</dd>
                                     <dd class="color pms" data-bg-color="#000000">Black 6 C</dd>
                                     <dd class="color pms" data-bg-color="#BFC0BF">421 C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Cincinnati Bengals"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Cincinnati Bengals"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/cincinnati-bengals.svg">
                             Cincinnati Bengals
@@ -426,11 +1663,11 @@
                                 <dt class="color-mode">PMS</dt>
                                     <dd class="color pms" data-bg-color="#000000">Process Black C</dd>
                                     <dd class="color pms" data-bg-color="#FB4F14">1655 C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Cleveland Browns"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Cleveland Browns"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/cleveland-browns.svg">
                             Cleveland Browns
@@ -452,11 +1689,11 @@
                                     <dd class="color pms" data-bg-color="#FB4F14">1655 C</dd>
                                     <dd class="color pms" data-bg-color="#22150C">NFL Cleveland Browns</dd>
                                     <dd class="color pms" data-bg-color="#A5ACAF">429 C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Dallas Cowboys"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Dallas Cowboys"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/dallas-cowboys.svg">
                             Dallas Cowboys
@@ -490,11 +1727,11 @@
                                     <dd class="color pms" data-bg-color="#A5ACAF">429 C</dd>
                                     <dd class="color pms" data-bg-color="#00338D">287 C</dd>
                                     <dd class="color pms" data-bg-color="#000000">Process Black</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Chicago Bears"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Chicago Bears"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/chicago-bears.svg">
                             Chicago Bears
@@ -512,11 +1749,11 @@
                                 <dt class="color-mode">PMS</dt>
                                     <dd class="color pms" data-bg-color="#0B162A">5395 C</dd>
                                     <dd class="color pms" data-bg-color="#C83803">1665 C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Denver Broncos"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Denver Broncos"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/denver-broncos.svg">
                             Denver Broncos
@@ -534,11 +1771,11 @@
                                 <dt class="color-mode">PMS</dt>
                                     <dd class="color pms" data-bg-color="#002244">289 C</dd>
                                     <dd class="color pms" data-bg-color="#FB4F14">1655 C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Detroit Lions"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Detroit Lions"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/detroit-lions.svg">
                             Detroit Lions
@@ -560,11 +1797,11 @@
                                     <dd class="color pms" data-bg-color="#005A8B">7462 C</dd>
                                     <dd class="color pms" data-bg-color="#B0B7BC">429</dd>
                                     <dd class="color pms" data-bg-color="#000000">Process Black C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Green Bay Packers"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Green Bay Packers"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/green-bay-packers.svg">
                             Green Bay Packers
@@ -582,11 +1819,11 @@
                                 <dt class="color-mode">PMS</dt>
                                     <dd class="color pms" data-bg-color="#203731">5535 C</dd>
                                     <dd class="color pms" data-bg-color="#FFB612">1235 C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Houston Texans"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Houston Texans"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/houston-texans.svg">
                             Houston Texans
@@ -604,11 +1841,11 @@
                                 <dt class="color-mode">PMS</dt>
                                     <dd class="color pms" data-bg-color="#03202F">5395 C</dd>
                                     <dd class="color pms" data-bg-color="#A71930">187 C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Indianapolis Colts"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Indianapolis Colts"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/indianapolis-colts.svg">
                             Indianapolis Colts
@@ -626,11 +1863,11 @@
                                 <dt class="color-mode">PMS</dt>
                                     <dd class="color pms" data-bg-color="#002C5F">654 C</dd>
                                     <dd class="color pms" data-bg-color="#A5ACAF">429 C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Jacksonville Jaguars"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Jacksonville Jaguars"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/jacksonville-jaguars.svg">
                             Jacksonville Jaguars
@@ -656,11 +1893,11 @@
                                     <dd class="color pms" data-bg-color="#006778">3155 C</dd>
                                     <dd class="color pms" data-bg-color="#9F792C">126 C</dd>
                                     <dd class="color pms" data-bg-color="#D7A22A">7555 C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Kansas City Chiefs"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Kansas City Chiefs"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/kansas-city-chiefs.svg">
                             Kansas City Chiefs
@@ -682,11 +1919,37 @@
                                     <dd class="color pms" data-bg-color="#E31837">186 C</dd>
                                     <dd class="color pms" data-bg-color="#FFB612">1235 C</dd>
                                     <dd class="color pms" data-bg-color="#000000">Process Black C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Minnesota Vikings"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Miami Dolphins"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nfl/miami-dolphins.svg">
+                            Miami Dolphins
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#008E97">008E97</dd>
+                                    <dd class="color hex" data-bg-color="#F58220">F58220</dd>
+                                    <dd class="color hex" data-bg-color="#005778">005778</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#008E97">0 142 151</dd>
+                                    <dd class="color rgb" data-bg-color="#F58220">245 130 32</dd>
+                                    <dd class="color rgb" data-bg-color="#005778">0 87 120</dd>
+                                <dt class="color-mode">CMYK</dt>
+                                    <dd class="color cmyk" data-bg-color="#008E97">100 21 42 2</dd>
+                                    <dd class="color cmyk" data-bg-color="#F58220">0 60 100 0</dd>
+                                    <dd class="color cmyk" data-bg-color="#005778">100 61 35 15</dd>
+                                <dt class="color-mode">PMS</dt>
+                                    <dd class="color pms" data-bg-color="#008E97">321 C</dd>
+                                    <dd class="color pms" data-bg-color="#F58220">151 C</dd>
+                                    <dd class="color pms" data-bg-color="#005778">7701 C</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Minnesota Vikings"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/minnesota-vikings.svg">
                             Minnesota Vikings
@@ -712,11 +1975,11 @@
                                     <dd class="color pms" data-bg-color="#FFC62F">123 C</dd>
                                     <dd class="color pms" data-bg-color="#E9BF9B">720 C</dd>
                                     <dd class="color pms" data-bg-color="#000000">Process Black C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="New England Patriots"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="New England Patriots"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/new-england-patriots.svg">
                             New England Patriots
@@ -738,11 +2001,11 @@
                                     <dd class="color pms" data-bg-color="#002244">289 C</dd>
                                     <dd class="color pms" data-bg-color="#C60C30">186 C</dd>
                                     <dd class="color pms" data-bg-color="#B0B7BC">429 C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="New Orleans Saints"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="New Orleans Saints"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/new-orleans-saints.svg">
                             New Orleans Saints
@@ -760,11 +2023,11 @@
                                 <dt class="color-mode">PMS</dt>
                                     <dd class="color pms" data-bg-color="#9F8958">8383 C Metallic</dd>
                                     <dd class="color pms" data-bg-color="#000000">Process Black C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="New York Giants"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="New York Giants"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/new-york-giants.svg">
                             New York Giants
@@ -786,11 +2049,11 @@
                                     <dd class="color pms" data-bg-color="#0B2265">2758 C</dd>
                                     <dd class="color pms" data-bg-color="#A71930">187 C</dd>
                                     <dd class="color pms" data-bg-color="#A5ACAF">429 C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="New York Jets"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="New York Jets"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/new-york-jets.svg">
                             New York Jets
@@ -804,11 +2067,11 @@
                                     <dd class="color cmyk" data-bg-color="#203731">70 40 60 60</dd>
                                 <dt class="color-mode">PMS</dt>
                                     <dd class="color pms" data-bg-color="#203731">5535 C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Oakland Raiders"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Oakland Raiders"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/oakland-raiders.svg">
                             Oakland Raiders
@@ -826,11 +2089,11 @@
                                 <dt class="color-mode">PMS</dt>
                                     <dd class="color pms" data-bg-color="#A5ACAF">429 C</dd>
                                     <dd class="color pms" data-bg-color="#000000">Process Black C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Philadelphia Eagles"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Philadelphia Eagles"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/philadelphia-eagles.svg">
                             Philadelphia Eagles
@@ -860,11 +2123,11 @@
                                     <dd class="color pms" data-bg-color="#ACC0C6">8240 C Metallic</dd>
                                     <dd class="color pms" data-bg-color="#000000">Process Black C</dd>
                                     <dd class="color pms" data-bg-color="#565A5C">425 C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Pittsburgh Steelers"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Pittsburgh Steelers"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/pittsburgh-steelers.svg">
                             Pittsburgh Steelers
@@ -894,11 +2157,11 @@
                                     <dd class="color pms" data-bg-color="#C60C30">186 C</dd>
                                     <dd class="color pms" data-bg-color="#00539B">287 C</dd>
                                     <dd class="color pms" data-bg-color="#A5ACAF">429 C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="San Diego Chargers"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="San Diego Chargers"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/san-diego-chargers.svg">
                             San Diego Chargers
@@ -920,11 +2183,11 @@
                                     <dd class="color pms" data-bg-color="#002244">289 C</dd>
                                     <dd class="color pms" data-bg-color="#0073CF">285 C</dd>
                                     <dd class="color pms" data-bg-color="#FFB612">1235 C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="San Francisco 49ers"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="San Francisco 49ers"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/san-francisco-49ers.svg">
                             San Francisco 49ers
@@ -950,11 +2213,11 @@
                                     <dd class="color pms" data-bg-color="#B3995D">465 C</dd>
                                     <dd class="color pms" data-bg-color="#000000">Process Black C</dd>
                                     <dd class="color pms" data-bg-color="#A5ACAF">429 C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Seattle Seahawks"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Seattle Seahawks"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/seattle-seahawks.svg">
                             Seattle Seahawks
@@ -976,11 +2239,11 @@
                                     <dd class="color pms" data-bg-color="#002244">289 C</dd>
                                     <dd class="color pms" data-bg-color="#69BE28">368 C</dd>
                                     <dd class="color pms" data-bg-color="#A5ACAF">429 C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="St Louis Rams"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="St Louis Rams"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/st-louis-rams.svg">
                             St Louis Rams
@@ -998,11 +2261,11 @@
                                 <dt class="color-mode">PMS</dt>
                                     <dd class="color pms" data-bg-color="#002244">289 C</dd>
                                     <dd class="color pms" data-bg-color="#B3995D">465 C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Tampa Bay Buccaneers"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Tampa Bay Buccaneers"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/tampa-bay-buccaneers.svg">
                             Tampa Bay Buccaneers
@@ -1032,11 +2295,11 @@
                                     <dd class="color pms" data-bg-color="#000000">Process Black C</dd>
                                     <dd class="color pms" data-bg-color="#FF7900">151 C</dd>
                                     <dd class="color pms" data-bg-color="#B1BABF">421 C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Tennessee Titans"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Tennessee Titans"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/tennessee-titans.svg">
                             Tennessee Titans
@@ -1062,11 +2325,11 @@
                                     <dd class="color pms" data-bg-color="#4B92DB">279 C</dd>
                                     <dd class="color pms" data-bg-color="#C60C30">186 C</dd>
                                     <dd class="color pms" data-bg-color="#A5ACAF">421 C</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Washington Redskins"
-                            data-league="nfl"
-                            data-colors="hex rgb cmyk pms ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Washington Redskins"
+                        data-league="nfl"
+                        data-colors="hex rgb cmyk pms ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nfl/washington-redskins.svg">
                             Washington Redskins
@@ -1092,65 +2355,17 @@
                                     <dd class="color pms" data-bg-color="#FFB612">1235 C</dd>
                                     <dd class="color pms" data-bg-color="#000000">Process Black C</dd>
                                     <dd class="color pms" data-bg-color="#5B2B2F">490 C</dd>
-                        </dl>                    </li>
-            </ul>
-            <h2 id="mlb" class="league-name">MLB</h2>
-            <ul class="teams">
-                    <li class="team"
-                            data-team="Arizona Diamondbacks"
-                            data-league="mlb"
-                            data-colors="hex rgb ">
-                        <h3 class="team-name"
-                            data-logo-url="assets/img/build/mlb/arizona-diamondbacks.svg">
-                            Arizona Diamondbacks
-                        </h3>
-                        <dl class="colors">
-                                <dt class="color-mode">HEX</dt>
-                                    <dd class="color hex" data-bg-color="#A71930">A71930</dd>
-                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
-                                    <dd class="color hex" data-bg-color="#DBCEAC">DBCEAC</dd>
-                                <dt class="color-mode">RGB</dt>
-                                    <dd class="color rgb" data-bg-color="#A71930">167 25 48</dd>
-                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
-                                    <dd class="color rgb" data-bg-color="#DBCEAC">219 206 172</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Atlanta Braves"
-                            data-league="mlb"
-                            data-colors="hex rgb ">
-                        <h3 class="team-name"
-                            data-logo-url="assets/img/build/mlb/atlanta-braves.svg">
-                            Atlanta Braves
-                        </h3>
-                        <dl class="colors">
-                                <dt class="color-mode">HEX</dt>
-                                    <dd class="color hex" data-bg-color="#002F5F">002F5F</dd>
-                                    <dd class="color hex" data-bg-color="#B71234">B71234</dd>
-                                <dt class="color-mode">RGB</dt>
-                                    <dd class="color rgb" data-bg-color="#002F5F">0 47 95</dd>
-                                    <dd class="color rgb" data-bg-color="#B71234">183 18 52</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Colorado Rockies"
-                            data-league="mlb"
-                            data-colors="hex rgb ">
-                        <h3 class="team-name"
-                            data-logo-url="assets/img/build/mlb/colorado-rockies.svg">
-                            Colorado Rockies
-                        </h3>
-                        <dl class="colors">
-                                <dt class="color-mode">HEX</dt>
-                                    <dd class="color hex" data-bg-color="#002F5F">002F5F</dd>
-                                    <dd class="color hex" data-bg-color="#B71234">B71234</dd>
-                                <dt class="color-mode">RGB</dt>
-                        </dl>                    </li>
-            </ul>
+                        </dl>                    </li><!--
+                
+            --></ul>
             <h2 id="nhl" class="league-name">NHL</h2>
-            <ul class="teams">
-                    <li class="team"
-                            data-team="Anaheim Ducks"
-                            data-league="nhl"
-                            data-colors="hex rgb ">
+            <ul class="teams"><!--
+                Inline block spacing http://css-tricks.com/fighting-the-space-between-inline-block-elements/
+                
+                    --><li class="team"
+                        data-team="Anaheim Ducks"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nhl/anaheim-ducks.svg">
                             Anaheim Ducks
@@ -1164,11 +2379,11 @@
                                     <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
                                     <dd class="color rgb" data-bg-color="#91764B">145 118 75</dd>
                                     <dd class="color rgb" data-bg-color="#EF5225">239 82 37</dd>
-                        </dl>                    </li>
-                    <li class="team"
-                            data-team="Arizona Coyotes"
-                            data-league="nhl"
-                            data-colors="hex rgb ">
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Arizona Coyotes"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
                         <h3 class="team-name"
                             data-logo-url="assets/img/build/nhl/arizona-coyotes.svg">
                             Arizona Coyotes
@@ -1182,8 +2397,487 @@
                                     <dd class="color rgb" data-bg-color="#841F27">132 31 39</dd>
                                     <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
                                     <dd class="color rgb" data-bg-color="#EFE1C6">239 225 198</dd>
-                        </dl>                    </li>
-            </ul>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Boston Bruins"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/boston-bruins.svg">
+                            Boston Bruins
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                    <dd class="color hex" data-bg-color="#FFC422">FFC422</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                                    <dd class="color rgb" data-bg-color="#FFC422">255 196 34</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Buffalo Sabres"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/buffalo-sabres.svg">
+                            Buffalo Sabres
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#002E62">002E62</dd>
+                                    <dd class="color hex" data-bg-color="#FDBB2F">FDBB2F</dd>
+                                    <dd class="color hex" data-bg-color="#AEB6B9">AEB6B9</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#002E62">0 46 98</dd>
+                                    <dd class="color rgb" data-bg-color="#FDBB2F">253 187 47</dd>
+                                    <dd class="color rgb" data-bg-color="#AEB6B9">174 182 185</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Calgary Flames"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/calgary-flames.svg">
+                            Calgary Flames
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#E03A3E">E03A3E</dd>
+                                    <dd class="color hex" data-bg-color="#FFC758">FFC758</dd>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#E03A3E">224 58 62</dd>
+                                    <dd class="color rgb" data-bg-color="#FFC758">255 199 88</dd>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Carolina Hurricanes"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/carolina-hurricanes.svg">
+                            Carolina Hurricanes
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#E03A3E">E03A3E</dd>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                    <dd class="color hex" data-bg-color="#8E8E90">8E8E90</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#E03A3E">224 58 62</dd>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                                    <dd class="color rgb" data-bg-color="#8E8E90">142 142 144</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Chicago Blackhawks"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/chicago-blackhawks.svg">
+                            Chicago Blackhawks
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#E3263A">E3263A</dd>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#E3263A">227 38 58</dd>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Colorado Avalanche"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/colorado-avalanche.svg">
+                            Colorado Avalanche
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#8B2942">8B2942</dd>
+                                    <dd class="color hex" data-bg-color="#01548A">01548A</dd>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                    <dd class="color hex" data-bg-color="#A9B0B8">A9B0B8</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#8B2942">139 41 66</dd>
+                                    <dd class="color rgb" data-bg-color="#01548A">1 84 138</dd>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                                    <dd class="color rgb" data-bg-color="#A9B0B8">169 176 184</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Columbus Blue Jackets"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/columbus-blue-jackets.svg">
+                            Columbus Blue Jackets
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#00285C">00285C</dd>
+                                    <dd class="color hex" data-bg-color="#E03A3E">E03A3E</dd>
+                                    <dd class="color hex" data-bg-color="#A9B0B8">A9B0B8</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#00285C">0 40 92</dd>
+                                    <dd class="color rgb" data-bg-color="#E03A3E">224 58 62</dd>
+                                    <dd class="color rgb" data-bg-color="#A9B0B8">169 176 184</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Dallas Stars"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/dallas-stars.svg">
+                            Dallas Stars
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#006A4E">006A4E</dd>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                    <dd class="color hex" data-bg-color="#C0C0C0">C0C0C0</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#006A4E">0 106 78</dd>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                                    <dd class="color rgb" data-bg-color="#C0C0C0">192 192 192</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Detroit Red Wings"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/detroit-red-wings.svg">
+                            Detroit Red Wings
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#EC1F26">EC1F26</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#EC1F26">236 31 38</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Edmonton Oilers"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/edmonton-oilers.svg">
+                            Edmonton Oilers
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#003777">003777</dd>
+                                    <dd class="color hex" data-bg-color="#E66A20">E66A20</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#003777">0 55 119</dd>
+                                    <dd class="color rgb" data-bg-color="#E66A20">230 106 32</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Florida Panthers"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/florida-panthers.svg">
+                            Florida Panthers
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#C8213F">C8213F</dd>
+                                    <dd class="color hex" data-bg-color="#002E5F">002E5F</dd>
+                                    <dd class="color hex" data-bg-color="#D59C05">D59C05</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#C8213F">200 33 63</dd>
+                                    <dd class="color rgb" data-bg-color="#002E5F">0 46 95</dd>
+                                    <dd class="color rgb" data-bg-color="#D59C05">213 156 5</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Los Angeles Kings"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/los-angeles-kings.svg">
+                            Los Angeles Kings
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                    <dd class="color hex" data-bg-color="#AFB7BA">AFB7BA</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                                    <dd class="color rgb" data-bg-color="#AFB7BA">175 183 186</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Minnesota Wild"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/minnesota-wild.svg">
+                            Minnesota Wild
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#025736">025736</dd>
+                                    <dd class="color hex" data-bg-color="#BF2B37">BF2B37</dd>
+                                    <dd class="color hex" data-bg-color="#EFB410">EFB410</dd>
+                                    <dd class="color hex" data-bg-color="#EEE3C7">EEE3C7</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#025736">2 87 54</dd>
+                                    <dd class="color rgb" data-bg-color="#BF2B37">191 43 55</dd>
+                                    <dd class="color rgb" data-bg-color="#EFB410">239 180 16</dd>
+                                    <dd class="color rgb" data-bg-color="#EEE3C7">238 227 199</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Montreal Canadiens"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/montreal-canadiens.svg">
+                            Montreal Canadiens
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#BF2F38">BF2F38</dd>
+                                    <dd class="color hex" data-bg-color="#213770">213770</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#BF2F38">191 47 56</dd>
+                                    <dd class="color rgb" data-bg-color="#213770">33 55 112</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Nashville Predators"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/nashville-predators.svg">
+                            Nashville Predators
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#FDBB2F">FDBB2F</dd>
+                                    <dd class="color hex" data-bg-color="#002E62">002E62</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#FDBB2F">253 187 47</dd>
+                                    <dd class="color rgb" data-bg-color="#002E62">0 46 98</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="New Jersey Devils"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/new-jersey-devils.svg">
+                            New Jersey Devils
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#E03A3E">E03A3E</dd>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#E03A3E">224 58 62</dd>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="New York Islanders"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/new-york-islanders.svg">
+                            New York Islanders
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#00529B">00529B</dd>
+                                    <dd class="color hex" data-bg-color="#F57D31">F57D31</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#00529B">0 82 155</dd>
+                                    <dd class="color rgb" data-bg-color="#F57D31">245 125 49</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="New York Rangers"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/new-york-rangers.svg">
+                            New York Rangers
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#0161AB">0161AB</dd>
+                                    <dd class="color hex" data-bg-color="#E6393F">E6393F</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#0161AB">1 97 171</dd>
+                                    <dd class="color rgb" data-bg-color="#E6393F">230 57 63</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Ottawa Senators"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/ottawa-senators.svg">
+                            Ottawa Senators
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#E4173E">E4173E</dd>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                    <dd class="color hex" data-bg-color="#D69F0F">D69F0F</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#E4173E">228 23 62</dd>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                                    <dd class="color rgb" data-bg-color="#D69F0F">214 159 15</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Philadelphia Flyers"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/philadelphia-flyers.svg">
+                            Philadelphia Flyers
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#F47940">F47940</dd>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#F47940">244 121 64</dd>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Pittsburgh Penguins"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/pittsburgh-penguins.svg">
+                            Pittsburgh Penguins
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                    <dd class="color hex" data-bg-color="#D1BD80">D1BD80</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                                    <dd class="color rgb" data-bg-color="#D1BD80">209 189 128</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="San Jose Sharks"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/san-jose-sharks.svg">
+                            San Jose Sharks
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#05535D">05535D</dd>
+                                    <dd class="color hex" data-bg-color="#F38F20">F38F20</dd>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#05535D">5 83 93</dd>
+                                    <dd class="color rgb" data-bg-color="#F38F20">243 143 32</dd>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="St Louis Blues"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/st-louis-blues.svg">
+                            St Louis Blues
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#0546A0">0546A0</dd>
+                                    <dd class="color hex" data-bg-color="#FFC325">FFC325</dd>
+                                    <dd class="color hex" data-bg-color="#101F48">101F48</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#0546A0">5 70 160</dd>
+                                    <dd class="color rgb" data-bg-color="#FFC325">255 195 37</dd>
+                                    <dd class="color rgb" data-bg-color="#101F48">16 31 72</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Tampa Bay Lightning"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/tampa-bay-lightning.svg">
+                            Tampa Bay Lightning
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#013E7D">013E7D</dd>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                    <dd class="color hex" data-bg-color="#C0C0C0">C0C0C0</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#013E7D">1 62 125</dd>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                                    <dd class="color rgb" data-bg-color="#C0C0C0">192 192 192</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Toronto Maple Leafs"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/toronto-maple-leafs.svg">
+                            Toronto Maple Leafs
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#003777">003777</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#003777">0 55 119</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Vancouver Canucks"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/vancouver-canucks.svg">
+                            Vancouver Canucks
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#07346F">07346F</dd>
+                                    <dd class="color hex" data-bg-color="#047A4A">047A4A</dd>
+                                    <dd class="color hex" data-bg-color="#A8A9AD">A8A9AD</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#07346F">7 52 111</dd>
+                                    <dd class="color rgb" data-bg-color="#047A4A">4 122 74</dd>
+                                    <dd class="color rgb" data-bg-color="#A8A9AD">168 169 173</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Washington Capitals"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/washington-capitals.svg">
+                            Washington Capitals
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#CF132B">CF132B</dd>
+                                    <dd class="color hex" data-bg-color="#00214E">00214E</dd>
+                                    <dd class="color hex" data-bg-color="#000000">000000</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#CF132B">207 19 43</dd>
+                                    <dd class="color rgb" data-bg-color="#00214E">0 33 78</dd>
+                                    <dd class="color rgb" data-bg-color="#000000">0 0 0</dd>
+                        </dl>                    </li><!--
+                    --><li class="team"
+                        data-team="Winnipeg Jets"
+                        data-league="nhl"
+                        data-colors="hex rgb ">
+                        <h3 class="team-name"
+                            data-logo-url="assets/img/build/nhl/winnipeg-jets.svg">
+                            Winnipeg Jets
+                        </h3>
+                        <dl class="colors">
+                                <dt class="color-mode">HEX</dt>
+                                    <dd class="color hex" data-bg-color="#002E62">002E62</dd>
+                                    <dd class="color hex" data-bg-color="#0168AB">0168AB</dd>
+                                    <dd class="color hex" data-bg-color="#A8A9AD">A8A9AD</dd>
+                                <dt class="color-mode">RGB</dt>
+                                    <dd class="color rgb" data-bg-color="#002E62">0 46 98</dd>
+                                    <dd class="color rgb" data-bg-color="#0168AB">1 104 171</dd>
+                                    <dd class="color rgb" data-bg-color="#A8A9AD">168 169 173</dd>
+                        </dl>                    </li><!--
+                
+            --></ul>
     </main>
     
 
@@ -1192,10 +2886,7 @@
     </footer>
 
     <!-- Script includes -->
-    <script src="assets/scripts/src/jquery.1.8.js"></script>
-    <script src="assets/scripts/src/js.js"></script>
-    <script src="assets/scripts/src/loadcss.js"></script>
-    <script src="assets/scripts/src/lazyload.js"></script>
+    <script src="assets/js/build/js-min.js"></script>
 
     <!-- Google Analytics 
     <script type="text/javascript">

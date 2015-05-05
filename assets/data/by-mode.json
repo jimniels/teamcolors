@@ -1,0 +1,448 @@
+[
+    {
+        "league": "NBA",
+        "teams": [
+            {
+                "team": "Atlanta Hawks",
+                "colors": {
+                    "hex"   :   ["E13A3E",          "002B5C",           "BEC0C2"],
+                    "rgb"   :   ["225 58 62",       "0 43 92",          "190 192 194"],
+                    "cmyk"  :   ["0 91 76 6",       "100 64 0 60",      "0 0 0 29"],
+                    "pms"   :   ["186",             "289",              "Cool Gray 5"]
+                }
+            },
+            {
+                "team": "Boston Celtics",
+                "colors" : {
+                    "hex"   :   ["008348",          "BB9753",           "A73832",           "FAB383",           "061922"],
+                    "rgb"   :   ["0 131 72",        "187 151 83",       "167 56 50",        "250 179 131",      "6 25 34"],
+                    "cmyk"  :   ["100 0 91 27",     "30 40 80 0",       "40 95 100 0",      "0 35 50 0",        "30 0 0 100"],
+                    "pms"   :   ["356",             "874",              "174",              "472",              "Black"]
+                }
+            },
+            {
+                "team": "Brooklyn Nets",
+                "colors" : {
+                    "hex"   :   ["061922"],
+                    "rgb"   :   ["6 25 34"],
+                    "cmyk"  :   ["30 0 0 100"],
+                    "pms"   :   ["Black"]
+                }
+            },
+            {
+                "team": "Charlotte Hornets",
+                "colors" : {
+                    "hex"   :   ["1D1160",          "008CA8",           "A1A1A4"],
+                    "rgb"   :   ["29 17 96",        "0 140 168",        "161 161 164"],
+                    "cmyk"  :   ["98 100 0 43",     "100 0 19 23",      "0 1 0 43"],
+                    "pms"   :   ["275",             "3145",             "Cool Gray 8"]
+                }
+            },
+            {
+                "team": "Chicago Bulls",
+                "colors" : {
+                    "hex"   :   ["CE1141",          "061922"],
+                    "rgb"   :   ["206 17 65",       "6 25 34"],
+                    "cmyk"  :   ["0 100 65 15",     "30 0 0 100"],
+                    "pms"   :   ["200",             "Black"]
+                }
+            },
+            {
+                "team": "Cleveland Cavaliers",
+                "colors" : {
+                    "hex"   :   ["860038",          "FDBB30",           "002D62"],
+                    "rgb"   :   ["134 0 56",        "253 187 48",       "0 45 98"],
+                    "cmyk"  :   ["0 100 34 53",     "0 29 91 0",        "100 68 54 0"],
+                    "pms"   :   ["209",             "1235",             "282"]
+                }                
+            },
+            {
+                "team": "Dallas Mavericks",
+                "colors" : {
+                    "hex"   :   ["007DC5",          "C4CED3",           "061922",           "20385B"],
+                    "rgb"   :   ["0 125 197",       "196 206 211",      "6 25 34",          "32 56 91"],
+                    "cmyk"  :   ["100 40 0 0",      "5 0 0 20",         "30 0 0 100",       "94 79 36 32"],
+                    "pms"   :   ["2935",            "877",              "Black",            "289"]
+                }
+            },
+            {
+                "team": "Denver Nuggets",
+                "colors" : {
+                    "hex"   :   ["4D90CD",          "FDB927",           "0F586C"],
+                    "rgb"   :   ["77 144 205",      "253 185 39",       "15 88 108"],
+                    "cmyk"  :   ["69 34 0 0",       "0 30 94 0",        "100 72 56 0"],
+                    "pms"   :   ["279",             "123",              "282"]
+                }
+            },
+            {
+                "team": "Detroit Pistons",
+                "colors": {
+                    "hex"   :   ["ED174C",          "006BB6",           "0F586C"],
+                    "rgb"   :   ["237 23 76",       "0 107 182",        "15 88 108"],
+                    "cmyk"  :   ["0 100 65 0",      "100 56 0 0",       "100 72 0 56"],
+                    "pms"   :   ["199",             "293",              "282"]
+                }
+            }
+        ]
+    },
+    {
+        "league": "NFL",
+        "teams": [
+            {
+                "team": "Arizona Cardinals",
+                "colors": {
+                    "hex"   :   ["97233F",          "000000",           "FFB612",           "A5ACAF"],
+                    "rgb"   :   ["135 0 39",        "0 0 0",            "238 173 30",       "155 161 162"],
+                    "cmyk"  :   ["0 100 60 30",     "70 50 50 100",     "0 25 100 0",       "5 0 0 30"],
+                    "pms"   :   ["194 C",           "Process Black C",  "1235 C",           "429 C"]
+                },
+                "src": "http://www.nflmedia.com/nfc_west.zip"
+            },
+            {
+                "team": "Atlanta Falcons",
+                "colors": {
+                    "hex"   :   ["A71930",          "000000",           "A5ACAF"],
+                    "rgb"   :   ["163 13 45",       "0 0 0",            "166 174 176"],
+                    "cmyk"  :   ["20 100 80 0",     "70 50 50 100",     "5 0 0 25"],
+                    "pms"   :   ["187 C",           "Process Black C",  "877 C"]
+                }, 
+                "src": "http://www.nflmedia.com/nfc_south.zip"
+            },
+            {
+                "team": "Baltimore Ravens", 
+                "colors" : {
+                    "hex"   :   ["241773",      "000000",           "9E7C0C",               "C60C30"],
+                    "rgb"   :   ["26 25 95",    "0 0 0",            "187 147 52",           "213 10 10"],
+                    "cmyk"  :   ["100 100 0 5", "70 50 50 100",     "0 20 80 20",           "10 100 100 0"],
+                    "pms"   :   ["273 C",       "Process Black C",  "8660 C Metallic",      "186 C"]
+                },
+                "src" : "http://www.nflmedia.com/afc_north.zip"
+            },
+            {
+                "team": "Buffalo Bills",
+                "colors": {
+                    "hex"   :   ["00338D",          "C60C30"],
+                    "rgb"   :   ["12 46 130",       "213 10 10"],
+                    "cmyk"  :   ["100 60 0 20",     "10 100 100 0"],
+                    "pms"   :   ["287 C",           "186 C"]
+                },
+                "src" : "http://www.nflmedia.com/afc_east.zip"
+            },
+            {
+                "team": "Carolina Panthers",
+                "colors": {
+                    "hex"   :   ["0085CA",          "000000",           "BFC0BF"],
+                    "rgb"   :   ["0 133 202",       "0 0 0",            "191 192 191"],
+                    "cmyk"  :   ["100 10 0 5",      "100 40 0 100",     "0 0 0 20"],
+                    "pms"   :   ["Process Blue C",  "Black 6 C",        "421 C"]
+                },
+                "src": "http://www.nflmedia.com/nfc_south.zip"
+            },
+            {
+                "team": "Cincinnati Bengals",
+                "colors" : {
+                    "hex"   :   ["000000",          "FB4F14"],
+                    "rgb"   :   ["0 0 0",           "211 47 30"],
+                    "cmyk"  :   ["70 50 50 100",    "0 85 100 0"],
+                    "pms"   :   ["Process Black C", "1655 C"]
+                },
+                "src" : "http://www.nflmedia.com/afc_north.zip"
+            },
+            {
+                "team": "Cleveland Browns",
+                "colors" : {
+                    "hex"   :   ["FB4F14",          "22150C",          "A5ACAF"],
+                    "rgb"   :   ["211 47 30",       "34 21 12",        "155 161 162"],
+                    "cmyk"  :   ["0 75 100 0",      "1 33 85 94",      "5 0 0 30"],
+                    "pms"   :   ["1655 C",          "NFL Cleveland Browns","429 C"]
+                },
+                "src" : "http://www.nflmedia.com/afc_north.zip"
+            },
+            {
+                "team": "Dallas Cowboys",
+                "colors" : {
+                    "hex"   :   ["002244",          "B0B7BC",           "ACC0C6",           "A5ACAF",           "00338D",           "000000"],
+                    "rgb"   :   ["0 21 50",         "176 183 188",      "186 202 211",      "155 161 162",      "12 46 130",        "0 0 0"],
+                    "cmyk"  :   ["100 65 0 60",     "3 0 0 32",         "10 0 0 20",        "0 0 0 20",         "100 60 0 20",      "70 50 50 100"],
+                    "pms"   :   ["289 C",           "8180 C Metallic",  "8240 C",           "429 C",            "287 C",            "Process Black"]
+                },
+                "src" : "http://www.nflmedia.com/nfc_east.zip"
+            },
+            {
+                "team": "Chicago Bears",
+                "colors": {
+                    "hex"   :   ["0B162A",          "C83803"],
+                    "rgb"   :   ["11 22 42",        "200 56 3"],
+                    "cmyk"  :   ["100 60 0 80",     "0 75 100 0"],
+                    "pms"   :   ["5395 C",          "1665 C"]
+                },
+                "src": "http://www.nflmedia.com/nfc_north.zip"
+            },
+            {
+                "team": "Denver Broncos",
+                "colors": {
+                    "hex"   :   ["002244",          "FB4F14"],
+                    "rgb"   :   ["0 35 76",         "255 82 0"],
+                    "cmyk"  :   ["100 72 0 64",     "0 82 100 0"],
+                    "pms"   :   ["289 C",           "1655 C"]
+                },
+                "src": "http://www.nflmedia.com/afc_west.zip"
+            },
+            {
+                "team": "Detroit Lions",
+                "colors": {
+                    "hex"   :   ["005A8B",          "B0B7BC",           "000000"],
+                    "rgb"   :   ["0 78 137",        "176 183 188",      "0 0 0"],
+                    "cmyk"  :   ["100 45 0 10",     "3 0 0 32",         "70 50 50 100"],
+                    "pms"   :   ["7462 C",          "429",              "Process Black C"]
+                },
+                "src": "http://www.nflmedia.com/nfc_north.zip"
+            },
+            {
+                "team": "Green Bay Packers",
+                "colors": {
+                    "hex"   :   ["203731",          "FFB612"],
+                    "rgb"   :   ["28 45 37",        "238 173 30"],
+                    "cmyk"  :   ["70 40 60 60",     "0 25 100 0"],
+                    "pms"   :   ["5535 C",          "1235 C"]
+                },
+                "src": "http://www.nflmedia.com/nfc_north.zip"
+            },
+            {
+                "team": "Houston Texans", 
+                "colors" : {
+                    "hex"   :   ["03202F",          "A71930"],
+                    "rgb"   :   ["0 7 28",          "163 13 45"],
+                    "cmyk"  :   ["100 60 0 80",     "0 100 79 20"],
+                    "pms"   :   ["5395 C",          "187 C"]
+                },
+                "src" : "http://www.nflmedia.com/afc_south.zip"
+            },
+            {
+                "team": "Indianapolis Colts", 
+                "colors" : {
+                    "hex"   :   ["002C5F",          "A5ACAF"],
+                    "rgb"   :   ["1 51 105",        "155 161 162"],
+                    "cmyk"  :   ["100 65 0 35",     "5 0 0 30"],
+                    "pms"   :   ["654 C",           "429 C"]
+                },
+                "src" : "http://www.nflmedia.com/afc_south.zip"
+            },
+            {
+                "team": "Jacksonville Jaguars", 
+                "colors" : {
+                    "hex"   :   ["000000",          "006778",           "9F792C",           "D7A22A"],
+                    "rgb"   :   ["0 0 0",           "0 101 118",        "159 121 44",       "215 162 42"],
+                    "cmyk"  :   ["70 50 50 100",    "100 0 20 30",      "34 48 100 13",     "17 37 100 0"],
+                    "pms"   :   ["Process Black C", "3155 C",           "126 C",            "7555 C"]
+                },
+                "src" : "http://www.nflmedia.com/afc_south.zip"
+            },
+            {
+                "team": "Kansas City Chiefs",
+                "colors": {
+                    "hex"   :   ["E31837",          "FFB612",           "000000"],
+                    "rgb"   :   ["227 24 55",       "238 173 30",       "0 0 0"],
+                    "cmyk"  :   ["0 100 81 4",      "0 25 100 0",       "70 50 50 100"],
+                    "pms"   :   ["186 C",           "1235 C",           "Process Black C"]
+                },
+                "src": "http://www.nflmedia.com/afc_west.zip"
+            },
+            {
+                "team": "Minnesota Vikings",
+                "colors": {
+                    "hex"   :   ["4F2683",          "FFC62F",           "E9BF9B",           "000000"],
+                    "rgb"   :   ["79 38 131",       "255 198 47",       "233 191 155",      "0 0 0"],
+                    "cmyk"  :   ["82 100 0 12",     "0 23 91 0",        "0 30 30 5",        "70 50 50 100"],
+                    "pms"   :   ["268 C",           "123 C",            "720 C",            "Process Black C"]
+                }, 
+                "src": "http://www.nflmedia.com/nfc_north.zip"
+            },
+            {
+                "team": "New England Patriots",
+                "colors" : {
+                    "hex"   :   ["002244",          "C60C30",           "B0B7BC"],
+                    "rgb"   :   ["0 21 50",         "213 10 10",        "176 183 188"],
+                    "cmyk"  :   ["100 65 0 60",     "10 100 100 0",     "3 0 0 32"],
+                    "pms"   :   ["289 C",           "186 C",            "429 C"]
+                },
+                "src" : "http://www.nflmedia.com/afc_east.zip"
+            },
+            {
+                "team": "New Orleans Saints",
+                "colors": {
+                    "hex"   :   ["9F8958",          "000000"],
+                    "rgb"   :   ["159 137 88",      "0 0 0"],
+                    "cmyk"  :   ["37 40 74 8",      "70 50 50 100"],
+                    "pms"   :   ["8383 C Metallic", "Process Black C"]
+                }, 
+                "src": "http://www.nflmedia.com/nfc_south.zip"
+            },
+            {
+                "team": "New York Giants",
+                "colors" : {
+                    "hex"   :   ["0B2265",          "A71930",           "A5ACAF"],
+                    "rgb"   :   ["1 35 82",         "163 13 45",        "155 161 162"],
+                    "cmyk"  :   ["100 75 0 30",     "20 100 80 0",      "5 0 0 30"],
+                    "pms"   :   ["2758 C",          "187 C",            "429 C"]
+                },
+                "src" : "http://www.nflmedia.com/nfc_east.zip"
+            },
+            {
+                "team": "New York Jets",
+                "colors" : {
+                    "hex"   :   ["203731"],
+                    "rgb"   :   ["28 45 37"],
+                    "cmyk"  :   ["70 40 60 60"],
+                    "pms"   :   ["5535 C"]
+                },
+                "src" : "http://www.nflmedia.com/afc_east.zip"
+            },
+            {
+                "team": "Oakland Raiders",
+                "colors": {
+                    "hex"   :   ["A5ACAF",          "000000"],
+                    "rgb"   :   ["166 174 176",     "0 0 0"],
+                    "cmyk"  :   ["5 0 0 25",        "70 50 50 100"],
+                    "pms"   :   ["429 C",           "Process Black C"]
+                },
+                "src": "http://www.nflmedia.com/afc_west.zip"
+            },
+            {
+                "team": "Philadelphia Eagles",
+                "colors" : {
+                    "hex"   :   ["004953",          "A5ACAF",           "ACC0C6",           "000000",           "565A5C"],
+                    "rgb"   :   ["0 49 53",         "191 192 191",      "186 202 211",      "0 0 0",            "95 96 98"],
+                    "cmyk"  :   ["100 0 30 70",     "5 0 0 25",         "10 0 0 20",        "70 50 50 100",     "0 0 0 80"],
+                    "pms"   :   ["316 C",           "429 C",            "8240 C Metallic",  "Process Black C",  "425 C"]
+                },
+                "src" : "http://www.nflmedia.com/nfc_east.zip"
+            },
+            {
+                "team": "Pittsburgh Steelers",
+                "colors" : {
+                    "hex"   :   ["000000",          "FFB612",           "C60C30",           "00539B",           "A5ACAF"],
+                    "rgb"   :   ["0 0 0",           "238 173 30",       "213 10 10",        "0 83 155",         "155 161 162"],
+                    "cmyk"  :   ["70 50 50 100",    "0 25 100 0",       "10 100 100 0",     "100 68 0 12",      "5 0 0 30"],
+                    "pms"   :   ["Process Black C", "1235 C",           "186 C",            "287 C",            "429 C"]
+                },
+                "src" : "http://www.nflmedia.com/afc_north.zip"
+            },
+            {
+                "team": "San Diego Chargers",
+                "colors": {
+                    "hex"   :   ["002244",          "0073CF",           "FFB612"],
+                    "rgb"   :   ["0 21 50",         "0 128 197",        "238 173 30"],
+                    "cmyk"  :   ["100 65 0 60",     "90 40 0 0",        "0 25 100 0"],
+                    "pms"   :   ["289 C",           "285 C",            "1235 C"]
+                },
+                "src": "http://www.nflmedia.com/afc_west.zip"
+            },
+            {
+                "team": "San Francisco 49ers",
+                "colors": {
+                    "hex"   :   ["AA0000",          "B3995D",           "000000",           "A5ACAF"],
+                    "rgb"   :   ["170 0 0",         "175 146 93",       "0 0 0",            "155 161 162"],
+                    "cmyk"  :   ["0 100 59 26",     "5 20 50 20",       "70 50 50 100",     "5 0 0 30"],
+                    "pms"   :   ["187C",            "465 C",            "Process Black C",  "429 C"]
+                },
+                "src": "http://www.nflmedia.com/nfc_west.zip"
+            },
+            {
+                "team": "Seattle Seahawks",
+                "colors": {
+                    "hex"   :   ["002244",          "69BE28",           "A5ACAF"],
+                    "rgb"   :   ["0 21 50",         "105 190 40",       "155 161 162"],
+                    "cmyk"  :   ["100 65 0 60",     "57 0 84 0",        "5 0 0 30"],
+                    "pms"   :   ["289 C",           "368 C",            "429 C"]
+                },
+                "src": "http://www.nflmedia.com/nfc_west.zip"
+            },
+            {
+                "team": "St Louis Rams",
+                "colors": {
+                    "hex"   :   ["002244",          "B3995D"],
+                    "rgb"   :   ["0 21 50",         "175 146 93"],
+                    "cmyk"  :   ["100 65 0 60",     "5 20 50 20"],
+                    "pms"   :   ["289 C",           "465 C"]
+                },
+                "src": "http://www.nflmedia.com/nfc_west.zip"
+            },
+            {
+                "team": "Tampa Bay Buccaneers",
+                "colors": {
+                    "hex"   :   ["D50A0A",          "34302B",           "000000",           "FF7900",           "B1BABF"],
+                    "rgb"   :   ["213 10 10",       "52 48 43",         "0 0 0",            "255 121 0",        "177 186 191"],
+                    "cmyk"  :   ["10 100 100 0",    "64 61 65 64",      "70 50 50 100",     "0 50 100 0",       "5 0 0 30"],
+                    "pms"   :   ["186 C",           "Black 7 C",        "Process Black C",  "151 C",            "421 C"]
+                },
+                "src": "http://www.nflmedia.com/nfc_south.zip"
+            }, 
+            {
+                "team": "Tennessee Titans",
+                "colors" : {
+                    "hex"   :   ["002244",          "4B92DB",           "C60C30",           "A5ACAF"],
+                    "rgb"   :   ["0 21 50",         "68 149 210",       "213 10 10",        "191 192 191"],
+                    "cmyk"  :   ["100 65 0 60",     "70 30 0 0",        "10 100 100 0",     "5 0 0 25"],
+                    "pms"   :   ["289 C",           "279 C",            "186 C",            "421 C"]
+                },
+                "src" : "http://www.nflmedia.com/afc_south.zip"
+            },
+            {
+                "team": "Washington Redskins",
+                "colors" : {
+                    "hex"   :   ["773141",          "FFB612",           "000000",           "5B2B2F"],
+                    "rgb"   :   ["63 16 16",        "238 173 30",       "0 0 0",            "91 43 47"],
+                    "cmyk"  :   ["20 100 60 30",    "0 25 100 0",       "70 50 50 100",     "0 80 70 70"],
+                    "pms"   :   ["195 C",           "1235 C",           "Process Black C",  "490 C"]
+                },
+                "src" : "http://www.nflmedia.com/nfc_east.zip"
+            }
+        ]
+    },
+    {
+        "league": "MLB",
+        "teams": [
+            {
+                "team": "Arizona Diamondbacks",
+                "colors": {
+                    "hex"   :   ["A71930",          "000000",           "DBCEAC"],
+                    "rgb"   :   ["167 25 48",       "0 0 0",            "219 206 172"]
+                }
+            },
+            {
+                "team": "Atlanta Braves",
+                "colors" : {
+                    "hex"   :   ["002F5F",          "B71234"],
+                    "rgb"   :   ["0 47 95",         "183 18 52"]
+                }
+            },
+            {
+                "team": "Colorado Rockies",
+                "colors" : {
+                    "hex"   :   ["002F5F",          "B71234"],
+                    "rgb"   :   []
+                }
+            }
+        ]
+    },
+    {
+        "league": "NHL",
+        "teams": [
+            {
+                "team": "Anaheim Ducks",
+                "colors": {
+                    "hex"   :   ["000000",          "91764B",           "EF5225"],
+                    "rgb"   :   ["0 0 0",           "145 118 75",       "239 82 37"]
+                }
+            },
+            {
+                "team": "Arizona Coyotes",
+                "colors" : {
+                    "hex"   :   ["841F27",          "000000",           "EFE1C6"],
+                    "rgb"   :   ["132 31 39",       "0 0 0",            "239 225 198"]
+                }
+            }
+        ]
+    }
+]

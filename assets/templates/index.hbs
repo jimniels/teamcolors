@@ -18,8 +18,8 @@
     <nav id="navigation">
         <ul class="leagues">
             {{#each .}}
-                <li id="nav-{{convertToId league}}" class="nav-league">
-                    <a href="#{{convertToId league}}" class="nav-league__name">{{league}}</a>
+                <li id="nav-{{@key}}" class="nav-league">
+                    <a href="#{{@key}}" class="nav-league__name">{{toUpperCase @key}}</a>
                 </li>
             {{/each}}
         </ul>
@@ -27,22 +27,24 @@
 
     <main id="content">
         {{#each .}}
-            <h2 id="{{convertToId league}}" class="league-name">{{league}}</h2>
-            <ul class="teams">
-                {{#each teams}}
-                    <li class="team"
-                            {{!-- id="{{convertToId team}}" --}}
-                            data-team="{{ team }}"
-                            data-league="{{convertToId ../league}}"
-                            data-colors="{{#each colors}}{{@key}} {{/each}}">
+            <h2 id="{{@key}}" class="league-name">{{toUpperCase @key}}</h2>
+            <ul class="teams"><!--
+                Inline block spacing http://css-tricks.com/fighting-the-space-between-inline-block-elements/
+                
+                {{#each this}}
+                    --><li class="team"
+                        data-team="{{ team }}"
+                        data-league="{{@../key}}"
+                        data-colors="{{#each colors}}{{@key}} {{/each}}">
                         <h3 class="team-name"
-                            data-logo-url="assets/img/build/{{convertToId ../league}}/{{convertToId team}}.svg">
+                            data-logo-url="assets/img/build/{{@../key}}/{{convertToId team}}.svg">
                             {{team}}
                         </h3>
                         {{> colors}}
-                    </li>
+                    </li><!--
                 {{/each}}
-            </ul>
+                
+            --></ul>
         {{/each}}
     </main>
     
@@ -52,10 +54,7 @@
     </footer>
 
     <!-- Script includes -->
-    <script src="assets/scripts/src/jquery.1.8.js"></script>
-    <script src="assets/scripts/src/js.js"></script>
-    <script src="assets/scripts/src/loadcss.js"></script>
-    <script src="assets/scripts/src/lazyload.js"></script>
+    <script src="assets/js/build/js-min.js"></script>
 
     <!-- Google Analytics 
     <script type="text/javascript">
