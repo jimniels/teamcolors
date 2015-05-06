@@ -1,4 +1,4 @@
-
+var test = 'color'
 var TeamColors = {
 
     // Set the defaults

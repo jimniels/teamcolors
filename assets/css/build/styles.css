@@ -1,0 +1,585 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  font: 1em/1.3 "Droid Sans", Helvetica, Arial, sans-serif;
+  color: #333;
+  background: #f7f7f7;
+}
+
+a {
+  color: #08c;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#top {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  z-index: 200;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-transition: all 0.33s ease;
+  -o-transition: all 0.33s ease;
+  -webkit-transition: all 0.33s ease;
+  transition: all 0.33s ease;
+  -moz-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  background: #333;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+}
+#top:hover {
+  -moz-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+  text-decoration: none;
+}
+@media only screen and (max-width: 600px) {
+  #top {
+    bottom: 1em;
+    right: 1em;
+  }
+}
+
+select {
+  font-size: 1em;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+@media only screen and (max-width: 600px) {
+  .colors {
+    display: none;
+    margin-bottom: 2em;
+  }
+  .show .colors {
+    display: block;
+  }
+}
+
+.color {
+  margin: .25em 0;
+  border-radius: 3px;
+  padding: 1em .75em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+.color:hover {
+  cursor: pointer;
+}
+.color.rgb:before {
+  content: 'RGB(';
+}
+.color.rgb:after {
+  content: ')';
+}
+.color.hex:before {
+  content: '#';
+}
+.color.cmyk:before {
+  content: 'CMYK(';
+}
+.color.cmyk:after {
+  content: ')';
+}
+.color.pms:before {
+  content: 'PMS ';
+}
+
+.color-mode {
+  display: none;
+}
+
+#navigation {
+  position: relative;
+  border-bottom: 1px solid #e9e9e9;
+  border-top: 1px solid #e9e9e9;
+  top: 1px;
+  z-index: 5;
+  background: #fff;
+  padding-left: 2.5em;
+}
+@media only screen and (max-width: 600px) {
+  #navigation {
+    padding-top: 1em;
+    padding-left: 0;
+  }
+}
+#navigation:after {
+  content: 'No results.';
+  position: absolute;
+  top: 9em;
+  left: 3em;
+  color: #777;
+}
+@media only screen and (max-width: 600px) {
+  #navigation:after {
+    top: 11em;
+    left: 2em;
+  }
+}
+#navigation select {
+  margin: 0 1em 0 .5em;
+}
+#navigation label {
+  font-size: 0.875em;
+  font-weight: bold;
+}
+@media only screen and (max-width: 600px) {
+  #navigation label:first-child {
+    margin-left: 2em;
+  }
+}
+#navigation input {
+  width: 65%;
+  font-family: "Droid Sans", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  padding: 1em;
+  border: 0;
+  border-left: 1px solid #e9e9e9;
+  border-radius: 0;
+}
+#navigation input:focus {
+  outline: 0;
+}
+@media only screen and (max-width: 1000px) {
+  #navigation input {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #navigation input {
+    position: static;
+    width: 100%;
+    padding: 1em 1.875em;
+    border-top: 1px solid #e9e9e9;
+    margin-top: 1em;
+  }
+}
+
+#header {
+  position: relative;
+  padding: 2.5em;
+  background: #f7f7f7;
+}
+@media only screen and (max-width: 600px) {
+  #header {
+    padding: 1.875em;
+    padding-bottom: 4.6875em;
+  }
+}
+.svg #header:before {
+  content: '';
+  position: absolute;
+  right: 1.25em;
+  top: 3.125em;
+  width: 320px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: 60px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25);
+  opacity: 0.25;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  background-image: url('../../img/build/leagues/nba.svg?1429137428'), url('../../img/build/leagues/nfl.svg?1429137428'), url('../../img/build/leagues/nhl.svg?1429137428'), url('../../img/build/leagues/mlb.svg?1429137428'), url('../../img/build/leagues/mls.svg?1429137428'), url('../../img/build/leagues/epl.svg?1429137428');
+  background-position: 100% center,  85% center,  65% center,  43% center,  20% center,  0% center;
+}
+@media only screen and (max-width: 600px) {
+  .svg #header:before {
+    background-size: 50px;
+    right: initial;
+    top: initial;
+    left: 1.25em;
+    bottom: 0;
+  }
+}
+
+.intro-authors {
+  color: #aaa;
+}
+.intro-authors a + a {
+  color: inherit;
+}
+
+.intro-description {
+  font-size: 1.25em;
+  margin-bottom: .25em;
+}
+.intro-description strong {
+  font-size: 2em;
+  font-weight: bold;
+  display: block;
+}
+.intro-description + p {
+  color: #777;
+}
+.intro-description + p a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.teams {
+  position: relative;
+  background: #fff;
+  min-height: 250px;
+}
+.teams:before, .teams:after {
+  content: '';
+  height: 100%;
+  top: 0;
+  position: absolute;
+  width: 1px;
+  background: #e9e9e9;
+  z-index: 20;
+}
+.teams:before {
+  left: 33.33333333%;
+}
+@media only screen and (max-width: 1000px) {
+  .teams:before {
+    left: 50%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .teams:before {
+    display: none;
+  }
+}
+.teams:after {
+  left: 66.66666666%;
+}
+@media only screen and (max-width: 1000px) {
+  .teams:after {
+    display: none;
+  }
+}
+
+.team {
+  background: #fff;
+  position: relative;
+  z-index: 10;
+  line-height: 2em;
+  width: 33.3333333%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: center;
+  padding: 2em;
+  padding: 2.5%;
+  border-top: 1px solid #e9e9e9;
+  display: inline-block;
+  vertical-align: top;
+}
+@media only screen and (max-width: 1000px) {
+  .team {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .team {
+    width: 100%;
+    padding: 0 0.625em;
+    position: relative;
+  }
+  .team:after {
+    content: '';
+    position: absolute;
+    top: 2em;
+    right: 1em;
+    -moz-transition: all 0.333s ease;
+    -o-transition: all 0.333s ease;
+    -webkit-transition: all 0.333s ease;
+    transition: all 0.333s ease;
+    background-image: url('../../img/build/arrow.svg?1429137428');
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+  }
+  .team.show:after {
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+.svg .team[data-league="nba"]:before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  background-size: 50px;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=15);
+  opacity: 0.15;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  color: red;
+  background-image: url('../../img/build/leagues/nba.svg?1429137428');
+  background-repeat: none;
+}
+@media only screen and (max-width: 600px) {
+  .svg .team[data-league="nba"]:before {
+    display: none;
+  }
+}
+.svg .team[data-league="nfl"]:before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  background-size: 50px;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=15);
+  opacity: 0.15;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  color: red;
+  background-image: url('../../img/build/leagues/nfl.svg?1429137428');
+  background-repeat: none;
+}
+@media only screen and (max-width: 600px) {
+  .svg .team[data-league="nfl"]:before {
+    display: none;
+  }
+}
+.svg .team[data-league="nhl"]:before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  background-size: 50px;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=15);
+  opacity: 0.15;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  color: red;
+  background-image: url('../../img/build/leagues/nhl.svg?1429137428');
+  background-repeat: none;
+}
+@media only screen and (max-width: 600px) {
+  .svg .team[data-league="nhl"]:before {
+    display: none;
+  }
+}
+.svg .team[data-league="mlb"]:before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  background-size: 50px;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=15);
+  opacity: 0.15;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  color: red;
+  background-image: url('../../img/build/leagues/mlb.svg?1429137428');
+  background-repeat: none;
+}
+@media only screen and (max-width: 600px) {
+  .svg .team[data-league="mlb"]:before {
+    display: none;
+  }
+}
+.svg .team[data-league="mls"]:before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  background-size: 50px;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=15);
+  opacity: 0.15;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  color: red;
+  background-image: url('../../img/build/leagues/mls.svg?1429137428');
+  background-repeat: none;
+}
+@media only screen and (max-width: 600px) {
+  .svg .team[data-league="mls"]:before {
+    display: none;
+  }
+}
+.svg .team[data-league="epl"]:before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  background-size: 50px;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=15);
+  opacity: 0.15;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  color: red;
+  background-image: url('../../img/build/leagues/epl.svg?1429137428');
+  background-repeat: none;
+}
+@media only screen and (max-width: 600px) {
+  .svg .team[data-league="epl"]:before {
+    display: none;
+  }
+}
+
+.team-name {
+  text-transform: uppercase;
+  letter-spacing: .0625em;
+  font-size: .825em;
+}
+.svg .team-name {
+  padding-top: 175px;
+  background-size: 175px;
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+@media only screen and (max-width: 600px) {
+  .svg .team-name {
+    letter-spacing: 0;
+    padding: 0 0;
+    background-size: 75px;
+    background-position: 0 5px;
+    width: 75%;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre;
+  }
+}
+
+#footer {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  border-top: 1px solid #e9e9e9;
+}
+#footer p {
+  padding: 1em;
+  color: #222;
+}
+
+@media print {
+  .hex,
+  .colors li {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  .colors li {
+    padding: .5em .75em;
+    border: 0 !important;
+    border-bottom: 1px solid #aaa !important;
+  }
+
+  .colors li:first-child {
+    border-top: 1px solid #aaa !important;
+  }
+
+  #footer {
+    display: none;
+  }
+
+  body:after {
+    content: "Brought to you by: http://teamcolors.ar90.com";
+  }
+}
