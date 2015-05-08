@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.1 (12002) - http://www.bohemiancoding.com/sketch -->
+    <title>tampa-bay-lightning</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0.00755678708" width="364.288902" height="339.516971"></rect>
+        <rect id="path-3" x="0" y="0.00755678708" width="364.288902" height="339.516971"></rect>
+    </defs>
+    <g id="NHL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="tampa-bay-lightning" sketch:type="MSArtboardGroup">
+            <g sketch:type="MSLayerGroup" transform="translate(74.000000, 86.000000)" id="g236">
+                <g transform="translate(0.000000, 0.937041)">
+                    <g id="path244-Clipped">
+                        <mask id="mask-2" sketch:name="SVGID_1_" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="SVGID_1_"></g>
+                        <path d="M364.288912,153.550127 C364.288912,116.643726 341.325117,80.2653546 300.561425,57.9133241 L284.945855,70.2913407 C312.800272,87.7966371 329.195013,113.964845 329.195013,143.663961 C329.195013,212.969141 243.454054,275.748091 148.040596,275.748091 C138.250842,275.748091 128.640751,275.028307 119.37013,273.653917 L87.1688083,297.459684 C107.499119,304.329748 130.183018,307.974953 153.895725,307.974953 C267.161088,307.974953 364.288912,231.589064 364.288912,153.550127" id="path244" fill="#003E7E" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                    </g>
+                    <g id="path246-Clipped">
+                        <mask id="mask-4" sketch:name="SVGID_1_" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <g id="SVGID_1_"></g>
+                        <path d="M220.226438,179.317825 L161.954093,190.706848 L291.204754,84.6076731 L231.030816,92.6641524 L347.988731,0 L211.834275,35.790831 C210.039534,35.7539917 208.229663,35.7247091 206.419793,35.7247091 C94.8356995,35.7247091 0,111.473939 0,191.397349 C0,230.618961 21.1425777,261.809598 53.9150389,282.023058 L3.60082902,339.516981 L220.226438,179.317825 L220.226438,179.317825 Z M15.556943,179.582313 C15.556943,107.914693 105.336541,47.4991274 196.712306,47.4991274 C197.344909,47.4991274 197.962383,47.514241 198.594987,47.5208532 L110.25364,146.251216 L161.050104,138.223075 L60.964456,234.910271 L101.555104,227.591524 L73.2042487,259.995025 C38.743899,243.696925 15.556943,215.585679 15.556943,179.582313 L15.556943,179.582313 Z" id="path246" fill="#003E7E" sketch:type="MSShapeGroup" mask="url(#mask-4)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

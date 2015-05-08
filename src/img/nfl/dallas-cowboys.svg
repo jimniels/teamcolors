@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.1 (12002) - http://www.bohemiancoding.com/sketch -->
+    <title>dallas-cowboys</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="NFL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="dallas-cowboys" sketch:type="MSArtboardGroup">
+            <g id="svg" sketch:type="MSLayerGroup" transform="translate(73.000000, 82.000000)">
+                <path d="M253.33696,215.56436 L366.531928,133.350351 L226.616612,133.350351 L183.336126,0.392134831 L140.055639,133.350351 L0.0559331551,133.350351 L113.335291,215.56436 L70.0557861,348.607865 L183.336126,266.393857 L296.616465,348.607865 L253.33696,215.56436" id="Fill-1" fill="#002244" sketch:type="MSShapeGroup"></path>
+                <path d="M241.642024,211.81261 L335.971818,143.329202 L219.361003,143.329202 L183.336126,32.54425 L147.310267,143.329202 L30.7014144,143.329202 L125.030227,211.81261 L89.0063316,322.595601 L183.336126,254.113174 L277.66592,322.595601 L241.642024,211.81261" id="Fill-2" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M232.591647,208.912772 L312.238497,151.090531 L213.726473,151.090531 L183.336126,57.5330421 L152.945778,151.090531 L54.433754,151.090531 L134.080604,208.912772 L103.689275,302.383992 L183.336126,244.647039 L262.983957,302.383992 L232.591647,208.912772" id="Fill-3" fill="#002244" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>
