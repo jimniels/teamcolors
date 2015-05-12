@@ -1,15 +1,15 @@
 module.exports = function(grunt) {
     
     // Configure paths to assets
-    var config = {
+    var path = {
         all: 'assets',
-        js: {
-            src: 'src/js',
-            build: 'assets/js'
+        scripts: {
+            src: 'src/scripts',
+            build: 'assets/scripts'
         },
-        css: {
+        styles: {
             src: 'src/css',
-            build: 'assets/css'
+            build: 'assets/styles'
         },
         img: {
             src: 'src/img',
@@ -24,25 +24,25 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        config: config,
+        path: path,
 
         // Regular tasks
         clean: {
             options: {
                 //'no-write': true
             },
-            build: ['<%= config.all %>'],
-            css: ['<%= config.css.build %>'],
-            js: ['<%= config.js.build %>'],
-            data: ['<%= config.data.build %>']
+            build: ['<%= path.all %>'],
+            css: ['<%= path.styles.build %>'],
+            scripts: ['<%= path.scripts.build %>'],
+            data: ['<%= path.data.build %>']
         },
 
         compass: {
             build: { 
                 options: {
-                    sassDir: '<%= config.css.src %>',
-                    cssDir: '<%= config.css.build %>',
-                    imagesDir: '<%= config.img.build %>',
+                    sassDir: '<%= path.styles.src %>',
+                    cssDir: '<%= path.styles.build %>',
+                    imagesDir: '<%= path.img.build %>',
                     outputStyle: 'compressed',
                     relativeAssets: true,
                     force: true
@@ -55,41 +55,41 @@ module.exports = function(grunt) {
                 separator: ';\n',
             },
             build: {
-                src: ['<%= config.js.src %>/*'],
-                dest: '<%= config.js.build %>/scripts.js',
+                src: ['<%= path.scripts.src %>/**/*.js'],
+                dest: '<%= path.scripts.build %>/scripts.js',
             }
         },
 
         uglify: {
             build: {
                 files: {
-                    '<%= config.js.build %>/scripts.min.js' : 
-                    ['<%= config.js.build %>/scripts.js']
+                    '<%= path.scripts.build %>/scripts.min.js' : 
+                    ['<%= path.scripts.build %>/scripts.js']
                 }
             }
         },
 
         'merge-json': {
             build: {
-                src: '<%= config.data.src %>/*',
-                dest: '<%= config.data.build %>/team-colors.json'
+                src: '<%= path.data.src %>/*',
+                dest: '<%= path.data.build %>/team-colors.json'
             }
         },
 
         'compile-handlebars': {
             build: {
-                template: '<%= config.hbs %>/index.hbs',
-                templateData: '<%= config.data.build %>/team-colors-colorfied.json',
+                template: '<%= path.hbs %>/index.hbs',
+                templateData: '<%= path.data.build %>/team-colors-colorfied.json',
                 output: '*.html',
-                helpers: '<%= config.hbs %>/helpers/*.js',
-                partials: '<%= config.hbs %>/partials/*.hbs'
+                helpers: '<%= path.hbs %>/helpers/*.js',
+                partials: '<%= path.hbs %>/partials/*.hbs'
             }
         },
 
         jshint: {
             build: [
-                '<%= config.js.src %>/js.js', 
-                '<%= config.data.src %>/*'
+                '<%= path.scripts.src %>/*.js', 
+                '<%= path.data.src %>/*.json'
             ]
         },
 
@@ -103,9 +103,9 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: '<%= config.img.src %>/',
+                        cwd: '<%= path.img.src %>/',
                         src: ['**/*.svg'],
-                        dest: '<%= config.img.build %>/',
+                        dest: '<%= path.img.build %>/',
                         ext: '.min.svg'
                     }
                 ]
@@ -118,16 +118,13 @@ module.exports = function(grunt) {
                 files: ['Gruntfile.js'],
                 tasks: ['default']
             },
-            jshint: {
-                files: [
-                    '<%= config.js.src %>/js.js',
-                    '<%= config.data.src %>/*'
-                ],
-                tasks: ['jshint', 'merge-json', 'colorify']
+            data: {
+                files: ['<%= path.data.src %>/*.json'],
+                tasks: ['jshint', 'merge-json', 'colorify'] 
             },
             scripts: {
-                files: ['<%= config.js.src %>/*'],
-                tasks: ['clean:js', 'jshint', 'concat', 'uglify']
+                files: ['<%= path.scripts.src %>/*.js'],
+                tasks: ['clean:scripts', 'jshint', 'concat', 'uglify']
             },
             colorify: {
                 files: ['src/grunt-tasks/colorify/**/*'],
@@ -135,17 +132,17 @@ module.exports = function(grunt) {
             },
             handlebars: {
                 files: [
-                    '<%= config.hbs %>/**/*', 
-                    '<%= config.data.build %>/team-colors-colorfied.json'
+                    '<%= path.hbs %>/**/*', 
+                    '<%= path.data.build %>/team-colors-colorfied.json'
                 ],
                 tasks: ['compile-handlebars']
             },
             compass: {
-                files: ['<%= config.css.src %>/*'],
+                files: ['<%= path.styles.src %>/*'],
                 tasks: ['clean:css', 'compass']
             },
             svgmin: {
-                files: ['<%= config.img.src %>/**/*'],
+                files: ['<%= path.img.src %>/**/*'],
                 tasks: ['svgmin']
             }
         }
@@ -165,7 +162,7 @@ module.exports = function(grunt) {
     
     // Default task(s).
     grunt.registerTask('default', [
-        'clean',
+        'clean:build',
         'jshint',
         'concat',
         'uglify',
