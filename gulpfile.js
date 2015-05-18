@@ -68,7 +68,7 @@ gulp.task('lint:data', function(){
 gulp.task('scripts', ['clean:scripts', 'lint:scripts'], function() {
     return gulp.src('src/scripts/**/*')
         .pipe(concat('scripts.js'))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(rename('scripts.min.js'))
         .pipe(gulp.dest('assets/scripts/'));
 });
@@ -81,6 +81,9 @@ gulp.task('svgs', function() {
     return gulp.src('assets/img/**/*.svg')
         .pipe(svgmin({
             plugins: [{mergePaths: false}]
+        }))
+        .pipe(rename(function (path) {
+            path.basename += ".min";
         }))
         .pipe(gulp.dest('assets/img'));
 });
