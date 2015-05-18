@@ -1,130 +1,128 @@
-{
-    "mls" : [
-        {
-            "team": "Chicago Fire",
-            "colors": {
-                "hex"   :   ["AF2626",          "0A174A",           "8A8D8F"]
-            }
-        },
-        {
-            "team": "Chivas USA",
-            "colors": {
-                "hex"   :   ["AA002C",          "031A43",           "FFC800"]
-            }
-        },
-        {
-            "team": "Colorado Rapids",
-            "colors": {
-                "hex"   :   ["91022D",          "85B7EA",           "8A8D8F",       "313F49"]
-            }
-        },
-        {
-            "team": "Columbus Crew",
-            "colors": {
-                "hex"   :   ["000000",          "FFDB00",           "8A8D8F"]
-            }
-        },
-        {
-            "team": "DC United",
-            "colors": {
-                "hex"   :   ["000000",          "DD0000"]
-            }
-        },
-        {
-            "team": "FC Dallas",
-            "colors": {
-                "hex"   :   ["CF0032",          "07175C",           "8A8D8F"]    
-            }
-        },
-        {
-            "team": "Houston Dynamo",
-            "colors": {
-                "hex"   :   ["F36600",          "2E2926",           "85B7EA"]
-            }
-        },
-        {
-            "team": "Los Angeles Galaxy",
-            "colors": {
-                "hex"   :   ["00245D",          "004689",           "F1AA00",       "FFD200"]
-            }
-        },
-        {
-            "team": "Montreal Impact",
-            "colors": {
-                "hex"   :   ["122089",          "000000",           "7A878F"]
-            }
-        },
-        {
-            "team": "New England Revolution",
-            "colors": {
-                "hex"   :   ["0A2141",          "D80016",           "8A8D8F"]
-            }
-        },
-        {
-            "team": "New York Red Bulls",
-            "colors": {
-                "hex"   :   ["D50031",          "012055",           "FFC800",       "8A8D8F"]
-            }
-        },
-        {
-            "team": "New York City FC",
-            "colors": {
-                "hex"   :   ["6CADDF",          "00285E",           "FD4F00"]
-            }
-        },
-        {
-            "team": "Orlando City SC",
-            "colors": {
-                "hex"   :   ["633492",          "FDE192"]
-            }
-        },
-        {
-            "team": "Philadelphia Union",
-            "colors": {
-                "hex"   :   ["001B2D",          "B18500",           "348AE1"]
-            }
-        },
-        {
-            "team": "Portland Timbers",
-            "colors": {
-                "hex"   :   ["004812",          "EBE72B"]
-            }
-        },
-        {
-            "team": "Real Salt Lake",
-            "colors": {
-                "hex"   :   ["A50531",          "013474",           "F2D11A"]
-            }
-        },
-        {
-            "team": "San Jose Earthquakes",
-            "colors": {
-                "hex"   :   ["0051BA",          "000000",           "B1B4B2"]
-            }
-        },
-        {
-            "team": "Seattle Sounders FC",
-            "colors": {
-                "hex"   :   ["4F8A10",          "11568C",           "212930"]
-            }
-        },
-        {
-            "team": "Sporting Kansas City",
-            "colors": {
-                "hex"   :   ["A4BBD7",          "0A2141",           "787775"]     
-            }
-        },
-        {
-            "team": "Toronto FC",
-            "colors": {
-                "hex"   :   ["D80016",          "313F49",           "A1AAAD"]
-            }
-        },
-        {
-            "team": "Vancouver Whitecaps FC",
-            "colors": {
-                "hex"   :   ["12264C",          "85B7EA",           "838383"]
-            }
+[
+    {
+        "team": "Chicago Fire",
+        "colors": {
+            "hex"   :   ["AF2626",          "0A174A",           "8A8D8F"]
         }
-    ]
-}
+    },
+    {
+        "team": "Chivas USA",
+        "colors": {
+            "hex"   :   ["AA002C",          "031A43",           "FFC800"]
+        }
+    },
+    {
+        "team": "Colorado Rapids",
+        "colors": {
+            "hex"   :   ["91022D",          "85B7EA",           "8A8D8F",       "313F49"]
+        }
+    },
+    {
+        "team": "Columbus Crew",
+        "colors": {
+            "hex"   :   ["000000",          "FFDB00",           "8A8D8F"]
+        }
+    },
+    {
+        "team": "DC United",
+        "colors": {
+            "hex"   :   ["000000",          "DD0000"]
+        }
+    },
+    {
+        "team": "FC Dallas",
+        "colors": {
+            "hex"   :   ["CF0032",          "07175C",           "8A8D8F"]    
+        }
+    },
+    {
+        "team": "Houston Dynamo",
+        "colors": {
+            "hex"   :   ["F36600",          "2E2926",           "85B7EA"]
+        }
+    },
+    {
+        "team": "Los Angeles Galaxy",
+        "colors": {
+            "hex"   :   ["00245D",          "004689",           "F1AA00",       "FFD200"]
+        }
+    },
+    {
+        "team": "Montreal Impact",
+        "colors": {
+            "hex"   :   ["122089",          "000000",           "7A878F"]
+        }
+    },
+    {
+        "team": "New England Revolution",
+        "colors": {
+            "hex"   :   ["0A2141",          "D80016",           "8A8D8F"]
+        }
+    },
+    {
+        "team": "New York Red Bulls",
+        "colors": {
+            "hex"   :   ["D50031",          "012055",           "FFC800",       "8A8D8F"]
+        }
+    },
+    {
+        "team": "New York City FC",
+        "colors": {
+            "hex"   :   ["6CADDF",          "00285E",           "FD4F00"]
+        }
+    },
+    {
+        "team": "Orlando City SC",
+        "colors": {
+            "hex"   :   ["633492",          "FDE192"]
+        }
+    },
+    {
+        "team": "Philadelphia Union",
+        "colors": {
+            "hex"   :   ["001B2D",          "B18500",           "348AE1"]
+        }
+    },
+    {
+        "team": "Portland Timbers",
+        "colors": {
+            "hex"   :   ["004812",          "EBE72B"]
+        }
+    },
+    {
+        "team": "Real Salt Lake",
+        "colors": {
+            "hex"   :   ["A50531",          "013474",           "F2D11A"]
+        }
+    },
+    {
+        "team": "San Jose Earthquakes",
+        "colors": {
+            "hex"   :   ["0051BA",          "000000",           "B1B4B2"]
+        }
+    },
+    {
+        "team": "Seattle Sounders FC",
+        "colors": {
+            "hex"   :   ["4F8A10",          "11568C",           "212930"]
+        }
+    },
+    {
+        "team": "Sporting Kansas City",
+        "colors": {
+            "hex"   :   ["A4BBD7",          "0A2141",           "787775"]     
+        }
+    },
+    {
+        "team": "Toronto FC",
+        "colors": {
+            "hex"   :   ["D80016",          "313F49",           "A1AAAD"]
+        }
+    },
+    {
+        "team": "Vancouver Whitecaps FC",
+        "colors": {
+            "hex"   :   ["12264C",          "85B7EA",           "838383"]
+        }
+    }
+]

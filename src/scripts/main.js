@@ -1,4 +1,4 @@
-var test = 'color'
+
 var TeamColors = {
 
     // Set the defaults
@@ -12,7 +12,7 @@ var TeamColors = {
     init: function(){
 
         // Load the page's CSS
-        loadCSS("assets/css/styles.css");
+        loadCSS("assets/styles/styles.min.css");
 
         // Append the "Back to Top" link
         $('body').append('<a href="#" id="top">&#8593;</a>');
