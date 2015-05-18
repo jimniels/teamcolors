@@ -153,7 +153,7 @@ gulp.task('data', ['lint:data'], function(){
                 // Log it
                 if(i > 0){
                     // Log league
-                    gutil.log(league.toUpperCase() + ' added ' + i + ' ' + mode + ' colors');
+                    gutil.log('  ' + league.toUpperCase() + ' added ' + i + ' ' + mode + ' colors');
                     // Log individual teams & added colors
                     // for (var i = 0; i < missing.length; i++) {
                     //     console.log('      '+missing[i]);
