@@ -1,4 +1,20 @@
+/*
+    Load dependencies
+    - Load jQuery
+    - Set it on the window prop
+    - Add the lazyload jquery plugin
+    - Add loadCSS function from vendor
+*/
+/*
+var $ = require('jquery');
+window.jQuery = $;
+require('jquery-lazyload/jquery.lazyload.js');
+var loadCSS = require('./vendor/loadCSS.js');
+*/
 
+/*
+    Page interactions
+*/
 var TeamColors = {
 
     // Set the defaults
@@ -12,7 +28,7 @@ var TeamColors = {
     init: function(){
 
         // Load the page's CSS
-        loadCSS("assets/styles/styles.min.css");
+        loadCSS("assets/styles/styles.css");
 
         // Append the "Back to Top" link
         $('body').append('<a href="#" id="top">&#8593;</a>');
@@ -187,11 +203,13 @@ $(document).ready(function(){
 
     // Lazy load team logos
     if($('html').hasClass('svg')){
-        $(".team-name").lazyload();
+        $(".team-name").lazyload({
+            threshold : 200,
+            data_attribute : "logo-url",
+            skip_invisible : true
+        });
     }
 });
-
-
 
 function addSearchHighlight($el) {
     var $teamName = $el.find('.team-name');

@@ -1,17 +1,28 @@
+/*
+    Dependencies
+*/
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
+    del = require('del'),
+    browserify = require('browserify'),
+    source = require('vinyl-source-stream'),
+    buffer = require('vinyl-buffer'),
+    sourcemaps = require('gulp-sourcemaps'),
+    
     compass = require('gulp-compass'),
     jshint = require('gulp-jshint'),
-    uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
+
+    uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
-    notify = require('gulp-notify'),
-    del = require('del'),
-    jsoncombine = require("gulp-jsoncombine"),
+    
     handlebars = require('gulp-compile-handlebars'),
-    requireDir = require('require-dir'),
     path = require("path"),
-    svgmin = require('gulp-svgmin');
+    svgmin = require('gulp-svgmin')
+
+    normalizeJSON = require('./utils/normalizeJSON');
+
+
 
 /*
     Clean
@@ -39,14 +50,12 @@ gulp.task('styles', ['clean:styles'], function() {
             image: 'assets/img',
             style: 'compressed'
         }))
-        .pipe(rename('styles.min.css'))
         .pipe(gulp.dest('assets/styles/'));
 });
 
 /*
     Lint
     Lint our JS using JShint
-    Use notify as reporter - https://github.com/mikaelbr/gulp-notify#as-jshint-reporter
 */
 gulp.task('lint:scripts', function(){
     return gulp
@@ -63,13 +72,40 @@ gulp.task('lint:data', function(){
 
 /*
     Scripts
-    Concat and minify scripts
+    User browserify to build js files
 */
+/*
+var b = browserify({
+    entries: './src/scripts/scripts.js',
+    debug: true
+});
+gulp.task('scriptz', ['clean:scripts', 'lint:scripts'], function () {
+  return b.bundle()
+    .pipe(source('scripts.min.js'))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({loadMaps: true}))
+      .on('error', gutil.log)
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest('./assets/scripts/'));
+});
+
+gulp.task('scriptz:prod', ['clean:scripts', 'lint:scripts'], function () {
+  return b.bundle()
+    .pipe(source('scripts.min.js'))
+    .pipe(gulp.dest('./assets/scripts/'));
+});
+*/
+
 gulp.task('scripts', ['clean:scripts', 'lint:scripts'], function() {
     return gulp.src('src/scripts/**/*')
-        .pipe(concat('scripts.js'))
+        //.pipe(concat('scripts.js'))
         //.pipe(uglify())
-        .pipe(rename('scripts.min.js'))
+        //.pipe(rename('scripts.min.js'))
+        .pipe(gulp.dest('assets/scripts/'));
+});
+gulp.task('scripts:prod', ['clean:scripts', 'lint:scripts'], function() {
+    return gulp.src('src/scripts/**/*')
+        .pipe(uglify())
         .pipe(gulp.dest('assets/scripts/'));
 });
 
@@ -81,9 +117,6 @@ gulp.task('svgs', function() {
     return gulp.src('assets/img/**/*.svg')
         .pipe(svgmin({
             plugins: [{mergePaths: false}]
-        }))
-        .pipe(rename(function (path) {
-            path.basename += ".min";
         }))
         .pipe(gulp.dest('assets/img'));
 });
@@ -124,61 +157,10 @@ gulp.task('templates', ['clean:templates', 'data'], function () {
 */
 gulp.task('data', ['lint:data'], function(){
     return gulp.src("src/data/*.json")
-        .pipe(jsoncombine("team-colors.json",function(data){
-            for (var league in data) {
-                var i = 0,
-                    missing = [],
-                    mode = '';
-                if (data.hasOwnProperty(league)) {
-                    data[league].forEach(function(team){
-                        // No HEX but RBG
-                        if(!team.colors.hex && team.colors.rgb) {
-                            team.colors.hex = [];
-                            team.colors.rgb.forEach(function(color){
-                                team.colors.hex.push( rgbTohex(color) );
-                            });
-                            missing.push( team.team + ' ' + team.colors.hex );
-                            i++;
-                            mode = 'HEX';
-                        }
-                        // No RGB but HEX 
-                        else if(!team.colors.rgb && team.colors.hex) {
-                            team.colors.rgb = [];
-                            team.colors.hex.forEach(function(color){
-                                team.colors.rgb.push( hexToRgb(color) );
-                            });
-                            missing.push( team.team + ' ' + team.colors.rgb );
-                            i++;
-                            mode = 'RGB';
-                        }
-                    });
-                }
-                // Log it
-                if(i > 0){
-                    // Log league
-                    gutil.log('  ' + league.toUpperCase() + ' added ' + i + ' ' + mode + ' colors');
-                    // Log individual teams & added colors
-                    // for (var i = 0; i < missing.length; i++) {
-                    //     console.log('      '+missing[i]);
-                    // };
-                }
-            }
-            return new Buffer(JSON.stringify(data));
-        }))
+        .pipe( normalizeJSON() )
         .pipe(gulp.dest("assets/data"));
 });
 
-/*
-    Default Tasks
-*/
-gulp.task('default', function() {
-    gulp.start( 
-        'scripts',
-        'styles',
-        'templates',
-        'svgs'
-    )
-});
 
 /*
     Watch Tasks
@@ -189,47 +171,26 @@ gulp.task('watch', function() {
     gulp.watch('src/styles/*.scss', ['styles']);
  
     // Scripts
-    gulp.watch('src/scripts/*.js', ['scripts']);
+    gulp.watch('src/scripts/**/*', ['scripts']);
 
     // Templates/Data
     gulp.watch(['src/data/*.json', 'src/handlebars/**/*'], ['templates']);
-
-    // SVGs
-    gulp.watch('assets/img/**/*.svg', ['svgs']);
 });
 
-
-
 /*
-    Helper Functions
+    Default Tasks
 */
-function rgbTohex(rgb){    
-    // Split RGB str into individual pieces and convert to int
-    var rgb = rgb.split(' '),
-        r = parseInt(rgb[0]),
-        g = parseInt(rgb[1]),
-        b = parseInt(rgb[2]);
-    // Convert RGB to HEX
-    // http://stackoverflow.com/questions/1133770/how-do-i-convert-a-string-into-an-integer-in-javascript
-    function componentToHex(c) {
-        var hex = c.toString(16);
-        return hex.length == 1 ? "0" + hex : hex;
-    }
-    // Returns '34ef25'
-    return componentToHex(r) + componentToHex(g) + componentToHex(b);
-}
+var sharedTasks = [
+    'styles',
+    'templates'
+];
 
-function hexToRgb(hex) {
-    // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
-    var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-    hex = hex.replace(shorthandRegex, function(m, r, g, b) {
-        return r + r + g + g + b + b;
-    });
+gulp.task('default', sharedTasks.concat([
+    'scripts',
+    'watch'
+]));
 
-    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    return result ? 
-        parseInt(result[1], 16) + ' ' + 
-        parseInt(result[2], 16) + ' ' +
-        parseInt(result[3], 16)
-    : null;
-}
+gulp.task('prod', sharedTasks.concat([
+    'svgs',
+    'scripts:prod'
+]));
