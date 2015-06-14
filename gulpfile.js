@@ -4,29 +4,18 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     del = require('del'),
-    browserify = require('browserify'),
-    source = require('vinyl-source-stream'),
-    buffer = require('vinyl-buffer'),
-    sourcemaps = require('gulp-sourcemaps'),
-    
     compass = require('gulp-compass'),
     jshint = require('gulp-jshint'),
     rename = require('gulp-rename'),
-
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
-    
     handlebars = require('gulp-compile-handlebars'),
-    path = require("path"),
     svgmin = require('gulp-svgmin')
-
     normalizeJSON = require('./utils/normalizeJSON');
-
-
 
 /*
     Clean
-    scripts, styles, and templates (i.e. data)
+    Clean the output of our scripts, styles, and templates/data
 */
 gulp.task('clean:scripts', function (cb) {
     del('assets/scripts/**/*', cb);
@@ -40,7 +29,7 @@ gulp.task('clean:templates', function (cb) {
 
 /*
     Styles
-    Convert our Sass to CSS using compass
+    Convert Sass to CSS using compass
 */
 gulp.task('styles', ['clean:styles'], function() {
     return gulp.src('src/styles/styles.scss')
@@ -50,7 +39,7 @@ gulp.task('styles', ['clean:styles'], function() {
             image: 'assets/img',
             style: 'compressed'
         }))
-        .pipe(gulp.dest('assets/styles/'));
+        .pipe(gulp.dest('assets/styles'));
 });
 
 /*
@@ -72,41 +61,15 @@ gulp.task('lint:data', function(){
 
 /*
     Scripts
-    User browserify to build js files
+    Concat and uglify scripts
+    Gotta do vendor scripts first,
+    as the custom main script is dependant on those
 */
-/*
-var b = browserify({
-    entries: './src/scripts/scripts.js',
-    debug: true
-});
-gulp.task('scriptz', ['clean:scripts', 'lint:scripts'], function () {
-  return b.bundle()
-    .pipe(source('scripts.min.js'))
-    .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
-      .on('error', gutil.log)
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./assets/scripts/'));
-});
-
-gulp.task('scriptz:prod', ['clean:scripts', 'lint:scripts'], function () {
-  return b.bundle()
-    .pipe(source('scripts.min.js'))
-    .pipe(gulp.dest('./assets/scripts/'));
-});
-*/
-
 gulp.task('scripts', ['clean:scripts', 'lint:scripts'], function() {
-    return gulp.src('src/scripts/**/*')
-        //.pipe(concat('scripts.js'))
-        //.pipe(uglify())
-        //.pipe(rename('scripts.min.js'))
-        .pipe(gulp.dest('assets/scripts/'));
-});
-gulp.task('scripts:prod', ['clean:scripts', 'lint:scripts'], function() {
-    return gulp.src('src/scripts/**/*')
+    return gulp.src(['src/scripts/vendor/*', 'src/scripts/*'])
+        .pipe(concat('main.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('assets/scripts/'));
+        .pipe(gulp.dest('assets/scripts'));
 });
 
 /*
@@ -125,13 +88,15 @@ gulp.task('svgs', function() {
     Templates
     Dependant on 'colorify' which creates the data
     we use for the handelbars template
+
+    We gotta delete the cache of the file,
+    otherwise node returns the same data from the intial run
+    http://stackoverflow.com/questions/13108936/nodejs-require-returns-same-old-file-when-requiring-a-second-time-after-the-file
 */
 gulp.task('templates', ['clean:templates', 'data'], function () {
-    // gotta do this so the file isn't cached on require
-    // http://stackoverflow.com/questions/13108936/nodejs-require-returns-same-old-file-when-requiring-a-second-time-after-the-file
-    var filename = path.resolve('./assets/data/team-colors.json');
+    var filename = './assets/data/team-colors.json';
     delete require.cache[filename];
-    var templateData = require('./assets/data/team-colors.json'),
+    var templateData = require(filename),
         options = {
             ignorePartials: true,
             batch : ['src/handlebars/partials'],
@@ -153,12 +118,12 @@ gulp.task('templates', ['clean:templates', 'data'], function () {
     Data
     Dependant on 'lint:data' which makes sure our json is corrent
     All teams should have AT LEAST an RGB or HEX value
-    For teams that don't have both, we convert them
+    For teams that don't have both, we convert them in normalizeJSON
 */
 gulp.task('data', ['lint:data'], function(){
-    return gulp.src("src/data/*.json")
+    return gulp.src('src/data/*.json')
         .pipe( normalizeJSON() )
-        .pipe(gulp.dest("assets/data"));
+        .pipe(gulp.dest('assets/data'));
 });
 
 
@@ -166,31 +131,26 @@ gulp.task('data', ['lint:data'], function(){
     Watch Tasks
 */
 gulp.task('watch', function() {
- 
+
     // Styles
     gulp.watch('src/styles/*.scss', ['styles']);
- 
+
     // Scripts
     gulp.watch('src/scripts/**/*', ['scripts']);
 
     // Templates/Data
-    gulp.watch(['src/data/*.json', 'src/handlebars/**/*'], ['templates']);
+    gulp.watch(['src/data/*', 'src/handlebars/**/*'], ['templates']);
 });
 
 /*
-    Default Tasks
+    Default Task
 */
-var sharedTasks = [
-    'styles',
-    'templates'
-];
-
-gulp.task('default', sharedTasks.concat([
-    'scripts',
-    'watch'
-]));
-
-gulp.task('prod', sharedTasks.concat([
-    'svgs',
-    'scripts:prod'
-]));
+gulp.task('default', function(){
+    gulp.start([
+        'styles',
+        'templates',
+        'scripts',
+        'svgs',
+        'watch'
+    ]);
+});

@@ -30,7 +30,7 @@
             <h2 id="{{@key}}" class="league-name">{{toUpperCase @key}}</h2>
             <ul class="teams"><!--
                 Inline block spacing http://css-tricks.com/fighting-the-space-between-inline-block-elements/
-                
+
                 {{#each this}}
                     --><li class="team"
                         data-team="{{ team }}"
@@ -43,23 +43,20 @@
                         {{> colors}}
                     </li><!--
                 {{/each}}
-                
+
             --></ul>
         {{/each}}
     </main>
-    
+
 
     <footer id="footer">
         <p>Want to add a new team or league? Want to make a correction? <a href="https://github.com/teamcolors/teamcolors.github.io">Find the source code on Github &raquo;</a></p>
     </footer>
 
     <!-- Script includes -->
-    <script src="assets/scripts/vendor/jquery.js"></script>
-    <script src="assets/scripts/vendor/jquery.lazyload.js"></script>
-    <script src="assets/scripts/vendor/loadCSS.js"></script>
-    <script src="assets/scripts/scripts.js"></script>
+    <script src="assets/scripts/main.js"></script>
 
-    <!-- Google Analytics 
+    <!-- Google Analytics
     <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-2118091-16']);

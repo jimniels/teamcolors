@@ -7,7 +7,7 @@
     position: relative;
     background: #fff;
     min-height: 250px;
-    
+
     // Border between columns
     &:before,
     &:after {
@@ -26,7 +26,7 @@
         @include respond-to(two-col) {
             left: 50%;
         }
-        
+
         @include respond-to(one-col) {
             display: none;
         }
@@ -87,32 +87,32 @@
     }
 
     // League background image
-    .svg & {
-        @each $league in $leagues {
-            &[data-league="#{$league}"]:before {
-                content: '';
-                width: 50px;
-                height: 50px;
-                background-size: 50px;
-                position: absolute;
-                top: 1em;
-                right: 1em;
-                @include opacity(.15);
-                @include filter(grayscale(1));
-                color: red;
-                background-image: image-url("leagues/#{$league}.min.svg");
-                background-repeat: none;
-                
-                // Don't show the league logos in the mobile view
-                @include respond-to(one-col) {
-                    display: none;
-                }
-            }
-        }
-    }
+    // .svg & {
+    //     @each $league in $leagues {
+    //         &[data-league="#{$league}"]:before {
+    //             content: '';
+    //             width: 50px;
+    //             height: 50px;
+    //             background-size: 50px;
+    //             position: absolute;
+    //             top: 1em;
+    //             right: 1em;
+    //             @include opacity(.15);
+    //             @include filter(grayscale(1));
+    //             color: red;
+    //             background-image: image-url("leagues/#{$league}.min.svg");
+    //             background-repeat: none;
+
+    //             // Don't show the league logos in the mobile view
+    //             @include respond-to(one-col) {
+    //                 display: none;
+    //             }
+    //         }
+    //     }
+    // }
 }
 
-.team-name { 
+.team-name {
     text-transform: uppercase;
     letter-spacing: .0625em;
     font-size: .825em;
@@ -125,7 +125,7 @@
         background-repeat: no-repeat;
         background-position: center 0;
 
-        @include respond-to(one-col) { 
+        @include respond-to(one-col) {
             letter-spacing: 0;
             padding: 0 0;
             background-size: 75px;
@@ -138,5 +138,5 @@
             text-overflow: ellipsis;
             white-space: pre;
         }
-    } 
+    }
 }

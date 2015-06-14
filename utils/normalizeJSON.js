@@ -1,3 +1,15 @@
+/*
+    NormalizeJSON
+    This takes all our individual color data files
+    Combines them into one .json file
+    And does a little color conversion in the process
+    Each team should have an RGB *OR* HEX color values
+    Some have both, which are slightly different,
+    But not all have both, in which case we do some conversion on the fly
+    And stick the converted values into our final .json file
+
+    Returns a JSON file of all our data
+*/
 var gutil = require("gulp-util"),
     jsoncombine = require("gulp-jsoncombine"),
     rgbHexConversion = require("./rgbHexConversion"),
@@ -22,7 +34,7 @@ module.exports = function() {
                         i++;
                         mode = 'HEX';
                     }
-                    // No RGB but HEX 
+                    // No RGB but HEX
                     else if(!team.colors.rgb && team.colors.hex) {
                         team.colors.rgb = [];
                         team.colors.hex.forEach(function(color){

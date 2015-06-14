@@ -1,41 +1,77 @@
 # Team Colors
 
-[Team Colors](http://teamcolors.arc90.com/) is a reference of HEX & RGB color values of major league sporting teams. 
+[Team Colors](http://teamcolors.arc90.com/) is a reference of HEX, RGB, CMYK, and Pantone color values of major league sports teams.
 
 
 ## Technical Overview
 
-PHP is used to parse and load the basic HTML markup. Javascript is used to load styles and vector versions of the team logos (if SVG is supported by the browser).
+### "Server" side
+Gulp is used to compile all necessary static assets locally into `assets/`. Those are then pushed to github pages which deploys and hosts the assets (hence the `CNAME` file).
+
+To run, simply do `npm install` to get all necessary packages. Then run `gulp` to compile everything (or for developing).
+
+### Client side
+Static `index.html` file is loaded with all necessary data. If javascript is supported, it loads styles and vector versions of the team logos (if SVG is supported by the browser).
 
 
-## Making Changes
+## Project Structure
 
-Team Colors data is rendered from the `team-data.json` file. Any changes to the data of the page can be done from that file. Teams are sorted according to their respective leagues. Leagues and league navigation controls are all rendered from this single `.json` file.
+Color data is rendered from each correspondingly-named league `.json` file in `src/data/`. Any changes to the data of the page can be done from those files.
+
+*Note on colors*: Color definitions for each team are in arrays and grouped by color mode. Color values should match index position in the array across color modes, for example:
+
+```
+colors:
+    rgb: TEAMS-RGB-BLUE, TEAMS-RGB-RED
+    hex: TEAMS-HEX-BLUE, TEAMS-HEX-RED
+```
 
 ### Edit Team Color or Name
 
-1. Find the team's entry in `team-data.json` 
-2. Edit it
+1. Determine the team’s league
+2. Find the league’s corresponding `.json` file in `src/data/`
+3. Edit it
+4. Run `gulp`
+5. Commit
 
 ### Adding a Team
 
-1. Add the team name and colors in `team-data.json`
-2. Add an .svg logo in the `project-files/TeamLogos.sketch` file, with the team's name (as stated in `team-data.json`) in lowercase with hyphens in place of spaces
-3. Export the .svg file to the `img/` directory
+1. Determine the team’s league
+2. Following the established pattern, add the team’s name and colors in its league’s `.json` file in `src/data/`
+3. Add a vector logo for the team in its corresponding `.sketch` league file in `src/img/` with the team’s name (as referenced in its `.json` file) in lowercase with hyphens, i.e. "utah-jazz"
+4. Export the team’s `.svg` logo to `assets/img/`
+5. Run `gulp`
+6. Commit
 
-## Dependencies
+### Adding a League
 
-### Compass
+Same essential steps as adding a team, except you would need new league files, i.e. a new file in `src/data` matching the league’s name (lowercase) with the league’s teams and colors, a new `.sketch` file in `src/img/` with the league’s teams and their logos, etc.
 
-CSS is built and compiled using compass. Partials are in `css/sass/` and are compiled to stylesheets in `css/`.
-
-### Sketch App
-
-All team logos are laid out in the .sketch file. You can export them to their corresponding league in `img/`.
 
 ## Official Color References
 
 ### NBA
 
-NBA colors and logos are all official. See this [NBA Media Central document](http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/AD4C002C7D0F37A285257D660058EAED/$File/NBA%20Primary%20Composite_14-15PLAYOFFS.pdf?OpenElement) for reference (username & password: nbamedia)
+All NBA colors are official ([source](http://courtside.nba.com/QuickPlace/nbalogo/Main.nsf/$defaultview/AD4C002C7D0F37A285257D660058EAED/$File/NBA%20Primary%20Composite_14-15PLAYOFFS.pdf?OpenElement) user & pass: nbamedia).
 
+The NBA only provides RGB, CMYK, and Pantone colors for each team, so the HEX color is a programmatic conversion of the RGB color.
+
+### NFL
+
+All NFL colors are official (see sources below).
+
+The NFL provides official RGB, HEX, CMYK, and Pantone colors (so none of the colors you see on Team Colors are conversions).
+
+The NFL has logo slicks which detail team color values. These are provided on a per-conference basis. *Note*: each of these source links are over 100MB in size, so they take a while to download.
+- [AFC North](http://www.nflmedia.com/afc_north.zip)
+- [AFC South](http://www.nflmedia.com/afc_south.zip)
+- [AFC East](http://www.nflmedia.com/afc_east.zip)
+- [AFC West](http://www.nflmedia.com/afc_west.zip)
+- [NFC North](http://www.nflmedia.com/nfc_north.zip)
+- [NFC South](http://www.nflmedia.com/nfc_south.zip)
+- [NFC East](http://www.nflmedia.com/nfc_east.zip)
+- [NFC West](http://www.nflmedia.com/nfc_west.zip)
+
+### EPL, MLB, MLS, NHL
+
+These leagues’ teams and colors are currently approximations. I am working on getting official colors. If you know how/where to find them, please open an issue here in Github.

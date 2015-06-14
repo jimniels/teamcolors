@@ -29,7 +29,7 @@
         cursor: pointer;
     }
 
-    // 
+    //
     //  RGB
     //  ---
     &.rgb {
@@ -41,7 +41,7 @@
         }
     }
 
-    // 
+    //
     //  HEX
     //  ---
     &.hex {
@@ -50,7 +50,7 @@
         }
     }
 
-    // 
+    //
     //  CMYK
     //  ---
     &.cmyk {
@@ -62,7 +62,7 @@
         }
     }
 
-    // 
+    //
     //  Pantone
     //  ---
     &.pms {
@@ -79,29 +79,3 @@
 .color-mode {
     display: none;
 }
-
-// li.team {
-//     display: none;
-// }
-// .color {
-//     display: none;
-// }
-
-
-// [data-active-league="all"] .team {
-//     display: inline-block;
-// }
-// @each $league in $leagues {
-//     [data-active-league="#{$league}"] .team[data-league="#{$league}"] {
-//         display: inline-block;
-//     }
-// }
-
-// @each $color in $colors {
-//     [data-active-color="#{$color}"] .#{$color} {
-//         display: block;
-//     }
-//     [data-active-color="#{$color}"] .team[data-colors~="#{$color}"] {
-//         display: inline-block;
-//     }  
-// }
