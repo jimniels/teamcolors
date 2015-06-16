@@ -75,6 +75,8 @@ gulp.task('scripts', ['clean:scripts', 'lint:scripts'], function() {
 /*
     SVGs
     Minify any .svg files in `assets/`
+    Usually this rarely needs to be run,
+    as it will replace all SVGs under version control
 */
 gulp.task('svgs', function() {
     return gulp.src('assets/img/**/*.svg')
@@ -150,7 +152,6 @@ gulp.task('default', function(){
         'styles',
         'templates',
         'scripts',
-        'svgs',
         'watch'
     ]);
 });
