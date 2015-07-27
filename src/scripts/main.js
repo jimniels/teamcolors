@@ -54,13 +54,10 @@ var TeamColors = {
             }
             return 0;
         });
-        $('#content').empty().append(this.$teams).wrapInner('<ul class="teams"></ul>');
-        //$('<ul class="teams></ul>').appendTo()
-        //$('#content').html('<ul class="teams"></ul>');
-        //$('.teams').append(this.$teams.html());
-        this.$teams.each(function(){
-            //console.log($(this)[0]);
-        });
+        $('#content')
+            .empty()
+            .append(this.$teams)
+            .wrapInner('<ul class="teams"></ul>');
 
         // Setup leauge/color toggling
         // Convert the nav <ul> into <select>
