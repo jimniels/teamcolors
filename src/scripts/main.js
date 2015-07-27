@@ -37,8 +37,8 @@ var TeamColors = {
         this.$teams.find('.color').each(function(){
             $(this).css('background-color', $(this).attr('data-bg-color'));
         });
-       
-        // Create an 'all' listing 
+
+        // Create an 'all' listing
         // In both the nav and content areas
         // Sort content alphabetically in 'all' listing
         //$allTeams = this.$teams.clone();
@@ -54,8 +54,13 @@ var TeamColors = {
             }
             return 0;
         });
-        $('#content').html('<ul class="teams"></ul>');
-        $('.teams').append(this.$teams);
+        $('#content').empty().append(this.$teams).wrapInner('<ul class="teams"></ul>');
+        //$('<ul class="teams></ul>').appendTo()
+        //$('#content').html('<ul class="teams"></ul>');
+        //$('.teams').append(this.$teams.html());
+        this.$teams.each(function(){
+            //console.log($(this)[0]);
+        });
 
         // Setup leauge/color toggling
         // Convert the nav <ul> into <select>
@@ -113,7 +118,7 @@ $(document).ready(function(){
     // Test for SVG support
     // Used to test whether or not to display the team logo
     // https://github.com/Modernizr/Modernizr/issues/687
-    // https://github.com/Modernizr/Modernizr/blob/master/feature-detects/svg/asimg.js    
+    // https://github.com/Modernizr/Modernizr/blob/master/feature-detects/svg/asimg.js
     if(document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1")) {
         $('html').addClass('svg');
     }
@@ -126,18 +131,18 @@ $(document).ready(function(){
         e.preventDefault();
 
         // Set the active league
-        TeamColors.activeLeague = $(this).val(); 
+        TeamColors.activeLeague = $(this).val();
 
         // If '.show' exists (expanded team view on mobile)
         // Collapse the team by removing the class
         if( $('.show').length > 0 ) {
             $('.show').removeClass('show');
-        }       
+        }
 
         // If the search field is not empty (user has a filtered selection)
         // Reset the search field
         if( $('.search').val() !== '' ) {
-            $('.search').val('');  
+            $('.search').val('');
             TeamColors.search = '';
 
             // Reset the team name 'highlight' for any teams that have it
@@ -153,14 +158,14 @@ $(document).ready(function(){
     // Search functions
     $('.search').on('keyup', function(){
         TeamColors.search = $(this).val().toLowerCase();
-        
+
         // Filter by team name within the currently active league selection
         // Loop over them and show/hide
         TeamColors.$teams.filter(function(){
             return TeamColors.activeLeague == 'all' || $(this).attr('data-league') == TeamColors.activeLeague;
         }).each(function(){
             var name = $(this).attr('data-team').toLowerCase();
-            
+
             if(TeamColors.search.length === 0) {
                 $(this).show();
                 $(this).find('.team-name').html($(this).attr('data-team'));
@@ -213,14 +218,14 @@ $(document).ready(function(){
 
 function addSearchHighlight($el) {
     var $teamName = $el.find('.team-name');
-    var name = $teamName.text().toLowerCase();  
+    var name = $teamName.text().toLowerCase();
     var highlight = '<span class="highlight">' + TeamColors.search + '</span>';
-    newName = name.replace(TeamColors.search, highlight); 
-    $teamName.html(newName); 
+    newName = name.replace(TeamColors.search, highlight);
+    $teamName.html(newName);
 
-    // Array method 
+    // Array method
     // var $teamName = $el.find('.team-name');
-    // var name = $teamName.text().toLowerCase();  
+    // var name = $teamName.text().toLowerCase();
     // var matchPosition = name.indexOf(TeamColors.search.toLowerCase());
     // if(matchPosition >= 0) {
     //     var highlight = $teamName.text().split('');
