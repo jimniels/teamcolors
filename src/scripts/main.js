@@ -27,9 +27,6 @@ var TeamColors = {
     // Initialize the view
     init: function(){
 
-        // Load the page's CSS
-        loadCSS("assets/styles/styles.css");
-
         // Append the "Back to Top" link
         $('body').append('<a href="#" id="top">&#8593;</a>');
 
