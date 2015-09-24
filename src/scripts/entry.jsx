@@ -1,20 +1,20 @@
-/*
-    Load dependencies
-    - Load jQuery
-    - Set it on the window prop
-    - Add the lazyload jquery plugin
-    - Add loadCSS function from vendor
-*/
-/*
-var $ = require('jquery');
-window.jQuery = $;
-require('jquery-lazyload/jquery.lazyload.js');
-var loadCSS = require('./vendor/loadCSS.js');
-*/
+import React from 'react';
+import App from './components/App';
+import teamData from '../../assets/data/team-colors';
 
+React.render(
+    <App
+      teams={teamData.teams}
+      leagues={teamData.leagues}
+      colors={teamData.colors}
+      threshold={20}
+      initialColor={'hex'}
+    />,
+    document.getElementById('content')
+);
 /*
     Page interactions
-*/
+
 var TeamColors = {
 
     // Set the defaults
@@ -230,3 +230,4 @@ function addSearchHighlight($el) {
     //     $teamName.html(highlight.join(''));
     // }
 }
+*/

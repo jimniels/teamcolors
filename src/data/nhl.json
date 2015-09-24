@@ -1,180 +1,180 @@
 [
     {
-        "team": "Anaheim Ducks",
+        "name": "Anaheim Ducks",
         "colors": {
             "hex"   :   ["000000",          "91764B",           "EF5225"]
         }
     },
     {
-        "team": "Arizona Coyotes",
+        "name": "Arizona Coyotes",
         "colors": {
             "hex"   :   ["841F27",          "000000",           "EFE1C6"]
         }
     },
     {
-        "team": "Boston Bruins",
+        "name": "Boston Bruins",
         "colors": {
-            "hex"   :   ["000000",          "FFC422"]         
+            "hex"   :   ["000000",          "FFC422"]
         }
     },
     {
-        "team": "Buffalo Sabres",
+        "name": "Buffalo Sabres",
         "colors": {
             "hex"   :   ["002E62",          "FDBB2F",           "AEB6B9"]
         }
     },
     {
-        "team": "Calgary Flames",
+        "name": "Calgary Flames",
         "colors": {
             "hex"   :   ["E03A3E",          "FFC758",           "000000"]
         }
     },
     {
-        "team": "Carolina Hurricanes",
+        "name": "Carolina Hurricanes",
         "colors": {
             "hex"   :   ["E03A3E",          "000000",           "8E8E90"]
         }
     },
     {
-        "team": "Chicago Blackhawks",
+        "name": "Chicago Blackhawks",
         "colors": {
             "hex"   :   ["E3263A",      "000000"]
         }
     },
     {
-        "team": "Colorado Avalanche",
+        "name": "Colorado Avalanche",
         "colors": {
             "hex"   :   ["8B2942",      "01548A",           "000000",           "A9B0B8"]
         }
     },
     {
-        "team": "Columbus Blue Jackets",
+        "name": "Columbus Blue Jackets",
         "colors": {
             "hex"   :   ["00285C",      "E03A3E",           "A9B0B8"]
         }
     },
     {
-        "team": "Dallas Stars",
+        "name": "Dallas Stars",
         "colors": {
             "hex"   :   ["006A4E",      "000000",           "C0C0C0"]
         }
     },
     {
-        "team": "Detroit Red Wings",
+        "name": "Detroit Red Wings",
         "colors": {
             "hex"   :   ["EC1F26"]
         }
     },
     {
-        "team": "Edmonton Oilers",
+        "name": "Edmonton Oilers",
         "colors": {
             "hex"   :   ["003777",      "E66A20"]
         }
     },
     {
-        "team": "Florida Panthers",
+        "name": "Florida Panthers",
         "colors": {
             "hex"   :   ["C8213F",      "002E5F",           "D59C05"]
         }
     },
     {
-        "team": "Los Angeles Kings",
+        "name": "Los Angeles Kings",
         "colors": {
             "hex"   :   ["000000",      "AFB7BA"]
         }
     },
     {
-        "team": "Minnesota Wild",
+        "name": "Minnesota Wild",
         "colors": {
             "hex"   :   ["025736",      "BF2B37",           "EFB410",           "EEE3C7"]
         }
     },
     {
-        "team": "Montreal Canadiens",
+        "name": "Montreal Canadiens",
         "colors": {
             "hex"   :   ["BF2F38",          "213770"]
         }
     },
     {
-        "team": "Nashville Predators",
+        "name": "Nashville Predators",
         "colors": {
             "hex"   :   ["FDBB2F",          "002E62"]
         }
     },
     {
-        "team": "New Jersey Devils",
+        "name": "New Jersey Devils",
         "colors": {
             "hex"   :   ["E03A3E",          "000000"]
         }
     },
     {
-        "team": "New York Islanders",
+        "name": "New York Islanders",
         "colors": {
             "hex"   :   ["00529B",          "F57D31"]
         }
     },
     {
-        "team": "New York Rangers",
+        "name": "New York Rangers",
         "colors": {
             "hex"   :   ["0161AB",          "E6393F"]
         }
     },
     {
-        "team": "Ottawa Senators",
+        "name": "Ottawa Senators",
         "colors": {
             "hex"   :   ["E4173E",          "000000",           "D69F0F"]
         }
     },
     {
-        "team": "Philadelphia Flyers",
+        "name": "Philadelphia Flyers",
         "colors": {
             "hex"   :   ["F47940",          "000000"]
         }
     },
     {
-        "team": "Pittsburgh Penguins",
+        "name": "Pittsburgh Penguins",
         "colors": {
             "hex"   :   ["000000",          "D1BD80"]
         }
     },
     {
-        "team": "San Jose Sharks",
+        "name": "San Jose Sharks",
         "colors": {
             "hex"   :   ["05535D",          "F38F20",           "000000"]
         }
     },
     {
-        "team": "St Louis Blues",
+        "name": "St Louis Blues",
         "colors": {
             "hex"   :   ["0546A0",          "FFC325",           "101F48"]
         }
     },
     {
-        "team": "Tampa Bay Lightning",
+        "name": "Tampa Bay Lightning",
         "colors": {
             "hex"   :   ["013E7D",          "000000",           "C0C0C0"]
         }
     },
     {
-        "team": "Toronto Maple Leafs",
+        "name": "Toronto Maple Leafs",
         "colors": {
             "hex"   :   ["003777"]
         }
     },
     {
-        "team": "Vancouver Canucks",
+        "name": "Vancouver Canucks",
         "colors": {
             "hex"   :   ["07346F",          "047A4A",           "A8A9AD"]
         }
     },
     {
-        "team": "Washington Capitals",
+        "name": "Washington Capitals",
         "colors": {
             "hex"   :   ["CF132B",          "00214E",           "000000"]
         }
     },
     {
-        "team": "Winnipeg Jets",
+        "name": "Winnipeg Jets",
         "colors": {
             "hex"   :   ["002E62",          "0168AB",           "A8A9AD"]
         }

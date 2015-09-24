@@ -3,51 +3,42 @@
 //  Header
 //  ==============================
 //
-#header {
+.header {
     position: relative;
-    padding: em(40);
-    background: $color-background;
+    padding: em(10) 0;
+    background: $color-primary;
+    color: white;
+    overflow: hidden;
 
-    @include respond-to(one-col) {
-        padding: em(30);
-        padding-bottom: em(75);
-    }
+    &__logo {
+        float: left;
+        font-size: em(12);
 
-    .svg & {
-        &:before {
-            content: '';
-            position: absolute;
-            right: em(20);
-            top: em(50);
-            width: 320px;
-            height: 60px;
-            background-repeat: no-repeat;
-            background-size: 60px;
-            @include opacity(.25);
-            @include filter(grayscale(1));
+        span {
+            display: block;
+            color: $color-secondary;
 
-            background-image:
-                image-url("leagues/nba.svg"), 
-                image-url("leagues/nfl.svg"),
-                image-url("leagues/nhl.svg"),
-                image-url("leagues/mlb.svg"),
-                image-url("leagues/mls.svg"),
-                image-url("leagues/epl.svg");
-            background-position:
-                100% center, 
-                85% center, 
-                65% center, 
-                43% center, 
-                20% center, 
-                0% center;
-            @include respond-to(one-col) {
-                background-size: 50px;
-                right: initial;
-                top: initial;
-                left: em(20);
-                bottom: 0;
+            a:first-child {
+                color: $color-link;
             }
         }
+    }
+
+    &__description {
+        font-size: em(12);
+        margin-top: em(8, 12);
+        float: right;
+        text-align: right;
+        color: $color-secondary;
+
+        span {
+            display: block;
+        }
+    }
+
+    a {
+        color: inherit;
+        text-decoration: underline;
     }
 }
 
@@ -67,7 +58,7 @@
     strong {
         font-size: 2em;
         font-weight: bold;
-        display: block; 
+        display: block;
     }
 
     + p {

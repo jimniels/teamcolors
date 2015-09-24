@@ -4,14 +4,12 @@
 //  Imports
 //  ==============================
 //
-@import "compass/css3";
-@import "compass/reset";
-
+@import "reset";
 @import "mixins";
 @import "general";
 @import "colors";
 @import "leagues";
-@import "nav";
+@import "team-filters";
 @import "header";
 @import "teams";
 @import "footer";

@@ -3,36 +3,20 @@
 //  Navigation
 //  ==============================
 //
-#navigation {
+.team-filters {
     position: relative;
     border-bottom: 1px solid $color-border;
     border-top: 1px solid $color-border;
-    top: 1px;
     z-index: $z-index-nav;
     background: #fff;
-    padding-left: 2.5em;
 
     @include respond-to(one-col) {
         padding-top: 1em;
         padding-left: 0;
     }
 
-    // No results filter message
-    &:after {
-        content: 'No results.';
-        position: absolute;
-        top: 9em;
-        left: 3em;
-        color: $color-text-light;
-
-        @include respond-to(one-col) {
-            top: 11em;
-            left: 2em;
-        }
-    } 
-
     select {
-        margin: 0 1em 0 .5em;
+        margin: 0 1em 0 0;
     }
 
     label {
@@ -72,5 +56,3 @@
         }
     }
 }
-
-

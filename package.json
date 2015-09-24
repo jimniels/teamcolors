@@ -15,23 +15,34 @@
   "bugs": {
     "url": "https://github.com/teamcolors/teamcolors.github.io/issues"
   },
+  "eslintConfig": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    },
+    "env": {
+      "es6": true
+    }
+},
   "homepage": "https://github.com/teamcolors/teamcolors.github.io",
   "devDependencies": {
-    "browserify": "^10.2.0",
+    "babelify": "^6.3.0",
+    "browserify": "^11.1.0",
     "del": "^1.1.1",
     "gulp": "^3.8.11",
-    "gulp-compass": "^2.0.4",
-    "gulp-compile-handlebars": "^0.4.4",
     "gulp-concat": "^2.5.2",
+    "gulp-eslint": "^1.0.0",
     "gulp-jshint": "^1.10.0",
     "gulp-jsoncombine": "^1.0.2",
     "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-svgmin": "^1.1.2",
     "gulp-uglify": "^1.2.0",
-    "gulp-util": "^3.0.4",
+    "gulp-util": "^3.0.6",
     "jquery": "^2.1.4",
     "jquery-lazyload": "^1.9.5",
+    "react": "^0.13.3",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   }

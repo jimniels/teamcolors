@@ -1,120 +1,120 @@
 [
     {
-        "team": "Arsenal",
+        "name": "Arsenal",
         "colors": {
             "hex"   :   ["EF0107",          "023474",           "9C824A"]
         }
     },
     {
-        "team": "Aston Villa",
+        "name": "Aston Villa",
         "colors": {
             "hex"   :   ["94BEE5",          "7A003C",           "FFE600"]
         }
     },
     {
-        "team": "Burnley",
+        "name": "Burnley",
         "colors": {
             "hex"   :   ["8CCCE5",          "53162F",           "F9EC34"]
         }
     },
     {
-        "team": "Chelsea",
+        "name": "Chelsea",
         "colors": {
             "hex"   :   ["034694",          "DBA111",           "ED1C24"]
         }
     },
     {
-        "team": "Crystal Palace",
+        "name": "Crystal Palace",
         "colors": {
             "hex"   :   ["1B458F",          "C4122E",           "A7A5A6"]
         }
     },
     {
-        "team": "Everton",
+        "name": "Everton",
         "colors": {
             "hex"   :   ["274488"]
         }
     },
     {
-        "team": "Hull City",
+        "name": "Hull City",
         "colors": {
             "hex"   :   ["F5A12D",          "000000"]
         }
     },
     {
-        "team": "Leicester City",
+        "name": "Leicester City",
         "colors": {
             "hex"   :   ["FDBE11",          "0053A0"]
         }
     },
     {
-        "team": "Liverpool",
+        "name": "Liverpool",
         "colors": {
             "hex"   :   ["00A398",          "D00027",           "FEF667"]
         }
     },
     {
-        "team": "Manchester City",
+        "name": "Manchester City",
         "colors": {
             "hex"   :   ["5CBFEB",          "FFCE65"]
         }
     },
     {
-        "team": "Manchester United",
+        "name": "Manchester United",
         "colors": {
             "hex"   :   ["DA020E",          "FFE500",           "000000"]
         }
     },
     {
-        "team": "Newcastle United",
+        "name": "Newcastle United",
         "colors": {
             "hex"   :   ["00B6F1",          "BBBDBF",           "231F20",       "F0B83D"]
         }
     },
     {
-        "team": "Queens Park Rangers",
+        "name": "Queens Park Rangers",
         "colors": {
             "hex"   :   ["005CAB"]
         }
     },
     {
-        "team": "Southampton",
+        "name": "Southampton",
         "colors": {
             "hex"   :   ["ED1A3B",          "211E1F",           "FFC20E"]
         }
     },
     {
-        "team": "Stoke City",
+        "name": "Stoke City",
         "colors": {
             "hex"   :   ["E03A3E",          "1B449C"]
         }
     },
     {
-        "team": "Sunderland",
+        "name": "Sunderland",
         "colors": {
             "hex"   :   ["EB172B",          "A68A26",           "211E1E"]
         }
     },
     {
-        "team": "Swansea City",
+        "name": "Swansea City",
         "colors": {
             "hex"   :   ["000000"]
         }
     },
     {
-        "team": "Tottenham Hotspur",
+        "name": "Tottenham Hotspur",
         "colors": {
             "hex"   :   ["001C58"]
         }
     },
     {
-        "team": "West Bromwich Albion",
+        "name": "West Bromwich Albion",
         "colors": {
             "hex"   :   ["091453"]
         }
     },
     {
-        "team": "West Ham United",
+        "name": "West Ham United",
         "colors": {
             "hex"   :   ["60223B",          "F7C240",           "5299C6"]
         }

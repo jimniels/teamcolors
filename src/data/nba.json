@@ -1,6 +1,6 @@
 [
     {
-        "team": "Atlanta Hawks",
+        "name": "Atlanta Hawks",
         "colors": {
             "rgb"   :   ["225 58 62",       "196 214 0",          "6 25 34"],
             "cmyk"  :   ["0 91 76 6",       "29 2 100 0",         "30 0 0 100"],
@@ -8,7 +8,7 @@
         }
     },
     {
-        "team": "Boston Celtics",
+        "name": "Boston Celtics",
         "colors" : {
             "rgb"   :   ["0 131 72",        "187 151 83",       "167 56 50",        "250 179 131",      "6 25 34"],
             "cmyk"  :   ["100 0 91 27",     "30 40 80 0",       "40 95 100 0",      "0 35 50 0",        "30 0 0 100"],
@@ -16,7 +16,7 @@
         }
     },
     {
-        "team": "Brooklyn Nets",
+        "name": "Brooklyn Nets",
         "colors" : {
             "rgb"   :   ["6 25 34"],
             "cmyk"  :   ["30 0 0 100"],
@@ -24,7 +24,7 @@
         }
     },
     {
-        "team": "Charlotte Hornets",
+        "name": "Charlotte Hornets",
         "colors" : {
             "rgb"   :   ["29 17 96",        "0 140 168",        "161 161 164"],
             "cmyk"  :   ["98 100 0 43",     "100 0 19 23",      "0 1 0 43"],
@@ -32,7 +32,7 @@
         }
     },
     {
-        "team": "Chicago Bulls",
+        "name": "Chicago Bulls",
         "colors" : {
             "rgb"   :   ["206 17 65",       "6 25 34"],
             "cmyk"  :   ["0 100 65 15",     "30 0 0 100"],
@@ -40,7 +40,7 @@
         }
     },
     {
-        "team": "Cleveland Cavaliers",
+        "name": "Cleveland Cavaliers",
         "colors" : {
             "rgb"   :   ["134 0 56",        "253 187 48",       "0 45 98"],
             "cmyk"  :   ["0 100 34 53",     "0 29 91 0",        "100 68 54 0"],
@@ -48,7 +48,7 @@
         }
     },
     {
-        "team": "Dallas Mavericks",
+        "name": "Dallas Mavericks",
         "colors" : {
             "rgb"   :   ["0 125 197",       "196 206 211",      "6 25 34",          "32 56 91"],
             "cmyk"  :   ["100 40 0 0",      "5 0 0 20",         "30 0 0 100",       "94 79 36 32"],
@@ -56,7 +56,7 @@
         }
     },
     {
-        "team": "Denver Nuggets",
+        "name": "Denver Nuggets",
         "colors" : {
             "rgb"   :   ["77 144 205",      "253 185 39",       "15 88 108"],
             "cmyk"  :   ["69 34 0 0",       "0 30 94 0",        "100 72 56 0"],
@@ -64,7 +64,7 @@
         }
     },
     {
-        "team": "Detroit Pistons",
+        "name": "Detroit Pistons",
         "colors": {
             "rgb"   :   ["237 23 76",       "0 107 182",        "15 88 108"],
             "cmyk"  :   ["0 100 65 0",      "100 56 0 0",       "100 72 0 56"],
@@ -72,7 +72,7 @@
         }
     },
     {
-        "team": "Golden State Warriors",
+        "name": "Golden State Warriors",
         "colors": {
             "rgb"   :   ["253 185 39",      "0 107 182",        "38 40 42"],
             "cmyk"  :   ["0 30 94 0",       "100 56 0 0",       "73 65 62 67"],
@@ -80,7 +80,7 @@
         }
     },
     {
-        "team": "Houston Rockets",
+        "name": "Houston Rockets",
         "colors": {
             "rgb"   :   ["206 17 65",       "196 206 211",      "6 25 34",          "253 185 39"],
             "cmyk"  :   ["100 65 15",       "5 0 0 20",         "30 0 0 100",       "0 30 94 0"],
@@ -88,7 +88,7 @@
         }
     },
     {
-        "team": "Indiana Pacers",
+        "name": "Indiana Pacers",
         "colors": {
             "rgb"   :   ["255 198 51",      "0 39 93",          "190 192 194"],
             "cmyk"  :   ["0 23 90 0",       "100 72 0 56",      "0 0 0 29"],
@@ -96,7 +96,7 @@
         }
     },
     {
-        "team": "Los Angeles Clippers",
+        "name": "Los Angeles Clippers",
         "colors": {
             "rgb"   :   ["237 23 76",       "0 107 182",        "6 25 34",          "190 192 194"],
             "cmyk"  :   ["0 100 65 0",      "100 56 0 0",       "30 0 0 100",       "0 0 0 29"],
@@ -104,7 +104,7 @@
         }
     },
     {
-        "team": "Los Angeles Lakers",
+        "name": "Los Angeles Lakers",
         "colors": {
             "rgb"   :   ["253 185 39",      "85 37 130",        "6 25 34",          "129 119 183"],
             "cmyk"  :   ["0 30 94 0",       "79 100 0 12",      "30 100 0 0",       "54 56 0 0"],
@@ -112,7 +112,7 @@
         }
     },
     {
-        "team": "Memphis Grizzlies",
+        "name": "Memphis Grizzlies",
         "colors": {
             "rgb"   :   ["15 88 108",       "115 153 198",      "190 212 233",      "253 185 39"],
             "cmyk"  :   ["100 72 0 56",     "50 25 0 10",       "24 9 2 0",         "0 30 94 0"],
@@ -120,7 +120,7 @@
         }
     },
     {
-        "team": "Miami Heat",
+        "name": "Miami Heat",
         "colors": {
             "rgb"   :   ["152 0 46",        "249 160 27",       "6 25 34",          "188 190 192"],
             "cmyk"  :   ["0 100 61 43",     "0 43 100 0",       "30 0 0 100",       "40 0 0 0"],
@@ -128,7 +128,7 @@
         }
     },
     {
-        "team": "Milwaukee Bucks",
+        "name": "Milwaukee Bucks",
         "colors": {
             "rgb"   :   ["0 71 27",         "240 235 210",      "6 25 34",          "0 125 197"],
             "cmyk"  :   ["80 0 90 75",      "6 9 23 0",         "20 20 20 100",     "100 45 0 0"],
@@ -136,7 +136,7 @@
         }
     },
     {
-        "team": "Minnesota Timberwolves",
+        "name": "Minnesota Timberwolves",
         "colors": {
             "rgb"   :   ["0 80 131",        "0 169 79",         "196 206 211",      "255 230 0",        "224 58 63",        "6 25 34"],
             "cmyk"  :   ["95 45 0 40",      "94 0 100 0",       "5 0 0 20",         "0 5 100 0",        "0 91 75 6",        "30 0 0 100"],
@@ -144,7 +144,7 @@
         }
     },
     {
-        "team": "New Orleans Pelicans",
+        "name": "New Orleans Pelicans",
         "colors": {
             "rgb"   :   ["0 43 92",         "227 24 55",        "180 151 90"],
             "cmyk"  :   ["100 64 0 60",     "0 100 81 4",       "20 30 70 15"],
@@ -152,7 +152,7 @@
         }
     },
     {
-        "team": "New York Knicks",
+        "name": "New York Knicks",
         "colors": {
             "rgb"   :   ["0 107 182",       "245 132 38",       "190 192 194",      "35 31 32"],
             "cmyk"  :   ["100 56 0 0",      "0 59 96 0",        "0 0 0 29",         "30 0 0 100"],
@@ -160,7 +160,7 @@
         }
     },
     {
-        "team": "Oklahoma City Thunder",
+        "name": "Oklahoma City Thunder",
         "colors": {
             "rgb"   :   ["0 125 195",       "240 81 51",        "253 187 48",       "0 45 98"],
             "cmyk"  :   ["89 43 0 0",       "0 84 88 0",        "0 29 91 0",        "100 68 0 54"],
@@ -168,7 +168,7 @@
         }
     },
     {
-        "team": "Orlando Magic",
+        "name": "Orlando Magic",
         "colors": {
             "rgb"   :   ["0 125 197",       "196 206 211",      "6 25 34"],
             "cmyk"  :   ["100 40 0 0",      "5 0 0 20",         "30 0 0 100"],
@@ -176,7 +176,7 @@
         }
     },
     {
-        "team": "Philadelphia 76ers",
+        "name": "Philadelphia 76ers",
         "colors": {
             "rgb"   :   ["237 23 76",       "0 107 182",        "0 43 92",          "196 206 211"],
             "cmyk"  :   ["0 100 65 0",      "100 56 0 0",       "100 64 0 60",      "5 0 0 20"],
@@ -184,7 +184,7 @@
         }
     },
     {
-        "team": "Phoenix Suns",
+        "name": "Phoenix Suns",
         "colors": {
             "rgb"   :   ["229 96 32",       "29 17 96",         "99 113 122",       "249 160 27",       "185 89 21",        "190 192 194",      "6 25 34"],
             "cmyk"  :   ["0 75 100 5",      "98 100 0 43",      "15 0 0 65",        "0 43 100 0",       "0 67 100 28",      "0 0 0 29",         "30 0 0 100"],
@@ -192,7 +192,7 @@
         }
     },
     {
-        "team": "Portland Trail Blazers",
+        "name": "Portland Trail Blazers",
         "colors": {
             "rgb"   :   ["224 58 62",       "186 195 201",      "6 25 34"],
             "cmyk"  :   ["0 91 76 6",       "5 0 0 25",         "30 0 0 100"],
@@ -200,7 +200,7 @@
         }
     },
     {
-        "team": "Sacramento Kings",
+        "name": "Sacramento Kings",
         "colors": {
             "rgb"   :   ["114 76 159",      "142 144 144",      "6 25 34"],
             "cmyk"  :   ["65 82 0 0",       "46 37 38 2",       "30 0 0 100"],
@@ -208,7 +208,7 @@
         }
     },
     {
-        "team": "San Antonio Spurs",
+        "name": "San Antonio Spurs",
         "colors": {
             "rgb"   :   ["186 195 201",     "6 25 34"],
             "cmyk"  :   ["5 0 0 25",        "30 0 0 100"],
@@ -216,7 +216,7 @@
         }
     },
     {
-        "team": "Toronto Raptors",
+        "name": "Toronto Raptors",
         "colors": {
             "rgb"   :   ["206 17 65",       "6 25 34",          "161 161 164",      "180 151 90"],
             "cmyk"  :   ["0 100 65 15",     "30 0 0 100",       "0 1 0 43",         "20 30 70 15"],
@@ -224,7 +224,7 @@
         }
     },
     {
-        "team": "Utah Jazz",
+        "name": "Utah Jazz",
         "colors": {
             "rgb"   :   ["0 43 92",         "249 160 27",       "0 71 27",          "190 192 194"],
             "cmyk"  :   ["100 64 0 60",     "0 43 100 0",       "80 0 90 75",       "0 0 0 29"],
@@ -232,7 +232,7 @@
         }
     },
     {
-        "team": "Washington Wizards",
+        "name": "Washington Wizards",
         "colors": {
             "rgb"   :   ["0 43 92",         "227 24 55",        "196 206 212"],
             "cmyk"  :   ["100 64 0 60",     "0 100 81 4",       "5 0 0 20"],
