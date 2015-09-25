@@ -69,7 +69,7 @@ b {
   font-weight: bold; }
 
 .wrapper {
-  width: 95%;
+  width: 90%;
   max-width: 87.5em;
   margin-left: auto;
   margin-right: auto; }
@@ -97,10 +97,6 @@ b {
   #top:hover {
     transform: scale(1.1);
     text-decoration: none; }
-  @media only screen and (max-width: 600px) {
-    #top {
-      bottom: 1em;
-      right: 1em; } }
 
 select {
   font-size: 1em; }
@@ -108,22 +104,14 @@ select {
 .highlight {
   background-color: yellow; }
 
-.javascript-disabled {
+.loading {
   text-align: center;
-  margin-top: 3.125em; }
-  .javascript-disabled p {
-    margin-top: 0.625em;
-    opacity: .85; }
-    .javascript-disabled p b {
-      display: block;
-      opacity: 1; }
-
-@media only screen and (max-width: 600px) {
-  .colors {
-    display: none;
-    margin-bottom: 2em; }
-    .show .colors {
-      display: block; } }
+  margin: 3.125em 0;
+  padding-top: 2.5em;
+  background: url("../img/loading.gif") 50% 0 no-repeat;
+  background-size: 32px; }
+  .loading b {
+    display: block; }
 
 .color {
   margin: .25em 0;
@@ -131,9 +119,9 @@ select {
   padding: 1em 0.75em;
   text-transform: uppercase;
   border-radius: 3px;
-  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  font-family: "Lucida Console", Monaco, monospace;
   color: #fff;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); }
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9); }
   .color:hover {
     cursor: pointer; }
   .color.rgb:before {
@@ -149,27 +137,18 @@ select {
   .color.pms:before {
     content: 'PMS '; }
 
-.color-mode {
-  display: none; }
-
 .team-filters {
   position: relative;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   z-index: 5;
   background: #fff; }
-  @media only screen and (max-width: 600px) {
-    .team-filters {
-      padding-top: 1em;
-      padding-left: 0; } }
   .team-filters select {
     margin: 0 1em 0 0; }
-  .team-filters label {
-    font-size: 0.875em;
-    font-weight: bold; }
-    @media only screen and (max-width: 600px) {
-      .team-filters label:first-child {
-        margin-left: 2em; } }
+    @media only screen and (max-width: 700px) {
+      .team-filters select {
+        width: 48%;
+        margin: 0.625em 1% 0 1%; } }
   .team-filters input {
     width: 65%;
     font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif;
@@ -183,13 +162,14 @@ select {
     @media only screen and (max-width: 1000px) {
       .team-filters input {
         width: 45%; } }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 700px) {
       .team-filters input {
         position: static;
         width: 100%;
-        padding: 1em 1.875em;
-        border-top: 1px solid rgba(0, 0, 0, 0.2);
-        margin-top: 1em; } }
+        border: 0;
+        padding: 0.9375em 0.625em;
+        box-shadow: none;
+        -webkit-appearance: none; } }
 
 .header {
   position: relative;
@@ -197,6 +177,9 @@ select {
   background: #0c5c7a;
   color: white;
   overflow: hidden; }
+  @media only screen and (max-width: 700px) {
+    .header {
+      padding: 1.25em 0; } }
   .header__logo {
     float: left;
     font-size: 0.75em; }
@@ -205,6 +188,10 @@ select {
       color: #98a9bd; }
       .header__logo span a:first-child {
         color: #5fc2f1; }
+    @media only screen and (max-width: 700px) {
+      .header__logo {
+        float: none;
+        text-align: center; } }
   .header__description {
     font-size: 0.75em;
     margin-top: 0.66667em;
@@ -213,6 +200,11 @@ select {
     color: #98a9bd; }
     .header__description span {
       display: block; }
+    @media only screen and (max-width: 700px) {
+      .header__description {
+        float: none;
+        text-align: center;
+        margin-top: 0; } }
   .header a {
     color: inherit;
     text-decoration: underline; }
@@ -244,35 +236,33 @@ select {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   background: #fff;
   position: relative;
-  width: 18.75em;
+  width: 23.5%;
+  margin: 0 1.5% 1.5% 0;
+  padding: 1em;
   overflow: hidden;
   text-align: center;
-  padding: 1.25em;
-  margin: 0 1.25em 1.25em 0;
   border-radius: 10px;
   display: inline-block;
   vertical-align: top; }
+  @media only screen and (max-width: 1000px) {
+    .team {
+      width: 31.333333%;
+      margin: 0 2% 2% 0; } }
+  @media only screen and (max-width: 700px) {
+    .team {
+      width: 100%;
+      display: block;
+      margin: 0 0 1em 0; } }
 
 .team-name {
   text-transform: uppercase;
   letter-spacing: .0625em;
   font-size: 0.875em;
   margin-bottom: 1.42857em;
-  padding-top: 175px;
-  background-size: 175px;
+  padding-top: 150px;
+  background-size: 150px;
   background-repeat: no-repeat;
   background-position: center 0; }
-  @media only screen and (max-width: 600px) {
-    .team-name {
-      letter-spacing: 0;
-      padding: 0 0;
-      background-size: 75px;
-      background-position: 0 5px;
-      width: 75%;
-      text-align: left;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: pre; } }
 
 #footer {
   position: relative;

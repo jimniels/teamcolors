@@ -23,13 +23,13 @@ var TeamColors = React.createClass({
     };
 
     // Filter teams by passed in vals
-
+    var filteredTeams = this.getFilteredTeams(activeFilters);
 
     // Return the initial state
     return {
       activeFilters: activeFilters,
-      visibleTeams: this.props.teams.slice(0, this.props.threshold),
-      allTeams: this.props.teams
+      visibleTeams: filteredTeams.slice(0, this.props.threshold),
+      allTeams: filteredTeams
     };
   },
 
@@ -87,7 +87,7 @@ var TeamColors = React.createClass({
     });
   },
 
-  // Return an array of icon objects (filtered if relevant)
+  // Return an array of teams (filtered if relevant)
   getFilteredTeams: function(activeFilters) {
     return this.props.teams.filter(function(team) {
 
@@ -103,23 +103,45 @@ var TeamColors = React.createClass({
         }
       }
 
+      if(activeFilters.search !== ''){
+        var name = team.name.toLowerCase();
+        var search = activeFilters.search.toLowerCase();
+        if(name.indexOf(search) !== 0) {
+          return false;
+        }
+      }
+
       return true;
     });
   },
 
   render: function() {
+    var activeFilters = this.state.activeFilters;
+    var leagues = this.props.leagues;
+    var colors = this.props.colors;
+    var visibleTeams = this.state.visibleTeams;
+    var allTeams = this.state.allTeams;
+
     return (
       <div>
         <TeamFilters
-          activeFilters={this.state.activeFilters}
+          activeFilters={activeFilters}
           onUserInput={this.handleUserInput}
-          leagues={this.props.leagues}
-          colors={this.props.colors}
+          leagues={leagues}
+          colors={colors}
         />
         <TeamList
-          teams={this.state.visibleTeams}
-          activeColor={this.state.activeFilters.color}
+          teams={visibleTeams}
+          activeFilters={activeFilters}
         />
+        {
+          (visibleTeams.length < allTeams.length)
+          ?
+            <p className="loading">
+              Loading more...
+            </p>
+          : null
+        }
       </div>
     );
   }

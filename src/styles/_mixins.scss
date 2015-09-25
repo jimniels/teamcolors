@@ -8,7 +8,7 @@ $colors: hex rgb cmyk pms;
 
 $font-size-base: 16;
 $font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Helvetica, Arial, sans-serif;
-$font-family-monospace: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+$font-family-monospace: "Lucida Console", Monaco, monospace;
 
 $color-primary: rgba(12, 92, 122, 1);
 $color-secondary: rgba(152, 169, 189, 1);
@@ -28,13 +28,13 @@ $z-index-nav: 5;
 }
 
 @mixin respond-to($media) {
-    @if $media == one-col {
-        @media only screen and (max-width: 600px) { @content; }
+    @if $media == mobile {
+        @media only screen and (max-width: 700px) { @content; }
     }
-    @else if $media == two-col {
+    @else if $media == tablet {
         @media only screen and (max-width: 1000px) { @content; }
     }
-    @else if $media == three-col {
+    @else if $media == desktop {
         @media only screen and (min-width: 1200px) { @content; }
     }
 }

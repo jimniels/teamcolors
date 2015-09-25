@@ -13,11 +13,16 @@
     box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
     background: #fff;
     position: relative;
-    width: em(300);
+    //width: em(300);
+    //margin: 0 em(20) em(20) 0;
+    //padding: em(20);
+    width: 23.5%;
+    margin: 0 1.5% 1.5% 0;
+    padding: 1em;
     overflow: hidden;
     text-align: center;
-    padding: em(20);
-    margin: 0 em(20) em(20) 0;
+
+
     border-radius: 10px;
 
 
@@ -26,6 +31,17 @@
     // HTML must remove unwanted space
     display: inline-block;
     vertical-align: top;
+
+    @include respond-to(tablet) {
+        width: 31.333333%;
+        margin: 0 2% 2% 0;
+    }
+
+    @include respond-to(mobile) {
+        width: 100%;
+        display: block;
+        margin: 0 0 1em 0;
+    }
 }
 
 .team-name {
@@ -36,22 +52,8 @@
 
     // SVG support allows for logos on this element
     // background-image set dynamically w/javascript
-    padding-top: 175px;
-    background-size: 175px;
+    padding-top: 150px;
+    background-size: 150px;
     background-repeat: no-repeat;
     background-position: center 0;
-
-    @include respond-to(one-col) {
-        letter-spacing: 0;
-        padding: 0 0;
-        background-size: 75px;
-        background-position: 0 5px;
-
-        width: 75%;
-        //padding-left: 25%;
-        text-align: left;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: pre;
-    }
 }

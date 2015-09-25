@@ -42,7 +42,7 @@ b {
 //  Wrapper
 //  -----
 .wrapper {
-  width: 95%;
+  width: 90%;
   max-width: em(1400);
   margin-left: auto;
   margin-right: auto;
@@ -98,18 +98,14 @@ select {
     background-color: yellow;
 }
 
-.javascript-disabled {
+.loading {
     text-align: center;
-    margin-top: em(50);
+    margin: em(50) 0;
+    padding-top: em(40);
+    background: url('../img/loading.gif') 50% 0 no-repeat;
+    background-size: 32px;
 
-    p {
-        margin-top: em(10);
-
-        b {
-          display: block;
-          opacity: 1;
-        }
-
-        opacity: .85;
+    b {
+      display: block;
     }
 }

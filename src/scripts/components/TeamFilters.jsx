@@ -12,7 +12,7 @@ var TeamFilters = React.createClass({
   // Debounce the keyup event
   // http://stackoverflow.com/questions/23123138/perform-debounce-in-react-js/24679479#24679479
   componentWillMount: function () {
-     this.delayedHandleChange = debounce(this.handleChange, 250);
+     this.delayedHandleChange = debounce(this.handleChange, 125);
   },
   handleKeyUp: function(e) {
     e.persist();
@@ -28,15 +28,21 @@ var TeamFilters = React.createClass({
   },
 
   render: function() {
+    var activeLeague = this.props.activeFilters.league;
+    var activeColor = this.props.activeFilters.color;
+    var activeSearch = this.props.activeFilters.search;
+    var leagues = this.props.leagues;
+    var colors = this.props.colors;
+
     return (
       <form className="team-filters">
         <div className="wrapper">
           <select
             ref="leagueInput"
             onChange={this.handleChange}
-            value={this.props.activeFilters.league}>
+            value={activeLeague}>
               <option value="">All leagues...</option>
-              {this.props.leagues.map(function(league, i){
+              {leagues.map(function(league, i){
                 return <option key={i} value={league}>{league.toUpperCase()}</option>;
               })}
           </select>
@@ -44,16 +50,16 @@ var TeamFilters = React.createClass({
           <select
             ref="colorInput"
             onChange={this.handleChange}
-            value={this.props.activeFilters.color}>
-              {this.props.colors.map(function(color, i){
-                return <option key={i} value={color}>{color.toUpperCase()}</option>;
+            value={activeColor}>
+              {colors.map(function(color, i){
+                return <option key={i} value={color}>{color.toUpperCase()} Colors</option>;
               })}
           </select>
 
           <input
             ref="searchInput"
             onKeyUp={this.handleKeyUp}
-            defaultValue={this.props.activeFilters.search}
+            defaultValue={activeSearch}
             type="text"
             placeholder="Filter by team name..."
             autoComplete="off"

@@ -7,7 +7,7 @@ React.render(
       teams={teamData.teams}
       leagues={teamData.leagues}
       colors={teamData.colors}
-      threshold={20}
+      threshold={40}
       initialColor={'hex'}
     />,
     document.getElementById('content')

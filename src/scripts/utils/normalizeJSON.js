@@ -1,14 +1,17 @@
 /*
-NormalizeJSON
-This takes all our individual color data files
-Combines them into one .json file
-And does a little color conversion in the process
-Each team should have an RGB *OR* HEX color values
-Some have both, which are slightly different,
-But not all have both, in which case we do some conversion on the fly
-And stick the converted values into our final .json file
+  NormalizeJSON
+  This takes all our individual color data files and:
+    - Combines them into one .json file
+    - Converts missing RGB or HEX values and adds them to each teams
+    - Adds additional meta info, like league name to each team
+    - Flattens everything into a single array of all teams
 
-Returns a JSON file of all our data
+  Each team should have an RGB *OR* HEX color values
+  Some have both, which are slightly different,
+  But not all have both, in which case we do some conversion on the fly
+  And stick the converted values into our final .json file
+
+  Returns a JSON file of all our data
 */
 var gutil = require("gulp-util");
 var jsoncombine = require("gulp-jsoncombine");

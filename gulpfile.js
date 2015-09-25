@@ -1,5 +1,5 @@
 /*
-Dependencies
+  Dependencies
 */
 var gulp            = require('gulp');
 var del             = require('del');
@@ -17,13 +17,11 @@ var sourcemaps      = require('gulp-sourcemaps');
 var babelify        = require('babelify');
 var browserify      = require('browserify');
 var eslint          = require('gulp-eslint');
-var normalizeJSON   = require('./utils/normalizeJSON');
-
-
+var normalizeJSON   = require('./src/scripts/utils/normalizeJSON');
 
 /*
-Clean
-Clean the output of our scripts, styles, and templates/data
+  Clean
+  Clean the output of our scripts, styles, and templates/data
 */
 gulp.task('clean:scripts', function (cb) {
   del('assets/scripts/**/*', cb);
@@ -36,36 +34,36 @@ gulp.task('clean:data', function (cb) {
 });
 
 /*
-Styles
-Convert Sass to CSS using compass
+  Styles
+  Convert using sass
 */
 gulp.task('styles', ['clean:styles'], function() {
   return gulp.src('src/styles/styles.scss')
-  .pipe(sass().on('error', sass.logError))
-  .pipe(gulp.dest('assets/styles'));
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('assets/styles'));
 });
 
 /*
-Lint
-Lint our JS using JShint
+  Lint
+  Lint our javascript and data
 */
 gulp.task('lint:scripts', function(){
   return gulp.src('src/scripts/**/*')
-  .pipe(eslint())
-  .pipe(eslint.format())
-  .pipe(eslint.failAfterError());
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
 });
 gulp.task('lint:data', function(){
   return gulp.src('src/data/*.json')
-  .pipe(eslint())
-  .pipe(eslint.format())
-  .pipe(eslint.failAfterError());
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
 });
 
 /*
-Scripts
-Concat and uglify scripts
-Dependant on data being prepped first
+  Scripts
+  Concat and uglify scripts
+  Dependant on data being prepped first
 */
 gulp.task('scripts', ['clean:scripts', 'lint:scripts', 'data'], function () {
 
@@ -78,38 +76,38 @@ gulp.task('scripts', ['clean:scripts', 'lint:scripts', 'data'], function () {
   });
 
   return b.bundle()
-  .pipe(source('entry.js'))
-  .on('error', gutil.log)
-  //.pipe(buffer())
-  //.pipe(uglify())
-  .pipe(gulp.dest('assets/scripts'));
+    .pipe(source('entry.js'))
+    .on('error', gutil.log)
+    //.pipe(buffer())
+    //.pipe(uglify())
+    .pipe(gulp.dest('assets/scripts'));
 });
 
 
 /*
-Data
-Dependant on 'lint:data' which makes sure our json is corrent
-All teams should have AT LEAST an RGB or HEX value
-For teams that don't have both, we convert them in normalizeJSON
+  Data
+  Dependant on 'lint:data' which makes sure our json is corrent
+  All teams should have AT LEAST an RGB or HEX value
+  For teams that don't have both, we convert them in normalizeJSON
 */
 gulp.task('data', ['lint:data', 'clean:data'], function(){
   return gulp.src('src/data/*.json')
-  .pipe( normalizeJSON() )
-  .pipe(gulp.dest('assets/data'));
+    .pipe( normalizeJSON() )
+    .pipe(gulp.dest('assets/data'));
 });
 
 /*
-SVGs
-Minify any .svg files in `assets/`
-Usually this rarely needs to be run,
-as it will replace all SVGs under version control
+  SVGs
+  Minify any .svg files in `assets/`
+  Usually this rarely needs to be run,
+  as it will replace all SVGs under version control
 */
 gulp.task('svgs', function() {
   return gulp.src('assets/img/**/*.svg')
-  .pipe(svgmin({
-    plugins: [{mergePaths: false}]
-  }))
-  .pipe(gulp.dest('assets/img'));
+    .pipe(svgmin({
+      plugins: [{mergePaths: false}]
+    }))
+    .pipe(gulp.dest('assets/img'));
 });
 
 /*
@@ -128,23 +126,16 @@ gulp.task('watch', function() {
 });
 
 /*
-sort by two
-.sort(function(a,b){
-if(a.Name>b.Name){return 1;}
-else if(a.Name<b.Name){return -1;}
-else{
-if(a.Total>b.Total) return 1;
-else if(a.Total<b.Total) return -1;
-else return 0;
-}
-});
+  Render Static HTML
+  Renders a plain HTML version of the page for non-JS users
 */
-gulp.task('render-static-html', function(){
-  return gulp.src('src/scripts/components/InitialHTML.jsx', { read: false })
+gulp.task('render-static-html', ['data'], function(){
+  var teamColors = require('./assets/data/team-colors.json');
+  return gulp.src('src/scripts/components/StaticHTML.jsx', { read: false })
   .pipe(reactRender({
     type: 'markup',
     props: {
-      teams: teamColors
+      teams: teamColors.teams
     }
   }))
   .pipe(rename('static.html'))
@@ -160,6 +151,7 @@ gulp.task('default', function(){
     'styles',
     //'templates',
     'scripts',
+    'render-static-html',
     //'data',
     'watch'
   ]);

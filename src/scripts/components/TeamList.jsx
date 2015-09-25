@@ -4,20 +4,22 @@ var TeamListItem = require('./TeamListItem');
 var TeamList = React.createClass({
   propTypes: {
     teams: React.PropTypes.array.isRequired,
-    activeColor: React.PropTypes.string.isRequired
+    activeFilters: React.PropTypes.object.isRequired
   },
 
   render: function() {
-    var activeColor = this.props.activeColor;
+    var activeFilters = this.props.activeFilters;
+    var teams = this.props.teams;
+
     return (
       <div className="wrapper">
         <ul className="teams">
-          {(this.props.teams.length > 0)
+          {(teams.length > 0)
             ?
-              this.props.teams.map(function(team){
-                return <TeamListItem key={team.id} team={team} activeColor={activeColor} />
+              teams.map(function(team){
+                return <TeamListItem key={team.id} team={team} activeFilters={activeFilters} />
               })
-            : 
+            :
               <li>0 teams matching your filters</li>
           }
         </ul>

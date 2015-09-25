@@ -10,6 +10,10 @@
     color: white;
     overflow: hidden;
 
+    @include respond-to(mobile) {
+        padding: em(20) 0;
+    }
+
     &__logo {
         float: left;
         font-size: em(12);
@@ -22,6 +26,11 @@
                 color: $color-link;
             }
         }
+
+        @include respond-to(mobile) {
+            float: none;
+            text-align: center;
+        }
     }
 
     &__description {
@@ -33,6 +42,12 @@
 
         span {
             display: block;
+        }
+
+        @include respond-to(mobile) {
+            float: none;
+            text-align: center;
+            margin-top: 0;
         }
     }
 
