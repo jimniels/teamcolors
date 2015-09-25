@@ -4,20 +4,18 @@
 var gulp            = require('gulp');
 var del             = require('del');
 var sass            = require('gulp-sass');
-var jshint          = require('gulp-jshint');
 var rename          = require('gulp-rename');
 var uglify          = require('gulp-uglify');
-var concat          = require('gulp-concat');
 var svgmin          = require('gulp-svgmin');
 var reactRender     = require('gulp-render-react');
 var source          = require('vinyl-source-stream');
 var buffer          = require('vinyl-buffer');
 var gutil           = require('gulp-util');
-var sourcemaps      = require('gulp-sourcemaps');
 var babelify        = require('babelify');
 var browserify      = require('browserify');
 var eslint          = require('gulp-eslint');
 var normalizeJSON   = require('./src/scripts/utils/normalizeJSON');
+var argv            = require('yargs').argv;
 
 /*
   Clean
@@ -75,12 +73,19 @@ gulp.task('scripts', ['clean:scripts', 'lint:scripts', 'data'], function () {
     transform: ['babelify']
   });
 
-  return b.bundle()
-    .pipe(source('entry.js'))
-    .on('error', gutil.log)
-    //.pipe(buffer())
-    //.pipe(uglify())
-    .pipe(gulp.dest('assets/scripts'));
+  if(argv.prod){
+    return b.bundle()
+      .pipe(source('entry.js'))
+      .on('error', gutil.log)
+      .pipe(buffer())
+      .pipe(uglify())
+      .pipe(gulp.dest('assets/scripts'));
+  } else {
+    return b.bundle()
+      .pipe(source('entry.js'))
+      .on('error', gutil.log)
+      .pipe(gulp.dest('assets/scripts'));
+  }
 });
 
 
@@ -145,14 +150,19 @@ gulp.task('render-static-html', ['data'], function(){
 /*
 Default Task
 */
-gulp.task('default', function(){
-
-  gulp.start([
+console.log(argv.prod);
+if(argv.prod) {
+  gulp.task('default', [
     'styles',
-    //'templates',
+    'scripts',
+    'render-static-html'
+  ]);
+}
+else {
+  gulp.task('default', [
+    'styles',
     'scripts',
     'render-static-html',
-    //'data',
     'watch'
   ]);
-});
+}

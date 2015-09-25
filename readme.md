@@ -2,6 +2,20 @@
 
 [Team Colors](http://teamcolors.arc90.com/) is a reference of HEX, RGB, CMYK, and Pantone color values of major league sports teams.
 
+## How-To
+
+For development, install node_modules via npm, then run gulp for development mode:
+
+```
+npm install
+gulp
+```
+
+For deployment, the site runs on github pages so all static assets must be pushed with the repo. To deploy, pass in the `prod` value to gulp:
+
+```
+gulp --prod
+```
 
 ## Technical Overview
 
