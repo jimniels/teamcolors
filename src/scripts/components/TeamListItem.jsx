@@ -29,6 +29,16 @@ var TeamItem = React.createClass({
     }
   },
 
+  // Select color value on click
+  // http://stackoverflow.com/questions/6139107/programatically-select-text-in-a-contenteditable-html-element
+  handleColorClick: function(e) {
+    var range = document.createRange();
+    range.selectNodeContents(e.target);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+  },
+
   render: function() {
     var team = this.props.team;
     var activeColor = this.props.activeFilters.color;
@@ -48,11 +58,12 @@ var TeamItem = React.createClass({
                   <li
                     key={i}
                     className={`color ${activeColor}`}
-                    style={{backgroundColor: `#${paintedColor}`}}>
+                    style={{backgroundColor: `#${paintedColor}`}}
+                    onClick={this.handleColorClick}>
                     {color}
                   </li>
               )
-            })
+            }, this)
           }
         </ul>
       </li>
