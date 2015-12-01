@@ -86,6 +86,13 @@ The NFL has logo slicks which detail team color values. These are provided on a 
 - [NFC East](http://www.nflmedia.com/nfc_east.zip)
 - [NFC West](http://www.nflmedia.com/nfc_west.zip)
 
-### EPL, MLB, MLS, NHL
+### MLB
+
+MLB colors have been extracted from the official “RGB Digital Art” spot color logo slicks provided at [MLB Press Box](http://mlbpressbox.mlbstyleguide.com) (user account required). They were not explicitly stated values, but they are color values pulled from individual team logos in an *official* MLB document.
+
+- [American League logo slick](http://i.imgur.com/RP5kBSI.png)
+- [National League logo slick](http://i.imgur.com/FcuizSx.png)
+
+### EPL, MLS, NHL
 
 These leagues’ teams and colors are currently approximations. I am working on getting official colors. If you know how/where to find them, please open an issue here in Github.
