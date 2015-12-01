@@ -88,7 +88,7 @@ b {
   right: 2em;
   z-index: 200;
   border-radius: 5px;
-  transition: all 0.33s ease;
+  transition: all .33s ease;
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
   background: #333;
   color: white;
@@ -116,7 +116,7 @@ select {
 .color {
   margin: .25em 0;
   border-radius: 3px;
-  padding: 1em 0.75em;
+  padding: 1em .75em;
   text-transform: uppercase;
   border-radius: 3px;
   font-family: "Lucida Console", Monaco, monospace;
@@ -279,7 +279,7 @@ select {
     box-shadow: none !important;
     text-shadow: none !important; }
   .colors li {
-    padding: 0.5em 0.75em;
+    padding: .5em .75em;
     border: 0 !important;
     border-bottom: 1px solid #aaa !important; }
   .colors li:first-child {
