@@ -1,5 +1,5 @@
-var React = require('react');
-var TeamListItem = require('./TeamListItem');
+import React from 'react'
+import TeamListItem from 'components/TeamListItem'
 
 var TeamList = React.createClass({
   propTypes: {
@@ -8,8 +8,7 @@ var TeamList = React.createClass({
   },
 
   render: function() {
-    var activeFilters = this.props.activeFilters;
-    var teams = this.props.teams;
+    const { activeFilters, teams } = this.props
 
     return (
       <div className="wrapper">

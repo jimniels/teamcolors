@@ -21,9 +21,9 @@ var TeamFilters = React.createClass({
 
   handleChange: function(event) {
     this.props.onUserInput({
-      'league': this.refs.leagueInput.getDOMNode().value,
-      'color': this.refs.colorInput.getDOMNode().value,
-      'search': this.refs.searchInput.getDOMNode().value
+      'league': this.refs.leagueInput.value,
+      'color': this.refs.colorInput.value,
+      'search': this.refs.searchInput.value
     });
   },
 

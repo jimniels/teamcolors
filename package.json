@@ -3,8 +3,22 @@
   "version": "1.0.0",
   "description": "[Team Colors](http://teamcolors.arc90.com/) is a reference of HEX & RGB color values of major league sporting teams.",
   "main": "gulpfile.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+
+    "dev": "npm run css:build && npm run webpack:dev",
+    "prod": "npm run css:prod && npm run webpack:prod",
+
+    "webpack:dev": "./node_modules/.bin/webpack --watch --config webpack.config.js",
+    "webpack:dev-hot": "./node_modules/.bin/webpack-dev-server --inline --hot",
+    "webpack:prod": "./node_modules/.bin/webpack -p --config webpack.config.js",
+
+    "css:build": "./node_modules/.bin/node-sass src/styles/styles.scss assets/styles/styles.css",
+    "css:dev": "./node_modules/.bin/node-sass -w src/styles/styles.scss assets/styles/styles.css",
+    "css:prod": "./node_modules/.bin/node-sass --output-style=compressed src/styles/styles.scss assets/styles/styles.css",
+
+    "server": "./node_modules/.bin/webpack"
   },
   "repository": {
     "type": "git",
@@ -25,22 +39,21 @@
     }
   },
   "homepage": "https://github.com/teamcolors/teamcolors.github.io",
+  "dependencies": {
+    "lodash": "^3.10.1",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3"
+  },
   "devDependencies": {
-    "babelify": "^6.3.0",
-    "browserify": "^11.1.0",
-    "del": "^1.1.1",
-    "gulp": "^3.8.11",
-    "gulp-eslint": "^1.0.0",
-    "gulp-jsoncombine": "^1.0.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-render-react": "^1.0.0",
-    "gulp-sass": "^2.0.4",
-    "gulp-svgmin": "^1.1.2",
-    "gulp-uglify": "^1.2.0",
-    "gulp-util": "^3.0.6",
-    "react": "^0.13.3",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "yargs": "^3.26.0"
+    "babel-core": "^6.3.17",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "json-loader": "^0.5.4",
+    "node-sass": "^3.4.2",
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0",
+    "webpack-notifier": "^1.2.1"
   }
 }
