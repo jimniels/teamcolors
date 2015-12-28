@@ -1,14 +1,13 @@
 {
   "name": "teamcolors.github.io",
   "version": "1.0.0",
-  "description": "[Team Colors](http://teamcolors.arc90.com/) is a reference of HEX & RGB color values of major league sporting teams.",
-  "main": "gulpfile.js",
+  "description": "Team Colors is a reference of color values for major league sporting teams.",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
 
     "dev": "npm run css:build && npm run webpack:dev",
-    "prod": "npm run css:prod && npm run webpack:prod",
+    "prod": "npm run css:prod && npm run webpack:prod && node src/scripts/generateStatic.js",
 
     "webpack:dev": "./node_modules/.bin/webpack --watch --config webpack.config.js",
     "webpack:dev-hot": "./node_modules/.bin/webpack-dev-server --inline --hot",
@@ -16,9 +15,7 @@
 
     "css:build": "./node_modules/.bin/node-sass src/styles/styles.scss assets/styles/styles.css",
     "css:dev": "./node_modules/.bin/node-sass -w src/styles/styles.scss assets/styles/styles.css",
-    "css:prod": "./node_modules/.bin/node-sass --output-style=compressed src/styles/styles.scss assets/styles/styles.css",
-
-    "server": "./node_modules/.bin/webpack"
+    "css:prod": "./node_modules/.bin/node-sass --output-style=compressed src/styles/styles.scss assets/styles/styles.css"
   },
   "repository": {
     "type": "git",

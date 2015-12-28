@@ -1,17 +1,26 @@
 import { uniq, keys } from 'lodash'
-import epl from 'data/src/epl'
-import mlb from 'data/src/mlb'
-import mls from 'data/src/mls'
-import nba from 'data/src/nba'
-import nfl from 'data/src/nfl'
-import nhl from 'data/src/nhl'
-import { rgbToHex, hexToRgb } from 'utils/rgbHexConversion'
+import epl from './src/epl'
+import mlb from './src/mlb'
+import mls from './src/mls'
+import nba from './src/nba'
+import nfl from './src/nfl'
+import nhl from './src/nhl'
+import { rgbToHex, hexToRgb } from '../utils/rgbHexConversion'
 
 /*
-  Data transformations
+  Data Transformations
 
   For each league, manually do any transformations needed for the data
   Refer to the README for what needs to be done for each league
+
+  We take all our individual color data files and:
+    - Convert missing RGB or HEX values and add them to each team
+    - Add additional meta info to each team, like league name and team ID
+    - Flatten everything into a single array of all teams
+
+  Each team should have an RGB *OR* HEX color values
+  Some have both, which are slightly different,
+  But not all have both, in which case we do some conversion on the fly
 */
 const eplOut = epl.map(team => {
   team.league = 'epl'
@@ -67,12 +76,14 @@ const leagues = uniq( teams.map(team => team.league) )
 const colors = uniq( teams.map(team => Object.keys(team.colors)).reduce((a, b) => a.concat(b)) )
 
 // Export data
+// export const data = {
 const data = {
   teams,
   leagues,
   colors
 }
-export default data
+
+module.exports = data
 
 
 function convertNameToId(name) {

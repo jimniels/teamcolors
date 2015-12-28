@@ -1,9 +1,10 @@
-import React, { PropTypes, Component } from 'react'
-import TeamList from 'components/TeamList';
-import TeamFilters from 'components/TeamFilters';
+import React from 'react'
+import TeamList from './TeamList'
+import TeamFilters from './TeamFilters'
 
-var TeamColors = React.createClass({
-  PropTypes: {
+export default React.createClass({
+
+  propTypes: {
     teams: React.PropTypes.array.isRequired,
     leagues: React.PropTypes.array.isRequired,
     colors: React.PropTypes.array.isRequired,
@@ -151,5 +152,3 @@ var TeamColors = React.createClass({
     );
   }
 });
-
-module.exports = TeamColors;

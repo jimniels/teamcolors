@@ -1,7 +1,7 @@
 import React from 'react';
 import debounce from '../utils/debounce';
 
-var TeamFilters = React.createClass({
+export default React.createClass({
   propTypes: {
     activeFilters: React.PropTypes.object.isRequired,
     leagues: React.PropTypes.array.isRequired,
@@ -14,6 +14,7 @@ var TeamFilters = React.createClass({
   componentWillMount: function () {
      this.delayedHandleChange = debounce(this.handleChange, 125);
   },
+
   handleKeyUp: function(e) {
     e.persist();
     this.delayedHandleChange();
@@ -28,27 +29,31 @@ var TeamFilters = React.createClass({
   },
 
   render: function() {
-    var activeLeague = this.props.activeFilters.league;
-    var activeColor = this.props.activeFilters.color;
-    var activeSearch = this.props.activeFilters.search;
-    var leagues = this.props.leagues;
-    var colors = this.props.colors;
+    const {
+      leagues,
+      colors,
+      activeFilters: {
+        league: activeLeague,
+        color: activeColor,
+        search: activeSearch
+      }
+    } = this.props
 
     return (
-      <form className="team-filters">
-        <div className="wrapper">
+      <form className='team-filters'>
+        <div className='wrapper'>
           <select
-            ref="leagueInput"
+            ref='leagueInput'
             onChange={this.handleChange}
             value={activeLeague}>
-              <option value="">All leagues...</option>
+              <option value=''>All leagues...</option>
               {leagues.map(function(league, i){
                 return <option key={i} value={league}>{league.toUpperCase()}</option>;
               })}
           </select>
 
           <select
-            ref="colorInput"
+            ref='colorInput'
             onChange={this.handleChange}
             value={activeColor}>
               {colors.map(function(color, i){
@@ -57,19 +62,17 @@ var TeamFilters = React.createClass({
           </select>
 
           <input
-            ref="searchInput"
+            ref='searchInput'
             onKeyUp={this.handleKeyUp}
             defaultValue={activeSearch}
-            type="text"
-            placeholder="Filter by team name..."
-            autoComplete="off"
-            autoCorrect="off"
-            spellCheck="false"
+            type='text'
+            placeholder='Filter by team name...'
+            autoComplete='off'
+            autoCorrect='off'
+            spellCheck='false'
           />
         </div>
       </form>
     );
   }
 });
-
-module.exports = TeamFilters;

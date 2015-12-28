@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 import { uniq } from 'lodash'
-import App from 'components/App'
-import data from 'data/index'
+import App from './components/App'
+import data from './data/index'
 
 ReactDOM.render(
   <App

@@ -1,7 +1,7 @@
 import React from 'react'
-import TeamListItem from 'components/TeamListItem'
+import TeamListItem from './TeamListItem'
 
-var TeamList = React.createClass({
+export default React.createClass({
   propTypes: {
     teams: React.PropTypes.array.isRequired,
     activeFilters: React.PropTypes.object.isRequired
@@ -11,20 +11,20 @@ var TeamList = React.createClass({
     const { activeFilters, teams } = this.props
 
     return (
-      <div className="wrapper">
-        <ul className="teams">
-          {(teams.length > 0)
-            ?
-              teams.map(function(team){
-                return <TeamListItem key={team.id} team={team} activeFilters={activeFilters} />
-              })
-            :
-              <li>0 teams matching your filters</li>
+      <div className='wrapper'>
+        <ul className='teams'>
+          { teams.length > 0
+            ? teams.map(team =>
+                <TeamListItem
+                  key={team.id}
+                  team={team}
+                  activeFilters={activeFilters}
+                />
+              )
+            : <li>0 teams matching your filters</li>
           }
         </ul>
       </div>
     );
   }
 });
-
-module.exports = TeamList;
