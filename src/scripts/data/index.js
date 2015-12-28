@@ -1,10 +1,10 @@
 import { uniq, keys } from 'lodash'
-import epl from './src/epl'
-import mlb from './src/mlb'
-import mls from './src/mls'
-import nba from './src/nba'
-import nfl from './src/nfl'
-import nhl from './src/nhl'
+import epl from './leagues/epl'
+import mlb from './leagues/mlb'
+import mls from './leagues/mls'
+import nba from './leagues/nba'
+import nfl from './leagues/nfl'
+import nhl from './leagues/nhl'
 import { rgbToHex, hexToRgb } from '../utils/rgbHexConversion'
 
 /*

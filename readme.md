@@ -4,62 +4,62 @@
 
 ## How-To
 
-For development, install node_modules via npm, then run gulp for development mode:
+Install project dependencies via npm:
 
 ```
 npm install
-gulp
 ```
 
-For deployment, the site runs on github pages so all static assets must be pushed with the repo. To deploy, pass in the `prod` value to gulp:
+### Development
+
+To actively develop, run:
 
 ```
-gulp --prod
+npm run dev
+```
+
+If you want to have your CSS watched and compiled as you develop, run this in a separate tab:
+
+```
+npm run css:dev
+```
+
+### Deployment
+
+The production site at [teamcolors.arc90.com](http://teamcolors.arc90.com) runs on github pages so all static assets must be generated and pushed with the repo. To deploy, run:
+
+```
+npm run prod
 ```
 
 ## Technical Overview
 
-### "Server" side
-Gulp is used to compile all necessary static assets locally into `assets/`. Those are then pushed to github pages which deploys and hosts the assets (hence the `CNAME` file).
+Site is built on the react framework. `index.html` is the shell container for react app. If javascript is not supported, a link is shown to `staticIndex.html` which has all color information in a static format.
 
-To run, simply do `npm install` to get all necessary packages. Then run `gulp` to compile everything (or for developing).
-
-### Client side
-Static `index.html` file is loaded with all necessary data. If javascript is supported, it loads styles and vector versions of the team logos (if SVG is supported by the browser).
-
-
-## Project Structure
-
-Color data is rendered from each correspondingly-named league `.json` file in `src/data/`. Any changes to the data of the page can be done from those files.
-
-*Note on colors*: Color definitions for each team are in arrays and grouped by color mode. Color values should match index position in the array across color modes, for example:
+Color data is group by league in each `.json` file in `src/scripts/data/leagues`. Any changes to the color data can be done from those files. *Note on colors*: Color definitions for each team are in arrays and grouped by color mode. Color values should match index position in the array across color modes, for example:
 
 ```
 colors:
-    rgb: TEAMS-RGB-BLUE, TEAMS-RGB-RED
-    hex: TEAMS-HEX-BLUE, TEAMS-HEX-RED
+  rgb: TEAMS-RGB-BLUE, TEAMS-RGB-RED
+  hex: TEAMS-HEX-BLUE, TEAMS-HEX-RED
 ```
+
+Source artwork for each team is grouped by league in `src/img`. Production versions of these logo should be in `.svg` format in `assets/img`.
 
 ### Edit Team Color or Name
 
-1. Determine the team’s league
-2. Find the league’s corresponding `.json` file in `src/data/`
-3. Edit it
-4. Run `gulp`
-5. Commit
+Find the league’s corresponding `.json` file in `src/scripts/data/leagues`, and edit the info you need.
 
-### Adding a Team
+Then run the npm prod script, commit, then push.
+
+### Add a Team
 
 1. Determine the team’s league
-2. Following the established pattern, add the team’s name and colors in its league’s `.json` file in `src/data/`
+2. Following the established pattern, add the team’s name and colors in its league’s `.json` file in `src/scripts/data/leagues`
 3. Add a vector logo for the team in its corresponding `.sketch` league file in `src/img/` with the team’s name (as referenced in its `.json` file) in lowercase with hyphens, i.e. "utah-jazz"
 4. Export the team’s `.svg` logo to `assets/img/`
-5. Run `gulp`
-6. Commit
-
-### Adding a League
-
-Same essential steps as adding a team, except you would need new league files, i.e. a new file in `src/data` matching the league’s name (lowercase) with the league’s teams and colors, a new `.sketch` file in `src/img/` with the league’s teams and their logos, etc.
+5. Preferably, optimize the svg (with a tool like [SVGO](https://github.com/svg/svgo))
+6. Run npm prod script, commit, push
 
 
 ## Official Color References
