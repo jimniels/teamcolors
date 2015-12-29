@@ -47,18 +47,22 @@ export default React.createClass({
             onChange={this.handleChange}
             value={activeLeague}>
               <option value=''>All leagues...</option>
-              {leagues.map(function(league, i){
-                return <option key={i} value={league}>{league.toUpperCase()}</option>;
-              })}
+              {leagues.map((league, i) =>
+                <option key={i} value={league}>
+                  {league.toUpperCase()}
+                </option>
+              )}
           </select>
 
           <select
             ref='colorInput'
             onChange={this.handleChange}
             value={activeColor}>
-              {colors.map(function(color, i){
-                return <option key={i} value={color}>{color.toUpperCase()} Colors</option>;
-              })}
+              {colors.map((color, i) =>
+                <option key={i} value={color}>
+                  {color.toUpperCase()} Colors
+                </option>
+              )}
           </select>
 
           <input
