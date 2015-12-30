@@ -18,7 +18,7 @@ export function rgbToHex(rgb){
   }
 
   // Return i.e. '34AB32'
-  return componentToHex(r) + componentToHex(g) + componentToHex(b);
+  return componentToHex(r) + componentToHex(g) + componentToHex(b)
 }
 
 /*
@@ -30,14 +30,14 @@ export function hexToRgb(hex) {
   // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
   var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i
   hex = hex.replace(shorthandRegex, function(m, r, g, b) {
-    return r + r + g + g + b + b;
-  });
+    return r + r + g + g + b + b
+  })
 
-  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
   // returns space separated RGB values, i.e. "123 40 51"
   return result
     ? parseInt(result[1], 16) + ' ' +
       parseInt(result[2], 16) + ' ' +
       parseInt(result[3], 16)
-    : null;
+    : null
 }

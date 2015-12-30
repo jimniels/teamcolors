@@ -1,4 +1,4 @@
-import { uniq, keys } from 'lodash'
+import { uniq } from 'lodash'
 import epl from './leagues/epl'
 import mlb from './leagues/mlb'
 import mls from './leagues/mls'
@@ -87,5 +87,5 @@ module.exports = data
 
 
 function convertNameToId(name) {
-  return name.replace(/\s+/g, '-').toLowerCase();
+  return name.replace(/\s+/g, '-').toLowerCase()
 }
