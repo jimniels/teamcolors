@@ -1,8 +1,9 @@
-import React from 'react';
-import TeamList from './TeamList';
-import TeamFilters from './TeamFilters';
+import React from 'react'
+import TeamList from './TeamList'
+import TeamFilters from './TeamFilters'
 
-var TeamColors = React.createClass({
+export default React.createClass({
+
   propTypes: {
     teams: React.PropTypes.array.isRequired,
     leagues: React.PropTypes.array.isRequired,
@@ -16,14 +17,14 @@ var TeamColors = React.createClass({
   getInitialState: function(){
 
     // Intial filters
-    var activeFilters = {
-      color: (this.props.initialColor ? this.props.initialColor : ''),
-      league: (this.props.initialLeague ? this.props.initialLeague : ''),
-      search: (this.props.initialSearch ? this.props.initialSearch : '')
+    const activeFilters = {
+      color: this.props.initialColor ? this.props.initialColor : '',
+      league: this.props.initialLeague ? this.props.initialLeague : '',
+      search: this.props.initialSearch ? this.props.initialSearch : ''
     };
 
     // Filter teams by passed in vals
-    var filteredTeams = this.getFilteredTeams(activeFilters);
+    const filteredTeams = this.getFilteredTeams(activeFilters);
 
     // Return the initial state
     return {
@@ -69,9 +70,9 @@ var TeamColors = React.createClass({
   },
 
   handleShowMore: function() {
-    var sliceBegin = this.state.visibleTeams.length;
-    var sliceEnd = sliceBegin + this.props.threshold;
-    var newTeams = this.state.allTeams.slice(sliceBegin, sliceEnd);
+    const sliceBegin = this.state.visibleTeams.length;
+    const sliceEnd = sliceBegin + this.props.threshold;
+    const newTeams = this.state.allTeams.slice(sliceBegin, sliceEnd);
     this.setState({
       visibleTeams: this.state.visibleTeams.concat(newTeams)
     });
@@ -79,7 +80,7 @@ var TeamColors = React.createClass({
 
   // User input filters
   handleUserInput: function(activeFilters) {
-    var filteredTeams = this.getFilteredTeams(activeFilters);
+    const filteredTeams = this.getFilteredTeams(activeFilters);
     this.setState({
       activeFilters: activeFilters,
       visibleTeams: filteredTeams.slice(0, this.props.threshold),
@@ -89,7 +90,8 @@ var TeamColors = React.createClass({
 
   // Return an array of teams (filtered if relevant)
   getFilteredTeams: function(activeFilters) {
-    return this.props.teams.filter(function(team) {
+    const { teams } = this.props
+    return teams.filter(team => {
 
       if(activeFilters.league !== '') {
         if(activeFilters.league !== team.league){
@@ -104,23 +106,28 @@ var TeamColors = React.createClass({
       }
 
       if(activeFilters.search !== ''){
-        var name = team.name.toLowerCase();
-        var search = activeFilters.search.toLowerCase();
+        const name = team.name.toLowerCase();
+        const search = activeFilters.search.toLowerCase();
         if(name.indexOf(search) !== 0) {
           return false;
         }
       }
 
       return true;
-    });
+    })
   },
 
   render: function() {
-    var activeFilters = this.state.activeFilters;
-    var leagues = this.props.leagues;
-    var colors = this.props.colors;
-    var visibleTeams = this.state.visibleTeams;
-    var allTeams = this.state.allTeams;
+    const {
+      activeFilters,
+      allTeams,
+      visibleTeams
+    } = this.state
+
+    const {
+      leagues,
+      colors
+    } = this.props
 
     return (
       <div>
@@ -135,9 +142,8 @@ var TeamColors = React.createClass({
           activeFilters={activeFilters}
         />
         {
-          (visibleTeams.length < allTeams.length)
-          ?
-            <p className="loading">
+          visibleTeams.length < allTeams.length
+          ? <p className='loading'>
               Loading more...
             </p>
           : null
@@ -146,5 +152,3 @@ var TeamColors = React.createClass({
     );
   }
 });
-
-module.exports = TeamColors;

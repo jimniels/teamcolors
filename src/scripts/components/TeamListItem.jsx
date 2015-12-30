@@ -1,6 +1,6 @@
-var React = require('react');
+import React from 'react'
 
-var TeamItem = React.createClass({
+export default React.createClass({
   propTypes: {
     team: React.PropTypes.object.isRequired,
     activeFilters: React.PropTypes.object.isRequired
@@ -14,11 +14,15 @@ var TeamItem = React.createClass({
     If there's no active search, we just return the team name in plain text.
   */
   getTeamName: function(){
-    var team = this.props.team;
-    var activeSearch = this.props.activeFilters.search;
+    const {
+      team,
+      activeFilters: {
+        search: activeSearch
+      }
+    } = this.props
 
-    if(activeSearch !== '') {
-      var activeSearchHighlight = '<span class="highlight">' + activeSearch + '</span>';
+    if (activeSearch !== '') {
+      const activeSearchHighlight = `<span class="highlight">${activeSearch}</span>`
       return {
         __html: team.name.toLowerCase().replace(activeSearch, activeSearchHighlight)
       }
@@ -32,28 +36,32 @@ var TeamItem = React.createClass({
   // Select color value on click
   // http://stackoverflow.com/questions/6139107/programatically-select-text-in-a-contenteditable-html-element
   handleColorClick: function(e) {
-    var range = document.createRange();
-    range.selectNodeContents(e.target);
-    var sel = window.getSelection();
-    sel.removeAllRanges();
-    sel.addRange(range);
+    const range = document.createRange()
+    range.selectNodeContents(e.target)
+    const sel = window.getSelection()
+    sel.removeAllRanges()
+    sel.addRange(range)
   },
 
   render: function() {
-    var team = this.props.team;
-    var activeColor = this.props.activeFilters.color;
+    const {
+      team,
+      activeFilters: {
+        color: activeColor
+      }
+    } = this.props
 
     return (
-      <li className="team">
+      <li className='team'>
         <h3
-          className="team-name"
+          className='team-name'
           style={{backgroundImage: `url(assets/img/${team.league}/${team.id}.svg)`}}
           dangerouslySetInnerHTML={this.getTeamName()}
         />
-        <ul className="colors">
+        <ul className='colors'>
           {
-            team.colors[activeColor].map(function(color, i){
-              var paintedColor = team.colors.hex[i];
+            team.colors[activeColor].map((color, i) => {
+              const paintedColor = team.colors.hex[i]
               return (
                   <li
                     key={i}
@@ -70,5 +78,3 @@ var TeamItem = React.createClass({
     );
   }
 });
-
-module.exports = TeamItem;

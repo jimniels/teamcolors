@@ -1,47 +1,46 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>TeamColors: Find and copy color values from your favorite sports teams.</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/styles/styles.css" />
+  <title>TeamColors: Find and copy color values from your favorite sports teams.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/styles/styles.css" />
 </head>
 <body>
-    <header class="header">
-        <div class="wrapper">
-            <h1 class="header__logo">
-                <a href="/"><img src="assets/img/teamColorsLogo.svg" alt="TeamColors logo" /></a>
-                <span>A project from <a href="http://twitter.com/jimniels">@jimniels</a> (started in the Arc90 Lab)</span>
-            </h1>
-            <p class="header__description">
-                <span>Some colors are official, others approximations. <a href="https://github.com/teamcolors/teamcolors.github.io#official-color-references">Learn more &#8250;</a></span>
-                <span>Suggestion, correction, or addition? <a href="https://github.com/teamcolors/teamcolors.github.io">Source is on Github &#8250;</a></span>
-            </p>
-        </div>
-    </header>
+  <header class="header">
+    <div class="wrapper">
+      <h1 class="header__logo">
+        <a href="/"><img src="assets/img/teamColorsLogo.svg" alt="TeamColors logo" /></a>
+        <span>A project from <a href="http://twitter.com/jimniels">@jimniels</a> (started in the Arc90 Lab)</span>
+      </h1>
+      <p class="header__description">
+        <span>Some colors are official, others approximations. <a href="https://github.com/teamcolors/teamcolors.github.io#official-color-references">Learn more &#8250;</a></span>
+        <span>Suggestion, correction, or addition? <a href="https://github.com/teamcolors/teamcolors.github.io">Source is on Github &#8250;</a></span>
+      </p>
+    </div>
+  </header>
 
-    <main id="content">
-        <div class="wrapper">
-            <p class="loading">
-                <b>Loading...</b> Got javascript disabled? <a href="static.html">We've still got you covered</a>.
-            </p>
-        </div>
-    </main>
+  <main id="content">
+    <div class="wrapper">
+      <p class="loading">
+        <b>Loading...</b> Got javascript disabled? <a href="static.html">We've still got you covered</a>.
+      </p>
+    </div>
+  </main>
 
+  <!-- Scripts -->
+  <script type="text/javascript" src="assets/scripts/bundle.js"></script>
 
-    <!-- Scripts -->
-    <script type="text/javascript" src="assets/scripts/entry.js"></script>
-
-    <!-- Google Analytics  -->
-    <script type="text/javascript">
+  <!-- Google Analytics -->
+  <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-2118091-16']);
     _gaq.push(['_trackPageview']);
 
     (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
-    </script>
+  </script>
 </body>
 </html>
