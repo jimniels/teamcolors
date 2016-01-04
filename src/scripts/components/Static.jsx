@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 
 var StaticHtml = React.createClass({
 
@@ -61,8 +61,8 @@ var StaticHtml = React.createClass({
           </ul>
         </body>
       </html>
-    );
+    )
   }
-});
+})
 
-module.exports = StaticHtml;
+module.exports = StaticHtml
