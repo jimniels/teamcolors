@@ -1,4 +1,4 @@
-function debounce(fn, delay) {
+export default function debounce(fn, delay) {
   var timer = null
   return function () {
     var context = this, args = arguments
@@ -8,5 +8,3 @@ function debounce(fn, delay) {
     }, delay)
   }
 }
-
-module.exports = debounce
