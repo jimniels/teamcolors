@@ -1,6 +1,9 @@
-/*
-  RGB To HEX
-  Convert a space delimited string of RGB values to HEX values
+/**
+ * RGB To HEX
+ * Convert a space delimited string of RGB values to HEX values
+ *
+ * @param {string} rgb - Space delimited RGB color value, i.e. "0 0 0"
+ * @returns {string} - HEX color value
 */
 export function rgbToHex(rgb){
 
@@ -21,9 +24,12 @@ export function rgbToHex(rgb){
   return componentToHex(r) + componentToHex(g) + componentToHex(b)
 }
 
-/*
-  HEX to RGB
-  Convert a HEX value to a space delimited string of RGB values
+/**
+ * HEX to RGB
+ * Convert a HEX value to a space delimited string of RGB values
+ *
+ * @param {string} hex - Hex color value (supports inclusin of '#' symbol)
+ * @returns {string} - Space delimited string of RGB values
 */
 export function hexToRgb(hex) {
 
