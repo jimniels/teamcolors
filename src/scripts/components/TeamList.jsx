@@ -13,7 +13,8 @@ export default React.createClass({
     return (
       <div className='wrapper'>
         <ul className='teams'>
-          { teams.length > 0
+          {
+            teams.length > 0
             ? teams.map(team =>
                 <TeamListItem
                   key={team.id}
@@ -25,6 +26,6 @@ export default React.createClass({
           }
         </ul>
       </div>
-    );
+    )
   }
-});
+})
