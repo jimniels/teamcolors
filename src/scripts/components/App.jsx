@@ -8,6 +8,7 @@ export default React.createClass({
     teams: React.PropTypes.array.isRequired,
     leagues: React.PropTypes.array.isRequired,
     colors: React.PropTypes.array.isRequired,
+    colorsByLeague: React.PropTypes.object.isRequired,
     threshold: React.PropTypes.number.isRequired,
     initialColor: React.PropTypes.string,
     initialLeague: React.PropTypes.string,
@@ -16,76 +17,75 @@ export default React.createClass({
 
   getInitialState: function(){
 
+    // @TODO Add ability to pass these initial state via the URL
     // Intial filters
     const activeFilters = {
       color: this.props.initialColor ? this.props.initialColor : '',
       league: this.props.initialLeague ? this.props.initialLeague : '',
       search: this.props.initialSearch ? this.props.initialSearch : ''
-    };
+    }
 
     // Filter teams by passed in vals
-    const filteredTeams = this.getFilteredTeams(activeFilters);
+    const filteredTeams = this.getFilteredTeams(activeFilters)
 
     // Return the initial state
     return {
       activeFilters: activeFilters,
       visibleTeams: filteredTeams.slice(0, this.props.threshold),
       allTeams: filteredTeams
-    };
+    }
   },
 
   componentDidMount: function(){
-    /*
-      Handle scroll
-      Throttle the scroll event and detect if we're at the bottom of the page
-      If we are, show more teams
-    */
+    // Handle scroll
+    // Throttle the scroll event and detect if we're at the bottom of the page
+    // If we are, show more teams
     var throttle = function(fn, threshhold, scope) {
-      threshhold || (threshhold = 250);
+      threshhold || (threshhold = 250)
       var last,
-          deferTimer;
+          deferTimer
       return function () {
-        var context = scope || this;
+        var context = scope || this
 
         var now = +new Date,
-            args = arguments;
+            args = arguments
         if (last && now < last + threshhold) {
           // hold on to it
-          clearTimeout(deferTimer);
+          clearTimeout(deferTimer)
           deferTimer = setTimeout(function () {
-            last = now;
-            fn.apply(context, args);
-          }, threshhold);
+            last = now
+            fn.apply(context, args)
+          }, threshhold)
         } else {
-          last = now;
-          fn.apply(context, args);
+          last = now
+          fn.apply(context, args)
         }
-      };
+      }
     }
     window.onscroll = throttle(function(){
       if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-        this.handleShowMore();
+        this.handleShowMore()
       }
-    }, 150, this);
+    }, 150, this)
   },
 
   handleShowMore: function() {
-    const sliceBegin = this.state.visibleTeams.length;
-    const sliceEnd = sliceBegin + this.props.threshold;
-    const newTeams = this.state.allTeams.slice(sliceBegin, sliceEnd);
+    const sliceBegin = this.state.visibleTeams.length
+    const sliceEnd = sliceBegin + this.props.threshold
+    const newTeams = this.state.allTeams.slice(sliceBegin, sliceEnd)
     this.setState({
       visibleTeams: this.state.visibleTeams.concat(newTeams)
-    });
+    })
   },
 
   // User input filters
   handleUserInput: function(activeFilters) {
-    const filteredTeams = this.getFilteredTeams(activeFilters);
+    const filteredTeams = this.getFilteredTeams(activeFilters)
     this.setState({
       activeFilters: activeFilters,
       visibleTeams: filteredTeams.slice(0, this.props.threshold),
       allTeams: filteredTeams
-    });
+    })
   },
 
   // Return an array of teams (filtered if relevant)
@@ -95,25 +95,25 @@ export default React.createClass({
 
       if(activeFilters.league !== '') {
         if(activeFilters.league !== team.league){
-          return false;
+          return false
         }
       }
 
       if(activeFilters.color !== ''){
         if( !(activeFilters.color in team.colors) ) {
-          return false;
+          return false
         }
       }
 
       if(activeFilters.search !== ''){
-        const name = team.name.toLowerCase();
-        const search = activeFilters.search.toLowerCase();
+        const name = team.name.toLowerCase()
+        const search = activeFilters.search.toLowerCase()
         if(name.indexOf(search) !== 0) {
-          return false;
+          return false
         }
       }
 
-      return true;
+      return true
     })
   },
 
@@ -126,7 +126,8 @@ export default React.createClass({
 
     const {
       leagues,
-      colors
+      colors,
+      colorsByLeague
     } = this.props
 
     return (
@@ -136,6 +137,7 @@ export default React.createClass({
           onUserInput={this.handleUserInput}
           leagues={leagues}
           colors={colors}
+          colorsByLeague={colorsByLeague}
         />
         <TeamList
           teams={visibleTeams}
@@ -149,6 +151,6 @@ export default React.createClass({
           : null
         }
       </div>
-    );
+    )
   }
-});
+})

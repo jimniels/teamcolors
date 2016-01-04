@@ -6,13 +6,14 @@ export default React.createClass({
     activeFilters: React.PropTypes.object.isRequired
   },
 
-  /*
-    Team name
-    Why is this dangerouslySetInnerHTML?
-    When there is an active search, we highlight the active search term in the
-    team name using <span> tags.
-    If there's no active search, we just return the team name in plain text.
-  */
+  /**
+   * Team Name
+   * When there is an active search, we highlight the active search term in the
+   * team name using <span> tags. That's why we use `dangerouslySetInnerHTML`
+   * If there's no active search, we just return the team name in plain text.
+   *
+   * @returns {object}
+   */
   getTeamName: function(){
     const {
       team,
@@ -33,8 +34,12 @@ export default React.createClass({
     }
   },
 
-  // Select color value on click
-  // http://stackoverflow.com/questions/6139107/programatically-select-text-in-a-contenteditable-html-element
+  /**
+   * Handle Color click
+   * Select all text when color values are clicked/tapped
+   *
+   * {@link http://stackoverflow.com/questions/6139107/programatically-select-text-in-a-contenteditable-html-element}
+   */
   handleColorClick: function(e) {
     const range = document.createRange()
     range.selectNodeContents(e.target)
@@ -63,18 +68,18 @@ export default React.createClass({
             team.colors[activeColor].map((color, i) => {
               const paintedColor = team.colors.hex[i]
               return (
-                  <li
-                    key={i}
-                    className={`color ${activeColor}`}
-                    style={{backgroundColor: `#${paintedColor}`}}
-                    onClick={this.handleColorClick}>
-                    {color}
-                  </li>
+                <li
+                  key={i}
+                  className={`color ${activeColor}`}
+                  style={{backgroundColor: `#${paintedColor}`}}
+                  onClick={this.handleColorClick}>
+                  {color}
+                </li>
               )
             }, this)
           }
         </ul>
       </li>
-    );
+    )
   }
-});
+})

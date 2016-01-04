@@ -8,20 +8,18 @@ import nhl from './leagues/nhl'
 import { rgbToHex, hexToRgb } from '../utils/rgbHexConversion'
 
 /*
-  Data Transformations
-
-  For each league, manually do any transformations needed for the data
-  Refer to the README for what needs to be done for each league
-
-  We take all our individual color data files and:
-    - Convert missing RGB or HEX values and add them to each team
-    - Add additional meta info to each team, like league name and team ID
-    - Flatten everything into a single array of all teams
-
-  Each team should have an RGB *OR* HEX color values
-  Some have both, which are slightly different,
-  But not all have both, in which case we do some conversion on the fly
-*/
+ * League Data Massage
+ * For each league, we manually do data transformations
+ * Refer to the README for what needs to be done to each league
+ *
+ * Each team should have an RGB *or* HEX color set
+ * Some teams have both, which are slightly different,
+ * But not all have both, in which case we do some conversion on the fly
+ * We take all our individual league color files and:
+ *    - Convert missing RGB or HEX values and add them to each team
+ *    - Add additional meta info to each team, like league name and team ID
+ *    - Flatten everything into a single array of all teams
+ */
 const eplOut = epl.map(team => {
   team.league = 'epl'
   team.id = convertNameToId(team.name)
@@ -63,29 +61,52 @@ const nflOut = nfl.map(team => {
   return team
 })
 
-// Make a list of teams
+/**
+ * Export transformed data
+ * All transformed data exported as an object and used in our react app
+ *
+ * teams {array} - An array of objects representing each imported team of data
+ * leagues {array} - An array of strings representing each league, sorted alphabetically
+ * colors {array} - An array of strings representing each color mode
+ * colorsByLeage {object} - A mapping of which leagues support which colors
+ */
+
+// Array of team data
 const teams = []
   .concat(eplOut, mlbOut, mlsOut, nbaOut, nflOut, nhlOut)
   .sort((a, b) => (a.id < b.id) ? -1 : (a.id > b.id) ? 1 : 0)
 
-// Make a list of leagues out of teams
+// Array of league names
 const leagues = uniq( teams.map(team => team.league) )
 
-// Get list of all colors out of teams
+// Array of color modes
 // .map returns array of array, reduce flattens, uniq removes duplicates
 const colors = uniq( teams.map(team => Object.keys(team.colors)).reduce((a, b) => a.concat(b)) )
 
-// Export data
-// export const data = {
-const data = {
+// Object mapping color support
+let colorsByLeague = {}
+teams.map(team => {
+  if ( !(colorsByLeague[team.league]) ) {
+    colorsByLeague[team.league] = Object.keys(team.colors)
+  }
+})
+
+// Export it all
+module.exports = {
   teams,
   leagues,
-  colors
+  colors,
+  colorsByLeague
 }
 
-module.exports = data
-
-
+/**
+ * Convert Name to ID
+ * Take a string (usually a team name) with spaces and mixed casing,
+ * convert it to a lowercased, hyphen-separated string representing an ID
+ *
+ * @param {string} name
+ * @returns {string} id
+ */
 function convertNameToId(name) {
   return name.replace(/\s+/g, '-').toLowerCase()
 }
