@@ -160,6 +160,16 @@
         "src": "http://www.nflmedia.com/afc_west.zip"
     },
     {
+        "name": "Los Angeles Rams",
+        "colors": {
+            "hex"   :   ["002244",          "B3995D"],
+            "rgb"   :   ["0 21 50",         "175 146 93"],
+            "cmyk"  :   ["100 65 0 60",     "5 20 50 20"],
+            "pms"   :   ["289 C",           "465 C"]
+        },
+        "src": "http://www.nflmedia.com/nfc_west.zip"
+    },
+    {
         "name": "Miami Dolphins",
         "colors": {
             "hex"   :   ["008E97",          "F58220",           "005778"],
@@ -276,16 +286,6 @@
             "rgb"   :   ["0 21 50",         "105 190 40",       "155 161 162"],
             "cmyk"  :   ["100 65 0 60",     "57 0 84 0",        "5 0 0 30"],
             "pms"   :   ["289 C",           "368 C",            "429 C"]
-        },
-        "src": "http://www.nflmedia.com/nfc_west.zip"
-    },
-    {
-        "name": "St Louis Rams",
-        "colors": {
-            "hex"   :   ["002244",          "B3995D"],
-            "rgb"   :   ["0 21 50",         "175 146 93"],
-            "cmyk"  :   ["100 65 0 60",     "5 20 50 20"],
-            "pms"   :   ["289 C",           "465 C"]
         },
         "src": "http://www.nflmedia.com/nfc_west.zip"
     },
