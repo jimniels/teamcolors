@@ -6,12 +6,6 @@
         }
     },
     {
-        "name": "Chivas USA",
-        "colors": {
-            "hex"   :   ["AA002C",          "031A43",           "FFC800"]
-        }
-    },
-    {
         "name": "Colorado Rapids",
         "colors": {
             "hex"   :   ["91022D",          "85B7EA",           "8A8D8F",       "313F49"]
@@ -24,7 +18,7 @@
         }
     },
     {
-        "name": "DC United",
+        "name": "D.C. United",
         "colors": {
             "hex"   :   ["000000",          "DD0000"]
         }
@@ -42,7 +36,7 @@
         }
     },
     {
-        "name": "Los Angeles Galaxy",
+        "name": "LA Galaxy",
         "colors": {
             "hex"   :   ["00245D",          "004689",           "F1AA00",       "FFD200"]
         }
