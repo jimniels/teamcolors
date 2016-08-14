@@ -133,9 +133,13 @@
     },
     {
         "name": "Pittsburgh Penguins",
-        "colors": {
-            "hex"   :   ["000000",          "D1BD80"]
-        }
+        "colors" : {
+            "hex"   :   ["CCCC99",          "000000",       "FFCC33"],
+            "rgb"   :   ["207 196 147",     "0 0 0",        "255 184 28"],
+            "cmyk"  :   ["6 8 35 12",       "0 0 0 100",    "0 28 89 0"],
+            "pms"   :   ["4535 C",          "Black C",      "1235 C"]
+        },
+        "src" : "http://penguins.nhl.com/v2/ext/pdf/15.16%20Sponsor%20Playbook/2015-16%20Partner%20Playbook%20-%20Brand%20Style%20Guide%20-%2019.pdf"
     },
     {
         "name": "San Jose Sharks",
