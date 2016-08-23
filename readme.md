@@ -103,6 +103,12 @@ NHL colors are currently approximations, with the exceptions listed below. I am 
 
 - [Pittsburgh Penguins](http://penguins.nhl.com/v2/ext/pdf/15.16%20Sponsor%20Playbook/2015-16%20Partner%20Playbook%20-%20Brand%20Style%20Guide%20-%2019.pdf)
 
-### EPL, MLS
+### MLS
+
+NHL colors are currently approximations, with the exceptions listed below. I am working on getting official colors of the remaining teams.
+
+- [Philadelphia Union](http://portfolios.scad.edu/gallery/36587433/Philadelphia-Union-Brand-Guidelines)
+
+### EPL
 
 These leagues’ teams and colors are currently approximations. I am working on getting official colors. If you know how/where to find them, please open an issue here in Github.

@@ -73,9 +73,12 @@
     },
     {
         "name": "Philadelphia Union",
-        "colors": {
-            "hex"   :   ["001B2D",          "B18500",           "348AE1"]
-        }
+        "colors" : {
+            "hex"   :   ["002D55",          "5090CD",       "B38707",       "B49759",       "F4F4F4"],
+            "rgb"   :   ["0 45 86",         "80 145 205",   "179 136 8",    "180 151 90",   "244 244 244"],
+            "cmyk"  :   ["100 46 0 70",     "68 34 0 0",    "0 27 100 34",    "20 30 70 15",    "3 2 2 0"]
+        },
+        "src" : "http://portfolios.scad.edu/gallery/36587433/Philadelphia-Union-Brand-Guidelines"
     },
     {
         "name": "Portland Timbers",
