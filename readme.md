@@ -112,3 +112,11 @@ NHL colors are currently approximations, with the exceptions listed below. I am 
 ### EPL
 
 These leagues’ teams and colors are currently approximations. I am working on getting official colors. If you know how/where to find them, please open an issue here in Github.
+
+## To-Dos
+
+- [ ] Switch to `flex` for layout
+- [ ] Make filtering a fuzzy string search
+- [ ] Improve error states for when data doesn't render
+- [ ] Consider alternatives to no-js users rather than just "here's the raw data" (something that doesn't required a build if a single color in the JSON file is changed)
+- [ ] (Possibly) Add team `id` manually to JSON file ??
