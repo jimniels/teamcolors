@@ -1,87 +1,57 @@
-//
-//
-//  Header
-//  ==============================
-//
+/**
+ *
+ * Header
+ *
+ */
+
 .header {
-    position: relative;
-    padding: em(10) 0;
-    background: $color-primary;
-    color: white;
-    overflow: hidden;
+  position: relative;
+  background: $color-primary;
+  color: white;
+  overflow: hidden;
 
-    @include respond-to(mobile) {
-        padding: em(20) 0;
+  /**
+  * Logo
+  */
+
+  &__logo {
+    padding: em(10) 0 0;
+
+    @include respond-to(tablet) {
+      float: left;
+      margin-right: em(20);
+      padding-right: em(20);
+      padding-bottom: em(10);
+      border-right: 1px solid rgba(255, 255, 255, .1);
     }
 
-    &__logo {
-        float: left;
-        font-size: em(12);
+    img {
+      width: 135px;
+    }
+  }
 
-        span {
-            display: block;
-            color: $color-secondary;
+  /**
+  * Description
+  */
+  &__description {
+    font-size: em(12);
+    color: $color-secondary;
+    margin-bottom: em(10);
 
-            a:first-child {
-                color: $color-link;
-            }
-        }
-
-        @include respond-to(mobile) {
-            float: none;
-            text-align: center;
-        }
+    @include respond-to(tablet) {
+      padding-top: em(9, 12);
+      margin-bottom: 0;
     }
 
-    &__description {
-        font-size: em(12);
-        margin-top: em(8, 12);
-        float: right;
-        text-align: right;
-        color: $color-secondary;
-
-        span {
-            display: block;
-        }
-
-        @include respond-to(mobile) {
-            float: none;
-            text-align: center;
-            margin-top: 0;
-        }
-    }
-
-    a {
-        color: inherit;
-        text-decoration: underline;
-    }
-}
-
-.intro-authors {
-    color: #aaa;
-
-    // De-emphasize Arc90, as it's no longer a company
-    a + a {
-        color: inherit;
-    }
-}
-
-.intro-description {
-    font-size: 1.25em;
-    margin-bottom: .25em;
-
-    strong {
-        font-size: 2em;
-        font-weight: bold;
+    // wrap to two lines on desktop
+    @include respond-to(desktop) {
+      span {
         display: block;
+      }
     }
 
-    + p {
-        color: #777;
-
-        a {
-            color: inherit;
-            text-decoration: underline;
-        }
+    a.emphasize {
+      color: $color-link;
     }
+  }
 }

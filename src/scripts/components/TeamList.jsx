@@ -1,5 +1,5 @@
-import React from 'react'
-import TeamListItem from './TeamListItem'
+import React from 'react';
+import TeamListItem from './TeamListItem';
 
 export default React.createClass({
   propTypes: {
@@ -8,7 +8,7 @@ export default React.createClass({
   },
 
   render: function() {
-    const { activeFilters, teams } = this.props
+    const { activeFilters, teams } = this.props;
 
     return (
       <div className='wrapper'>

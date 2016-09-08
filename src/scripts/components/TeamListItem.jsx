@@ -1,37 +1,11 @@
-import React from 'react'
+import React from 'react';
+import fuzzy from 'fuzzy';
+import {capitalize, start, replace} from 'lodash';
 
 export default React.createClass({
   propTypes: {
     team: React.PropTypes.object.isRequired,
     activeFilters: React.PropTypes.object.isRequired
-  },
-
-  /**
-   * Team Name
-   * When there is an active search, we highlight the active search term in the
-   * team name using <span> tags. That's why we use `dangerouslySetInnerHTML`
-   * If there's no active search, we just return the team name in plain text.
-   *
-   * @returns {object}
-   */
-  getTeamName: function(){
-    const {
-      team,
-      activeFilters: {
-        search: activeSearch
-      }
-    } = this.props
-
-    if (activeSearch !== '') {
-      const activeSearchHighlight = `<span class="highlight">${activeSearch}</span>`
-      return {
-        __html: team.name.toLowerCase().replace(activeSearch, activeSearchHighlight)
-      }
-    } else {
-      return {
-        __html: team.name
-      }
-    }
   },
 
   /**
@@ -41,11 +15,11 @@ export default React.createClass({
    * {@link http://stackoverflow.com/questions/6139107/programatically-select-text-in-a-contenteditable-html-element}
    */
   handleColorClick: function(e) {
-    const range = document.createRange()
-    range.selectNodeContents(e.target)
-    const sel = window.getSelection()
-    sel.removeAllRanges()
-    sel.addRange(range)
+    const range = document.createRange();
+    range.selectNodeContents(e.target);
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
   },
 
   render: function() {
@@ -54,19 +28,19 @@ export default React.createClass({
       activeFilters: {
         color: activeColor
       }
-    } = this.props
+    } = this.props;
 
     return (
       <li className='team'>
         <h3
           className='team-name'
-          style={{backgroundImage: `url(assets/img/${team.league}/${team.id}.svg)`}}
-          dangerouslySetInnerHTML={this.getTeamName()}
-        />
+          style={{backgroundImage: `url(static/img/${team.league}/${team.id}.svg)`}}>
+          {team.name}
+        </h3>
         <ul className='colors'>
           {
             team.colors[activeColor].map((color, i) => {
-              const paintedColor = team.colors.hex[i]
+              const paintedColor = team.colors.hex[i];
               return (
                 <li
                   key={i}
@@ -75,7 +49,7 @@ export default React.createClass({
                   onClick={this.handleColorClick}>
                   {color}
                 </li>
-              )
+              );
             }, this)
           }
         </ul>

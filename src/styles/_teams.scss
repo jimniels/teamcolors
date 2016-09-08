@@ -1,59 +1,40 @@
-//
-//
-//  Teams
-//  ==============================
-//
+/**
+ *
+ * Teams
+ *
+ */
+
 .teams {
-    position: relative;
-    margin-top: em(20);
+  position: relative;
+  margin-top: em(20);
 }
 
 .team {
-    border: 1px solid $color-border;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
-    background: #fff;
-    position: relative;
-    //width: em(300);
-    //margin: 0 em(20) em(20) 0;
-    //padding: em(20);
-    width: 23.5%;
-    margin: 0 1.5% 1.5% 0;
-    padding: 1em;
-    overflow: hidden;
-    text-align: center;
+  border: 1px solid $color-border;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .0625);
+  background: #fff;
+  position: relative;
+  width: em(250);
+  margin: 0 em(20) em(20) 0;
+  padding: 1em;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 10px;
 
-
-    border-radius: 10px;
-
-
-    // Inline-block spacing
-    // http://css-tricks.com/fighting-the-space-between-inline-block-elements/
-    // HTML must remove unwanted space
-    display: inline-block;
-    vertical-align: top;
-
-    @include respond-to(tablet) {
-        width: 31.333333%;
-        margin: 0 2% 2% 0;
-    }
-
-    @include respond-to(mobile) {
-        width: 100%;
-        display: block;
-        margin: 0 0 1em 0;
-    }
+  // Inline-block spacing
+  // http://css-tricks.com/fighting-the-space-between-inline-block-elements/
+  // HTML must remove unwanted space
+  display: inline-block;
+  vertical-align: top;
 }
 
 .team-name {
-    text-transform: uppercase;
-    letter-spacing: .0625em;
-    font-size: em(14);
-    margin-bottom: em(20, 14);
+  margin-bottom: em(16);
 
-    // SVG support allows for logos on this element
-    // background-image set dynamically w/javascript
-    padding-top: 135px;
-    background-size: 135px;
-    background-repeat: no-repeat;
-    background-position: center 0;
+  // SVG support allows for logos on this element
+  // background-image set dynamically w/javascript
+  padding-top: 125px;
+  background-size: 125px;
+  background-repeat: no-repeat;
+  background-position: center 0;
 }
