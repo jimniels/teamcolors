@@ -1,8 +1,8 @@
 # Team Colors
 
-![TeamColors screenshot](http://i.imgur.com/Q7q1Ji7.png)
+![TeamColors screenshot](http://i.imgur.com/XbWE9cG.png)
 
-[Team Colors](http://teamcolors.arc90.com/) is a reference of HEX, RGB, CMYK, and Pantone color values of major league sports teams.
+[Team Colors](http://jim-nielsen.com/teamcolors) is a reference of HEX, RGB, CMYK, and Pantone color values of major league sports teams.
 
 ## How-To
 
