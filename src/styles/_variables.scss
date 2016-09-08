@@ -1,0 +1,25 @@
+/**
+ *
+ * Variables
+ *
+ */
+
+$leagues: nba, nfl, nhl, mlb, mls, epl; // currently not used
+$colors: hex rgb cmyk pms;
+
+$font-size-base: 16;
+$font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Helvetica, Arial, sans-serif;
+$font-family-monospace: 'Lucida Console', Monaco, monospace;
+
+$color-primary: rgba(12, 92, 122, 1);
+$color-secondary: rgba(152, 169, 189, 1);
+
+$color-border: rgba(0, 0, 0, .15);
+$color-background: rgba($color-secondary, .2);
+$color-link: rgba(95, 194, 241, 1);
+$color-text: rgba(34, 34, 34, 1);
+
+$z-index-back-to-top: 200;
+$z-index-dividers: 20;
+$z-index-footer: 10;
+$z-index-nav: 5;

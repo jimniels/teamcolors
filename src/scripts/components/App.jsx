@@ -1,6 +1,7 @@
-import React from 'react'
-import TeamList from './TeamList'
-import TeamFilters from './TeamFilters'
+import React from 'react';
+import fuzzy from 'fuzzy';
+import TeamList from './TeamList';
+import TeamFilters from './TeamFilters';
 
 export default React.createClass({
 
@@ -91,6 +92,7 @@ export default React.createClass({
   // Return an array of teams (filtered if relevant)
   getFilteredTeams: function(activeFilters) {
     const { teams } = this.props
+    let out = [];
     return teams.filter(team => {
 
       if(activeFilters.league !== '') {
@@ -105,16 +107,15 @@ export default React.createClass({
         }
       }
 
+      // @TODO possibly fix to fit array of multiple, not single, items
       if(activeFilters.search !== ''){
-        const name = team.name.toLowerCase()
-        const search = activeFilters.search.toLowerCase()
-        if(name.indexOf(search) !== 0) {
+        if(fuzzy.filter(activeFilters.search, [team.name]).length === 0) {
           return false
         }
       }
 
       return true
-    })
+    });
   },
 
   render: function() {

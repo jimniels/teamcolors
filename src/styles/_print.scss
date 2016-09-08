@@ -1,26 +1,24 @@
-//
-//  
-//  Print Styles
-//  ==============================
-//
+/**
+ *
+ * Print Styles
+ *
+*/
+
 @media print {
-    .hex,
-    .colors li {
-        box-shadow: none !important; 
-        text-shadow: none !important;
-    }
-    .colors li {
-        padding: .5em .75em;
-        border: 0 !important;
-        border-bottom: 1px solid #aaa !important;
-    }
-    .colors li:first-child {
-        border-top: 1px solid #aaa !important;
-    }
-    #footer {
-        display: none;
-    }
-    body:after {
-        content: "Brought to you by: http://teamcolors.ar90.com";
-    }
+  .hex,
+  .colors li {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  .colors li {
+    padding: .5em .75em;
+    border: 0 !important;
+    border-bottom: 1px solid #aaa !important;
+  }
+  .colors li:first-child {
+    border-top: 1px solid #aaa !important;
+  }
+  #footer {
+    display: none;
+  }
 }

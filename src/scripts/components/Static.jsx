@@ -1,7 +1,6 @@
 import React from 'react'
 
 var StaticHtml = React.createClass({
-
   PropTypes: {
     teams: React.PropTypes.array.isRequired
   },

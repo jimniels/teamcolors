@@ -7,7 +7,7 @@ import {rgbToHex, hexToRgb} from './utils/rgbHexConversion';
 
 // Get our team data, massage it, then render it
 const request = new XMLHttpRequest();
-request.open('GET', 'src/scripts/data/teams.json', true);
+request.open('GET', 'static/data/teams.json', true);
 request.onload = () => {
   if (request.status >= 200 && request.status < 400) {
 

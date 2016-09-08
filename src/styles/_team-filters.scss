@@ -1,48 +1,48 @@
-//
-//
-//  Navigation
-//  ==============================
-//
+/**
+ *
+ * Team Filters
+ *
+ */
+
 .team-filters {
-    position: relative;
-    border-bottom: 1px solid $color-border;
-    border-top: 1px solid $color-border;
-    z-index: $z-index-nav;
-    background: #fff;
+  position: relative;
+  border-bottom: 1px solid $color-border;
+  z-index: $z-index-nav;
+  background: #fff;
 
-    select {
-        margin: 0 1em 0 0;
+  select {
+    width: 48%;
+    margin: em(10) 1% 0 1%;
 
-        @include respond-to(mobile) {
-            width: 48%;
-            margin: em(10) 1% 0 1%;
-        }
+
+    @include respond-to(tablet) {
+      width: auto;
+      margin: 0 1em 0 0;
+    }
+  }
+
+  input {
+    font-family: $font-family;
+    font-size: 1em;
+    padding: em(15) em(10);
+    border: 0;
+    box-shadow: none;
+    -webkit-appearance: none;
+    width: 100%;
+
+    &:focus {
+      outline: 0;
     }
 
-    input {
-        width: 65%;
-        font-family: $font-family;
-        font-size: 1em;
-        padding: 1em;
-        border: 0;
-        border-left: 1px solid $color-border;
-        border-radius: 0;
-
-        &:focus {
-            outline: 0;
-        }
-
-        @include respond-to(tablet) {
-            width: 45%;
-        }
-
-        @include respond-to(mobile) {
-            position: static;
-            width: 100%;
-            border: 0;
-            padding: em(15) em(10);
-            box-shadow: none;
-            -webkit-appearance: none;
-        }
+    @include respond-to(tablet) {
+      width: 45%;
+      border-left: 1px solid $color-border;
+      border-radius: 0;
+      padding: em(15);
     }
+
+    @include respond-to(desktop) {
+      width: 65%;
+    }
+  }
 }

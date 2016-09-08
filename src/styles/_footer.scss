@@ -1,17 +1,17 @@
-//
-//
-//
-//  Footer
-//  ==============================
-//
-#footer {
-    position: relative;
-    z-index: $z-index-footer;
-    text-align: center;
-    border-top: 1px solid $color-border;
+/**
+ *
+ * Footer
+ *
+ */
 
-    p {
-        padding: 1em;    
-        color: $color-text;
-    }
+#footer {
+  position: relative;
+  z-index: $z-index-footer;
+  text-align: center;
+  border-top: 1px solid $color-border;
+
+  p {
+    padding: em(16);
+    color: $color-text;
+  }
 }

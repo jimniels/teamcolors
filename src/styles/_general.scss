@@ -1,36 +1,39 @@
-//
-//
-//  General Styles
-//  ==============================
-//
+/**
+ *
+ * General
+ *
+ */
 
-//
-//  Box Sizing
-//  -----
-//  http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+/**
+ * Box Sizing
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
 
-//
-//  Body Styles
-//  -----
+/**
+ * Body Styles
+ */
+
 body {
-    width: 100%;
-    margin: 0 auto;
-    font: 1em/1.5 $font-family;
-    color: #333;
-    background: $color-background;
+  width: 100%;
+  margin: 0 auto;
+  font: 1em/1.5 $font-family;
+  color: #333;
+  background: $color-background;
 }
 
 a {
-    color: inherit;
-    text-decoration: underline;
+  color: inherit;
+  text-decoration: underline;
 }
 
 strong,
@@ -38,9 +41,10 @@ b {
   font-weight: bold;
 }
 
-//
-//  Wrapper
-//  -----
+/**
+ * Wrapper
+ */
+
 .wrapper {
   width: 94%;
   max-width: em(1400);
@@ -48,64 +52,36 @@ b {
   margin-right: auto;
 }
 
-//
-//  Clearfix
-//  -----
+/**
+ * Clearfix
+ */
+
 .clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: '';
+  display: table;
+  clear: both;
 }
 
-//
-//  Back to top
-//  -----
-#top {
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    position: fixed;
-    bottom: 2em;
-    right: 2em;
-    z-index: $z-index-back-to-top;
-    border-radius: 5px;
-    transition: all .33s ease;
-    box-shadow: 0 0 0 3px rgba(0,0,0,.1);
-    background: #333;
-    color: white;
-    text-align: center;
-    font-weight: 700;
+/**
+ * Other
+ */
 
-    &:hover {
-        transform: scale(1.1);
-        text-decoration: none;
-    }
-
-    @include respond-to(one-col) {
-        bottom: 1em;
-        right: 1em;
-    }
-}
-
-//
-//  Other
-//  -----
 select {
-    font-size: 1em;
+  font-size: 1em;
 }
 
 .highlight {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 .loading {
-    text-align: center;
-    margin: em(50) 0;
-    padding-top: em(40);
-    background: url('../img/loading.gif') 50% 0 no-repeat;
-    background-size: 32px;
+  text-align: center;
+  margin: em(50) 0;
+  padding-top: em(40);
+  background: image-url('loading.gif') 50% 0 no-repeat;
+  background-size: 32px;
 
-    b {
-      display: block;
-    }
+  b {
+    display: block;
+  }
 }

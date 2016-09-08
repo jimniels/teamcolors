@@ -1,6 +1,6 @@
-import React from 'react'
-import { contains } from 'lodash'
-import debounce from '../utils/debounce'
+import React from 'react';
+import {contains} from 'lodash';
+import debounce from '../utils/debounce';
 
 export default React.createClass({
   propTypes: {
@@ -14,12 +14,12 @@ export default React.createClass({
   // Debounce the keyup event
   // http://stackoverflow.com/questions/23123138/perform-debounce-in-react-js/24679479#24679479
   componentWillMount: function () {
-     this.delayedHandleChange = debounce(this.handleChange, 125)
+    this.delayedHandleChange = debounce(this.handleChange, 125);
   },
 
   handleKeyUp: function(e) {
-    e.persist()
-    this.delayedHandleChange()
+    e.persist();
+    this.delayedHandleChange();
   },
 
   handleChange: function() {
@@ -40,7 +40,7 @@ export default React.createClass({
         color: activeColor,
         search: activeSearch
       }
-    } = this.props
+    } = this.props;
 
     return (
       <form className='team-filters'>
@@ -66,7 +66,7 @@ export default React.createClass({
                       disabled={disabled}>
                         {league.toUpperCase()}
                     </option>
-                  )
+                  );
                 })
               }
           </select>
@@ -77,11 +77,11 @@ export default React.createClass({
             value={activeColor}>
               <optgroup label='Color mode'>
                 { colors.map((color, i) => {
-                  let disabled
+                  let disabled;
                   if (activeLeague === '' || contains(colorsByLeague[activeLeague], color) ) {
-                    disabled = false
+                    disabled = false;
                   } else {
-                    disabled = true
+                    disabled = true;
                   }
 
                   return (
@@ -91,7 +91,7 @@ export default React.createClass({
                       disabled={disabled}>
                         {color.toUpperCase()}
                     </option>
-                  )
+                  );
                 })}
               </optgroup>
           </select>

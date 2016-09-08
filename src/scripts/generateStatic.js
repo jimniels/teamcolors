@@ -8,7 +8,7 @@ var fs = require('fs')
 var React = require('react')
 var ReactDOMServer = require('react-dom/server')
 var Static = require('./components/Static')
-var data = require('./data/index')
+var data = require('../../static/data/teams.json')
 
 // Render static markup from component
 var html = ReactDOMServer.renderToStaticMarkup(React.createElement(
