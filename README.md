@@ -20,25 +20,25 @@ To actively develop, run:
 npm run dev
 ```
 
-If you want to have your CSS watched and compiled as you develop, run this in a separate tab:
-
-```
-npm run css:dev
-```
+This will setup Webpack and Sass to compile javascript and CSS into the `build` folder. Hitting the root of this folder from your localhost will serve your files.
 
 ### Deployment
 
-The production site at [teamcolors.arc90.com](http://teamcolors.arc90.com) runs on github pages so all static assets must be generated and pushed with the repo. To deploy, run:
+The production site at [jim-nielsen.com/teamcolors](http://jim-nielsen.com/teamcolors) runs on github pages so all static assets must be generated and pushed with the repo. To deploy, run:
 
 ```
 npm run prod
 ```
+**Note:**
+
+- Everything in `/static` are static files that are referenced directly via the HTML file. So if you make a commit that changes these, they’ll be pulled in automatically without having to do a “build” of the site and committing that as well. For example, if somebody makes a PR that changes a color value in the team colors .json file, you can merge the PR from github and changes should be live to the site without having to actually run a build.
+- Everything in `/build` has to be built when you make an interactive/stylistic change in javascript or CSS. Change some css? Compile it to `/build/styles` and commit. Change some javascript, i.e. the way the app works? Compile it to `/build/scripts`. Raw assets like images and data are pulled in from `/static`.
 
 ## Technical Overview
 
-Site is built on the react framework. `index.html` is the shell container for react app. If javascript is not supported, a link is shown to `staticIndex.html` which has all color information in a static format.
+Site is built on the react framework. `index.html` is the shell container for react app. If javascript is not supported, a link is shown to the raw JSON data which has all color information.
 
-Color data is group by league in each `.json` file in `src/scripts/data/leagues`. Any changes to the color data can be done from those files. *Note on colors*: Color definitions for each team are in arrays and grouped by color mode. Color values should match index position in the array across color modes, for example:
+Color data is housed in a single `.json` file `static/data/teams.json`. Any changes to team colors can be done there. *Note on colors*: Color definitions for each team are in arrays and grouped by color mode. Color values should match index position in the array across color modes, for example:
 
 ```
 colors:
@@ -46,22 +46,20 @@ colors:
   hex: TEAMS-HEX-BLUE, TEAMS-HEX-RED
 ```
 
-Source artwork for each team is grouped by league in `src/img`. Production versions of these logo should be in `.svg` format in `assets/img`.
+Source artwork for each team is grouped by league in `static/sketch`. Production versions of these logo should be in `.svg` format in `static/img`.
 
 ### Edit Team Color or Name
 
-Find the league’s corresponding `.json` file in `src/scripts/data/leagues`, and edit the info you need.
-
-Then run the npm prod script, commit, then push.
+Find teams `.json` file in `static/data/teams.json`, and edit the info you need.
 
 ### Add a Team
 
 1. Determine the team’s league
-2. Following the established pattern, add the team’s name and colors in its league’s `.json` file in `src/scripts/data/leagues`
-3. Add a vector logo for the team in its corresponding `.sketch` league file in `src/img/` with the team’s name (as referenced in its `.json` file) in lowercase with hyphens, i.e. "utah-jazz"
-4. Export the team’s `.svg` logo to `assets/img/`
+2. Following the established pattern, add the team’s name and colors the `.json` file
+3. Add a vector logo for the team in its corresponding `.sketch` league file in `static/sketch` with the team’s name (as referenced in its `.json` file) in lowercase with hyphens, i.e. "utah-jazz"
+4. Export the team’s `.svg` logo to `static/img/`
 5. Preferably, optimize the svg (with a tool like [SVGO](https://github.com/svg/svgo))
-6. Run npm prod script, commit, push
+6. Run `npm run prod`, commit, push
 
 
 ## Official Color References
