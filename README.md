@@ -114,7 +114,7 @@ These leagues’ teams and colors are currently approximations. I am working on 
 ## To-Dos
 
 - [ ] Switch to `flex` for layout
-- [ ] Make filtering a fuzzy string search
+- [ ] Improve filtering with fuzzy string search
 - [ ] Improve error states for when data doesn't render
 - [ ] Consider alternatives to no-js users rather than just "here's the raw data" (something that doesn't required a build if a single color in the JSON file is changed)
-- [ ] (Possibly) Add team `id` manually to JSON file ??
+- [ ] Possibly add team `id` manually to JSON file ??
