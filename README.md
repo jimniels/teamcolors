@@ -97,10 +97,7 @@ The extracted colors are in HEX form and their RGB counterparts are generated pr
 
 ### NHL
 
-NHL colors are currently approximations, with the exceptions listed below. I am working on getting official colors of the remaining teams.
-
-- [Pittsburgh Penguins](http://penguins.nhl.com/v2/ext/pdf/15.16%20Sponsor%20Playbook/2015-16%20Partner%20Playbook%20-%20Brand%20Style%20Guide%20-%2019.pdf)
-
+NHL colors are official. As per [Michael Sharer](https://github.com/epitaphmike) of the NHL.
 ### MLS
 
 NHL colors are currently approximations, with the exceptions listed below. I am working on getting official colors of the remaining teams.
