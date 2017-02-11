@@ -100,7 +100,7 @@ The extracted colors are in HEX form and their RGB counterparts are generated pr
 NHL colors are official. As per [Michael Sharer](https://github.com/epitaphmike) of the NHL.
 ### MLS
 
-NHL colors are currently approximations, with the exceptions listed below. I am working on getting official colors of the remaining teams.
+MLS colors are currently approximations, with the exceptions listed below. I am working on getting official colors of the remaining teams.
 
 - [Philadelphia Union](http://portfolios.scad.edu/gallery/36587433/Philadelphia-Union-Brand-Guidelines)
 
