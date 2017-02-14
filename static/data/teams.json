@@ -366,7 +366,13 @@
 
 
 
-
+  {
+    "name": "Atlanta United FC",
+    "league": "mls",
+    "colors": {
+      "hex"   :   ["A29061",          "80000B",           "000000"]
+    }
+  },
   {
     "name": "Chicago Fire",
     "league": "mls",
@@ -414,6 +420,13 @@
     "league": "mls",
     "colors": {
       "hex"   :   ["00245D",          "004689",           "F1AA00",       "FFD200"]
+    }
+  },
+  {
+    "name": "Minnesota United FC",
+    "league": "mls",
+    "colors": {
+      "hex"   :   ["CFD4D8",          "6CADDF",           "000000"]
     }
   },
   {
