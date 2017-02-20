@@ -1,16 +1,16 @@
 [
   {
+    "name": "AFC Bournemouth",
+    "league": "epl",
+    "colors": {
+      "hex"   :   ["E62333",          "000000"]
+    }
+  },
+  {
     "name": "Arsenal",
     "league": "epl",
     "colors": {
       "hex"   :   ["EF0107",          "023474",           "9C824A"]
-    }
-  },
-  {
-    "name": "Aston Villa",
-    "league": "epl",
-    "colors": {
-      "hex"   :   ["94BEE5",          "7A003C",           "FFE600"]
     }
   },
   {
@@ -77,17 +77,10 @@
     }
   },
   {
-    "name": "Newcastle United",
+    "name": "Middlesbrough",
     "league": "epl",
     "colors": {
-      "hex"   :   ["00B6F1",          "BBBDBF",           "231F20",       "F0B83D"]
-    }
-  },
-  {
-    "name": "Queens Park Rangers",
-    "league": "epl",
-    "colors": {
-      "hex"   :   ["005CAB"]
+      "hex"   :    ["FF0000",         "000000"]
     }
   },
   {
@@ -126,6 +119,13 @@
     }
   },
   {
+    "name": "Watford",
+    "league": "epl",
+    "colors": {
+      "hex"   :    ["FBEE23",           "ED2127",           "000000"]
+    }
+  },
+  {
     "name": "West Bromwich Albion",
     "league": "epl",
     "colors": {
@@ -136,7 +136,7 @@
     "name": "West Ham United",
     "league": "epl",
     "colors": {
-      "hex"   :   ["60223B",          "F7C240",           "5299C6"]
+      "hex"   :   ["60223B",            "F7C240",           "5299C6"]
     }
   },
 
