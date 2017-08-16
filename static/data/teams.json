@@ -14,6 +14,13 @@
     }
   },
   {
+    "name": "Brighton & Hove Albion",
+    "league": "epl",
+    "colors": {
+      "hex"   :   ["0055a9",          "F8BC1B"]
+    }
+  },
+  {
     "name": "Burnley",
     "league": "epl",
     "colors": {
@@ -42,10 +49,10 @@
     }
   },
   {
-    "name": "Hull City",
+    "name": "Huddersfield Town",
     "league": "epl",
     "colors": {
-      "hex"   :   ["F5A12D",          "000000"]
+      "hex"   :   ["0073d2"]
     }
   },
   {
@@ -77,10 +84,10 @@
     }
   },
   {
-    "name": "Middlesbrough",
+    "name": "Newcastle United",
     "league": "epl",
     "colors": {
-      "hex"   :    ["FF0000",         "000000"]
+      "hex"   :   ["241f20",           "00B8F4",         "c3a572"]
     }
   },
   {
@@ -95,13 +102,6 @@
     "league": "epl",
     "colors": {
       "hex"   :   ["E03A3E",          "1B449C"]
-    }
-  },
-  {
-    "name": "Sunderland",
-    "league": "epl",
-    "colors": {
-      "hex"   :   ["EB172B",          "A68A26",           "211E1E"]
     }
   },
   {
