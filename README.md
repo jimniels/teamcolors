@@ -6,7 +6,7 @@
 
 ## How-To
 
-First, make sure you `yarn install`
+Install: `yarn install`
 Development: `yarn start`
 Build: `yarn build`
 
