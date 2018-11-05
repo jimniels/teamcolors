@@ -1,0 +1,335 @@
+:root {
+  --font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
+    Helvetica, Arial, sans-serif;
+  --font-family-monospace: "Lucida Console", Monaco, monospace;
+  --font-size-base: 16;
+
+  --color-primary: rgba(12, 92, 122, 1);
+  --color-secondary: rgba(152, 169, 189, 1);
+
+  --color-border: rgba(0, 0, 0, 0.15);
+  --color-background: rgba(152, 169, 189, 0.2);
+  --color-link: rgba(95, 194, 241, 1);
+  --color-text: rgba(34, 34, 34, 1);
+
+  --z-index-back-to-top: 200;
+  --z-index-dividers: 20;
+  --z-index-footer: 10;
+  --z-index-nav: 5;
+}
+
+/* ==========================================================================
+   General
+   ========================================================================== */
+
+/**
+ * Box Sizing
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/**
+ * Body Styles
+ */
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  font: 1em/1.5 var(--font-family);
+  color: #333;
+  background: var(--color-background);
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+/**
+ * Wrapper
+ */
+
+.wrapper {
+  width: 94%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/**
+ * Clearfix
+ */
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/**
+ * Other
+ */
+
+select {
+  font-size: 1em;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+.loading {
+  text-align: center;
+  margin: 50px auto;
+  padding-top: 40px;
+  background: url("../img/loading.gif") 50% 0 no-repeat;
+  background-size: 32px;
+  max-width: 500px;
+}
+.loading b {
+  display: block;
+}
+
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+
+/**
+ *
+ *  Colors
+ *  Displaying team colors and hex values
+ *
+ */
+
+.colors {
+}
+
+.color {
+  margin: 3px 0;
+  border-radius: 3px;
+  padding: 12px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  font-family: var(--font-family-monospace);
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+.color:hover {
+  cursor: pointer;
+}
+
+/* RGB */
+.color.rgb:before {
+  content: "RGB(";
+}
+.color.rgb:after {
+  content: ")";
+}
+
+/* HEX */
+.color.hex:before {
+  content: "#";
+}
+
+/* CMYK */
+.color.cmyk:before {
+  content: "CMYK(";
+}
+.color.cmyk:after {
+  content: ")";
+}
+
+/* Pantone */
+.color.pms:before {
+  content: "PMS ";
+}
+
+/* ==========================================================================
+   Team Filters
+   ========================================================================== */
+
+.team-filters {
+  position: relative;
+  border-bottom: 1px solid var(--color-border);
+  z-index: var(--z-index-nav);
+  background: #fff;
+}
+
+.team-filters select {
+  width: 48%;
+  margin: 10px 1% 0 1%;
+}
+@media only screen and (min-width: 700px) {
+  .team-filters select {
+    width: auto;
+    margin: 0 1em 0 0;
+  }
+}
+
+.team-filters input {
+  font-family: var(--font-family);
+  font-size: 1em;
+  padding: 15px 10px;
+  border: 0;
+  box-shadow: none;
+  -webkit-appearance: none;
+  width: 100%;
+}
+.team-filters input:focus {
+  outline: 0;
+}
+
+@media only screen and (min-width: 700px) {
+  .team-filters input {
+    width: 45%;
+    border-left: 1px solid var(--color-border);
+    border-radius: 0;
+    padding: 15px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .team-filters input {
+    width: 65%;
+  }
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.header {
+  position: relative;
+  background: var(--color-primary);
+  color: white;
+  overflow: hidden;
+}
+
+.header__logo {
+  padding: 10px 0 0;
+}
+@media only screen and (min-width: 700px) {
+  .header__logo {
+    float: left;
+    margin-right: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+.header__logo img {
+  width: 135px;
+}
+
+.header__description {
+  font-size: 12px;
+  color: var(--color-secondary);
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 700px) {
+  .header__description {
+    padding-top: 9px;
+    margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  /* wrap to two lines on desktop */
+  .header__description span {
+    display: block;
+  }
+}
+
+.header__description a.emphasize {
+  color: var(--color-link);
+}
+
+/* ==========================================================================
+   Teams
+   ========================================================================== */
+
+.teams {
+  position: relative;
+  margin-top: 20px;
+}
+
+.team {
+  border: 1px solid var(--color-border);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.0625);
+  background: #fff;
+  position: relative;
+  width: 250px;
+  margin: 0 20px 20px 0;
+  padding: 1em;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 10px;
+
+  /* Inline-block spacing
+     http://css-tricks.com/fighting-the-space-between-inline-block-elements/
+     HTML must remove unwanted space */
+  display: inline-block;
+  vertical-align: top;
+}
+
+.team-name {
+  margin-bottom: 16px;
+
+  /* SVG support allows for logos on this element
+     background-image set dynamically w/javascript */
+  padding-top: 125px;
+  background-size: 125px;
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+#footer {
+  position: relative;
+  z-index: var(--z-index-footer);
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+}
+#footer p {
+  padding: 16px;
+  color: var(--color-text);
+}
+
+/* ==========================================================================
+   Print
+   ========================================================================== */
+
+@media print {
+  .hex,
+  .colors li {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  .colors li {
+    padding: 0.5em 0.75em;
+    border: 0 !important;
+    border-bottom: 1px solid #aaa !important;
+  }
+  .colors li:first-child {
+    border-top: 1px solid #aaa !important;
+  }
+  #footer {
+    display: none;
+  }
+}

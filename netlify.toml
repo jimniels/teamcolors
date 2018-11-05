@@ -1,0 +1,10 @@
+[build]
+  base = ""
+  publish = "build"
+  command = "yarn build"
+
+[[redirects]]
+  from = "https://teamcolors.netlify.com/*"
+  to = "https://teamcolors.jim-nielsen.com/:splat"
+  status = 301
+  force = true

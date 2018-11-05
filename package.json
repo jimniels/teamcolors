@@ -1,43 +1,26 @@
 {
-  "name": "teamcolors.github.io",
-  "version": "1.0.0",
-  "description": "Team Colors is a reference of color values for major league sporting teams.",
+  "name": "teamcolors",
+  "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "npm run css:build && npm run css:dev & npm run webpack:dev",
-    "prod": "npm run css:prod && npm run webpack:prod",
-    "prod:static": "node src/scripts/generateStatic.js",
-    "webpack:dev": "./node_modules/.bin/webpack --watch --d --config webpack.config.js",
-    "webpack:prod": "./node_modules/.bin/webpack -p --config webpack.config.js",
-    "css:build": "./node_modules/.bin/node-sass src/styles/index.scss build/styles/index.css",
-    "css:dev": "./node_modules/.bin/node-sass -w src/styles/index.scss build/styles/index.css",
-    "css:prod": "./node_modules/.bin/node-sass --output-style=compressed src/styles/index.scss build/styles/index.css",
-    "lint": "./node_modules/.bin/eslint src/scripts",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/teamcolors/teamcolors.github.io.git"
-  },
-  "author": "Jim Nielsen",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/teamcolors/teamcolors.github.io/issues"
-  },
-  "homepage": "https://github.com/teamcolors/teamcolors.github.io",
   "dependencies": {
-    "lodash": "^3.10.1",
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3"
+    "fuzzy": "^0.1.3",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-scripts": "2.0.5"
   },
-  "devDependencies": {
-    "babel-core": "^6.3.17",
-    "babel-loader": "^6.2.0",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-preset-react": "^6.3.13",
-    "fuzzy": "^0.1.1",
-    "node-sass": "^3.4.2",
-    "webpack": "^1.12.9",
-    "webpack-dev-server": "^1.14.0"
-  }
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

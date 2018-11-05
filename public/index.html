@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>TeamColors: Find and copy color values from your favorite sports teams.</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="%PUBLIC_URL%/styles/reset.css" />
+  <link rel="stylesheet" href="%PUBLIC_URL%/styles/index.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="wrapper">
+      <h1 class="header__logo">
+        <a href=".">
+          <img src="%PUBLIC_URL%/img/teamColorsLogo.svg" alt="TeamColors logo" />
+        </a>
+      </h1>
+      <p class="header__description">
+        <span>
+          A project from <a href="http://jim-nielsen.com" class="emphasize">Jim</a> <a href="https://twitter.com/jimniels" class="emphasize">Nielsen</a>. Got suggestions or corrections? <a href="https://github.com/jimniels/teamcolors">Source is on Github</a>.
+        </span>
+        <span>
+          Note: some colors are official, others are approximations. <a href="https://github.com/jimniels/teamcolors#official-color-references">Learn more</a>.
+        </span>
+      </p>
+    </div>
+  </header>
+
+  <main id="root">
+    <div class="wrapper">
+      <p class="loading">
+        <b>Loading...</b> Not loading? You’re probably on an old browser or have Javascript disabled. You can still <a href="data/teams.json">view the raw data</a>.
+      </p>
+    </div>
+  </main>
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(["_setAccount", "UA-2118091-16"]);
+    _gaq.push(["_trackPageview"]);
+
+    (function() {
+      var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+      ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+      var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</body>
+</html>
