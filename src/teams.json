@@ -1311,6 +1311,13 @@
     }
   },
   {
+    "name": "Seattle Kraken",
+    "league": "nhl",
+    "colors": {
+      "hex"   :   ["001628", "99D9D9", "355464", "68A2B9", "E9072B"]
+    }
+  },
+  {
     "name": "St Louis Blues",
     "league": "nhl",
     "colors": {
